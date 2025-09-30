@@ -1,0 +1,298 @@
+{
+  "name": "Slow_Flight",
+  "shortDescription": "Learn to fly at minimum controllable airspeed and understand the edge of the flight envelope",
+  "prompt": "You are teaching a student pilot slow flight operations in a Cessna 172. Slow flight is one of the most important fundamental skills - it teaches aircraft control at critically low airspeeds, similar to landing configuration. The student will learn to fly at minimum controllable airspeed, understand the relationship between power and altitude at slow speeds, experience mushy controls, and perform turns and altitude changes while slow. Emphasize that this skill builds awareness of stall warning signs and prepares them for landing approaches. Practice area should be at minimum 3,000 feet AGL with clearing turns before each maneuver. Departing from Palo Alto Airport (KPAO).",
+  "openingLine": "Today you will learn to fly at the edge of the envelope. Slow flight teaches you what the airplane feels like when approaching its limits!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": true,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on slow flight: flying at the slowest airspeed at which the aircraft can maintain controlled flight. Explain that this is typically 5-10 knots above stall speed. Cover the learning objectives: understanding how the airplane handles at low speeds, recognizing stall warning signs, learning that power controls altitude at slow speeds (not pitch), and building confidence near the stall. Explain the configurations: clean (no flaps) and landing (full flaps). Emphasize safety: minimum altitude 3,000 AGL, clearing turns before entry, and immediate recovery if stall occurs.",
+      "steps": [
+        "Define slow flight: minimum controllable airspeed",
+        "Explain why we practice this: landing preparation and aircraft control mastery",
+        "Describe what it feels like: mushy controls, high power, nose-high attitude",
+        "Explain the critical concept: at slow speeds, power controls altitude and pitch controls airspeed",
+        "Cover two configurations: clean and landing",
+        "Brief safety procedures: altitude requirements, clearing turns, recovery procedure",
+        "Set expectations: this may feel uncomfortable at first, but that is normal and safe"
+      ],
+      "goals": [
+        "Student understands what slow flight is and why we practice it",
+        "Student knows power controls altitude in slow flight",
+        "Student understands safety procedures",
+        "Student knows this is preparation for landing",
+        "Student is ready but aware this will feel different than cruise flight"
+      ]
+    },
+    {
+      "name": "Setup_Practice_Area",
+      "prompt": "Position aircraft in practice area at 3,500 feet AGL, away from airport traffic. Establish cruise flight. Perform thorough clearing turns - look for traffic in all directions. Brief the altitude lost during entry (approximately 100-200 feet) so the student is prepared. Select an outside reference point for heading. Transfer controls to student.",
+      "steps": [
+        "Navigate to practice area or use setPosition at 3,500 AGL",
+        "Establish straight and level cruise flight",
+        "Perform clearing turns: 90 degrees left, then 180 degrees right",
+        "Look for traffic above, below, and at same altitude",
+        "Select prominent outside reference for heading",
+        "Brief expected altitude loss during entry",
+        "Confirm student is ready",
+        "Transfer controls with positive exchange"
+      ],
+      "goals": [
+        "Practice area is clear of traffic",
+        "Aircraft is stabilized at 3,500 feet",
+        "Student has performed clearing turns",
+        "Student has outside reference selected",
+        "Student has controls and is ready to begin"
+      ]
+    },
+    {
+      "name": "Entry_Clean_Configuration",
+      "prompt": "Teach slow flight entry in clean configuration (no flaps). The procedure: reduce power to approximately 1,500 RPM, maintain altitude as airspeed decreases, as airspeed approaches 65 knots add full power, continue raising nose to maintain altitude, trim nose-up, establish approximately 55-60 KIAS. The airplane will be in a very nose-high attitude with full power to maintain altitude.",
+      "steps": [
+        "Apply carburetor heat",
+        "Reduce power to approximately 1,500 RPM",
+        "Maintain altitude with increasing back pressure as speed decreases",
+        "Watch airspeed decrease through 70 knots",
+        "At approximately 65 knots, smoothly add full power",
+        "Continue raising nose to maintain altitude as speed decreases further",
+        "Adjust pitch to maintain 55-60 KIAS",
+        "Add significant right rudder to counteract left-turning tendencies",
+        "Trim for nose-up attitude (lots of nose-up trim needed)",
+        "Stabilize at 55-60 KIAS in level flight",
+        "Note the high power setting, nose-high attitude, and mushy control feel"
+      ],
+      "goals": [
+        "Student can enter slow flight smoothly",
+        "Student maintains altitude within 100 feet during entry",
+        "Student establishes 55-60 KIAS in clean configuration",
+        "Student uses sufficient right rudder",
+        "Student trims properly for hands-off slow flight",
+        "Student recognizes the different sight picture and control feel"
+      ],
+      "commonErrors": [
+        "Not adding power soon enough (altitude loss)",
+        "Not adding enough power (cannot maintain altitude)",
+        "Insufficient right rudder (uncoordinated flight)",
+        "Not raising nose enough (airspeed too fast, not really slow flight)",
+        "Poor trim usage (fighting the controls)",
+        "Fixating on instruments instead of outside references"
+      ]
+    },
+    {
+      "name": "Slow_Flight_Maneuvers_Clean",
+      "prompt": "Have student practice maintaining slow flight in clean configuration. Emphasize outside references and the critical concept: power controls altitude, pitch controls airspeed. Practice small heading changes (10-20 degrees), altitude changes (plus/minus 100 feet), and recognizing the approach to stall (buffet, mushy controls, stall horn if equipped).",
+      "steps": [
+        "Maintain slow flight at 55-60 KIAS for 1-2 minutes",
+        "Practice heading changes: gentle 10-degree banks, coordinate with rudder",
+        "Practice altitude changes: add power to climb, reduce power to descend, adjust pitch for airspeed",
+        "Feel the mushy control response",
+        "Listen for stall warning horn (may activate intermittently)",
+        "Feel control surface buffet if present",
+        "Practice recovering 100 feet: add full power, lower nose slightly, return to altitude",
+        "Practice climbing 100 feet: add more power, maintain airspeed with pitch"
+      ],
+      "goals": [
+        "Student can maintain slow flight altitude within 100 feet",
+        "Student can maintain airspeed within 5 knots",
+        "Student can perform gentle turns while slow",
+        "Student demonstrates understanding that power controls altitude",
+        "Student recognizes stall warning indications",
+        "Student maintains coordination with adequate rudder"
+      ],
+      "commonErrors": [
+        "Using pitch to control altitude (leads to airspeed changes and potential stall)",
+        "Insufficient power additions for altitude corrections",
+        "Not using enough rudder in turns",
+        "Excessive bank angles (accelerated stall risk)",
+        "Fixating inside on instruments",
+        "Tensing up instead of relaxing"
+      ]
+    },
+    {
+      "name": "Recovery_To_Cruise_Clean",
+      "prompt": "Teach recovery from slow flight to normal cruise. The procedure: simultaneously lower nose to cruise attitude and reduce power to cruise setting, accelerate to cruise speed, remove carburetor heat, adjust trim to cruise. Emphasize smooth, coordinated recovery to avoid altitude gain.",
+      "steps": [
+        "Simultaneously lower nose to cruise pitch attitude",
+        "Reduce power to cruise RPM (approximately 2,300-2,400)",
+        "Allow airspeed to increase",
+        "As airspeed passes through 60 knots, reduce right rudder pressure",
+        "Stabilize at cruise speed (approximately 100 knots)",
+        "Fine-tune altitude with small pitch adjustments",
+        "Remove carburetor heat",
+        "Trim for cruise flight",
+        "Confirm aircraft is in normal cruise configuration"
+      ],
+      "goals": [
+        "Student performs smooth recovery to cruise flight",
+        "Student maintains altitude within 100 feet during recovery",
+        "Student coordinates power and pitch reduction",
+        "Student re-trims properly for cruise"
+      ],
+      "commonErrors": [
+        "Lowering nose without reducing power (excessive airspeed)",
+        "Reducing power without lowering nose (altitude loss)",
+        "Not reducing right rudder as speed increases",
+        "Gaining excessive altitude during recovery"
+      ]
+    },
+    {
+      "name": "Entry_Landing_Configuration",
+      "prompt": "Teach slow flight in landing configuration with full flaps. This more closely simulates the landing approach. Entry procedure is similar to clean configuration but add flaps incrementally as speed decreases. Final speed will be slower (approximately 50-55 KIAS) and power requirement will be higher due to flap drag.",
+      "steps": [
+        "From cruise flight, apply carburetor heat",
+        "Reduce power to 1,500 RPM, maintain altitude",
+        "As airspeed decreases below 110 KIAS, extend flaps 10 degrees",
+        "Continue slowing, add flaps 20 degrees below 95 KIAS",
+        "Add flaps 30 degrees (full) below 85 KIAS",
+        "As speed approaches 60 knots, add full power",
+        "Raise nose to maintain altitude",
+        "Establish 50-55 KIAS with full flaps",
+        "Use significant right rudder",
+        "Trim for landing configuration slow flight",
+        "Note even higher power requirement than clean configuration"
+      ],
+      "goals": [
+        "Student can enter slow flight in landing configuration",
+        "Student extends flaps at proper speeds",
+        "Student establishes 50-55 KIAS with full flaps",
+        "Student maintains altitude within 100 feet",
+        "Student uses proper coordination and trim",
+        "Student recognizes this simulates final approach conditions"
+      ],
+      "commonErrors": [
+        "Extending flaps too fast or at too high airspeed",
+        "Not adding enough power with full flaps (altitude loss)",
+        "Insufficient right rudder",
+        "Poor airspeed control during flap extension",
+        "Not recognizing increased proximity to stall with flaps"
+      ]
+    },
+    {
+      "name": "Slow_Flight_Maneuvers_Landing",
+      "prompt": "Practice slow flight maneuvers in landing configuration. This is the most important practice as it directly applies to landing. Maintain 50-55 KIAS, practice gentle turns simulating base to final, and practice slight altitude changes. Emphasize that this is exactly what the airplane feels like on final approach to landing.",
+      "steps": [
+        "Maintain landing configuration slow flight for 1-2 minutes",
+        "Practice shallow turns (10-15 degrees maximum) simulating pattern turns",
+        "Practice small altitude corrections with power",
+        "Maintain precise airspeed control",
+        "Note the sight picture - memorize this for landing approaches",
+        "Feel how much power is needed to maintain altitude",
+        "Recognize stall warning signs (closer to stall with flaps)",
+        "Practice a simulated go-around: full power, pitch for Vy, retract flaps gradually"
+      ],
+      "goals": [
+        "Student can maintain landing configuration slow flight precisely",
+        "Student performs coordinated turns while slow with flaps",
+        "Student recognizes this is the landing approach feel",
+        "Student can perform go-around from slow flight",
+        "Student builds confidence in low-speed flight",
+        "Student understands power-altitude relationship at slow speeds"
+      ],
+      "commonErrors": [
+        "Excessive bank angles with flaps (accelerated stall risk)",
+        "Poor airspeed discipline (drifting too slow near stall)",
+        "Not using enough power to maintain altitude",
+        "Uncoordinated flight",
+        "Forgetting this is practice for landing"
+      ]
+    },
+    {
+      "name": "Recovery_To_Cruise_Landing",
+      "prompt": "Teach recovery from landing configuration slow flight to normal cruise. Must coordinate power, pitch, and flap retraction. The procedure: add full power, lower nose slightly, establish positive rate of climb, retract flaps gradually (one setting at a time), accelerate to cruise speed, reduce to cruise power, trim.",
+      "steps": [
+        "Add full power smoothly",
+        "Lower nose to climb attitude (approximately Vy)",
+        "Confirm positive rate of climb on VSI",
+        "Retract flaps to 20 degrees",
+        "Allow airspeed to increase to 60 knots",
+        "Retract flaps to 10 degrees",
+        "Allow airspeed to increase to 70 knots",
+        "Retract flaps to 0 degrees",
+        "Climb to desired altitude or level off",
+        "Reduce power to cruise setting",
+        "Remove carburetor heat",
+        "Trim for cruise flight"
+      ],
+      "goals": [
+        "Student performs safe recovery with proper sequencing",
+        "Student retracts flaps gradually, not all at once",
+        "Student maintains altitude or climb as appropriate",
+        "Student coordinates power, pitch, and flap changes",
+        "Student ends in stabilized cruise flight"
+      ],
+      "commonErrors": [
+        "Retracting all flaps at once (may cause sink or stall)",
+        "Not adding enough power before raising nose",
+        "Retracting flaps at too slow an airspeed",
+        "Poor pitch control during recovery",
+        "Excessive altitude loss or gain"
+      ]
+    },
+    {
+      "name": "Integration_Practice",
+      "prompt": "Final practice session: have student perform complete sequence multiple times. Entry clean, maneuvers, recovery. Entry landing configuration, maneuvers, recovery. Build consistency and confidence. Praise good technique and provide specific feedback on areas to improve.",
+      "steps": [
+        "Complete cycle: enter clean slow flight, maneuvers, recover",
+        "Complete cycle: enter landing slow flight, maneuvers, recover",
+        "Repeat if time and altitude allow",
+        "Monitor altitude management (regain altitude between repetitions if needed)",
+        "Provide specific, actionable feedback",
+        "Note improvements throughout the practice",
+        "Build student confidence through successful repetitions"
+      ],
+      "goals": [
+        "Student demonstrates consistent slow flight entries",
+        "Student can perform both clean and landing configuration slow flight",
+        "Student shows improved precision and confidence",
+        "Student understands the practical application to landing",
+        "Student is proficient at slow flight operations"
+      ]
+    },
+    {
+      "name": "Return_And_Debrief",
+      "prompt": "Navigate back to KPAO. Discuss what slow flight teaches about the airplane and why it matters. Quiz student on key concepts: power controls altitude at slow speeds, recognition of stall warning signs, relationship to landing approach. Celebrate their accomplishment of controlling the aircraft at the edge of the envelope. Preview next module: traffic pattern operations.",
+      "steps": [
+        "Return to KPAO practice area",
+        "Discuss what they learned about aircraft behavior at slow speeds",
+        "Quiz: what controls altitude in slow flight? (power)",
+        "Quiz: what controls airspeed in slow flight? (pitch)",
+        "Discuss how this relates to landing approaches",
+        "Ask what stall warning signs they noticed",
+        "Provide overall feedback on their performance",
+        "Celebrate completing Module 1: Fundamentals",
+        "Preview Module 2: Traffic pattern operations at KRHV",
+        "Answer any final questions"
+      ],
+      "goals": [
+        "Student can articulate key slow flight principles",
+        "Student understands power-altitude relationship at slow speeds",
+        "Student connects slow flight to landing approach",
+        "Student recognizes stall warning signs",
+        "Student feels accomplished and ready for traffic pattern work",
+        "Student has completed all fundamentals training"
+      ]
+    }
+  ]
+}

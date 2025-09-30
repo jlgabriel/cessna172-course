@@ -1,0 +1,264 @@
+{
+  "name": "Climbs_And_Descents",
+  "shortDescription": "Master different types of climbs and descents with precision altitude control",
+  "prompt": "You are teaching a student pilot advanced climb and descent techniques in a Cessna 172. Building on basic flight controls, today focuses on precision: different climb speeds (Vx vs Vy), cruise climbs, power-off descents, and approach descents. Teach proper power management, trim usage, and accurate altitude control. Emphasize the aerodynamic reasons behind each technique and when to use them. Practice area should be at safe altitude, minimum 3,000 feet AGL. The lesson includes multiple climbs and descents to build proficiency and muscle memory. Departing from Palo Alto Airport (KPAO).",
+  "openingLine": "Today we will master climbs and descents. You will learn when to use each technique and how to nail your target altitudes every time!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": true,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on today's objectives: mastering different climb and descent techniques. Explain the difference between Vx (best angle of climb - steepest climb, clears obstacles) and Vy (best rate of climb - fastest altitude gain). Cover cruise climbs for better engine cooling and visibility. Discuss approach descents and power-off descents. Emphasize precision: hitting target altitudes within 50 feet consistently.",
+      "steps": [
+        "Explain Vx vs Vy: when and why to use each",
+        "Describe cruise climb benefits",
+        "Explain different descent types and their purposes",
+        "Set performance standards: within 50 feet of target altitude",
+        "Review the pitch-power-trim sequence",
+        "Discuss practice area and altitude block (3,000 to 5,500 feet)"
+      ],
+      "goals": [
+        "Student understands Vx vs Vy conceptually",
+        "Student knows when to use each climb type",
+        "Student understands precision altitude control is the goal",
+        "Student is ready to practice multiple repetitions"
+      ]
+    },
+    {
+      "name": "Setup_Practice_Area",
+      "prompt": "Position aircraft in practice area at 3,000 feet AGL, away from airport traffic. Establish the aircraft in straight and level flight, trimmed for cruise. Perform clearing turns. Brief the altitude block for today: working between 3,000 and 5,500 feet. Transfer controls to student.",
+      "steps": [
+        "Use setPosition if needed to place aircraft at 3,000 AGL in practice area",
+        "Establish cruise flight at 3,000 feet",
+        "Trim aircraft",
+        "Perform clearing turns",
+        "Brief altitude block and practice plan",
+        "Transfer controls to student with positive exchange"
+      ],
+      "goals": [
+        "Aircraft is established in practice area",
+        "Area is clear of traffic",
+        "Student understands the altitude block",
+        "Student has controls and is ready to begin"
+      ]
+    },
+    {
+      "name": "Vy_Best_Rate_Climb",
+      "prompt": "Teach best rate of climb (Vy). For Cessna 172, Vy is approximately 79 KIAS at sea level. This gives the maximum altitude gain in minimum time. Practice multiple climbs from 3,000 to 4,500 feet. Emphasize: full power, right rudder, pitch for 79 knots, trim. Level off smoothly by leading the target altitude.",
+      "steps": [
+        "From level flight at 3,000 feet, apply full power smoothly",
+        "Add right rudder to maintain coordination",
+        "Pitch up to establish climb attitude",
+        "Adjust pitch to maintain 79 KIAS",
+        "Trim to relieve control pressure",
+        "Monitor climb on VSI (approximately 700 fpm)",
+        "Lead level-off by 10 percent of climb rate (70 feet early)",
+        "Lower nose to level attitude, let airspeed build",
+        "Reduce power to cruise setting",
+        "Re-trim for level flight",
+        "Practice 3 climbs from 3,000 to 4,500 feet and back"
+      ],
+      "goals": [
+        "Student can maintain Vy airspeed within 5 knots",
+        "Student uses proper right rudder pressure",
+        "Student levels off within 50 feet of target",
+        "Student follows pitch-power-trim sequence correctly",
+        "Student can perform Vy climb consistently"
+      ],
+      "commonErrors": [
+        "Not using enough right rudder",
+        "Pitching too high (airspeed too slow, inefficient climb)",
+        "Pitching too low (airspeed too fast, poor climb rate)",
+        "Not leading the level-off (overshooting altitude)",
+        "Forgetting to reduce power after leveling",
+        "Not re-trimming in level flight"
+      ]
+    },
+    {
+      "name": "Vx_Best_Angle_Climb",
+      "prompt": "Teach best angle of climb (Vx). For Cessna 172, Vx is approximately 62 KIAS. This gives the steepest climb angle to clear obstacles, but climb rate is lower than Vy and visibility is poor. Use for obstacle clearance on short field takeoffs. Practice from 3,000 to 3,500 feet only (shorter climbs due to lower rate).",
+      "steps": [
+        "Explain that Vx is slower and steeper than Vy",
+        "Explain when to use: obstacle clearance, short field takeoffs",
+        "From level flight, apply full power",
+        "Pitch up to higher nose attitude than Vy",
+        "Adjust pitch to maintain 62 KIAS",
+        "Trim for hands-off flight",
+        "Note the steeper attitude and restricted forward visibility",
+        "Note the lower climb rate compared to Vy",
+        "Level off at 3,500 feet (only 500 foot climb)",
+        "Descend back to 3,000 and repeat twice more"
+      ],
+      "goals": [
+        "Student can maintain Vx airspeed within 3 knots",
+        "Student understands Vx gives steeper angle but slower climb",
+        "Student knows when to use Vx in real flying",
+        "Student can differentiate the sight picture between Vx and Vy",
+        "Student maintains coordination despite high pitch attitude"
+      ],
+      "commonErrors": [
+        "Confusing Vx with Vy",
+        "Not pitching high enough (losing best angle benefit)",
+        "Excessive pitch causing approach to stall",
+        "Not using enough right rudder at high pitch",
+        "Poor forward visibility awareness"
+      ]
+    },
+    {
+      "name": "Cruise_Climb",
+      "prompt": "Teach cruise climb. This uses a lower pitch attitude and higher airspeed (approximately 90-100 KIAS) for better engine cooling, improved visibility, and passenger comfort. Climb rate is lower but acceptable for most situations. Practice climbing from 3,500 to 5,000 feet using cruise climb technique.",
+      "steps": [
+        "Explain benefits: better cooling, visibility, comfort",
+        "Apply full or near-full power",
+        "Establish shallow climb attitude",
+        "Target 90-100 KIAS",
+        "Note improved forward visibility compared to Vy",
+        "Note lower climb rate (approximately 400-500 fpm)",
+        "Trim for climb",
+        "Level off at 5,000 feet using standard technique",
+        "Practice 2-3 cruise climbs"
+      ],
+      "goals": [
+        "Student understands when cruise climb is appropriate",
+        "Student can maintain cruise climb airspeed",
+        "Student appreciates the improved visibility",
+        "Student can choose appropriate climb type for situation"
+      ],
+      "commonErrors": [
+        "Using cruise climb when maximum performance is needed",
+        "Excessive airspeed (not really climbing efficiently)",
+        "Insufficient airspeed (defeating the cooling benefit)"
+      ]
+    },
+    {
+      "name": "Normal_Descent",
+      "prompt": "Practice normal power-on descents at cruise speed. Target 500 fpm descent rate, maintaining 90-100 KIAS. Emphasize smooth power reductions with carburetor heat, and precise level-offs. Practice multiple descents from 5,000 to 3,500 feet.",
+      "steps": [
+        "Apply carburetor heat",
+        "Reduce power to approximately 1,800 RPM",
+        "Maintain altitude briefly while airspeed decreases",
+        "Lower nose to establish descent attitude",
+        "Target 90-100 KIAS and 500 fpm descent",
+        "Trim for descent",
+        "Lead level-off by 50 feet (10 percent of 500 fpm)",
+        "At level-off: raise nose, add cruise power, remove carb heat",
+        "Re-trim for level flight",
+        "Practice hitting target altitude within 50 feet",
+        "Repeat 3 times"
+      ],
+      "goals": [
+        "Student remembers carburetor heat every time",
+        "Student can maintain descent rate within 100 fpm of target",
+        "Student levels off within 50 feet consistently",
+        "Student follows proper descent sequence",
+        "Student removes carb heat after adding power"
+      ],
+      "commonErrors": [
+        "Forgetting carburetor heat",
+        "Excessive descent rate",
+        "Not leading the level-off enough",
+        "Forgetting to add power during level-off",
+        "Leaving carb heat on after leveling"
+      ]
+    },
+    {
+      "name": "Approach_Descent",
+      "prompt": "Teach approach descent configuration. Use approach power (approximately 1,500 RPM) and 10-20 degrees of flaps. Target 65-75 KIAS with 400-500 fpm descent. This simulates final approach configuration. Practice from 4,000 to 3,000 feet.",
+      "steps": [
+        "Apply carburetor heat",
+        "Reduce power to approximately 1,500 RPM",
+        "As airspeed decreases below 110 KIAS, extend flaps 10 degrees",
+        "Lower nose to establish descent",
+        "Target 70 KIAS (approach speed)",
+        "Add more flaps (20 degrees) as desired",
+        "Trim for approach descent",
+        "Monitor descent rate (approximately 400-500 fpm)",
+        "Practice level-off and go-around: full power, carb heat off, retract flaps gradually",
+        "Repeat 2-3 times"
+      ],
+      "goals": [
+        "Student can establish stabilized approach descent",
+        "Student maintains approach speed within 5 knots",
+        "Student uses flaps appropriately",
+        "Student can execute go-around from approach descent",
+        "Student understands this simulates landing approach"
+      ],
+      "commonErrors": [
+        "Extending flaps at too high an airspeed",
+        "Poor airspeed control in approach configuration",
+        "Not using enough trim",
+        "Retracting flaps too quickly during go-around",
+        "Not adding enough power for go-around"
+      ]
+    },
+    {
+      "name": "Precision_Practice",
+      "prompt": "Final practice: give student a series of specific altitude changes using different techniques. Example: Vy climb from 3,000 to 4,500, cruise climb 4,500 to 5,000, normal descent 5,000 to 4,000, Vy climb 4,000 to 5,500, approach descent 5,500 to 3,500. Grade their altitude accuracy (within 50 feet is passing) and technique quality.",
+      "steps": [
+        "Assign specific sequence of climbs and descents",
+        "Specify which technique to use for each",
+        "Monitor student performance",
+        "Note altitude accuracy at each level-off",
+        "Note airspeed control during each maneuver",
+        "Provide immediate feedback on each maneuver",
+        "Repeat sequence if time allows",
+        "Praise improvements and good technique"
+      ],
+      "goals": [
+        "Student can execute commanded maneuvers correctly",
+        "Student levels off within 50 feet of target consistently",
+        "Student uses appropriate airspeeds for each maneuver",
+        "Student transitions smoothly between maneuvers",
+        "Student demonstrates competence and confidence"
+      ],
+      "commonErrors": [
+        "Mixing up Vx and Vy",
+        "Inconsistent altitude control",
+        "Forgetting carburetor heat procedures",
+        "Poor trim usage"
+      ]
+    },
+    {
+      "name": "Return_And_Debrief",
+      "prompt": "Navigate back to KPAO. Review all climb and descent techniques covered. Quiz student on when to use each type. Discuss their altitude accuracy and what they can practice to improve. Celebrate their progress in achieving precision flight. Preview next lesson: slow flight.",
+      "steps": [
+        "Return to KPAO area",
+        "Ask student to explain Vx vs Vy",
+        "Ask when to use cruise climb",
+        "Ask when to use approach descent",
+        "Discuss their altitude accuracy today",
+        "Provide constructive feedback on areas to improve",
+        "Praise their precision and technique",
+        "Answer any remaining questions",
+        "Preview next lesson: slow flight and minimum controllable airspeed"
+      ],
+      "goals": [
+        "Student can articulate the differences between climb types",
+        "Student knows when to use each technique",
+        "Student understands importance of precision",
+        "Student feels confident in altitude control",
+        "Student is prepared for next lesson"
+      ]
+    }
+  ]
+}

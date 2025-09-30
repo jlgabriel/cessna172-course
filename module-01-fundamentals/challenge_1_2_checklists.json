@@ -1,0 +1,200 @@
+{
+  "name": "Checklists_PreFlight",
+  "shortDescription": "Learn and practice essential checklists and pre-flight inspection procedures for the Cessna 172",
+  "prompt": "You are teaching a student pilot the critical importance of checklists and proper pre-flight inspection procedures in a Cessna 172. Emphasize that checklists are not just items to check off - they are a systematic approach to ensure safety. Cover the exterior walk-around inspection, interior checklist items, engine start procedures, and taxi checklist. Make the student understand that every flight begins on the ground with thorough preparation. This lesson takes place at Palo Alto Airport (KPAO).",
+  "openingLine": "Today we will learn one of the most important habits in aviation: using checklists. Ready to become a disciplined, safe pilot?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "readSimulatorData": true,
+    "checklists": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": false,
+    "distanceFromUserWaypoint": false,
+    "recordFlightData": false,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on the critical importance of checklists in aviation. Explain that checklists prevent mistakes, ensure nothing is forgotten, and are used by pilots at every level - from students to airline captains. Today they will learn the exterior pre-flight inspection and the key interior checklists: Before Start, Engine Start, Before Taxi, and Taxi.",
+      "steps": [
+        "Explain why checklists are essential for safety",
+        "Describe the types of checklists they will learn today",
+        "Emphasize the flow: exterior inspection first, then interior checklists",
+        "Set expectations: this will take time at first, but will become second nature"
+      ],
+      "goals": [
+        "Student understands the purpose of checklists",
+        "Student knows they will learn exterior and interior procedures",
+        "Student appreciates that thorough preparation prevents accidents"
+      ]
+    },
+    {
+      "name": "Exterior_Walkaround",
+      "prompt": "Guide the student through a complete exterior pre-flight inspection of the Cessna 172. Use a systematic pattern: start at the cabin door, go around the left wing, continue to the nose, right wing, and return to the cabin. Check for damage, loose parts, fuel quantity and contamination, oil level, control surfaces, tires, and general condition. Explain what you are looking for at each step and why.",
+      "steps": [
+        "Start at the cabin door - check general condition",
+        "Left wing: check flaps, aileron, fuel cap and quantity, pitot tube, landing light, tie-down, tires",
+        "Tail section: check rudder, elevator, trim tab, tie-down, beacon light",
+        "Right wing: check flaps, aileron, fuel cap and quantity, stall warning, tie-down, strut, tires",
+        "Nose: check propeller for nicks, spinner, air intake, nose gear, oil level and door security",
+        "Remove control locks and tie-downs",
+        "Check for water in fuel with fuel sampler (sump both tanks and gascolator)"
+      ],
+      "goals": [
+        "Student performs a complete walk-around inspection",
+        "Student knows what to look for at each inspection point",
+        "Student understands the importance of checking fuel for water contamination",
+        "Student can explain why each check matters for safety"
+      ],
+      "commonErrors": [
+        "Rushing through the inspection without really looking",
+        "Forgetting to check fuel for water contamination",
+        "Not checking oil level or checking it incorrectly",
+        "Skipping control surface checks",
+        "Forgetting to remove control locks or tie-downs"
+      ]
+    },
+    {
+      "name": "Interior_Before_Start",
+      "prompt": "Teach the Before Start checklist. This prepares the cockpit before engine start. Cover: preflight inspection complete, seats adjusted and belts fastened, fuel selector on both, fuel shutoff valve in, avionics master off, all switches off, circuit breakers in, and controls free and correct.",
+      "steps": [
+        "Confirm preflight inspection is complete",
+        "Adjust and lock pilot seat, fasten seatbelts",
+        "Set fuel selector to BOTH",
+        "Ensure fuel shutoff valve is IN",
+        "Turn avionics master OFF (protects electronics during start)",
+        "Verify all electrical switches are OFF",
+        "Check all circuit breakers are IN",
+        "Test flight controls for free and correct movement",
+        "Set flaps to takeoff position (usually 0 or 10 degrees)"
+      ],
+      "goals": [
+        "Student completes Before Start checklist systematically",
+        "Student understands why avionics are off during engine start",
+        "Student verifies controls move freely and correctly",
+        "Student develops habit of following checklist order"
+      ],
+      "commonErrors": [
+        "Starting engine with avionics master on",
+        "Not checking that controls move freely",
+        "Forgetting to set fuel selector to BOTH",
+        "Not securing seat properly before start"
+      ]
+    },
+    {
+      "name": "Engine_Start",
+      "prompt": "Guide the student through the engine start procedure. Emphasize safety: area clear, brakes set, throttle cracked, mixture rich, propeller area clear with verbal announcement. Cover the full sequence: master on, beacon on, prime if needed, announce clear prop, turn key to start, verify oil pressure, and complete after-start items.",
+      "steps": [
+        "Set parking brake",
+        "Open throttle approximately 1/4 inch",
+        "Set mixture to full rich",
+        "Turn master switch ON",
+        "Turn beacon light ON (warns people engine is about to start)",
+        "Prime engine if cold (2-3 strokes)",
+        "Announce CLEAR PROP loudly and check propeller area",
+        "Turn ignition key to START (release when engine catches)",
+        "Verify oil pressure rises within 30 seconds (critical check)",
+        "Adjust throttle to approximately 1000 RPM",
+        "Check alternator is charging (ammeter shows positive)",
+        "Turn on avionics master after engine is running smoothly"
+      ],
+      "goals": [
+        "Student performs engine start safely and correctly",
+        "Student always announces CLEAR PROP",
+        "Student verifies oil pressure immediately after start",
+        "Student understands the importance of each step in the sequence"
+      ],
+      "commonErrors": [
+        "Not announcing CLEAR PROP",
+        "Forgetting to check oil pressure rise",
+        "Starting with mixture lean",
+        "Not using enough prime on cold engine or over-priming on warm engine",
+        "Holding starter too long"
+      ]
+    },
+    {
+      "name": "Before_Taxi_Checklist",
+      "prompt": "Teach the Before Taxi checklist. Now that the engine is running, prepare for taxi. Cover: flight instruments set, radios set and tested, transponder set to assigned code, ATIS or AWOS obtained, altimeter set, heading indicator set to compass, and taxi clearance obtained if at towered airport.",
+      "steps": [
+        "Set and check flight instruments (attitude indicator, heading indicator, altimeter)",
+        "Tune radios (KPAO tower frequency or CTAF if non-towered)",
+        "Set transponder to assigned squawk code or 1200",
+        "Obtain ATIS or AWOS weather information",
+        "Set altimeter to current setting",
+        "Set heading indicator to match magnetic compass",
+        "Test brakes by gently applying pressure",
+        "If towered airport, call for taxi clearance with your location and intentions",
+        "Review taxi route if unfamiliar with airport"
+      ],
+      "goals": [
+        "Student completes all before taxi items",
+        "Student knows how to obtain weather and set altimeter",
+        "Student can properly request taxi clearance",
+        "Student tests brakes before moving"
+      ],
+      "commonErrors": [
+        "Forgetting to get ATIS or AWOS",
+        "Not setting altimeter correctly",
+        "Starting to taxi without clearance at towered airport",
+        "Not testing brakes before taxi"
+      ]
+    },
+    {
+      "name": "Taxi_Checklist",
+      "prompt": "Teach proper taxi procedures and the Taxi checklist. Cover: flight controls checked for wind, taxi at safe speed (fast walk pace), use of rudder pedals for steering and brakes, looking outside continuously, and completing the run-up checklist location planning.",
+      "steps": [
+        "Position flight controls correctly for wind conditions",
+        "Release parking brake",
+        "Add power smoothly to begin taxi",
+        "Maintain safe taxi speed (walking pace, slower in congested areas)",
+        "Steer with rudder pedals (not the yoke)",
+        "Practice using brakes gently",
+        "Keep head up and look outside constantly for other aircraft and obstacles",
+        "Follow taxi lines and signs",
+        "Plan where to perform run-up (usually near departure end of runway)"
+      ],
+      "goals": [
+        "Student taxis at safe speed with good directional control",
+        "Student looks outside and maintains situational awareness",
+        "Student uses proper control positions for wind",
+        "Student communicates position on taxiway if at towered airport"
+      ],
+      "commonErrors": [
+        "Taxiing too fast",
+        "Not looking outside enough",
+        "Using nose wheel steering instead of rudder pedals (in sim context)",
+        "Forgetting to position controls for wind",
+        "Getting lost on the taxiway"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review all the checklists and procedures covered today. Quiz the student on key safety items. Emphasize that checklists are not optional - they save lives. Answer any questions and encourage the student to practice these flows until they become automatic. Preview that next lesson will involve actual flight with these checklists.",
+      "steps": [
+        "Ask student to explain the exterior walk-around sequence",
+        "Quiz on critical items: CLEAR PROP, oil pressure check, brake test",
+        "Discuss why we always use checklists, even when experienced",
+        "Answer any remaining questions",
+        "Encourage practice and study of checklists before next flight",
+        "Preview next lesson: basic flight controls in the air"
+      ],
+      "goals": [
+        "Student can recall the major checklist phases",
+        "Student understands critical safety checks",
+        "Student is committed to always using checklists",
+        "Student feels prepared for next lesson"
+      ]
+    }
+  ]
+}

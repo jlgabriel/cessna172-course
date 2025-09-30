@@ -1,0 +1,237 @@
+{
+  "name": "Basic_Flight_Controls",
+  "shortDescription": "Learn the fundamental flight controls and how they affect the aircraft in flight",
+  "prompt": "You are teaching a student pilot their first airborne lesson on basic flight controls in a Cessna 172. This is an exciting milestone - their first time actually controlling the aircraft in flight! Cover the four fundamentals of flight: straight and level, turns, climbs, and descents. Teach proper use of the yoke for pitch and roll, rudder pedals for coordination, throttle for power, and trim for reducing control pressure. Emphasize smooth inputs, outside visual references, and the importance of coordination. Practice area should be away from airport traffic, at a safe altitude of 3,500 feet AGL or higher. Departing from Palo Alto Airport (KPAO).",
+  "openingLine": "Congratulations! Today you will actually fly the airplane. Ready to take the controls and experience the magic of flight?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": true,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on today's lesson objectives. Explain that they will learn the four fundamentals of flight: straight and level, turns, climbs, and descents. Cover the effects of each control: yoke controls pitch and roll, rudder pedals control yaw and provide coordination, throttle controls power, and trim relieves control pressure. Emphasize that all maneuvers today will be performed at a safe altitude with smooth, coordinated inputs. Review the practice area location and safety procedures.",
+      "steps": [
+        "Explain today's goals: master basic flight control inputs",
+        "Review the four fundamentals of flight",
+        "Describe the practice area (away from airport, minimum 3,500 AGL)",
+        "Review clearing turns and collision avoidance",
+        "Explain the concept of outside visual references",
+        "Discuss what smooth, coordinated flight feels like"
+      ],
+      "goals": [
+        "Student understands the lesson objectives",
+        "Student knows the practice area location and altitude requirements",
+        "Student is excited but understands safety comes first",
+        "Student knows they will be doing the flying today"
+      ]
+    },
+    {
+      "name": "Departure_Setup",
+      "prompt": "Set up the aircraft in the practice area at 3,500 feet AGL in straight and level flight, cruise configuration. Use setPosition if needed to place aircraft in appropriate location west of KPAO over safe terrain. Ensure student is ready to take controls. Brief the transfer of controls procedure: you have the controls, I have the controls, you have the controls.",
+      "steps": [
+        "Position aircraft at 3,500 AGL in practice area",
+        "Establish straight and level flight, cruise power (approximately 2,300 RPM)",
+        "Trim aircraft for hands-off flight",
+        "Perform clearing turns to check for traffic",
+        "Brief the positive exchange of controls procedure",
+        "Transfer controls to student with clear communication"
+      ],
+      "goals": [
+        "Aircraft is stabilized and trimmed",
+        "Practice area is clear of traffic",
+        "Student understands control transfer procedure",
+        "Student has the controls and knows it"
+      ],
+
+    },
+    {
+      "name": "Straight_And_Level",
+      "prompt": "Teach straight and level flight - the foundation of all flying. Have the student hold altitude within 100 feet and heading within 10 degrees. Teach them to use the horizon as a pitch reference and landmarks for heading. Emphasize gentle, small corrections rather than large control movements. Teach proper instrument cross-check between outside references and instruments. Introduce the concept of trim to relieve control pressure.",
+      "steps": [
+        "Explain the sight picture for level flight - horizon position relative to cowl",
+        "Have student place hands lightly on yoke and feel the control forces",
+        "Practice small pitch corrections to maintain altitude",
+        "Select a distant landmark for heading reference",
+        "Practice small aileron corrections to maintain heading",
+        "Introduce rudder use to keep ball centered",
+        "Demonstrate and practice using trim to relieve control pressure",
+        "Practice maintaining altitude within 100 feet and heading within 10 degrees for 2 minutes"
+      ],
+      "goals": [
+        "Student can maintain altitude within 100 feet",
+        "Student can maintain heading within 10 degrees",
+        "Student uses outside references primarily with instrument backup",
+        "Student makes smooth, small corrections",
+        "Student understands and uses trim",
+        "Student keeps ball centered with rudder"
+      ],
+      "commonErrors": [
+        "Chasing the altimeter with large pitch corrections",
+        "Fixating on instruments instead of looking outside",
+        "Not using trim, fighting the controls",
+        "Overcontrolling with large, abrupt inputs",
+        "Forgetting to use rudder for coordination",
+        "Tensing up and gripping controls too tightly"
+      ]
+    },
+    {
+      "name": "Level_Turns",
+      "prompt": "Teach coordinated level turns. Start with shallow 15-degree bank turns, progress to medium 30-degree bank turns. Emphasize the coordination of aileron, rudder, and elevator. Teach that in turns, back pressure is needed to maintain altitude due to loss of vertical lift component. Practice rolling into the turn, holding the bank, and rolling out smoothly on a specific heading. Use rudder to keep the ball centered throughout.",
+      "steps": [
+        "Explain the aerodynamics: why back pressure is needed in turns",
+        "Demonstrate a shallow 15-degree bank turn to the left",
+        "Have student practice: look where you want to turn, apply aileron and rudder together",
+        "Teach adding slight back pressure as bank increases",
+        "Practice holding the bank steady",
+        "Teach rolling out: lead the desired heading by half the bank angle",
+        "Practice turns to specific headings (left and right)",
+        "Progress to 30-degree bank turns",
+        "Practice 90-degree, 180-degree, and 360-degree turns"
+      ],
+      "goals": [
+        "Student can perform coordinated turns (ball centered)",
+        "Student maintains altitude within 100 feet during turns",
+        "Student can roll out on specific headings within 10 degrees",
+        "Student understands the relationship between bank angle and back pressure",
+        "Student can perform both left and right turns smoothly"
+      ],
+      "commonErrors": [
+        "Not using enough rudder (skidding or slipping)",
+        "Not adding back pressure (altitude loss in turns)",
+        "Adding too much back pressure (altitude gain)",
+        "Overbanking or underbanking",
+        "Not leading the rollout, overshooting headings",
+        "Fixating inside the cockpit during turns"
+      ]
+    },
+    {
+      "name": "Climbs",
+      "prompt": "Teach how to establish and maintain a climb. Cover the pitch-power-trim sequence: power first, pitch for airspeed, trim to relieve pressure. Teach climbing at Vy (best rate of climb, approximately 79 KIAS for C172). Explain that during climb, right rudder is needed to counteract left-turning tendencies. Practice leveling off at a target altitude using the lead point technique.",
+      "steps": [
+        "From straight and level, smoothly add full power",
+        "Apply right rudder to counteract left-turning tendencies",
+        "Raise nose to climb attitude (use horizon reference)",
+        "Allow airspeed to stabilize at Vy (approximately 79 knots)",
+        "Trim to relieve control pressure",
+        "Maintain climb attitude with outside reference and airspeed with instruments",
+        "Practice leveling off: lead target altitude by 10% of climb rate",
+        "At level-off, lower nose to level flight attitude",
+        "Allow airspeed to increase, reduce power to cruise setting",
+        "Re-trim for level flight"
+      ],
+      "goals": [
+        "Student can establish a climb at Vy airspeed",
+        "Student uses right rudder during climb",
+        "Student can maintain climb airspeed within 5 knots",
+        "Student can level off smoothly at target altitude within 100 feet",
+        "Student follows the pitch-power-trim sequence"
+      ],
+      "commonErrors": [
+        "Not using enough right rudder (uncoordinated climb)",
+        "Pitching up too aggressively (airspeed too slow)",
+        "Not pitching up enough (poor climb rate)",
+        "Not leveling off soon enough (overshooting altitude)",
+        "Forgetting to reduce power after level-off",
+        "Not re-trimming after level-off"
+      ]
+    },
+    {
+      "name": "Descents",
+      "prompt": "Teach how to establish and maintain a descent. Cover the descent sequence: reduce power first, maintain altitude until airspeed decreases, then lower nose to descent attitude. Teach descending at cruise descent speed (approximately 90-100 KIAS). Practice leveling off smoothly at a target altitude. Emphasize that carburetor heat should be applied when reducing power below cruise settings.",
+      "steps": [
+        "Apply carburetor heat before reducing power",
+        "Reduce power to approximately 1,800 RPM",
+        "Maintain altitude until airspeed decreases",
+        "Lower nose to establish descent (approximately 500 fpm)",
+        "Maintain descent airspeed with pitch",
+        "Trim for descent",
+        "Practice leveling off: lead target altitude by 10% of descent rate",
+        "At level-off, raise nose to level flight attitude",
+        "Add power to cruise setting",
+        "Turn off carburetor heat after adding power",
+        "Re-trim for level flight"
+      ],
+      "goals": [
+        "Student can establish a stabilized descent",
+        "Student remembers to use carburetor heat",
+        "Student can maintain descent airspeed within 5 knots",
+        "Student can level off smoothly at target altitude within 100 feet",
+        "Student follows proper descent sequence"
+      ],
+      "commonErrors": [
+        "Forgetting carburetor heat",
+        "Lowering nose before reducing power (excessive airspeed)",
+        "Not lowering nose enough (insufficient descent rate)",
+        "Leveling off too late (busting altitude)",
+        "Forgetting to turn off carb heat after adding power",
+        "Not adding enough power during level-off (continued descent)"
+      ]
+    },
+    {
+      "name": "Integration_Practice",
+      "prompt": "Have the student practice integrating all four fundamentals. Give them a series of maneuvers: climb to 4,500 feet, level off, turn to heading 090, descend to 3,500 feet, level off, turn to heading 180. Evaluate their ability to smoothly transition between maneuvers while maintaining coordination. Provide positive feedback and constructive corrections.",
+      "steps": [
+        "Assign sequence: climb to 4,500, level off, turn heading 090",
+        "Then: descend to 3,500, level off, turn heading 180",
+        "Observe student's coordination and smoothness",
+        "Provide real-time coaching as needed",
+        "Praise good technique",
+        "Correct errors gently and clearly",
+        "Repeat sequences until student shows improvement",
+        "Build student's confidence"
+      ],
+      "goals": [
+        "Student can transition smoothly between maneuvers",
+        "Student maintains coordination throughout",
+        "Student uses proper pitch-power-trim sequences",
+        "Student demonstrates understanding of all four fundamentals",
+        "Student shows growing confidence and competence"
+      ],
+      "commonErrors": [
+        "Rushing transitions between maneuvers",
+        "Forgetting trim changes",
+        "Losing situational awareness of altitude or heading",
+        "Not maintaining coordination during transitions"
+      ]
+    },
+    {
+      "name": "Return_And_Debrief",
+      "prompt": "Guide student back to KPAO practice area. Review what was learned today. Quiz them on key concepts. Emphasize that these basics are the foundation of all future flying. Praise their accomplishment of actually flying the airplane. Answer questions and preview next lesson on climbs and descents in more detail.",
+      "steps": [
+        "Navigate back toward KPAO",
+        "Take controls for pattern entry and landing if needed",
+        "Ask student to describe what they learned",
+        "Quiz on key points: coordination, trim, pitch-power relationship",
+        "Discuss what felt challenging and what felt natural",
+        "Celebrate their first time actually flying the airplane",
+        "Answer any questions",
+        "Preview next lesson: more advanced climbs and descents"
+      ],
+      "goals": [
+        "Student can articulate what they learned",
+        "Student feels proud of their accomplishment",
+        "Student understands the importance of today's fundamentals",
+        "Student is eager to continue training"
+      ]
+    }
+  ]
+}

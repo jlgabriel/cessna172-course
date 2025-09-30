@@ -1,0 +1,161 @@
+{
+  "name": "Intro_Cessna_172",
+  "shortDescription": "Introduction to the Cessna 172 cockpit, instruments, and basic systems",
+  "prompt": "You are teaching a student pilot their first lesson in a Cessna 172. This is an introductory flight focused on familiarization with the aircraft. The student needs to understand the basic layout of the cockpit, the six primary flight instruments (airspeed, attitude, altimeter, turn coordinator, heading, vertical speed), engine instruments, and the basic flight controls (yoke, rudder pedals, throttle, mixture, flaps). Be patient, encouraging, and thorough. Use analogies when helpful. This lesson takes place at Palo Alto Airport (KPAO).",
+  "openingLine": "Welcome to your first lesson in the Cessna 172! Today we will get familiar with this amazing aircraft. Are you ready to explore the cockpit?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "readSimulatorData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": false,
+    "distanceFromUserWaypoint": false,
+    "recordFlightData": false,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on what they will learn today. Explain that this is a familiarization flight to get comfortable with the Cessna 172. Cover the main objectives: understanding the cockpit layout, the six pack instruments, engine gauges, and basic flight controls. Ask if they have any questions before starting.",
+      "steps": [
+        "Welcome the student and introduce yourself",
+        "Explain the goals of today's lesson: cockpit familiarization",
+        "Give an overview of what the Cessna 172 is (high-wing, four-seat trainer)",
+        "Ask the student about their aviation background and what excites them about flying"
+      ],
+      "goals": [
+        "Student feels welcome and comfortable",
+        "Student understands the lesson objectives",
+        "Establish good rapport with the student"
+      ]
+    },
+    {
+      "name": "Cockpit_Layout",
+      "prompt": "Guide the student through the overall cockpit layout. Point out the main areas: instrument panel, center pedestal (throttle quadrant), overhead panel if applicable, and side panels. Help them understand the general organization before diving into details.",
+      "steps": [
+        "Show the instrument panel and its general sections",
+        "Point out the throttle quadrant in the center",
+        "Explain the basic layout: pilot on left, copilot on right",
+        "Show where circuit breakers and switches are located"
+      ],
+      "goals": [
+        "Student can identify major sections of the cockpit",
+        "Student understands the pilot and copilot positions",
+        "Student knows where primary controls are located"
+      ],
+      "commonErrors": [
+        "Overwhelming the student with too much information at once",
+        "Not letting the student touch and feel the controls"
+      ]
+    },
+    {
+      "name": "Six_Pack_Instruments",
+      "prompt": "Teach the student about the six primary flight instruments, arranged in the standard T configuration. Top row left to right: Airspeed Indicator, Attitude Indicator, Altimeter. Bottom row: Turn Coordinator, Heading Indicator, Vertical Speed Indicator. Explain what each instrument tells the pilot and why it matters.",
+      "steps": [
+        "Explain the standard T arrangement of instruments",
+        "Teach the Airspeed Indicator (shows speed in knots, color-coded arcs)",
+        "Teach the Attitude Indicator (artificial horizon, shows pitch and bank)",
+        "Teach the Altimeter (shows altitude in feet MSL, has three hands)",
+        "Teach the Turn Coordinator (shows rate of turn and coordination)",
+        "Teach the Heading Indicator (shows magnetic heading)",
+        "Teach the Vertical Speed Indicator (shows rate of climb or descent)"
+      ],
+      "goals": [
+        "Student can identify all six instruments by name and location",
+        "Student understands what each instrument displays",
+        "Student knows which instruments are most critical for basic flight"
+      ],
+      "commonErrors": [
+        "Confusing the altimeter hands",
+        "Not understanding the difference between heading indicator and compass",
+        "Thinking the attitude indicator shows altitude"
+      ]
+    },
+    {
+      "name": "Engine_Instruments",
+      "prompt": "Explain the engine instruments to the student. Cover the tachometer (RPM), oil pressure, oil temperature, fuel gauges, ammeter or voltmeter, and any other engine-related gauges. Emphasize which readings are normal and which indicate problems.",
+      "steps": [
+        "Show the tachometer and explain normal RPM ranges",
+        "Explain oil pressure gauge and normal green arc",
+        "Explain oil temperature and its importance",
+        "Show fuel gauges and discuss fuel management",
+        "Point out ammeter or voltmeter for electrical system health",
+        "Mention any other relevant gauges (EGT, CHT if equipped)"
+      ],
+      "goals": [
+        "Student can locate engine instruments",
+        "Student knows normal operating ranges",
+        "Student understands which readings indicate problems"
+      ],
+      "commonErrors": [
+        "Ignoring fuel quantity indicators",
+        "Not understanding the importance of oil pressure"
+      ]
+    },
+    {
+      "name": "Flight_Controls",
+      "prompt": "Teach the student about the primary flight controls and how they work. The yoke controls pitch (elevator) and roll (ailerons), rudder pedals control yaw (rudder), throttle controls power, mixture controls fuel mixture, and flaps provide additional lift and drag. Let the student manipulate each control to feel how they move.",
+      "steps": [
+        "Demonstrate the yoke: push/pull for pitch, turn for roll",
+        "Have student try the yoke movements",
+        "Demonstrate rudder pedals: push right to yaw right, push left to yaw left",
+        "Have student try rudder pedals",
+        "Show throttle: push in for more power, pull out for less",
+        "Show mixture: full rich for takeoff, can be leaned in cruise",
+        "Show flaps control and explain flap settings (0, 10, 20, 30 degrees)",
+        "Emphasize that control movements should be smooth, not abrupt"
+      ],
+      "goals": [
+        "Student understands which control does what",
+        "Student has physically manipulated each control",
+        "Student knows that smooth inputs are important",
+        "Student understands the purpose of mixture and flaps"
+      ],
+      "commonErrors": [
+        "Using excessive force on controls",
+        "Confusing rudder and aileron functions",
+        "Not understanding when to use flaps"
+      ]
+    },
+    {
+      "name": "Systems_Overview",
+      "prompt": "Give a brief overview of the main aircraft systems: fuel system (tanks, selector, pump), electrical system (battery, alternator), and basic understanding of how the engine works (four-stroke cycle). Keep it simple and practical.",
+      "steps": [
+        "Explain the fuel system: two tanks, fuel selector, primer",
+        "Explain the electrical system: battery starts engine, alternator charges battery",
+        "Give a simple explanation of how the engine works",
+        "Mention the importance of preflight inspection"
+      ],
+      "goals": [
+        "Student has basic understanding of fuel system",
+        "Student knows role of battery and alternator",
+        "Student appreciates that systems need to be checked before flight"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Wrap up the lesson by reviewing what was covered. Ask the student to explain back to you what they learned. Answer any remaining questions. Encourage them and let them know what comes next in their training.",
+      "steps": [
+        "Ask student to identify the six pack instruments",
+        "Quiz them on what the primary flight controls do",
+        "Answer any questions they have",
+        "Praise their progress and encourage continued learning",
+        "Preview the next lesson"
+      ],
+      "goals": [
+        "Student can recall main points of the lesson",
+        "Student feels confident about what they learned",
+        "Student is excited for the next lesson"
+      ]
+    }
+  ]
+}
