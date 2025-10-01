@@ -1,0 +1,268 @@
+{
+  "name": "Pattern_Components",
+  "shortDescription": "Learn the five components of the airport traffic pattern and how they work together",
+  "prompt": "You are teaching a student pilot the anatomy of the airport traffic pattern at Reid-Hillview Airport (KRHV). This is their introduction to pattern operations at a busy controlled airport with parallel runways. Cover the five pattern components: departure/upwind, crosswind, downwind, base, and final. Explain the purpose of each leg, standard altitudes, airspeeds, spacing, and how to identify position. Emphasize that the pattern is a structured flow that keeps traffic organized and safe. Use both ground-based observation and airborne demonstration. KRHV has parallel runways 31L/13R and 31R/13L, pattern altitude is 1,000 feet AGL (approximately 1,135 MSL).",
+  "openingLine": "Today we learn the traffic pattern - the organized flow that makes safe airport operations possible. Ready to master the pattern at a busy airport?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": false,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on the traffic pattern structure. Explain that the pattern is a rectangular flight path around the airport that provides organized, predictable traffic flow. Introduce the five components: departure (upwind), crosswind, downwind, base, and final. Explain that most patterns are left-hand (left turns) unless specified otherwise. Cover standard pattern altitude at KRHV (1,000 AGL, approximately 1,135 MSL) and typical speeds. Emphasize that understanding the pattern is fundamental to all airport operations.",
+      "steps": [
+        "Introduce the concept: the traffic pattern is a rectangular path around the runway",
+        "Explain the five legs: departure/upwind, crosswind, downwind, base, final",
+        "Describe left-hand vs right-hand patterns (KRHV uses left patterns for most runways)",
+        "State pattern altitude: 1,000 feet AGL (1,135 MSL at KRHV)",
+        "Discuss typical pattern speeds: 80-90 knots cruise, 70-80 on base, 65-70 on final",
+        "Explain the purpose: safety through predictability and organization",
+        "Mention that KRHV is busy with parallel runways, good for learning"
+      ],
+      "goals": [
+        "Student understands the pattern is a rectangular flight path",
+        "Student knows the five pattern components by name",
+        "Student knows pattern altitude and approximate speeds",
+        "Student understands the pattern organizes traffic for safety",
+        "Student is ready to learn each component in detail"
+      ]
+    },
+    {
+      "name": "Ground_Observation",
+      "prompt": "If practical, have the student observe the pattern from the ground or tower perspective. Point out aircraft at different positions in the pattern. Help them visualize the rectangular shape and identify which leg each aircraft is on. This ground-based perspective helps them understand the overall flow before flying it themselves.",
+      "steps": [
+        "Position where pattern can be observed (ramp, tower view, or simulator external view)",
+        "Point out the runway in use (likely 31L or 31R based on winds)",
+        "Identify aircraft on departure climbing out",
+        "Point out aircraft turning crosswind (90 degrees from runway)",
+        "Show aircraft on downwind (parallel to runway, opposite direction)",
+        "Identify aircraft turning base (perpendicular to runway again)",
+        "Point out aircraft on final approach (aligned with runway)",
+        "Discuss spacing between aircraft and how pattern maintains separation"
+      ],
+      "goals": [
+        "Student can visualize the rectangular pattern shape",
+        "Student can identify which leg an aircraft is on",
+        "Student understands the flow from departure through final",
+        "Student appreciates the spacing and organization"
+      ]
+    },
+    {
+      "name": "Airborne_Setup",
+      "prompt": "Position the aircraft above pattern altitude (approximately 2,500 feet MSL) in the KRHV area to observe the pattern from above. From this vantage point, the student can see the rectangular shape clearly and watch traffic flow through each leg. Establish a safe orbit above the pattern.",
+      "steps": [
+        "Use setPosition if needed to place aircraft at 2,500 MSL over KRHV",
+        "Establish a gentle orbit (right turns to keep airport in view on left side)",
+        "Point out the runway orientation and parallel runways",
+        "From above, trace the pattern shape with hands or pointer",
+        "Watch actual traffic if present, or describe traffic flow",
+        "Identify each pattern leg from this overhead perspective",
+        "Discuss how being 1,500 feet above pattern keeps us clear of traffic"
+      ],
+      "goals": [
+        "Student has clear view of pattern from above",
+        "Student can trace the rectangular pattern visually",
+        "Student sees how pattern relates to runway and surrounding area",
+        "Student understands vertical separation from pattern traffic"
+      ]
+    },
+    {
+      "name": "Departure_Upwind",
+      "prompt": "Teach the departure or upwind leg. This is the leg from takeoff until turning crosswind, typically extending runway centerline. Explain that after takeoff, aircraft climb straight ahead maintaining runway heading until reaching at least 500-800 feet AGL (or airport-specific altitude) before turning crosswind. At KRHV, turn crosswind when approximately 800 feet AGL. The purpose is obstacle clearance and predictability for following traffic.",
+      "steps": [
+        "Define departure/upwind: from takeoff to crosswind turn",
+        "Explain the climb: maintain runway heading, climb at Vy (79 knots)",
+        "Discuss altitude for crosswind turn: typically 800 feet AGL at KRHV",
+        "Explain why we climb straight: obstacle clearance, predictability",
+        "Mention following traffic spacing: they know where you will be",
+        "Discuss trim and configuration: clean, full power, climbing",
+        "Point out ground references for departure leg alignment"
+      ],
+      "goals": [
+        "Student understands departure leg is straight extension of runway",
+        "Student knows when to turn crosswind (approximately 800 AGL)",
+        "Student knows to maintain runway heading during departure",
+        "Student understands obstacle clearance and spacing purposes"
+      ],
+      "commonErrors": [
+        "Turning crosswind too early (before safe altitude)",
+        "Not maintaining runway heading (drifting with wind)",
+        "Poor speed control during climb"
+      ]
+    },
+    {
+      "name": "Crosswind_Leg",
+      "prompt": "Teach the crosswind leg. This is a 90-degree turn from departure, perpendicular to the runway. The leg should be approximately 45 seconds to 1 minute long. Continue climbing toward pattern altitude (1,000 AGL). At KRHV, turn crosswind around 800 AGL and level off at pattern altitude during or just after crosswind. Purpose is to position for downwind entry and continue climb safely.",
+      "steps": [
+        "Define crosswind: 90-degree turn from departure, perpendicular to runway",
+        "Demonstrate the turn: coordinated 20-30 degree bank to pattern direction (usually left)",
+        "Explain timing: turn when approximately 800 AGL or when 45-degree from runway numbers",
+        "Discuss altitude: continue climb, level at pattern altitude (1,000 AGL, 1,135 MSL)",
+        "Explain speed: reduce to 80-90 knots as approaching pattern altitude",
+        "Discuss length: typically 45 seconds to 1 minute on crosswind",
+        "Point out ground references perpendicular to runway"
+      ],
+      "goals": [
+        "Student understands crosswind is 90-degree leg from departure",
+        "Student knows when to turn crosswind (approximately 800 AGL)",
+        "Student knows to level at pattern altitude during or after crosswind",
+        "Student understands typical leg length (45 seconds to 1 minute)"
+      ],
+      "commonErrors": [
+        "Turning crosswind before reaching safe altitude",
+        "Not leveling at pattern altitude (too high or too low)",
+        "Poor wind correction (drifting toward or away from airport)",
+        "Crosswind leg too long or too short"
+      ]
+    },
+    {
+      "name": "Downwind_Leg",
+      "prompt": "Teach the downwind leg. This is the leg parallel to the runway, flying opposite direction to landing. At pattern altitude (1,000 AGL), cruise speed (80-90 knots). The downwind leg provides time for landing setup: configure aircraft, run checklists, report position to tower. Position should be approximately half to three-quarters mile from the runway. Key reference: when abeam the landing threshold (numbers alongside you), begin preparing for base turn.",
+      "steps": [
+        "Define downwind: parallel to runway, opposite landing direction",
+        "Demonstrate the turn: another 90-degree turn onto downwind",
+        "Explain altitude: maintain 1,000 AGL (1,135 MSL) precisely",
+        "Explain speed: 80-90 knots cruise",
+        "Discuss spacing from runway: half to three-quarters mile",
+        "Teach the abeam point: when threshold is directly off your wing",
+        "Explain downwind tasks: configure, checklist, radio calls, watch for following traffic",
+        "Point out ground references parallel to runway"
+      ],
+      "goals": [
+        "Student understands downwind is parallel to runway, opposite direction",
+        "Student maintains 1,000 AGL precisely on downwind",
+        "Student knows proper spacing from runway",
+        "Student recognizes abeam point (threshold alongside)",
+        "Student understands downwind is preparation phase for landing"
+      ],
+      "commonErrors": [
+        "Altitude not precise (too high or too low)",
+        "Too close or too far from runway",
+        "Not identifying abeam point correctly",
+        "Forgetting to prepare for landing (checklists, configuration)"
+      ]
+    },
+    {
+      "name": "Base_Leg",
+      "prompt": "Teach the base leg. Turn base when approximately 45 degrees past the landing threshold (when runway numbers are 45 degrees behind the wing). Base is perpendicular to runway, descending and slowing. Begin descent to approximately 800 feet, reduce speed to 70-80 knots, may add first increment of flaps (10 degrees). Base leg length varies with wind and allows final approach alignment. Watch for traffic on final and adjust spacing.",
+      "steps": [
+        "Define base: perpendicular to runway, descending to final approach",
+        "Explain when to turn: approximately 45 degrees past threshold (varies with wind)",
+        "Demonstrate base turn: 30-degree bank, coordinated, look for final approach traffic first",
+        "Discuss descent: begin descending to approximately 800 feet",
+        "Explain speed reduction: 70-80 knots on base",
+        "Discuss flaps: may add 10 degrees on base for better control",
+        "Explain length adjustment: longer base if high or fast, shorter if low or slow",
+        "Teach to watch for traffic on final and adjust spacing"
+      ],
+      "goals": [
+        "Student understands base is perpendicular to runway, descending",
+        "Student knows when to turn base (approximately 45 degrees past threshold)",
+        "Student begins descent and slows to 70-80 knots on base",
+        "Student considers adding first increment of flaps",
+        "Student watches for final approach traffic before turning"
+      ],
+      "commonErrors": [
+        "Turning base too early or too late",
+        "Not looking for traffic on final before turning",
+        "Descending too rapidly or too slowly",
+        "Poor speed control",
+        "Not adjusting base leg for wind"
+      ]
+    },
+    {
+      "name": "Final_Approach",
+      "prompt": "Teach the final approach leg. Turn final to align with runway centerline. This is the most critical leg: stabilized approach at proper speed (65-70 knots with appropriate flaps), proper descent rate (approximately 400-500 fpm), aligned with centerline, on glidepath (typically 3 degrees). Full landing configuration with full flaps. This is where landing actually happens, so precision matters. Emphasize stabilization by 300-500 feet AGL.",
+      "steps": [
+        "Define final: aligned with runway centerline, descending to landing",
+        "Demonstrate final turn: roll out on centerline, coordinated turn",
+        "Explain landing configuration: full flaps (30 degrees), landing speed (65-70 knots)",
+        "Discuss descent rate: approximately 400-500 fpm for typical 3-degree glidepath",
+        "Teach stabilized approach criteria: on speed, on centerline, on glidepath by 500 feet",
+        "Explain what to look for: runway alignment, VASI/PAPI lights if equipped, aim point",
+        "Discuss go-around decision: if not stabilized, go around",
+        "Point out this leg extends from turn to touchdown (typically 1-2 miles)"
+      ],
+      "goals": [
+        "Student understands final is aligned with runway, descending to landing",
+        "Student knows landing configuration: full flaps, 65-70 knots",
+        "Student knows stabilized approach criteria",
+        "Student understands this is the landing leg, precision required",
+        "Student knows go-around is an option if unstable"
+      ],
+      "commonErrors": [
+        "Not aligned with centerline",
+        "Airspeed too fast or too slow",
+        "Descent rate too high (steep) or too low (shallow)",
+        "Not stabilized by 500 feet",
+        "Continuing unstable approach instead of going around"
+      ]
+    },
+    {
+      "name": "Pattern_Integration",
+      "prompt": "Now that all five legs are explained, fly one complete pattern at KRHV (observation flight, instructor or autopilot can fly). Point out each leg as you progress through it. Have the student call out which leg you are on and what the key tasks are for that leg. This integration helps cement the complete picture of how all legs connect.",
+      "steps": [
+        "Set up for departure from KRHV runway 31L or 31R",
+        "Execute departure/upwind: climb straight, maintain runway heading",
+        "Ask student: what leg are we on? What should we be doing?",
+        "Execute crosswind turn: 90 degrees left, continue climb",
+        "Ask student: what leg now? What altitude should we reach?",
+        "Execute downwind: level at 1,000 AGL, parallel to runway",
+        "Ask student: what should we do on downwind? When is abeam point?",
+        "Execute base turn: 45 degrees past threshold, descend, slow, add flaps",
+        "Ask student: what leg? What configuration changes?",
+        "Execute final turn: align with centerline, full flaps, landing speed",
+        "Ask student: what makes a stabilized final?",
+        "Complete pattern by landing or going around for another pattern"
+      ],
+      "goals": [
+        "Student can identify each pattern leg during flight",
+        "Student understands the flow from one leg to the next",
+        "Student knows key tasks and configurations for each leg",
+        "Student sees how all five components form complete pattern",
+        "Student is prepared to fly the pattern themselves in future lessons"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review all five pattern components with the student. Quiz them on key points: altitudes, speeds, purposes of each leg. Discuss common traffic pattern errors and how to avoid them. Emphasize that the pattern is the foundation of all takeoff and landing operations. Answer questions and preview next lesson: normal takeoffs.",
+      "steps": [
+        "Ask student to name the five pattern legs in order",
+        "Quiz on pattern altitude at KRHV (1,000 AGL)",
+        "Quiz on typical speeds: departure climb, downwind cruise, base, final",
+        "Ask about key reference points: when to turn crosswind, abeam point, when to turn base",
+        "Discuss why the pattern matters: safety through organization",
+        "Review what makes a stabilized final approach",
+        "Answer any remaining questions",
+        "Celebrate learning the pattern structure",
+        "Preview next lesson: Challenge 2.2 - Normal Takeoffs"
+      ],
+      "goals": [
+        "Student can recite the five pattern legs in order",
+        "Student knows standard altitudes and speeds",
+        "Student understands purpose and flow of the pattern",
+        "Student recognizes key decision points in the pattern",
+        "Student feels confident in pattern knowledge and ready for takeoff practice"
+      ]
+    }
+  ]
+}

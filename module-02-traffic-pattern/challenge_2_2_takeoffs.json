@@ -1,0 +1,281 @@
+{
+  "name": "Normal_Takeoffs",
+  "shortDescription": "Master normal takeoff procedures and technique from lineup to climb-out",
+  "prompt": "You are teaching a student pilot normal takeoff procedures in a Cessna 172 at Reid-Hillview Airport (KRHV). This is their first time actually performing takeoffs. Cover the complete sequence: lineup, full power application, directional control with rudder, rotation at proper speed, initial climb, and departure leg. Emphasize smooth control inputs, proper speeds, and maintaining runway centerline. KRHV runways are 31L/13R (3,101 feet) and 31R/13L (2,408 feet). Pattern altitude is 1,000 feet AGL. Teach the student to be precise, confident, and to use proper radio communications. Practice multiple takeoffs with touch-and-goes or stop-and-goes.",
+  "openingLine": "Today you will perform your first takeoffs! This is one of the most exciting moments in flight training. Ready to feel the aircraft lift off under your control?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on normal takeoff procedures. Explain the complete sequence: lineup, power application, acceleration, rotation, liftoff, and initial climb. Cover critical speeds: rotation speed (approximately 55-60 knots) and climb speed (Vy 79 knots). Emphasize directional control with rudder pedals, smooth power application, and proper pitch attitude after liftoff. Discuss what to watch for: airspeed alive, centerline tracking, rotation at proper speed, positive rate of climb. Set expectations: you will practice multiple takeoffs today to build muscle memory and confidence.",
+      "steps": [
+        "Explain the takeoff sequence: lineup, full power, accelerate, rotate, climb",
+        "State rotation speed: 55-60 knots indicated",
+        "State climb speed: Vy 79 knots after liftoff",
+        "Emphasize rudder for directional control during takeoff roll",
+        "Explain right rudder needed due to P-factor, torque, and propwash",
+        "Discuss pitch attitude: slight nose-up after rotation, not excessive",
+        "Cover go/no-go decision point and rejected takeoff procedures",
+        "Explain radio calls: position and ready for takeoff at KRHV tower",
+        "Set goal: 5-8 takeoffs today for proficiency"
+      ],
+      "goals": [
+        "Student understands complete takeoff sequence",
+        "Student knows rotation speed (55-60 knots) and climb speed (79 knots)",
+        "Student understands importance of rudder control",
+        "Student knows they will practice multiple repetitions",
+        "Student feels prepared but excited for their first takeoff"
+      ]
+    },
+    {
+      "name": "Ground_Procedures",
+      "prompt": "Position aircraft at the run-up area near the departure runway. Complete the Before Takeoff checklist: flight controls free and correct, flaps set (0-10 degrees for normal takeoff), trim set for takeoff (slightly nose-up), fuel selector on BOTH, mixture rich, run-up completed (magnetos, carb heat). Brief the student on the taxi-to-position procedure and radio communication with tower.",
+      "steps": [
+        "Use setPosition if needed at KRHV run-up area",
+        "Complete Before Takeoff checklist systematically",
+        "Check flight controls: full and free movement",
+        "Set flaps: 0 degrees for normal takeoff (or 10 if short field)",
+        "Set trim: neutral or slightly nose-up",
+        "Verify fuel selector: BOTH",
+        "Verify mixture: FULL RICH",
+        "Complete engine run-up: 1,700 RPM, check mags (drop less than 150 RPM, less than 50 difference)",
+        "Brief taxi onto runway procedure: hold short line, wait for clearance, expedite onto runway",
+        "Practice radio call: Tower KRHV Skyhawk N12345 ready for takeoff runway 31 Left"
+      ],
+      "goals": [
+        "Before Takeoff checklist completed correctly",
+        "Engine run-up successful",
+        "Student knows radio procedures for takeoff clearance",
+        "Aircraft is configured properly for normal takeoff",
+        "Student is mentally prepared for first takeoff"
+      ],
+      "commonErrors": [
+        "Rushing the checklist",
+        "Not completing full run-up",
+        "Incorrect flap setting",
+        "Forgetting to set trim",
+        "Poor radio communication"
+      ]
+    },
+    {
+      "name": "Lineup_And_Clearance",
+      "prompt": "Taxi to the runway hold short line. Contact tower for takeoff clearance. After receiving clearance (Tower: Skyhawk 345 runway 31 Left cleared for takeoff), expeditiously taxi onto the runway and align with centerline. Ensure you are straight on centerline before starting takeoff roll. This is the last moment to abort if something is wrong.",
+      "steps": [
+        "Taxi to hold short line for runway 31L",
+        "Stop at hold short line, do not cross without clearance",
+        "Call tower: KRHV Tower Skyhawk N12345 ready for takeoff runway 31 Left",
+        "Listen for clearance: Skyhawk 345 runway 31 Left cleared for takeoff",
+        "Read back clearance: Skyhawk 345 cleared for takeoff 31 Left",
+        "Look for traffic on final approach and base",
+        "Taxi onto runway, turn to align with centerline",
+        "Center aircraft on centerline, straighten nosewheel",
+        "Verify runway ahead is clear",
+        "Final check: flight controls feel normal, ready to apply power"
+      ],
+      "goals": [
+        "Student communicates properly with tower",
+        "Student receives and reads back takeoff clearance correctly",
+        "Student expedites lineup but remains careful",
+        "Aircraft is aligned with runway centerline",
+        "Student is mentally ready to begin takeoff roll"
+      ],
+      "commonErrors": [
+        "Crossing hold short line without clearance",
+        "Not reading back clearance",
+        "Taking too long to line up (delaying following traffic)",
+        "Not centered on centerline before starting roll",
+        "Forgetting to look for traffic on final"
+      ]
+    },
+    {
+      "name": "Power_Application_And_Roll",
+      "prompt": "Teach the takeoff roll. Smoothly advance throttle to full power over 2-3 seconds while maintaining centerline with rudder. Right rudder pressure will be needed immediately due to left-turning tendencies. Keep eyes outside, down the runway centerline. Slight forward pressure on yoke to lift nosewheel slightly for better steering and less drag. Scan airspeed indicator periodically to confirm acceleration.",
+      "steps": [
+        "Place right hand on throttle, left hand on yoke (lightly)",
+        "Release brakes",
+        "Smoothly advance throttle to full power (approximately 2,300-2,400 RPM)",
+        "As power increases, apply right rudder pressure to counteract left turn",
+        "Keep eyes outside, focused down the runway centerline",
+        "Use rudder pedals to maintain centerline tracking",
+        "Apply slight forward pressure to lift nosewheel off ground (improves steering)",
+        "Scan airspeed indicator: confirm airspeed is alive and increasing",
+        "Feel the acceleration through seat and sound",
+        "Continue centerline control with rudder throughout roll"
+      ],
+      "goals": [
+        "Student applies power smoothly to full throttle",
+        "Student maintains runway centerline with rudder",
+        "Student uses appropriate right rudder for left-turning tendency",
+        "Student keeps eyes outside primarily",
+        "Student confirms airspeed is increasing",
+        "Aircraft accelerates down centerline without weaving"
+      ],
+      "commonErrors": [
+        "Abrupt power application (can cause loss of control)",
+        "Not using enough right rudder (veering left)",
+        "Using too much right rudder (veering right)",
+        "Fixating on instruments instead of looking outside",
+        "Using ailerons instead of rudder for steering (ineffective on ground)",
+        "Excessive forward pressure on yoke (nosing down)"
+      ]
+    },
+    {
+      "name": "Rotation_And_Liftoff",
+      "prompt": "Teach rotation and liftoff. At approximately 55-60 knots, smoothly apply back pressure to raise the nose to approximately 10 degrees pitch-up attitude. The aircraft will lift off naturally when ready, typically 60-65 knots. Do not force it off the ground early. After liftoff, establish Vy climb attitude (approximately 79 knots) and maintain runway heading. This is a critical moment requiring smooth, coordinated control inputs.",
+      "steps": [
+        "Monitor airspeed during roll: 40 knots, 50 knots, approaching rotation",
+        "At 55-60 knots, smoothly apply back pressure on yoke",
+        "Raise nose to approximately 10 degrees pitch-up (sight picture: horizon lowered)",
+        "Allow aircraft to lift off naturally (do not force it)",
+        "Feel the weight transfer from wheels to wings (subtle but noticeable)",
+        "After liftoff, establish climb attitude for Vy (79 knots)",
+        "Maintain runway heading with coordinated rudder",
+        "Increase right rudder slightly as airspeed and power stabilize in climb",
+        "Verify positive rate of climb on VSI",
+        "Avoid excessive pitch-up (nose too high causes slow climb and possible stall)"
+      ],
+      "goals": [
+        "Student rotates at proper speed (55-60 knots)",
+        "Student applies smooth, appropriate back pressure",
+        "Student allows aircraft to fly off naturally, does not force it",
+        "Student establishes Vy climb attitude (79 knots) after liftoff",
+        "Student maintains runway heading during initial climb",
+        "Takeoff is smooth and coordinated"
+      ],
+      "commonErrors": [
+        "Rotating too early (aircraft not ready, may settle back or drag tail)",
+        "Rotating too late (using excessive runway, potentially departing fast and flat)",
+        "Excessive back pressure (too high pitch, slow climb, potential stall)",
+        "Not maintaining runway heading after liftoff",
+        "Fixating on instruments during rotation",
+        "Not increasing right rudder as needed in climb"
+      ]
+    },
+    {
+      "name": "Initial_Climb_Departure",
+      "prompt": "Teach the initial climb and departure leg. After liftoff, maintain runway heading and climb at Vy (79 knots). At a safe altitude (approximately 500-800 feet AGL), clean up the aircraft if needed (retract flaps if used). Continue climb on departure leg until reaching approximately 800 feet AGL, then prepare for crosswind turn. Trim the aircraft to relieve control pressure. Monitor instruments but primarily use outside visual references.",
+      "steps": [
+        "Maintain runway heading after liftoff",
+        "Establish Vy climb (79 knots) with proper pitch attitude",
+        "Maintain coordinated flight (ball centered, adequate right rudder)",
+        "At 500 feet AGL: if flaps were used (10 degrees), retract to 0 degrees",
+        "Trim for climb to relieve control pressure",
+        "Continue straight climb on departure leg",
+        "Monitor climb rate (approximately 700 fpm typical)",
+        "At approximately 800 feet AGL, prepare for crosswind turn",
+        "Scan for traffic before turning",
+        "Maintain situational awareness of airport position"
+      ],
+      "goals": [
+        "Student maintains runway heading during departure",
+        "Student climbs at Vy (79 knots)",
+        "Student trims properly for climb",
+        "Student retracts flaps at safe altitude if applicable",
+        "Student maintains coordinated flight with right rudder",
+        "Student knows when to turn crosswind (approximately 800 AGL)"
+      ],
+      "commonErrors": [
+        "Drifting off runway heading",
+        "Incorrect climb speed (too fast or too slow)",
+        "Not using enough right rudder (uncoordinated climb)",
+        "Poor trim usage (fighting the controls)",
+        "Turning crosswind too early (before safe altitude)",
+        "Not scanning for traffic before turning"
+      ]
+    },
+    {
+      "name": "Repetition_Practice",
+      "prompt": "Have the student perform multiple takeoffs to build proficiency and muscle memory. Use either touch-and-go landings (brief touchdown and immediate takeoff) or full-stop-and-go (full stop, taxi back, takeoff again). Provide specific feedback after each takeoff: what was good, what needs improvement. Focus on consistency: same rotation speed, same pitch attitude, same centerline tracking. Celebrate improvements and progress.",
+      "steps": [
+        "After first takeoff, fly pattern and prepare for landing or touch-and-go",
+        "After landing or touch, immediately set up for next takeoff",
+        "Repeat takeoff sequence: power, rudder, rotation, climb",
+        "Provide immediate feedback: altitude of rotation, centerline tracking, climb performance",
+        "Note improvements: better rudder control, smoother rotation, etc",
+        "Repeat 4-6 more times for total of 5-8 takeoffs",
+        "With each repetition, student should show increasing confidence and consistency",
+        "Vary feedback focus: one takeoff focus on rudder, next on rotation, next on climb speed",
+        "Build toward independent takeoffs with minimal instructor input"
+      ],
+      "goals": [
+        "Student performs at least 5 takeoffs during lesson",
+        "Student shows progressive improvement in technique",
+        "Student demonstrates consistent rotation speed and climb performance",
+        "Student maintains centerline throughout takeoff roll",
+        "Student builds confidence in takeoff procedures",
+        "Student can perform takeoff with minimal coaching by end"
+      ],
+      "commonErrors": [
+        "Inconsistent rotation speed (varies widely between takeoffs)",
+        "Not learning from previous mistakes",
+        "Getting discouraged instead of treating each as learning opportunity"
+      ]
+    },
+    {
+      "name": "Emergency_Procedures_Brief",
+      "prompt": "Brief the student on rejected takeoff procedures and engine failure on takeoff. Explain that if any problem occurs before rotation (engine roughness, abnormal indication, control issue), the decision is to abort: close throttle, apply brakes, exit runway when safe. If engine fails after liftoff below 500 feet AGL, lower nose immediately, land straight ahead, do not attempt turn back. This is critical safety knowledge.",
+      "steps": [
+        "Explain rejected takeoff: before rotation, any doubt means abort",
+        "Procedure: close throttle, apply brakes, maintain directional control",
+        "Explain engine failure after takeoff: most critical emergency",
+        "Rule: below 500 feet AGL, land straight ahead, do not turn back",
+        "Demonstrate proper response: lower nose immediately, establish best glide, find landing spot ahead",
+        "Emphasize: altitude is life, speed is life insurance, do not stall trying to return",
+        "Discuss that KRHV has adequate runway length for rejected takeoff",
+        "Reassure that actual engine failures are rare but preparation is essential"
+      ],
+      "goals": [
+        "Student knows rejected takeoff procedure",
+        "Student understands engine failure after takeoff response",
+        "Student knows the 500 foot rule: land straight ahead, do not turn back",
+        "Student understands these are critical safety procedures",
+        "Student feels prepared mentally for emergency scenarios"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief the takeoff lesson. Review what the student did well and areas for improvement. Discuss how their takeoffs progressed throughout the lesson. Quiz on critical speeds and procedures. Celebrate their accomplishment of performing actual takeoffs. Answer questions and preview next lesson: normal landings.",
+      "steps": [
+        "Ask student how they felt about their takeoffs today",
+        "Review specific good points: centerline tracking, smooth rotation, good climb speed",
+        "Discuss areas to improve: more right rudder, earlier rotation, better trim usage, etc",
+        "Quiz on rotation speed (55-60 knots)",
+        "Quiz on climb speed (Vy 79 knots)",
+        "Quiz on when to turn crosswind (approximately 800 AGL)",
+        "Review emergency procedures: rejected takeoff, engine failure after takeoff",
+        "Celebrate their achievement: they are now taking off!",
+        "Answer any remaining questions",
+        "Preview next lesson: Challenge 2.3 - Normal Landings (the other half of the pattern)"
+      ],
+      "goals": [
+        "Student understands their performance strengths and weaknesses",
+        "Student can state critical speeds and altitudes",
+        "Student knows emergency procedures",
+        "Student feels accomplished and proud of progress",
+        "Student is eager to learn landings next",
+        "Student has realistic self-assessment of takeoff proficiency"
+      ]
+    }
+  ]
+}
