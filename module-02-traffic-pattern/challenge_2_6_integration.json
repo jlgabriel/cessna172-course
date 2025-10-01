@@ -1,0 +1,255 @@
+{
+  "name": "Complete_Pattern_Integration",
+  "shortDescription": "Integrate all pattern skills into smooth, consistent, independent circuits",
+  "prompt": "You are teaching a student pilot to integrate all traffic pattern skills into complete, flowing circuits in a Cessna 172 at Reid-Hillview Airport (KRHV). This is the culmination of Module 2 training. The student has learned pattern components, takeoffs, landings, touch-and-goes, and entries/exits. Now they must put it all together with consistency, smoothness, and increasing independence. Cover complete circuits from pattern entry through multiple touch-and-goes to pattern exit. Emphasize flow, consistency, situational awareness, and professional operations. Build toward the student performing patterns with minimal instructor intervention, demonstrating readiness for solo pattern work. KRHV runways are 31L/13R and 31R/13L, pattern altitude is 1,000 feet AGL.",
+  "openingLine": "Today we put it all together! You will fly complete patterns independently, showing you are ready for solo work. Let's make every circuit count!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": true,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on complete pattern integration. Explain that today is about putting all the pieces together: entries, takeoffs, pattern legs, landings, touch-and-goes, and exits. The goal is smooth, flowing circuits with consistent performance. Emphasize that the student will fly with increasing independence - instructor will reduce coaching progressively. Set standards: altitude within 100 feet, airspeed within 5 knots, proper positioning on all legs, smooth transitions, professional communications. Discuss that this lesson demonstrates readiness for solo pattern work. Set expectations: minimum 10 complete circuits today, building consistency and confidence.",
+      "steps": [
+        "Review all Module 2 skills learned: pattern components, takeoffs, landings, touch-and-goes, entries/exits",
+        "Explain today's goal: integrate everything into smooth, consistent circuits",
+        "Set performance standards: altitude ±100 feet, airspeed ±5 knots, proper leg positioning",
+        "Discuss flow: each leg transitions smoothly to the next, anticipate rather than react",
+        "Explain progressive independence: instructor will coach less as student demonstrates competence",
+        "State expectations: minimum 10 circuits, focus on consistency not perfection",
+        "Emphasize situational awareness: always know your position, watch for traffic, stay ahead of aircraft",
+        "Discuss that successful completion demonstrates readiness for solo pattern work",
+        "Review emergency procedures: go-around always available, rejected takeoff if needed"
+      ],
+      "goals": [
+        "Student understands the integration objective",
+        "Student knows the performance standards expected",
+        "Student understands they will fly with increasing independence",
+        "Student feels prepared and confident for the challenge",
+        "Student knows this is preparation for solo work"
+      ]
+    },
+    {
+      "name": "Pattern_Entry_And_Setup",
+      "prompt": "Guide the student through proper pattern entry at KRHV. Use 45-degree entry to downwind as the standard unless tower directs otherwise. Have the student establish themselves on downwind at pattern altitude with proper spacing from the runway. Complete before landing checklist. Establish the baseline for smooth pattern operations.",
+      "steps": [
+        "Position aircraft for 45-degree entry to downwind, or use setPosition if needed",
+        "Student contacts tower: KRHV Tower, Skyhawk N12345, inbound for closed traffic, touch-and-go",
+        "Tower responds with pattern entry instructions",
+        "Student reads back and executes entry",
+        "Establish on downwind: 1,000 AGL, 80-90 knots, half-mile from runway",
+        "Complete before landing checklist",
+        "Verify proper downwind positioning and configuration",
+        "Prepare for first circuit"
+      ],
+      "goals": [
+        "Student enters pattern professionally and safely",
+        "Student establishes correct downwind position and altitude",
+        "Student completes appropriate checklists",
+        "Aircraft is configured and positioned for first circuit"
+      ]
+    },
+    {
+      "name": "First_Circuit_Coached",
+      "prompt": "Have the student fly the first complete circuit with moderate coaching. Provide reminders and prompts but allow the student to make decisions. Coach the complete flow: downwind to base turn, base leg, final turn, approach, landing, touch-and-go, departure, crosswind, back to downwind. Provide immediate feedback on what went well and what to improve for next circuit.",
+      "steps": [
+        "Student flies downwind, identifies abeam point",
+        "Coach: Begin configuring for landing, prepare for base turn",
+        "Student turns base at 45 degrees past threshold",
+        "Coach: Descend, slow to 70-80 knots, consider flaps 10 degrees",
+        "Student turns final, aligns with centerline",
+        "Coach: Full flaps, landing speed 65-70 knots, stabilize",
+        "Student executes approach and landing",
+        "Coach touch-and-go: flaps, carb heat, trim, power",
+        "Student performs touch-and-go and climbs out",
+        "Coach: Maintain runway heading, turn crosswind at 800 AGL",
+        "Student turns crosswind, then downwind",
+        "Immediate debrief: what went well, what to improve next time"
+      ],
+      "goals": [
+        "Student completes first circuit successfully with coaching",
+        "Student demonstrates understanding of complete pattern flow",
+        "Student receives specific feedback for improvement",
+        "Baseline performance established for comparison"
+      ],
+      "commonErrors": [
+        "Not anticipating next leg transition",
+        "Altitude deviations on downwind",
+        "Turning base too early or too late",
+        "Poor speed control on base and final",
+        "Rushed touch-and-go reconfiguration"
+      ]
+    },
+    {
+      "name": "Consistency_Building",
+      "prompt": "Have the student fly 3-4 circuits focusing on consistency. Reduce coaching significantly - only provide input for safety or significant errors. Focus the student on making each circuit as similar as possible: same altitudes, same speeds, same positions, same techniques. After each circuit, provide brief feedback on consistency metrics: altitude control, speed control, pattern positioning, landing quality.",
+      "steps": [
+        "Student flies circuit 2 with minimal prompting",
+        "Note altitude consistency on downwind (should be 1,000 AGL ±50 feet)",
+        "Note speed consistency (downwind 80-90, base 70-80, final 65-70)",
+        "Note pattern leg positioning (half-mile downwind, proper base/final turns)",
+        "Note landing consistency (touchdown point, smoothness)",
+        "Brief feedback after circuit 2",
+        "Student flies circuit 3, focusing on replicating circuit 2",
+        "Compare: altitude, speed, positioning, landing quality",
+        "Brief feedback: praise consistency, identify remaining variations",
+        "Student flies circuit 4, aiming for best consistency yet",
+        "Detailed feedback on consistency across all four circuits so far"
+      ],
+      "goals": [
+        "Student demonstrates improving consistency across circuits",
+        "Altitude deviations decrease (trending toward ±50 feet)",
+        "Speed control improves (within ±5 knots each leg)",
+        "Pattern positioning becomes more predictable",
+        "Landing quality becomes more consistent",
+        "Student develops self-awareness of performance"
+      ],
+      "commonErrors": [
+        "Each circuit significantly different from previous",
+        "Not learning from previous circuits",
+        "Focusing on one aspect while neglecting others",
+        "Allowing fatigue to degrade performance"
+      ]
+    },
+    {
+      "name": "Independent_Operation",
+      "prompt": "Have the student fly 3-4 circuits with essentially no coaching unless safety is compromised. The student should operate as if flying solo, making all decisions independently. Instructor observes and evaluates but does not prompt or coach. This simulates solo pattern work. After these circuits, provide comprehensive feedback on readiness for solo.",
+      "steps": [
+        "Brief student: next circuits will be flown as if solo, no prompting unless safety issue",
+        "Student flies circuit 5 independently",
+        "Instructor monitors but remains silent unless safety concern",
+        "Note decision making: base turn timing, speed control, go-around decisions",
+        "Student flies circuit 6 independently",
+        "Observe situational awareness: traffic scanning, position awareness",
+        "Student flies circuit 7 independently",
+        "Evaluate overall competence: can student safely fly pattern alone?",
+        "Student flies circuit 8 if time and performance warrants",
+        "After independent circuits, comprehensive debrief on readiness for solo"
+      ],
+      "goals": [
+        "Student demonstrates ability to fly pattern without prompting",
+        "Student makes appropriate decisions throughout circuit",
+        "Student maintains standards: altitude ±100 feet, speed ±5 knots",
+        "Student shows good situational awareness and judgment",
+        "Student demonstrates readiness for solo pattern work",
+        "Student flies safely and confidently without instructor input"
+      ],
+      "commonErrors": [
+        "Waiting for instructor prompts that do not come",
+        "Loss of standards when not prompted",
+        "Poor decision making without guidance",
+        "Lack of situational awareness"
+      ]
+    },
+    {
+      "name": "Challenge_Circuits",
+      "prompt": "Introduce mild challenges to test the student's ability to adapt and handle variations. Examples: tower assigns different runway, unexpected traffic requires extended downwind, simulate go-around due to traffic on runway, practice different pattern entry. Evaluate how student handles non-standard situations while maintaining safety and professionalism.",
+      "steps": [
+        "Challenge 1: Tower assigns opposite runway (if winds permit), student must adapt",
+        "Student acknowledges change, visualizes new pattern, executes correctly",
+        "Challenge 2: Tower extends downwind for traffic spacing",
+        "Student maintains altitude and speed, watches for traffic, rejoins pattern appropriately",
+        "Challenge 3: Simulate traffic on runway requiring go-around",
+        "Instructor calls: Traffic on runway, go around",
+        "Student executes go-around: power, pitch, positive rate, flaps, re-enter pattern",
+        "Challenge 4: Tower assigns base entry instead of continuing pattern",
+        "Student executes proper base entry, maintains spacing, continues circuit",
+        "Evaluate: How did student handle variations? Maintain safety? Adapt smoothly?"
+      ],
+      "goals": [
+        "Student demonstrates adaptability to changes",
+        "Student maintains safety and standards during variations",
+        "Student makes appropriate decisions in non-standard situations",
+        "Student communicates professionally with tower during changes",
+        "Student shows judgment and flexibility"
+      ]
+    },
+    {
+      "name": "Performance_Refinement",
+      "prompt": "Focus the final 2-3 circuits on refining performance and polishing technique. Have the student identify one or two areas they want to improve (e.g., landing smoothness, altitude precision, speed control) and consciously work on those areas. Provide specific coaching on the identified refinement areas. Build toward the best circuits of the day.",
+      "steps": [
+        "Ask student: What do you want to refine in final circuits?",
+        "Common areas: landing flare smoothness, altitude precision on downwind, speed control on base/final",
+        "Student identifies 1-2 specific refinement goals",
+        "Fly circuit focusing on refinement area 1",
+        "Provide specific feedback on that area",
+        "Fly circuit focusing on refinement area 2 (or both)",
+        "Provide specific feedback",
+        "Final circuit: integrate refinements, aim for best performance of day",
+        "Celebrate improvements and progress"
+      ],
+      "goals": [
+        "Student demonstrates ability to self-assess and identify improvement areas",
+        "Student shows focused improvement in identified areas",
+        "Student produces best performance of day in final circuits",
+        "Student feels accomplished and motivated to continue improving"
+      ]
+    },
+    {
+      "name": "Exit_And_Parking",
+      "prompt": "After final circuit, have student execute proper pattern exit (typically crosswind departure unless tower directs otherwise) and navigate to parking. Complete post-flight procedures and secure aircraft. This completes the full operational cycle from entry to exit to shutdown.",
+      "steps": [
+        "After final touch-and-go or landing, student requests departure or follows tower instruction",
+        "Student executes appropriate departure (crosswind, straight-out, or as assigned)",
+        "Climb to safe altitude, clear pattern airspace",
+        "Navigate to parking or transient area",
+        "Contact tower: Skyhawk 345, taxiing to parking, request frequency change",
+        "Tower: Skyhawk 345, frequency change approved, good day",
+        "Taxi to parking, perform shutdown checklist",
+        "Secure aircraft properly"
+      ],
+      "goals": [
+        "Student exits pattern professionally and safely",
+        "Student completes appropriate radio communications",
+        "Student secures aircraft properly",
+        "Complete operational cycle demonstrated"
+      ]
+    },
+    {
+      "name": "Comprehensive_Debrief",
+      "prompt": "Conduct thorough debrief of the complete lesson. Review performance across all circuits: consistency, decision making, adaptability, refinement. Discuss strengths demonstrated today and areas for continued improvement. Provide honest assessment of readiness for solo pattern work. Celebrate the completion of Module 2 and preview Module 3. Answer all questions and ensure student feels accomplished and prepared for next steps.",
+      "steps": [
+        "Review number of circuits flown (should be 10+)",
+        "Discuss consistency: how did performance compare across circuits?",
+        "Review independent operation: could student fly safely without instructor?",
+        "Discuss challenge circuits: how did student adapt to variations?",
+        "Identify key strengths demonstrated today",
+        "Identify areas for continued practice and improvement",
+        "Provide assessment: Is student ready for solo pattern work?",
+        "Quiz on key knowledge: pattern altitudes, speeds, procedures, radio calls",
+        "Celebrate completion of Module 2: Traffic Pattern Operations!",
+        "Preview Module 3: Stalls (understanding aircraft at critically low airspeeds)",
+        "Answer any remaining questions",
+        "Encourage continued practice and refinement"
+      ],
+      "goals": [
+        "Student understands their performance level honestly",
+        "Student knows their strengths and areas for improvement",
+        "Student receives clear assessment of solo readiness",
+        "Student feels accomplished completing Module 2",
+        "Student is motivated and prepared for Module 3",
+        "Student has realistic self-assessment and confidence"
+      ]
+    }
+  ]
+}

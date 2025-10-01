@@ -1,0 +1,262 @@
+{
+  "name": "Normal_Landings",
+  "shortDescription": "Master normal landing procedures from final approach through touchdown and rollout",
+  "prompt": "You are teaching a student pilot normal landing procedures in a Cessna 172 at Reid-Hillview Airport (KRHV). This is their first time actually performing landings. Cover the complete sequence: stabilized final approach, aiming point control, flare, touchdown, and rollout. Emphasize airspeed control, visual aiming point, smooth flare technique, and landing on the centerline. Teach the landing sight picture and when to begin the flare. KRHV runways are 31L/13R (3,101 feet) and 31R/13L (2,408 feet). Pattern altitude is 1,000 feet AGL. Practice multiple landings to build consistency and confidence. This is one of the most challenging but rewarding skills in flying.",
+  "openingLine": "Today you will make your first landings! This is the moment every pilot remembers forever. Ready to bring the aircraft safely back to earth?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on normal landing procedures. Explain that landing is a series of progressively slower descents culminating in a gentle touchdown. Cover the sequence: stabilized approach, aiming point selection, roundout (beginning of flare), flare itself, touchdown, and rollout. Emphasize three critical elements: airspeed control (65-70 knots on final), sight picture (aiming point and peripheral vision), and smooth flare timing. Explain that landings take practice - even experienced pilots work on making greaser landings. Set expectations: multiple practice landings today, each one teaching something new.",
+      "steps": [
+        "Explain landing sequence: approach, roundout, flare, touchdown, rollout",
+        "State approach speed: 65-70 knots with full flaps",
+        "Describe aiming point: typically the first third of runway, touchdown zone markings",
+        "Explain the sight picture: look down the runway, not at the ground directly in front",
+        "Teach roundout concept: beginning to arrest descent about 10-20 feet AGL",
+        "Teach flare: progressive back pressure to slow descent rate as ground approaches",
+        "Discuss ideal touchdown: main wheels first, nose wheel gently lowering after",
+        "Explain that first landings may be firm - that is normal and safe",
+        "Set goal: 5-8 landings today, building consistency"
+      ],
+      "goals": [
+        "Student understands complete landing sequence",
+        "Student knows approach speed (65-70 knots)",
+        "Student understands aiming point concept",
+        "Student knows the flare is progressive, not abrupt",
+        "Student has realistic expectations about learning to land",
+        "Student feels excited but prepared for the challenge"
+      ]
+    },
+    {
+      "name": "Ground_Demonstration",
+      "prompt": "If practical, use ground-based observation or video to show what a good landing looks like. Point out the approach angle, the aiming point, when the flare begins, and the touchdown. Help the student visualize the sight picture they will see from the cockpit. Discuss common landing errors and what they look like: ballooning, porpoising, bouncing, hard landings.",
+      "steps": [
+        "Show video or observe actual landings at KRHV if possible",
+        "Point out stabilized approach: constant angle, constant speed",
+        "Identify the aiming point on the runway",
+        "Show when flare begins: aircraft appears to float slightly",
+        "Point out smooth touchdown: main wheels first",
+        "Explain what ballooning looks like: aircraft rises after flare starts",
+        "Explain porpoising: nose-wheel landing followed by bouncing",
+        "Discuss go-around decision: always an option if landing does not feel right"
+      ],
+      "goals": [
+        "Student can visualize what a good landing looks like",
+        "Student recognizes the approach angle and aiming point",
+        "Student understands common landing errors visually",
+        "Student knows go-around is always available"
+      ]
+    },
+    {
+      "name": "Setup_Final_Approach",
+      "prompt": "Position aircraft on a stabilized final approach to KRHV runway 31L or 31R. Use setPosition to establish the aircraft approximately 1 mile from threshold, 500 feet AGL, 70 knots, full flaps, on centerline, descending at 400-500 fpm. This gives the student a stabilized starting point to practice the final portion of landing without having to fly the entire pattern initially.",
+      "steps": [
+        "Use setPosition: 1 mile final, 500 AGL, runway 31L or 31R",
+        "Establish full flaps (30 degrees)",
+        "Establish approach speed: 70 knots",
+        "Establish descent rate: 400-500 fpm",
+        "Ensure aircraft is on centerline and on glidepath",
+        "Trim aircraft for hands-off approach",
+        "Brief the student: you are now on final approach, ready to land",
+        "Transfer controls to student with positive exchange"
+      ],
+      "goals": [
+        "Aircraft is in stabilized final approach configuration",
+        "Student has controls from a good starting position",
+        "Student can focus on learning the flare and touchdown",
+        "Setup eliminates variables of flying the full pattern initially"
+      ]
+    },
+    {
+      "name": "Stabilized_Approach",
+      "prompt": "Teach maintaining a stabilized approach. Explain the four criteria: on speed (65-70 knots), on centerline, on glidepath (aiming at touchdown zone), and in landing configuration (full flaps). Teach that small corrections are better than large ones. Use power to control descent rate and pitch to control airspeed. This is the opposite of cruise flight where pitch controls altitude.",
+      "steps": [
+        "Confirm full flaps (30 degrees) and approach speed (70 knots)",
+        "Teach aiming point: look at touchdown zone, typically first third of runway",
+        "Explain sight picture: if aiming point moves up in windscreen, you are low; if moves down, you are high",
+        "Teach power for glidepath: add power if too low, reduce if too high",
+        "Teach pitch for airspeed: pitch down slightly if too slow, pitch up if too fast",
+        "Emphasize small corrections: 50 RPM power changes, small pitch adjustments",
+        "Practice maintaining 70 knots and centerline for the approach",
+        "Monitor descent rate: should be approximately 400-500 fpm"
+      ],
+      "goals": [
+        "Student can maintain 65-70 knots on final",
+        "Student can maintain runway centerline alignment",
+        "Student understands power controls glidepath on approach",
+        "Student understands pitch controls airspeed on approach",
+        "Student makes small, smooth corrections",
+        "Student maintains stabilized approach to roundout point"
+      ],
+      "commonErrors": [
+        "Excessive airspeed (too fast for proper flare)",
+        "Too slow airspeed (risk of stall)",
+        "Not aligned with centerline",
+        "Chasing airspeed with large pitch changes",
+        "Not using power to control glidepath",
+        "Fixating on instruments instead of looking outside"
+      ]
+    },
+    {
+      "name": "Roundout_And_Flare",
+      "prompt": "Teach the roundout and flare. The roundout begins approximately 10-20 feet AGL: smoothly reduce descent rate by applying back pressure. The flare continues as the aircraft descends toward the runway: progressively increase back pressure to slow descent rate further. The goal is to be in a nearly level, slow descent (almost floating) just above the runway, touching down gently on the main wheels. This requires looking down the runway, not at the ground immediately in front. Use peripheral vision to judge height.",
+      "steps": [
+        "As aircraft approaches 10-20 feet AGL, begin roundout: smoothly apply back pressure",
+        "Shift eyes to look down the runway, not right in front",
+        "Use peripheral vision to judge height above runway",
+        "Continue increasing back pressure as aircraft settles",
+        "Reduce power to idle during flare (timing varies, typically roundout to just before touchdown)",
+        "Keep pulling back gently to keep nose up as speed decreases",
+        "Hold the aircraft off the runway as long as possible",
+        "Allow main wheels to touch down gently, nose wheel still off the ground",
+        "After main wheels touch, gently lower nose wheel to runway"
+      ],
+      "goals": [
+        "Student begins roundout at appropriate height (10-20 feet AGL)",
+        "Student transitions visual focus down the runway",
+        "Student applies progressive back pressure during flare",
+        "Student reduces power to idle at appropriate time",
+        "Student achieves main wheels touchdown first",
+        "Student gently lowers nose wheel after main wheels touch"
+      ],
+      "commonErrors": [
+        "Starting flare too high (balloons, then drops hard)",
+        "Starting flare too late (hard landing, potential nose-wheel first)",
+        "Looking at ground right in front instead of down runway",
+        "Not applying enough back pressure (hard flat landing)",
+        "Applying too much back pressure (balloon or stall)",
+        "Not holding the aircraft off long enough",
+        "Landing nose-wheel first (porpoising risk)"
+      ]
+    },
+    {
+      "name": "Touchdown_And_Rollout",
+      "prompt": "Teach proper touchdown and rollout procedures. After main wheels touch, gently lower the nose wheel. Maintain centerline with rudder pedals. After nose wheel is down, apply brakes as needed (usually minimal braking needed on longer runways). Exit the runway at a safe taxiway. If performing touch-and-go, immediately configure for takeoff without stopping.",
+      "steps": [
+        "After main wheels touch, continue holding some back pressure",
+        "Gently allow nose wheel to lower to runway (do not push forward)",
+        "Maintain runway centerline with rudder pedals",
+        "Keep control wheel slightly back to keep weight on main wheels",
+        "Apply brakes smoothly if needed to slow down",
+        "Watch for runway exit taxiway",
+        "For full-stop landing: exit runway at safe taxiway, call tower when clear",
+        "For touch-and-go: immediately apply full power, retract flaps to 10 degrees, verify positive climb, retract remaining flaps"
+      ],
+      "goals": [
+        "Student maintains centerline during rollout",
+        "Student applies brakes smoothly when needed",
+        "Student keeps some back pressure to protect nose gear",
+        "Student can perform touch-and-go if briefed",
+        "Student exits runway safely or continues for another takeoff"
+      ],
+      "commonErrors": [
+        "Pushing forward on yoke after touchdown (harsh nose-wheel contact)",
+        "Not maintaining centerline during rollout",
+        "Excessive braking or standing on brakes",
+        "Not clearing runway promptly",
+        "For touch-and-go: retracting all flaps at once (causes sink)"
+      ]
+    },
+    {
+      "name": "Go_Around_Practice",
+      "prompt": "Teach and practice the go-around procedure. Explain that if the approach is not stabilized, or the landing does not feel right, the correct decision is to go around and try again. There is no penalty for a go-around - safety is paramount. Practice executing a go-around from final approach: full power, pitch for climb, positive rate, retract flaps incrementally, climb to pattern altitude, re-enter pattern.",
+      "steps": [
+        "Brief go-around decision criteria: unstable approach, excessive speed, misaligned, or does not feel right",
+        "Set up on final approach in a non-ideal configuration (too fast, too high, or off-centerline)",
+        "Call for go-around: GO AROUND",
+        "Apply full power smoothly",
+        "Pitch for climb attitude (approximately Vy)",
+        "Verify positive rate of climb on VSI",
+        "Retract flaps one increment at a time (30 to 20, then 20 to 10, then 10 to 0)",
+        "Climb to pattern altitude, turn crosswind when appropriate",
+        "Re-enter pattern for another approach"
+      ],
+      "goals": [
+        "Student understands when to execute go-around",
+        "Student knows go-around is the correct decision when in doubt",
+        "Student can perform go-around: power, pitch, positive rate, flaps",
+        "Student retracts flaps incrementally during go-around",
+        "Student feels confident making go-around decision"
+      ],
+      "commonErrors": [
+        "Delaying go-around decision (trying to save a bad approach)",
+        "Not applying full power immediately",
+        "Retracting all flaps at once during go-around",
+        "Not establishing positive rate before retracting flaps"
+      ]
+    },
+    {
+      "name": "Repetition_Practice",
+      "prompt": "Have the student perform multiple landings to build proficiency, consistency, and confidence. Use touch-and-goes or stop-and-goes. After each landing, provide specific feedback: what was good, what needs improvement. Focus on: approach speed control, aiming point consistency, flare timing, touchdown smoothness. Celebrate improvements. Build toward independent landings with minimal coaching.",
+      "steps": [
+        "After first landing, set up for next approach (touch-and-go or full pattern)",
+        "Provide immediate feedback: approach was stable, flare was early/late, touchdown was firm/smooth",
+        "Note specific improvements: better speed control, smoother flare, etc",
+        "Repeat landing sequence 4-6 more times for total of 5-8 landings",
+        "Vary feedback focus each landing: one on speed, next on centerline, next on flare timing",
+        "Encourage the student when landings improve",
+        "Address recurring errors with specific coaching",
+        "Build toward student performing landings independently by end of lesson"
+      ],
+      "goals": [
+        "Student performs at least 5 landings during lesson",
+        "Student shows progressive improvement in technique",
+        "Student demonstrates more consistent landings as lesson progresses",
+        "Student understands their strengths and areas to improve",
+        "Student builds confidence in landing ability",
+        "Student can perform landing with minimal coaching by end"
+      ],
+      "commonErrors": [
+        "Not learning from previous landing mistakes",
+        "Getting frustrated with hard landings instead of treating as learning",
+        "Inconsistent approach speeds between landings"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief the landing lesson. Review what the student did well and areas for continued improvement. Discuss how their landings progressed throughout the lesson. Quiz on critical elements: approach speed, when to begin flare, what to look at during flare. Celebrate their accomplishment of making their first landings. Emphasize that landing proficiency takes time and practice. Answer questions and preview next lesson: touch-and-go procedures.",
+      "steps": [
+        "Ask student how they felt about their landings today",
+        "Review specific good points: stable approaches, improving flare timing, centerline control",
+        "Discuss areas to continue working on: flare timing, speed control, smoothness, etc",
+        "Quiz on approach speed (65-70 knots)",
+        "Quiz on when to begin flare (10-20 feet AGL)",
+        "Quiz on what to look at during flare (down the runway, peripheral vision)",
+        "Discuss that great landings take many hours of practice",
+        "Celebrate their achievement: they can now land an airplane!",
+        "Answer any remaining questions",
+        "Preview next lesson: Challenge 2.4 - Touch and Go procedures and pattern efficiency"
+      ],
+      "goals": [
+        "Student understands their landing performance honestly",
+        "Student can state critical landing parameters",
+        "Student knows landing takes continued practice to master",
+        "Student feels proud of accomplishment despite imperfect landings",
+        "Student is motivated to continue improving",
+        "Student looks forward to next lesson with confidence"
+      ]
+    }
+  ]
+}

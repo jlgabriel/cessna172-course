@@ -1,0 +1,259 @@
+{
+  "name": "Touch_And_Go",
+  "shortDescription": "Master touch-and-go procedures to efficiently practice takeoffs and landings",
+  "prompt": "You are teaching a student pilot touch-and-go procedures in a Cessna 172 at Reid-Hillview Airport (KRHV). Touch-and-go is a technique where the aircraft lands, then immediately takes off again without coming to a full stop. This allows efficient practice of both takeoffs and landings in the traffic pattern. Cover the complete sequence: normal landing, immediate reconfiguration for takeoff while still rolling, smooth power application, and departure. Emphasize the critical actions during rollout: flaps up to takeoff position, carb heat off, trim reset, full power. Teach proper timing and coordination. Safety is paramount: if anything feels wrong, abort the touch-and-go and do a full-stop landing instead. KRHV runways are 31L/13R (3,101 feet) and 31R/13L (2,408 feet), adequate for safe touch-and-goes.",
+  "openingLine": "Today we will master touch-and-go procedures - the efficient way to practice takeoffs and landings. Ready to keep the pattern moving?",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "startUserTimer": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "recordFlightData": true,
+    "challengeTimer": false,
+    "phaserEnabled": true,
+    "assistantModeEnabled": false
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on touch-and-go procedures. Explain that a touch-and-go combines landing and immediate takeoff without stopping, allowing efficient practice of both skills. Cover the critical sequence during rollout: main wheels touch, flaps to takeoff setting (10 degrees or 0), carb heat off, trim for takeoff, verify sufficient runway remaining, full power, normal takeoff. Emphasize safety: touch-and-go is only performed when runway length is adequate and conditions are suitable. If anything feels wrong or rushed, do a full-stop landing instead. Teach proper radio phraseology at towered airports.",
+      "steps": [
+        "Explain touch-and-go concept: land and immediately takeoff without stopping",
+        "Describe the benefits: efficient practice, more repetitions per flight hour",
+        "Explain the critical reconfiguration sequence during rollout",
+        "State the actions: flaps to takeoff position, carb heat off, trim reset, full power",
+        "Emphasize timing: reconfigure while rolling, before applying takeoff power",
+        "Discuss safety: adequate runway required, abort if anything feels wrong",
+        "Teach radio call at KRHV: request touch-and-go on initial call or downwind",
+        "State KRHV runways are adequate length for safe touch-and-goes",
+        "Set expectations: multiple touch-and-goes today for maximum practice"
+      ],
+      "goals": [
+        "Student understands touch-and-go concept and purpose",
+        "Student knows the reconfiguration sequence",
+        "Student understands safety requirements for touch-and-go",
+        "Student knows when to abort and do full-stop instead",
+        "Student knows proper radio communications for touch-and-go",
+        "Student is ready to practice the procedure"
+      ]
+    },
+    {
+      "name": "Demonstration",
+      "prompt": "Demonstrate one complete touch-and-go for the student. Talk through each step as you perform it. Emphasize the smooth flow from landing to reconfiguration to takeoff. Point out the timing of each action and the awareness needed to perform them safely while maintaining aircraft control and runway centerline.",
+      "steps": [
+        "Set up and fly a normal pattern to final approach",
+        "Narrate the approach: speed, configuration, aiming point",
+        "Execute normal landing: flare, touchdown on main wheels",
+        "As soon as main wheels touch, begin reconfiguration (narrate each action)",
+        "Retract flaps to 10 degrees (or 0 for performance takeoff)",
+        "Turn off carburetor heat",
+        "Adjust trim to takeoff setting",
+        "Verify adequate runway remaining ahead",
+        "Smoothly apply full power for takeoff",
+        "Execute normal takeoff: maintain centerline, rotate at speed, climb out",
+        "Explain that entire sequence from touchdown to liftoff is approximately 5-10 seconds"
+      ],
+      "goals": [
+        "Student sees complete touch-and-go performed correctly",
+        "Student understands the flow and timing of the procedure",
+        "Student recognizes the actions happen quickly but smoothly",
+        "Student can visualize performing it themselves"
+      ]
+    },
+    {
+      "name": "First_Attempt_Coached",
+      "prompt": "Have the student perform their first touch-and-go with heavy coaching. Talk them through each step. Focus on one task at a time: first the landing, then the reconfiguration, then the takeoff. Provide real-time prompts for each action. Build their confidence with successful completion.",
+      "steps": [
+        "Student flies normal approach to landing",
+        "Coach the landing: speed, flare, touchdown",
+        "As soon as main wheels touch, call out: Flaps to 10 degrees",
+        "Student retracts flaps to 10 degrees",
+        "Call out: Carb heat off",
+        "Student turns off carburetor heat",
+        "Call out: Check trim for takeoff",
+        "Student adjusts trim",
+        "Call out: Verify runway remaining - looks good",
+        "Call out: Full power for takeoff",
+        "Student applies full power and continues with normal takeoff",
+        "Coach the takeoff: right rudder, centerline, rotate, climb",
+        "Debrief immediately after: that was your first touch-and-go!"
+      ],
+      "goals": [
+        "Student completes their first touch-and-go successfully",
+        "Student performs each step with prompting",
+        "Student maintains aircraft control throughout",
+        "Student feels the flow of the procedure",
+        "Student gains confidence from successful completion"
+      ],
+      "commonErrors": [
+        "Forgetting to retract flaps (causes slow acceleration)",
+        "Retracting all flaps instead of going to takeoff setting",
+        "Forgetting carburetor heat off",
+        "Applying power before reconfiguration complete",
+        "Not maintaining centerline during rollout",
+        "Rushing and making mistakes"
+      ]
+    },
+    {
+      "name": "Landing_Quality_Focus",
+      "prompt": "Practice several touch-and-goes with emphasis on landing quality. The landing portion must be good before the touch-and-go makes sense. Focus on consistent approach speed, proper flare timing, and smooth main-wheel touchdowns. Build consistency in the landing before worrying about speed of reconfiguration.",
+      "steps": [
+        "Student performs approach and landing with focus on technique",
+        "Emphasize approach speed: 65-70 knots consistently",
+        "Coach flare timing and smoothness",
+        "Aim for main wheels touching first, gently",
+        "After landing, proceed with touch-and-go reconfiguration",
+        "Provide feedback on landing quality after each attempt",
+        "Repeat 3-4 times, focusing on landing consistency",
+        "Praise improvements in landing technique"
+      ],
+      "goals": [
+        "Student demonstrates consistent landing technique",
+        "Student touches down on main wheels first each time",
+        "Student maintains proper approach speed",
+        "Student shows improving flare timing and smoothness",
+        "Landings are safe platform for practicing touch-and-go"
+      ],
+      "commonErrors": [
+        "Inconsistent approach speeds",
+        "Poor flare timing (too early or too late)",
+        "Nose-wheel landings",
+        "Not maintaining centerline on touchdown"
+      ]
+    },
+    {
+      "name": "Reconfiguration_Speed",
+      "prompt": "Now focus on the speed and smoothness of reconfiguration during rollout. Teach the flow: flaps, carb heat, trim, power. Practice making these actions quick but deliberate, not rushed. Develop muscle memory for the sequence. The goal is smooth, automatic reconfiguration that does not compromise aircraft control or situational awareness.",
+      "steps": [
+        "After touchdown, student performs reconfiguration sequence",
+        "Time the sequence: should be 3-5 seconds from touchdown to full power",
+        "Coach the flow: flaps first, then carb heat, check trim, then power",
+        "Emphasize maintaining centerline throughout reconfiguration",
+        "Practice finding controls without looking inside excessively",
+        "Build toward automatic, flowing reconfiguration",
+        "Repeat 3-4 times with focus on smooth, quick reconfiguration",
+        "Provide feedback on speed and accuracy of reconfiguration"
+      ],
+      "goals": [
+        "Student can reconfigure in 3-5 seconds smoothly",
+        "Student follows the proper sequence consistently",
+        "Student maintains aircraft control during reconfiguration",
+        "Student develops muscle memory for the actions",
+        "Reconfiguration becomes more automatic with practice"
+      ],
+      "commonErrors": [
+        "Taking too long to reconfigure (using excessive runway)",
+        "Wrong sequence of actions",
+        "Forgetting steps",
+        "Head down inside cockpit too long",
+        "Losing centerline control while reconfiguring"
+      ]
+    },
+    {
+      "name": "Complete_Integration",
+      "prompt": "Practice complete touch-and-go cycles with both landing quality and reconfiguration smoothness. Student should now perform the entire sequence with minimal prompting. Focus on consistency: every landing should be similar, every reconfiguration should be smooth, every takeoff should be standard. Build proficiency through repetition.",
+      "steps": [
+        "Student flies complete pattern to landing",
+        "Student performs landing with good technique",
+        "Student immediately reconfigs: flaps, carb heat, trim",
+        "Student verifies runway remaining",
+        "Student applies full power and executes takeoff",
+        "Student flies departure, crosswind, downwind, base, final",
+        "Repeat the cycle 4-6 times",
+        "Provide feedback after each complete cycle",
+        "Note improvements and areas still needing work",
+        "Reduce coaching progressively as student shows competence"
+      ],
+      "goals": [
+        "Student performs touch-and-go independently with minimal coaching",
+        "Student demonstrates consistency across multiple attempts",
+        "Student integrates landing, reconfiguration, and takeoff smoothly",
+        "Student maintains good situational awareness throughout",
+        "Student shows increasing proficiency and confidence",
+        "Student can perform at least 5-8 touch-and-goes successfully"
+      ],
+      "commonErrors": [
+        "Inconsistency between attempts",
+        "Forgetting steps when not prompted",
+        "Allowing quality to degrade with fatigue"
+      ]
+    },
+    {
+      "name": "Emergency_Procedures",
+      "prompt": "Brief and practice scenarios where touch-and-go should be aborted in favor of full-stop landing. Discuss situations: poor landing (bounced or long), inadequate runway remaining, engine roughness, aircraft system issue, or simply feeling rushed or uncomfortable. Practice making the decision to abort touch-and-go and complete a full-stop landing instead. Safety always comes first.",
+      "steps": [
+        "Brief scenarios requiring touch-and-go abort",
+        "Scenario 1: Bounced landing - student should abort, full stop",
+        "Practice: intentional balloon/bounce, call full-stop, complete landing",
+        "Scenario 2: Long landing - student should abort if less than half runway remains",
+        "Practice: land long, recognize insufficient runway, reduce to idle, brake, full-stop",
+        "Scenario 3: Feeling rushed or uncomfortable - always okay to abort",
+        "Discuss: no pressure to complete touch-and-go if it does not feel right",
+        "Reinforce: full-stop landing is always the safe choice when in doubt"
+      ],
+      "goals": [
+        "Student knows when to abort touch-and-go procedure",
+        "Student can make decision to do full-stop instead",
+        "Student understands safety comes before practice efficiency",
+        "Student feels empowered to abort if uncomfortable",
+        "Student has practiced aborting and doing full-stop"
+      ]
+    },
+    {
+      "name": "Radio_Communications",
+      "prompt": "Practice proper radio communications for touch-and-go operations at towered airports like KRHV. Teach when and how to request touch-and-go, and how to communicate with tower during pattern operations. Cover initial call-up, pattern entry, downwind call, and acknowledging landing clearance that includes touch-and-go approval.",
+      "steps": [
+        "Teach initial call-up: KRHV Tower, Skyhawk N12345, left downwind runway 31 Left, touch-and-go",
+        "Tower response: Skyhawk 345, runway 31 Left, cleared touch-and-go",
+        "Student reads back: Skyhawk 345, cleared touch-and-go 31 Left",
+        "Practice the radio calls during pattern operations",
+        "Teach position reports: Skyhawk 345, left base 31 Left",
+        "Discuss that touch-and-go clearance covers the landing and subsequent takeoff",
+        "Practice several complete patterns with proper radio communications",
+        "Emphasize professional, concise radio technique"
+      ],
+      "goals": [
+        "Student can properly request touch-and-go clearance",
+        "Student reads back clearances correctly",
+        "Student makes appropriate position reports",
+        "Student understands touch-and-go clearance covers landing and takeoff",
+        "Student demonstrates professional radio communications"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief the touch-and-go lesson. Review the student's progress from first coached attempt to independent performance. Discuss the reconfiguration sequence and common errors encountered. Quiz on when to abort a touch-and-go. Celebrate their ability to efficiently practice both takeoffs and landings. Answer questions and preview next lesson: pattern entries and exits.",
+      "steps": [
+        "Ask student how they felt about learning touch-and-go procedures",
+        "Review their progression throughout the lesson",
+        "Discuss the reconfiguration sequence: flaps, carb heat, trim, power",
+        "Quiz on when to abort touch-and-go (bounced, long, uncomfortable)",
+        "Review proper radio communications for touch-and-go",
+        "Discuss how touch-and-go allows more practice per flight hour",
+        "Celebrate their proficiency in the procedure",
+        "Answer any remaining questions",
+        "Preview next lesson: Challenge 2.5 - Pattern Entries and Exits (joining and leaving traffic)"
+      ],
+      "goals": [
+        "Student understands touch-and-go procedure thoroughly",
+        "Student can perform touch-and-go independently and safely",
+        "Student knows when to abort in favor of full-stop",
+        "Student has proper radio communication skills for touch-and-go",
+        "Student feels accomplished and ready for next pattern skills",
+        "Student can use touch-and-go to practice efficiently in future training"
+      ]
+    }
+  ]
+}
