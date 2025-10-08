@@ -1,0 +1,345 @@
+{
+  "name": "Pilotage_Dead_Reckoning",
+  "shortDescription": "Master visual navigation and dead reckoning on your first cross-country flight. Learn chart reading, checkpoint identification, time-distance calculations, and wind correction while navigating from Palo Alto to Watsonville.",
+  "prompt": "You are teaching fundamental cross-country navigation to a private pilot student. This is their first real cross-country flight using pilotage (visual landmarks) and dead reckoning (calculated navigation).\n\n**ROUTE:** KPAO (Palo Alto) → KWVI (Watsonville), approximately 35 nautical miles, southbound along the coast.\n\n**PILOTAGE FUNDAMENTALS:**\nNavigate using visible landmarks: cities, roads, rivers, coastline, terrain features. Compare what you see outside with sectional chart. Identify checkpoints every 5-8 nm to confirm position.\n\n**DEAD RECKONING CALCULATIONS:**\n- True Course (TC) from chart, apply magnetic variation (~14°E in California): Magnetic Course = TC + 14°\n- Estimate Wind Correction Angle (WCA) based on winds aloft forecast\n- True Heading = TC + WCA, then Magnetic Heading = TH + variation\n- Calculate groundspeed from TAS and wind, then Time = Distance ÷ Groundspeed\n- Update ETAs at each checkpoint based on actual groundspeed\n\n**CHECKPOINTS (approximate):**\n1. Departure: KPAO (elevation 6 ft)\n2. Checkpoint 1: ~8 nm - Stanford Dish area / Foothill landmarks\n3. Checkpoint 2: ~15 nm - Santa Cruz Mountains ridge\n4. Checkpoint 3: ~25 nm - Aptos area / coastal landmarks\n5. Destination: KWVI (elevation 163 ft, non-towered)\n\n**SECTIONAL CHART READING:**\nIdentify features: airports (magenta/blue), cities (yellow), roads (various colors), terrain elevation, airspace boundaries, obstacles. Know your position at all times within 5 nm.\n\n**POSITION AWARENESS:**\nAlways know: where you are, where you're going, how long to get there, how much fuel required. If uncertain of position, use landmarks to reorient or climb for better visibility.\n\nUse markers at each checkpoint, timer for ETAs, waypoints for navigation tracking. Student maintains cruise altitude 3,500 ft, airspeed 105-110 KIAS.",
+  "openingLine": "Welcome to your first cross-country! Today we're flying KPAO to KWVI using pilotage and dead reckoning - the foundation of all navigation. We'll identify checkpoints, calculate ETAs, and master chart reading along the way.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on cross-country navigation fundamentals and flight overview.",
+      "steps": [
+        "Explain this is first real cross-country: KPAO to KWVI, approximately 35 nm southbound",
+        "Define pilotage: visual navigation using landmarks compared to sectional chart",
+        "Define dead reckoning: calculated navigation using heading, speed, time, distance",
+        "Emphasize: combination of both techniques provides redundancy and accuracy",
+        "Teach checkpoint concept: identify prominent landmarks every 5-8 nm to confirm position",
+        "Review today's checkpoints: Stanford area (8 nm), Santa Cruz Mountains (15 nm), Aptos area (25 nm), KWVI arrival",
+        "Explain time-distance-speed relationship: Time = Distance ÷ Groundspeed, updating ETAs at checkpoints",
+        "Introduce magnetic variation: ~14° East in California, add to true course for magnetic course",
+        "Discuss wind correction angle: estimate based on winds aloft, adjust heading to maintain course",
+        "Set expectations: maintain 3,500 ft MSL cruise, 105-110 KIAS, track position continuously",
+        "Explain tools: will set waypoints at checkpoints, use timer for ETAs, markers to track progress",
+        "Emphasize: always know position within 5 nm - if uncertain, reorient using landmarks or climb"
+      ],
+      "goals": [
+        "Student understands pilotage and dead reckoning concepts",
+        "Student knows today's route: KPAO → KWVI with four checkpoints",
+        "Student familiar with time-distance-speed calculations",
+        "Student understands magnetic variation and wind correction angle basics",
+        "Student prepared to maintain continuous position awareness",
+        "Student ready for first cross-country navigation experience"
+      ],
+      "commonErrors": [
+        "Thinking one navigation method is sufficient (need both pilotage and dead reckoning)",
+        "Not planning checkpoints in advance",
+        "Forgetting to account for magnetic variation",
+        "Ignoring wind effect on groundspeed and heading"
+      ]
+    },
+    {
+      "name": "Flight_Planning",
+      "prompt": "Complete detailed flight planning with calculations for KPAO to KWVI.",
+      "steps": [
+        "Get weather briefing using weatherLookup: KPAO departure weather, KWVI destination weather, winds aloft at 3,000 ft",
+        "Review sectional chart (student should have one available): locate KPAO, KWVI, identify route",
+        "Measure true course from KPAO to KWVI: approximately 180° true (southbound)",
+        "Apply magnetic variation: TC 180° + 14°E variation = MC 194° magnetic",
+        "Check winds aloft forecast: determine wind direction and speed at cruise altitude",
+        "Calculate wind correction angle: if wind from west, need to crab right; if from east, crab left",
+        "Example: 270° at 15 knots wind, need ~8° right correction, True Heading ~188°, Magnetic Heading ~202°",
+        "Calculate groundspeed: TAS ~110 knots, adjust for wind component (headwind reduces, tailwind increases)",
+        "Estimate time enroute: 35 nm ÷ groundspeed (if 110 knots GS, ~19 minutes total)",
+        "Calculate fuel: time × fuel flow (~9 gph cruise = ~3 gallons, plus VFR reserve of 30 min)",
+        "Identify checkpoints on chart: Stanford Dish area, Santa Cruz Mountains ridge, Aptos coastal area",
+        "Calculate checkpoint ETAs: Departure time + (distance ÷ groundspeed) for each checkpoint",
+        "Student uses pilotNotes to record: heading, groundspeed, ETAs, fuel calculations",
+        "Set destination using setDestinationRunway: KWVI runway 02 or 20 (based on winds)"
+      ],
+      "goals": [
+        "Student completes comprehensive flight plan with all calculations",
+        "True course, magnetic course, and heading determined with variation and wind correction",
+        "Groundspeed and time enroute calculated accurately",
+        "Fuel requirements determined with VFR reserves included",
+        "Checkpoint locations identified and ETAs calculated",
+        "Student has written flight plan in pilot notes for reference",
+        "Destination runway set for navigation assistance"
+      ],
+      "commonErrors": [
+        "Forgetting to add magnetic variation (flying true heading on magnetic compass)",
+        "Not accounting for wind effect on groundspeed (ETAs inaccurate)",
+        "Insufficient fuel reserve calculation",
+        "Checkpoints not clearly identified on chart before departure"
+      ]
+    },
+    {
+      "name": "Preflight",
+      "prompt": "Review departure procedures and prepare for navigation leg.",
+      "steps": [
+        "Position aircraft at KPAO using setPosition (on ground, ready for departure)",
+        "Review KPAO departure: towered airport, runway 31 typical, left traffic pattern",
+        "Discuss departure clearance: 'Palo Alto Tower, Cessna [callsign], south ramp, ready to taxi, departing to the south with information [ATIS]'",
+        "Plan departure: after takeoff, turn to heading ~202° (calculated magnetic heading), climb to 3,500 ft",
+        "Review first checkpoint: Stanford Dish area at ~8 nm, identify landmarks (Stanford campus, foothills)",
+        "Set first checkpoint waypoint: use setUserWaypoint for Stanford area position",
+        "Start challenge timer at takeoff: track actual time to compare with calculated ETAs",
+        "Brief altitude: will climb to 3,500 ft MSL for cruise (well above terrain, good for visibility)",
+        "Brief airspeed: maintain 105-110 KIAS in cruise for predictable groundspeed",
+        "Review communication plan: contact KPAO tower for departure, monitor 121.5 enroute, contact KWVI CTAF for arrival",
+        "Emphasize: start chart reading immediately after takeoff, identify landmarks early and often",
+        "Student adds marker 'KPAO Departure' when ready to begin"
+      ],
+      "goals": [
+        "Aircraft positioned at KPAO ready for departure",
+        "Departure procedures reviewed and understood",
+        "Calculated heading and altitude plan clear",
+        "First checkpoint waypoint set and landmarks briefed",
+        "Challenge timer ready to start at takeoff",
+        "Student mentally prepared to begin navigation immediately after departure",
+        "Communication plan established"
+      ],
+      "commonErrors": [
+        "Not setting first checkpoint waypoint before departure",
+        "Forgetting to start timer at takeoff",
+        "Not briefing specific landmarks to look for at first checkpoint"
+      ]
+    },
+    {
+      "name": "Departure",
+      "prompt": "Execute departure from KPAO and establish cruise navigation to first checkpoint.",
+      "steps": [
+        "Request taxi clearance: 'Palo Alto Tower, Cessna [callsign], ready to taxi, runway 31, departing to the south'",
+        "After taxi and run-up complete, request takeoff clearance",
+        "Student adds marker 'Takeoff KPAO' and starts challenge timer at liftoff",
+        "Execute normal takeoff, climb out straight ahead initially per tower instructions",
+        "After clearing pattern and receiving clearance to turn, turn to calculated heading ~202° magnetic",
+        "Student adds marker 'On Course - Heading 202' when established on navigation heading",
+        "Climb to 3,500 ft MSL, maintain heading during climb",
+        "Once at cruise altitude, level off and establish cruise power: 2,400 RPM, trim for 105-110 KIAS",
+        "Begin pilotage immediately: identify landmarks visible ahead - Bay shoreline, Stanford area, foothills",
+        "Compare outside view to sectional chart: 'What do you see? Can you identify it on the chart?'",
+        "Student reads simulator data to confirm heading, altitude, airspeed, groundspeed",
+        "Calculate actual groundspeed from GPS or time/distance, compare to flight plan prediction",
+        "Update ETA to first checkpoint based on actual groundspeed: 'If we're making 108 knots, when will we reach Checkpoint 1?'",
+        "Monitor distance to first checkpoint waypoint using distanceFromUserWaypoint",
+        "Coach: 'Scan outside frequently, cross-check landmarks with chart, don't fixate on instruments'"
+      ],
+      "goals": [
+        "Successful departure from KPAO with proper communications",
+        "Established on course heading ~202° magnetic",
+        "Climb to and maintain 3,500 ft MSL cruise altitude",
+        "Cruise power set: 2,400 RPM, 105-110 KIAS",
+        "Challenge timer running for ETA tracking",
+        "Student actively comparing outside view to sectional chart",
+        "Actual groundspeed determined and checkpoint ETA updated",
+        "Navigation to first checkpoint in progress"
+      ],
+      "commonErrors": [
+        "Not turning to heading immediately after clearance (drifting off course)",
+        "Fixating on instruments instead of looking outside for landmarks",
+        "Not updating ETAs based on actual groundspeed",
+        "Poor heading control (allowing drift without correction)"
+      ]
+    },
+    {
+      "name": "Checkpoint_1",
+      "prompt": "Identify and navigate through first checkpoint at Stanford area (~8 nm from KPAO).",
+      "steps": [
+        "As approaching ~8 nm from departure, look for Stanford area landmarks: university campus, foothills, Dish",
+        "Coach: 'What landmarks do you see ahead? Can you identify Stanford campus? The foothills?'",
+        "When student identifies checkpoint area, student adds marker 'Checkpoint 1 - Stanford Area'",
+        "Check actual time against calculated ETA: 'You estimated 4 minutes to this checkpoint - what was actual time?'",
+        "Calculate groundspeed based on actual time: 8 nm ÷ actual time = groundspeed",
+        "Compare actual groundspeed to flight plan: if different, discuss why (wind stronger/lighter than forecast)",
+        "Update heading if necessary: 'Are we left or right of course? Do we need heading correction?'",
+        "Set next checkpoint waypoint: Santa Cruz Mountains ridge at ~15 nm from KPAO",
+        "Calculate ETA to next checkpoint based on updated groundspeed: ~7 nm more ÷ groundspeed",
+        "Coach chart reading: 'Find our position on the chart. What should we see next? Mountains ahead?'",
+        "Review fuel: check fuel gauge, confirm consumption matches flight plan estimates",
+        "Continue cruise: maintain 3,500 ft, 105-110 KIAS, heading ~202° (adjusted if needed)",
+        "Emphasize continuous position awareness: 'Always know where you are, where you're going, how long until you get there'"
+      ],
+      "goals": [
+        "Student successfully identifies first checkpoint using visual landmarks",
+        "Actual time compared to calculated ETA (teaches accuracy of calculations)",
+        "Groundspeed recalculated based on actual performance",
+        "Heading adjusted if needed to stay on course",
+        "Next checkpoint waypoint set and ETA calculated",
+        "Student demonstrates understanding of continuous navigation updates",
+        "Student building confidence in chart reading and landmark identification"
+      ],
+      "commonErrors": [
+        "Not positively identifying checkpoint (guessing rather than confirming)",
+        "Forgetting to update ETAs based on actual groundspeed",
+        "Not correcting heading if off course",
+        "Losing position awareness after passing checkpoint"
+      ]
+    },
+    {
+      "name": "Checkpoint_2",
+      "prompt": "Navigate through second checkpoint at Santa Cruz Mountains (~15 nm from KPAO).",
+      "steps": [
+        "Approaching mountains: terrain rises ahead, ridge becomes visible",
+        "Coach: 'Notice how terrain is changing. Can you identify the mountain ridge on your chart?'",
+        "Student identifies distinctive ridge/pass area as checkpoint",
+        "Student adds marker 'Checkpoint 2 - Santa Cruz Mountains'",
+        "Verify position using multiple landmarks: ridge shape, valleys, any visible roads or clearings",
+        "Check time: 'What was your ETA for this checkpoint? How close were you?'",
+        "Discuss navigation accuracy: if ETAs have been accurate, pilotage and DR working well together",
+        "If ETAs off, discuss why: wind different than forecast? Heading corrections needed?",
+        "Emphasize terrain awareness: altitude is 3,500 ft, terrain below ~2,000 ft, adequate clearance",
+        "Set next checkpoint waypoint: Aptos coastal area at ~25 nm from KPAO",
+        "Calculate ETA: ~10 nm ahead ÷ current groundspeed",
+        "Look ahead: coastal area should become visible soon, watch for ocean appearing",
+        "Coach: 'As we cross the mountains, we'll see the coast ahead. That's our next reference.'",
+        "Maintain cruise parameters: altitude, airspeed, heading",
+        "Review fuel: consumption still matching plan? Adequate reserves for destination plus VFR minimum?"
+      ],
+      "goals": [
+        "Student identifies second checkpoint using terrain features",
+        "Student demonstrates improved chart reading over mountainous terrain",
+        "ETA accuracy improving with practice and groundspeed updates",
+        "Student maintains terrain awareness and safe altitude",
+        "Next checkpoint waypoint set with ETA calculated",
+        "Student gaining confidence in continuous navigation process",
+        "Fuel management awareness maintained"
+      ],
+      "commonErrors": [
+        "Uncertainty about exact position over mountains (not using multiple landmarks)",
+        "Not maintaining altitude awareness over rising terrain",
+        "Assuming checkpoint passed without positive identification",
+        "Not looking ahead to identify next checkpoint area"
+      ]
+    },
+    {
+      "name": "Checkpoint_3",
+      "prompt": "Navigate through third checkpoint at Aptos coastal area (~25 nm from KPAO).",
+      "steps": [
+        "Approaching coast: Pacific Ocean becomes visible ahead, coastal communities apparent",
+        "Coach: 'There's the coast! Can you identify the Aptos area? Any distinctive features?'",
+        "Student identifies coastal landmarks: beaches, Highway 1, coastal communities",
+        "Student adds marker 'Checkpoint 3 - Aptos Coast'",
+        "Verify position: compare coastline shape to chart, identify Aptos area specifically",
+        "Check ETA accuracy: by third checkpoint, student should be predicting time accurately",
+        "Discuss navigation proficiency: 'Your ETAs have been close/improving - good job tracking groundspeed!'",
+        "Look ahead: KWVI (Watsonville) is approximately 10 nm further south along coast",
+        "Set destination waypoint if not already set: KWVI runway (02 or 20 based on winds)",
+        "Calculate final ETA to KWVI: ~10 nm ÷ groundspeed = final leg time",
+        "Begin descent planning: 'We're at 3,500 ft, KWVI is 163 ft elevation, need to descend ~3,400 ft'",
+        "Calculate descent: if descending at 500 fpm, need ~7 minutes descent time, start descent ~3-4 nm out",
+        "Prepare for arrival: review KWVI (non-towered), will use CTAF frequency, announce position",
+        "Student uses airportCodeLookup to confirm KWVI details: CTAF frequency, runway in use",
+        "Coach: 'Final leg to KWVI. Keep tracking position, prepare for pattern entry'"
+      ],
+      "goals": [
+        "Student identifies third checkpoint using coastal landmarks",
+        "Student demonstrates consistent ETA prediction accuracy",
+        "Student successfully navigates using combination of pilotage and dead reckoning",
+        "Descent planning initiated for arrival at KWVI",
+        "Destination airport information reviewed (non-towered procedures)",
+        "Student prepared for final navigation leg and arrival",
+        "Student demonstrates confidence in cross-country navigation"
+      ],
+      "commonErrors": [
+        "Not planning descent in advance (arriving too high over airport)",
+        "Forgetting KWVI is non-towered (different communication procedures than KPAO)",
+        "Not monitoring fuel for VFR reserves",
+        "Losing position awareness as destination approaches"
+      ]
+    },
+    {
+      "name": "Arrival",
+      "prompt": "Navigate to KWVI and execute arrival at non-towered airport.",
+      "steps": [
+        "Continue along coast toward KWVI, maintaining position awareness",
+        "Begin descent ~5 nm out: reduce power to ~2,000 RPM, pitch for 500 fpm descent, maintain 90-100 KIAS",
+        "Monitor distance to KWVI: use navigateToUserWaypoint and distanceFromUserWaypoint",
+        "When ~10 nm out, announce on CTAF: 'Watsonville Traffic, Cessna [callsign], 10 miles north, inbound landing runway [02/20]'",
+        "Coach: 'KWVI is non-towered. Self-announce position, listen for other traffic.'",
+        "Identify KWVI airport: look for runway, airport markings, compare to chart position",
+        "Student adds marker 'KWVI Identified' when airport visual",
+        "Continue descent to pattern altitude (~1,000 AGL = ~1,200 MSL)",
+        "Enter pattern based on runway in use: 45° entry to downwind for runway 02 or 20",
+        "Announce: 'Watsonville Traffic, Cessna [callsign], entering left downwind runway [02/20]'",
+        "Execute pattern: downwind, base, final with position reports",
+        "Land on appropriate runway, student adds marker 'Landed KWVI'",
+        "Stop challenge timer at landing: check total time from KPAO departure to KWVI landing",
+        "Taxi to parking, shut down",
+        "Coach: 'Congratulations! You just completed your first cross-country navigation flight!'"
+      ],
+      "goals": [
+        "Student successfully navigates to KWVI using continuous position tracking",
+        "Descent planning and execution appropriate for arrival",
+        "Proper non-towered airport communications on CTAF",
+        "Airport identified using pilotage before entering pattern",
+        "Standard pattern entry and landing at KWVI",
+        "Total time tracked for comparison to flight plan",
+        "Student successfully completes first cross-country flight!",
+        "Student gains confidence in ability to navigate cross-country"
+      ],
+      "commonErrors": [
+        "Arriving too high over airport due to late descent",
+        "Not using proper non-towered communications",
+        "Entering pattern incorrectly for wind/runway in use",
+        "Losing position awareness on arrival (not certain of airport location)"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review navigation performance and prepare for advanced techniques.",
+      "steps": [
+        "Review complete flight: KPAO → KWVI, ~35 nm, four checkpoints successfully identified",
+        "Analyze timer data: compare actual total time to flight plan estimate",
+        "Review markers: departure, on course, three checkpoints, arrival - all tracked",
+        "Use analyzeFlightData to examine navigation accuracy throughout flight",
+        "Discuss pilotage success: 'Which landmarks were easiest to identify? Which were challenging?'",
+        "Review dead reckoning accuracy: 'How close were your ETAs? What affected accuracy?'",
+        "Assess groundspeed calculations: 'Did actual groundspeed match predictions? Why or why not?'",
+        "Evaluate heading control: 'Did you maintain course? Need many corrections?'",
+        "Discuss wind effect: 'Was wind as forecast? How did it affect flight?'",
+        "Review chart reading: 'Are you more comfortable reading sectional now? What helped most?'",
+        "Emphasize position awareness: 'Did you always know where you were? Any uncertainty moments?'",
+        "Celebrate success: 'You completed your first cross-country! You used pilotage and dead reckoning to navigate 35 nm!'",
+        "Preview next challenge: VOR Navigation - using radio navigation to supplement visual techniques",
+        "Explain: 'Next we'll learn VOR - it provides course guidance from radio stations, great backup for pilotage'",
+        "Encourage practice: 'Keep practicing checkpoint identification and time-distance calculations on all flights'"
+      ],
+      "goals": [
+        "Student sees objective performance data from entire navigation flight",
+        "ETA accuracy assessed and understood",
+        "Pilotage and dead reckoning skills evaluated",
+        "Student identifies strengths and areas for continued practice",
+        "Student understands how wind affects navigation",
+        "Student feels accomplished completing first cross-country",
+        "Student prepared and motivated for VOR navigation challenge next",
+        "Foundation established for all future cross-country flying"
+      ]
+    }
+  ]
+}

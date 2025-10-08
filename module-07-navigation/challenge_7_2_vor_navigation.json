@@ -1,0 +1,342 @@
+{
+  "name": "VOR_Navigation",
+  "shortDescription": "Master VOR radio navigation techniques on a cross-country flight. Learn VOR fundamentals, radial tracking, course interception, station passage, and VOR approaches while flying from Reid-Hillview to Monterey Regional.",
+  "prompt": "You are teaching VOR (VHF Omnidirectional Range) radio navigation to a private pilot student. This lesson integrates electronic navigation with pilotage on a cross-country flight.\n\n**ROUTE:** KRHV (Reid-Hillview) → KMRY (Monterey Regional), approximately 45 nautical miles, southwest.\n\n**VOR FUNDAMENTALS:**\nVOR stations broadcast 360 radials (magnetic courses FROM the station). Aircraft receives signal, determines which radial it's on. TO/FROM indicator shows direction TO or FROM the station.\n\n**VOR OPERATION SEQUENCE:**\n1. TUNE - Set VOR frequency on NAV radio\n2. IDENTIFY - Listen for Morse code identifier (must match station)\n3. SELECT - Rotate OBS (Omni Bearing Selector) to desired course\n4. TRACK - Keep CDI (Course Deviation Indicator) needle centered\n\n**AVAILABLE VORs:**\n- SNS VOR (Salinas, 117.0) - Useful for enroute navigation\n- MRY VOR (Monterey, 115.1) - Destination navigation and approach\n\n**CDI INTERPRETATION:**\n- Needle centered = on course\n- Needle left = course is to your left, turn left to intercept\n- Needle right = course is to your right, turn right to intercept\n- Each dot = ~2° deviation, full deflection = 10° or more off course\n\n**STATION PASSAGE:**\nAs you pass over/near VOR station, CDI becomes very sensitive, needle swings, TO/FROM flips. This confirms station passage.\n\n**CRITICAL:** VOR supplements pilotage - don't fixate on instruments. Cross-check VOR guidance with visual landmarks and position awareness.\n\nUse markers at VOR intercepts, course changes, station passage, approach phases. Student maintains 3,500 ft cruise, 105-110 KIAS.",
+  "openingLine": "Today we're learning VOR navigation - radio guidance that supplements visual navigation. We'll fly KRHV to KMRY using VOR to track our course, practicing the skills pilots have used for decades.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on VOR navigation principles and flight overview.",
+      "steps": [
+        "Explain today's flight: KRHV to KMRY, approximately 45 nm southwest, using VOR for navigation",
+        "Define VOR: ground-based radio navigation station broadcasting 360 radials (courses FROM station)",
+        "Explain VOR advantage: provides course guidance independent of visibility, supplements pilotage",
+        "Teach VOR operation sequence: TUNE frequency, IDENTIFY station, SELECT course, TRACK using CDI",
+        "Review VOR instruments: NAV radio for frequency, OBS knob to select course, CDI needle shows deviation, TO/FROM indicator",
+        "Explain CDI needle: centered = on course, left = course to your left (turn left), right = course to your right (turn right)",
+        "Discuss radials vs courses: radial is FROM station, course TO station is opposite radial (180° difference)",
+        "Review VORs for today: SNS VOR (Salinas, 117.0) enroute, MRY VOR (Monterey, 115.1) for approach",
+        "Teach station passage: CDI very sensitive near station, needle swings, TO/FROM flips when passing",
+        "Emphasize integration: use VOR with pilotage, don't fixate on instruments, maintain visual scan",
+        "Set expectations: practice intercepting courses, tracking radials, station passage, VOR approach to KMRY",
+        "Brief altitude and airspeed: 3,500 ft MSL cruise, 105-110 KIAS standard"
+      ],
+      "goals": [
+        "Student understands VOR concept: radials from station, course guidance",
+        "Student knows VOR operation: tune, identify, select, track",
+        "Student familiar with CDI interpretation and needle meaning",
+        "Student knows today's VORs: SNS (117.0) and MRY (115.1)",
+        "Student understands station passage indicators",
+        "Student prepared to integrate VOR with visual navigation",
+        "Student ready for first VOR navigation flight"
+      ],
+      "commonErrors": [
+        "Confusing radials (FROM station) with courses (TO station)",
+        "Turning wrong direction when intercepting (opposite of CDI indication)",
+        "Fixating on VOR instruments instead of looking outside",
+        "Not identifying VOR before using (wrong station tuned)"
+      ]
+    },
+    {
+      "name": "VOR_Theory",
+      "prompt": "Deep dive into VOR theory, radials, courses, and intercepts.",
+      "steps": [
+        "Explain VOR principle: station broadcasts 360 radials, numbered 001° through 360° magnetic",
+        "Define radial: magnetic course FROM the VOR station (e.g., 090° radial = due east FROM station)",
+        "Define course: magnetic course TO the VOR station (opposite of radial - if on 090° radial, course TO is 270°)",
+        "Teach OBS selection: rotate OBS to desired course, CDI shows deviation from that course",
+        "Explain TO/FROM indicator: TO means selected course goes toward station, FROM means away from station",
+        "Demonstrate intercept technique: if course is left of you (needle left), turn left to intercept",
+        "Discuss intercept angle: typically 30-45° for initial intercept, then reduce to maintain course",
+        "Explain tracking: once on course, make small heading adjustments to keep CDI centered",
+        "Teach wind correction: if drifting right (needle left), turn left and add left correction to heading",
+        "Review CDI sensitivity: each dot ~2° deviation, full deflection ~10° or more, very sensitive near station",
+        "Discuss VOR accuracy: typically ±5° at distance, less accurate far from station (50+ nm)",
+        "Practice scenario: 'If you're on the 180° radial from SNS VOR, what course TO the station? (360°)'",
+        "Emphasize: VOR is a tool, pilot still responsible for position awareness and visual navigation"
+      ],
+      "goals": [
+        "Student clearly understands radials (FROM) vs courses (TO)",
+        "Student knows how to select course using OBS",
+        "Student understands CDI needle interpretation thoroughly",
+        "Student knows intercept and tracking techniques",
+        "Student prepared to correct for wind drift using VOR",
+        "Student understands VOR accuracy and limitations",
+        "Student ready to apply theory in flight"
+      ],
+      "commonErrors": [
+        "Selecting radial instead of course (180° error)",
+        "Turning wrong direction during intercept (chasing needle)",
+        "Over-controlling near station when CDI very sensitive",
+        "Not applying wind correction when tracking"
+      ]
+    },
+    {
+      "name": "Flight_Planning",
+      "prompt": "Plan VOR navigation flight from KRHV to KMRY with VOR courses.",
+      "steps": [
+        "Get weather briefing: KRHV, KMRY conditions, winds aloft at 3,000-4,000 ft",
+        "Review sectional chart: locate KRHV, KMRY, identify SNS VOR and MRY VOR positions",
+        "Determine direct course: KRHV to KMRY approximately 230° magnetic (southwest)",
+        "Plan VOR navigation: will use SNS VOR initially, transition to MRY VOR for approach",
+        "Calculate SNS VOR radial/course: from KRHV, determine which radial intercepts route to KMRY",
+        "Example plan: intercept SNS VOR 240° radial (course 240° magnetic toward southwest)",
+        "Calculate distance to SNS VOR from KRHV: approximately 25 nm",
+        "Plan transition point: near SNS VOR, switch to MRY VOR for final approach guidance",
+        "Determine MRY VOR approach course: intercept appropriate radial inbound to KMRY",
+        "Calculate total distance: ~45 nm, estimate time enroute based on groundspeed (~25 minutes)",
+        "Calculate fuel: time × 9 gph + VFR reserve 30 min",
+        "Student uses pilotNotes to record: VOR frequencies (SNS 117.0, MRY 115.1), courses, distances, ETAs",
+        "Set destination: use setDestinationRunway for KMRY runway (10L/28R or 10R/28L based on winds)",
+        "Brief plan: depart KRHV, intercept SNS radial, track to station, switch to MRY VOR, approach KMRY"
+      ],
+      "goals": [
+        "Student completes VOR navigation flight plan",
+        "VOR frequencies and courses identified and recorded",
+        "SNS VOR radial selected for enroute navigation",
+        "MRY VOR approach course planned",
+        "Time and fuel calculations completed",
+        "Student has written VOR navigation plan in notes",
+        "Student understands flight sequence: intercept, track, station passage, approach"
+      ],
+      "commonErrors": [
+        "Not identifying VOR frequencies before flight",
+        "Confusing which radial to intercept",
+        "Not planning transition from SNS to MRY VOR",
+        "Insufficient fuel planning for distance"
+      ]
+    },
+    {
+      "name": "Departure",
+      "prompt": "Depart KRHV and intercept first VOR course.",
+      "steps": [
+        "Position aircraft at KRHV using setPosition (on ground, ready for departure)",
+        "Review departure: KRHV is towered, parallel runways 31L/13R and 31R/13L typical",
+        "Set up NAV radio: tune SNS VOR frequency 117.0, verify identifier (SNS in Morse code)",
+        "Student adds marker 'SNS VOR Tuned and Identified'",
+        "Request taxi and takeoff clearance from KRHV tower",
+        "Execute takeoff, student adds marker 'Takeoff KRHV' and starts challenge timer",
+        "After clearing pattern, turn toward southwest (heading ~230°) to intercept SNS VOR course",
+        "Climb to 3,500 ft MSL, establish cruise power 2,400 RPM, 105-110 KIAS",
+        "Rotate OBS to select desired course (e.g., 240° if tracking 240° radial from SNS)",
+        "Observe CDI needle position: needle shows which direction the course is",
+        "Coach: 'CDI needle is showing [left/right]. That means the course is to your [left/right]. Turn that direction.'",
+        "Student turns to intercept: use 30-45° intercept angle toward course",
+        "Student adds marker 'Intercepting SNS Course' when turning to intercept",
+        "Monitor CDI: as needle centers, reduce intercept angle to capture course",
+        "When CDI centered, turn to course heading and track: small corrections to keep needle centered",
+        "Student adds marker 'On SNS Course' when established tracking",
+        "Apply wind correction: if drifting (needle moving), adjust heading to maintain course"
+      ],
+      "goals": [
+        "Successful departure from KRHV",
+        "SNS VOR correctly tuned and identified",
+        "Student intercepts planned VOR course successfully",
+        "CDI interpretation correct (turning proper direction)",
+        "Course captured and tracking established",
+        "Student demonstrates understanding of VOR navigation basics",
+        "Wind correction being applied to maintain course"
+      ],
+      "commonErrors": [
+        "Turning wrong direction during intercept (opposite of needle)",
+        "Not identifying VOR before using (wrong station)",
+        "Over-correcting when intercepting course",
+        "Not applying wind correction after establishing on course"
+      ]
+    },
+    {
+      "name": "VOR_Tracking",
+      "prompt": "Practice tracking VOR course toward SNS station.",
+      "steps": [
+        "Student tracks selected course toward SNS VOR, maintaining CDI needle centered",
+        "Coach: 'Notice how the needle moves when you drift off course. Make small heading corrections.'",
+        "Teach bracketing technique: if needle drifts left, turn left 5-10°, observe if drift stops",
+        "If needle returns to center and stays, that's your wind correction heading",
+        "If needle continues moving, adjust heading further in same direction",
+        "Student practices maintaining course: CDI needle within one dot (±2°) of center",
+        "Emphasize visual navigation: 'What do you see outside? Can you identify landmarks on the chart?'",
+        "Cross-check VOR with pilotage: 'Does your position make sense with landmarks you see?'",
+        "Monitor distance to SNS VOR: estimate based on time and groundspeed, or use DME if available",
+        "As approaching SNS station (~10 nm out), notice CDI becomes more sensitive",
+        "Coach: 'The closer to the station, the more sensitive the CDI. Small heading changes have bigger effect.'",
+        "Watch for station passage indicators: CDI may swing, TO/FROM will flip when passing station",
+        "Student maintains course despite CDI sensitivity increase",
+        "Read simulator data periodically to confirm heading, altitude, airspeed maintained"
+      ],
+      "goals": [
+        "Student successfully tracks VOR course maintaining CDI centered",
+        "Bracketing technique learned and applied for wind correction",
+        "Student keeps CDI within one dot (±2°) of center consistently",
+        "Visual scan maintained (not fixating on instruments)",
+        "Position awareness maintained using VOR and pilotage together",
+        "Student recognizes increased CDI sensitivity approaching station",
+        "Student prepared for station passage"
+      ],
+      "commonErrors": [
+        "Over-correcting heading (causing S-turns around course)",
+        "Fixating on CDI instead of maintaining visual scan outside",
+        "Not recognizing wind drift until well off course",
+        "Ignoring increased CDI sensitivity near station"
+      ]
+    },
+    {
+      "name": "Station_Passage",
+      "prompt": "Navigate through SNS VOR station passage.",
+      "steps": [
+        "As approaching SNS VOR station, CDI becomes very sensitive to heading changes",
+        "Coach: 'We're getting close to the station. Notice how sensitive the CDI is now?'",
+        "Watch TO/FROM indicator: will show TO as approaching, will flip to FROM when passing",
+        "Monitor CDI needle: may swing rapidly as passing near station",
+        "Student adds marker 'SNS VOR Station Passage' when TO/FROM flips",
+        "Continue on course heading through station passage area",
+        "After passing station, TO/FROM indicates FROM, CDI sensitivity returns to normal",
+        "Coach: 'Station passage confirmed - TO/FROM flipped to FROM. We're now on a radial FROM the station.'",
+        "Verify position using pilotage: 'Look outside - does your position match SNS VOR location on chart?'",
+        "Explain: station passage is excellent position fix, confirms navigation accuracy",
+        "Discuss DME if available: distance decreases to zero at station, then increases again",
+        "Student continues tracking same course, now as radial FROM SNS VOR",
+        "Prepare for VOR change: will switch to MRY VOR for approach to destination"
+      ],
+      "goals": [
+        "Student successfully navigates through VOR station passage",
+        "Student recognizes station passage indicators: TO/FROM flip, CDI sensitivity",
+        "Student maintains course heading during station passage",
+        "Student uses station passage as position confirmation",
+        "Student understands now tracking FROM station (on radial)",
+        "Student prepared to switch to next VOR for approach",
+        "Student demonstrates proficiency in VOR navigation"
+      ],
+      "commonErrors": [
+        "Over-correcting during high CDI sensitivity near station",
+        "Not recognizing station passage when TO/FROM flips",
+        "Losing heading control during station passage",
+        "Not using station passage to confirm position"
+      ]
+    },
+    {
+      "name": "VOR_Approach",
+      "prompt": "Switch to MRY VOR and execute VOR approach to Monterey.",
+      "steps": [
+        "After passing SNS VOR, prepare to switch to MRY VOR for approach",
+        "Student tunes MRY VOR frequency 115.1, identifies station (MRY in Morse code)",
+        "Student adds marker 'MRY VOR Tuned and Identified'",
+        "Determine appropriate radial/course to KMRY: select inbound course to airport",
+        "Rotate OBS to select approach course (typically ~280-300° depending on runway in use)",
+        "Observe CDI needle: shows direction to intercept MRY VOR inbound course",
+        "Turn to intercept inbound course using 30-45° intercept angle",
+        "Student adds marker 'Intercepting MRY VOR Course'",
+        "As CDI centers, reduce angle and establish tracking inbound to MRY VOR/KMRY",
+        "Student adds marker 'Tracking Inbound MRY' when established",
+        "Begin descent for arrival: ~5-10 nm from KMRY, descend from 3,500 ft to pattern altitude",
+        "Continue tracking VOR course inbound while descending",
+        "Monitor distance: approaching KMRY, station passage will occur at/near airport",
+        "Look for airport: 'Can you identify KMRY airport ahead? Two parallel runways?'",
+        "Student adds marker 'KMRY Visual' when airport identified",
+        "Transition from VOR approach to visual pattern entry",
+        "Enter pattern for appropriate runway at KMRY, continue to landing"
+      ],
+      "goals": [
+        "Student successfully switches from SNS VOR to MRY VOR",
+        "MRY VOR correctly tuned and identified",
+        "Student intercepts and tracks inbound course to KMRY",
+        "Descent planning and execution coordinated with VOR approach",
+        "Student transitions from VOR guidance to visual approach",
+        "Successful arrival at KMRY using VOR navigation",
+        "Student demonstrates complete VOR navigation capability"
+      ],
+      "commonErrors": [
+        "Not identifying new VOR before switching",
+        "Confusion during VOR changeover (wrong course selected)",
+        "Descending too early or too late for arrival",
+        "Not looking outside to identify airport (fixating on VOR)"
+      ]
+    },
+    {
+      "name": "Landing",
+      "prompt": "Complete approach and landing at KMRY.",
+      "steps": [
+        "Continue VOR guidance inbound until airport clearly visible",
+        "Descend to pattern altitude: ~1,200 AGL (~1,500 MSL at KMRY elevation 257 ft)",
+        "Contact KMRY tower for landing clearance",
+        "Enter pattern appropriate for runway in use (10L/28R or 10R/28L based on winds)",
+        "Fly normal pattern: downwind, base, final approach",
+        "Execute landing on assigned runway",
+        "Student adds marker 'Landed KMRY' at touchdown",
+        "Stop challenge timer: note total time from KRHV to KMRY",
+        "Taxi to parking per ground control instructions",
+        "Coach: 'Excellent work! You navigated 45 nm using VOR all the way to landing!'"
+      ],
+      "goals": [
+        "Successful transition from VOR approach to visual pattern",
+        "Proper communication with KMRY tower",
+        "Standard pattern entry and landing executed",
+        "Total flight time tracked for analysis",
+        "Student successfully completes VOR navigation cross-country",
+        "Student confident in VOR navigation capability"
+      ],
+      "commonErrors": [
+        "Late communication with tower",
+        "Improper pattern entry",
+        "Not transitioning from instruments to visual references soon enough"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review VOR navigation performance and prepare for GPS navigation.",
+      "steps": [
+        "Review complete flight: KRHV → KMRY, ~45 nm using VOR navigation",
+        "Analyze markers: departure, SNS VOR intercept, tracking, station passage, MRY VOR approach, arrival",
+        "Use analyzeFlightData to examine VOR tracking accuracy",
+        "Discuss intercept technique: 'How did the intercept go? Right direction turn? Capture the course smoothly?'",
+        "Review tracking: 'How well did you maintain the course? CDI needle stay centered? Apply wind correction?'",
+        "Assess station passage: 'Did you recognize station passage? TO/FROM flip? CDI sensitivity?'",
+        "Evaluate VOR changeover: 'How did switching from SNS to MRY go? Identify correctly?'",
+        "Compare VOR vs pilotage: 'How did VOR help vs visual navigation? What worked better in different situations?'",
+        "Discuss integration: 'Did you maintain visual scan while using VOR? Cross-check with landmarks?'",
+        "Review VOR advantages: provides course guidance regardless of visibility, excellent backup for pilotage",
+        "Discuss limitations: accuracy ±5°, less accurate far from station, requires functional equipment",
+        "Preview next challenge: GPS Navigation - modern electronic navigation, even more precise",
+        "Explain: 'GPS gives exact position and direct-to navigation, but principles similar to VOR'",
+        "Celebrate: 'You've learned radio navigation - a critical skill used by pilots for decades!'",
+        "Encourage: 'Keep practicing VOR - it's excellent backup when GPS fails or for IFR approaches'"
+      ],
+      "goals": [
+        "Student sees objective VOR tracking performance data",
+        "Intercept and tracking techniques assessed and understood",
+        "Station passage recognition confirmed",
+        "VOR changeover procedure successful",
+        "Student understands VOR advantages and limitations",
+        "Student appreciates integration of VOR with visual navigation",
+        "Student prepared for GPS navigation next challenge",
+        "Foundation established for radio navigation procedures"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "name": "GPS_Navigation",
+  "shortDescription": "Master modern GPS navigation on an extended cross-country flight. Learn GPS operation, direct-to navigation, flight plan programming, and situational awareness while maintaining backup navigation skills flying from Watsonville to San Luis Obispo.",
+  "prompt": "You are teaching GPS navigation to a private pilot student. This lesson covers modern electronic navigation while emphasizing situational awareness and backup procedures.\n\n**ROUTE:** KWVI (Watsonville) → KSBP (San Luis Obispo), approximately 75 nautical miles southeast, crossing coastal mountains.\n\n**GPS FUNDAMENTALS:**\nGPS (Global Positioning System) uses satellites to provide precise position, groundspeed, track, and navigation guidance. Modern GPS units show moving map, direct-to navigation, flight plans, and extensive database information.\n\n**GPS ADVANTAGES:**\n- Precise position (within meters)\n- Direct-to any waypoint or airport\n- Automatic groundspeed and ETA calculations\n- Moving map with terrain, airspace, obstacles\n- Database of airports, navaids, waypoints, frequencies\n\n**GPS OPERATION:**\n1. Enter destination (airport code or waypoint)\n2. Select Direct-To or activate flight plan\n3. Follow magenta course line on moving map\n4. Monitor distance, bearing, groundspeed, ETA\n5. GPS provides continuous course guidance\n\n**CRITICAL LIMITATIONS:**\n- GPS can fail (satellite signal loss, equipment malfunction, jamming)\n- Database must be current for IFR use\n- Don't fixate on GPS - maintain outside scan\n- RAIM (Receiver Autonomous Integrity Monitoring) alerts to signal problems\n- Always have backup: pilotage, dead reckoning, paper chart\n\n**SITUATIONAL AWARENESS:**\nGPS makes navigation easier but pilot must remain engaged. Know position, understand terrain, monitor airspace, cross-check GPS with visual landmarks. GPS is tool, not autopilot replacement.\n\n**ROUTE CONSIDERATIONS:**\nCrosses coastal mountains (peaks 3,000+ ft), requires terrain awareness. Monitor fuel carefully (75 nm = longest single leg so far). Airspace to avoid enroute.\n\nStudent maintains 5,500 ft MSL cruise (terrain clearance), 105-110 KIAS. Use markers at waypoints, terrain features, airspace transitions.",
+  "openingLine": "Today we're learning GPS navigation - the modern system most pilots use. We'll fly KWVI to KSBP, 75 nm across mountains, practicing GPS operation while maintaining situational awareness and backup navigation skills.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on GPS navigation principles and extended cross-country flight.",
+      "steps": [
+        "Explain today's flight: KWVI to KSBP, 75 nm southeast, longest single leg in course so far",
+        "Define GPS: satellite navigation providing precise position, groundspeed, course guidance",
+        "Review GPS advantages: accuracy within meters, direct-to navigation, moving map, automatic calculations",
+        "Teach GPS operation basics: enter destination, select direct-to, follow magenta line, monitor progress",
+        "Discuss GPS instruments: moving map display, data fields (distance, bearing, groundspeed, ETA), course deviation",
+        "Emphasize limitations: GPS can fail, must maintain situational awareness, have backup navigation",
+        "Review route challenges: crosses coastal mountains (peaks 3,000+ ft), terrain awareness critical",
+        "Discuss altitude: will cruise at 5,500 ft MSL for terrain clearance and safety margin",
+        "Brief fuel management: 75 nm at ~110 knots GS = ~40 minutes flight time, monitor fuel carefully",
+        "Set expectations: use GPS primarily but cross-check with pilotage, know position always",
+        "Explain: 'GPS makes navigation easier but you must stay engaged - don't become GPS-dependent'",
+        "Preview skills: GPS programming, situational awareness, terrain navigation, extended cross-country"
+      ],
+      "goals": [
+        "Student understands GPS navigation fundamentals",
+        "Student knows today's route: KWVI → KSBP, 75 nm across mountains",
+        "Student aware of GPS advantages and critical limitations",
+        "Student understands terrain awareness requirements at higher altitude",
+        "Student prepared for fuel management on longer leg",
+        "Student ready to integrate GPS with situational awareness",
+        "Student motivated for extended cross-country navigation"
+      ],
+      "commonErrors": [
+        "Over-reliance on GPS without backup navigation",
+        "Fixating on GPS display instead of looking outside",
+        "Not considering terrain when planning altitude",
+        "Inadequate fuel planning for longer distance"
+      ]
+    },
+    {
+      "name": "GPS_Theory",
+      "prompt": "Deep dive into GPS operation, features, and limitations.",
+      "steps": [
+        "Explain GPS system: network of satellites, receiver calculates position from multiple satellite signals",
+        "Review accuracy: civilian GPS ~3-10 meter accuracy, sufficient for VFR and IFR navigation",
+        "Teach direct-to navigation: enter destination identifier, GPS calculates course and distance",
+        "Explain flight plan capability: enter multiple waypoints, GPS guides leg-by-leg",
+        "Review moving map features: terrain display, airspace boundaries, obstacles, airports, navaids",
+        "Discuss data fields: distance to destination, bearing, groundspeed, ETA, fuel required, track vs course",
+        "Explain course deviation: similar to VOR CDI, shows left/right of desired track",
+        "Teach database use: airport information, frequencies, runway data, approaches, waypoints",
+        "Review RAIM: alerts pilot to GPS signal problems, integrity monitoring",
+        "Discuss GPS limitations: signal can be lost (jamming, terrain blocking, equipment failure)",
+        "Emphasize backup importance: what if GPS fails? Must know pilotage and dead reckoning",
+        "Explain situational awareness: GPS tells position but pilot must understand what that means",
+        "Practice scenario: 'If GPS shows you're at [coordinates], how do you verify with visual references?'"
+      ],
+      "goals": [
+        "Student understands GPS operation and satellite system",
+        "Student knows GPS features: direct-to, flight plans, moving map, database",
+        "Student familiar with GPS data fields and their meanings",
+        "Student understands RAIM and integrity monitoring",
+        "Student aware of GPS limitations and failure modes",
+        "Student prepared to use GPS effectively while maintaining awareness",
+        "Student ready for backup navigation if GPS fails"
+      ],
+      "commonErrors": [
+        "Assuming GPS never fails",
+        "Not understanding RAIM warnings",
+        "Over-trusting GPS position without visual confirmation",
+        "Not maintaining backup navigation capability"
+      ]
+    },
+    {
+      "name": "Flight_Planning",
+      "prompt": "Plan extended GPS cross-country from KWVI to KSBP.",
+      "steps": [
+        "Get comprehensive weather briefing: KWVI departure, KSBP destination, winds aloft at 5,500 ft, enroute weather",
+        "Review route on sectional: KWVI to KSBP, approximately 75 nm southeast",
+        "Identify terrain: coastal mountains, peaks up to 3,500 ft, valleys, note terrain elevations",
+        "Select cruise altitude: 5,500 ft MSL provides 2,000+ ft clearance over highest terrain",
+        "Check airspace: identify any Class C/D airspace, restricted areas, MOAs enroute",
+        "Calculate direct course: KWVI to KSBP approximately 130-140° magnetic (southeast)",
+        "Estimate groundspeed: TAS ~110 knots at 5,500 ft, adjust for winds aloft",
+        "Calculate time enroute: 75 nm ÷ groundspeed (if 110 knots = ~40 minutes)",
+        "Calculate fuel: 40 min × 9 gph = 6 gallons, plus VFR reserve 30 min (4.5 gal) = 10.5 gallons total",
+        "Verify fuel on board sufficient: C172 has 53 gallons usable, plenty for this flight",
+        "Identify waypoints: departure KWVI, mountain crossing point (midway), arrival KSBP",
+        "Student uses pilotNotes: record altitude, course, distance, time, fuel, waypoints, frequencies",
+        "Use airportCodeLookup for KSBP: confirm tower frequency, runway info, elevation (212 ft)",
+        "Set destination: use setDestinationRunway for KSBP runway 11 or 29 (based on winds)"
+      ],
+      "goals": [
+        "Student completes comprehensive flight plan for 75 nm leg",
+        "Terrain and altitude requirements analyzed and addressed",
+        "Airspace reviewed and any restrictions identified",
+        "Course, time, and groundspeed calculated accurately",
+        "Fuel planning completed with adequate VFR reserves",
+        "Waypoints identified for progress tracking",
+        "Student has complete written plan in pilot notes",
+        "Destination airport information obtained"
+      ],
+      "commonErrors": [
+        "Insufficient altitude for terrain clearance",
+        "Not checking airspace along route",
+        "Inadequate fuel reserve for longer flight",
+        "Not identifying waypoints for progress tracking"
+      ]
+    },
+    {
+      "name": "Departure_KWVI",
+      "prompt": "Depart KWVI and establish GPS navigation to KSBP.",
+      "steps": [
+        "Position aircraft at KWVI using setPosition (on ground ready for departure)",
+        "Review KWVI: non-towered airport, CTAF frequency, runway 02/20",
+        "Check ATIS/AWOS for winds, select runway 02 or 20 based on wind",
+        "Program GPS: enter KSBP as destination, select direct-to navigation",
+        "Verify GPS shows: bearing to KSBP, distance 75 nm, ETA based on current groundspeed",
+        "Student adds marker 'GPS Programmed - KSBP Direct'",
+        "Announce on CTAF: 'Watsonville Traffic, Cessna [callsign], departing runway [02/20], southeast departure'",
+        "Execute takeoff, student adds marker 'Takeoff KWVI' and starts challenge timer",
+        "After clearing pattern, turn to GPS course (follow magenta line toward KSBP)",
+        "Climb to cruise altitude 5,500 ft MSL, monitor terrain clearance during climb",
+        "Student adds marker 'On Course - GPS Heading' when established",
+        "Establish cruise power: 2,400 RPM, 105-110 KIAS at 5,500 ft",
+        "Read GPS data: groundspeed, bearing to KSBP, distance remaining, ETA",
+        "Update ETA based on actual groundspeed: compare to flight plan estimate",
+        "Cross-check GPS with pilotage: 'Look outside - heading toward mountains as expected?'",
+        "Set first waypoint at mountain crossing (midpoint): use setUserWaypoint"
+      ],
+      "goals": [
+        "Successful departure from KWVI non-towered airport",
+        "GPS programmed correctly for direct-to KSBP",
+        "On course following GPS guidance",
+        "Climb to 5,500 ft MSL completed safely",
+        "Cruise power and airspeed established",
+        "Challenge timer running for tracking",
+        "GPS data monitored and ETA updated",
+        "Visual cross-check of GPS guidance initiated"
+      ],
+      "commonErrors": [
+        "Not programming GPS before takeoff",
+        "Improper non-towered departure communications",
+        "Insufficient climb rate approaching terrain",
+        "Following GPS blindly without visual confirmation"
+      ]
+    },
+    {
+      "name": "Mountain_Crossing",
+      "prompt": "Navigate across coastal mountains using GPS with terrain awareness.",
+      "steps": [
+        "Continue following GPS course toward KSBP, climbing terrain ahead visible",
+        "Monitor GPS moving map: terrain colors show elevation, watch for high terrain",
+        "Maintain 5,500 ft MSL: verify adequate clearance above terrain below (2,000+ ft)",
+        "Coach: 'GPS shows our track and terrain. But look outside - do you see the mountains?'",
+        "Practice situational awareness: 'Where are we now? What terrain is below? What's ahead?'",
+        "Approaching mountain crossing point (~midway, 35-40 nm from KWVI)",
+        "Student adds marker 'Mountain Crossing - Midpoint' at highest terrain point",
+        "Monitor GPS distance: should show ~35-40 nm to KSBP remaining",
+        "Check ETA: compare actual time to flight plan, adjust if needed based on groundspeed",
+        "Cross-check position with sectional: identify valleys, peaks, roads visible below",
+        "Emphasize altitude: 'We're at 5,500 ft over 3,000 ft terrain - good safety margin'",
+        "Monitor fuel: consumption matching plan? Adequate for destination plus reserves?",
+        "Check airspace on GPS: any restricted areas? Class C/D airspace ahead?",
+        "Discuss emergency options: 'If engine fails here, where would you land? Limited flat areas.'",
+        "Continue GPS navigation: follow magenta line, monitor progress toward KSBP",
+        "Descending terrain ahead: crossing mountains, approaching KSBP valley"
+      ],
+      "goals": [
+        "Student navigates safely across mountainous terrain",
+        "Altitude maintained with adequate terrain clearance",
+        "GPS moving map used for terrain awareness",
+        "Visual confirmation of terrain features",
+        "Midpoint checkpoint identified and marked",
+        "ETA updated based on actual progress",
+        "Fuel monitored and confirmed adequate",
+        "Situational awareness maintained over challenging terrain",
+        "Emergency landing options considered"
+      ],
+      "commonErrors": [
+        "Fixating on GPS without looking outside at terrain",
+        "Insufficient altitude over mountains",
+        "Not monitoring fuel on extended leg",
+        "Not considering emergency landing options over mountains"
+      ]
+    },
+    {
+      "name": "GPS_Failure",
+      "prompt": "Practice backup navigation when GPS simulated failure occurs.",
+      "steps": [
+        "Simulate GPS failure: 'Your GPS just lost satellite signal - screen shows RAIM warning'",
+        "Student responds: note position before GPS failure, determine last known location",
+        "Student adds marker 'GPS Failure - Backup Navigation'",
+        "Coach: 'What do you do now? How do you navigate to KSBP without GPS?'",
+        "Student identifies position using pilotage: terrain features, valleys, roads, landmarks",
+        "Student refers to sectional chart: plot approximate position, measure course to KSBP",
+        "Calculate heading: true course from current position to KSBP, apply magnetic variation",
+        "Estimate distance remaining: measure on chart, approximately 30-40 nm depending on position",
+        "Calculate ETA: distance ÷ groundspeed (from airspeed and wind estimate)",
+        "Student flies calculated heading, looks for visual landmarks to confirm track",
+        "Coach: 'Excellent! You're navigating by pilotage and DR - GPS is backup, not requirement'",
+        "After ~5 minutes, restore GPS: 'GPS signal restored - check if heading was correct'",
+        "Student adds marker 'GPS Restored'",
+        "Compare GPS track to pilotage heading: how close were you?",
+        "Discuss: 'This is why backup navigation is critical - GPS will eventually fail'",
+        "Resume GPS navigation toward KSBP"
+      ],
+      "goals": [
+        "Student experiences GPS failure and responds appropriately",
+        "Student successfully reverts to pilotage and dead reckoning",
+        "Position determined using visual landmarks and chart",
+        "Heading and ETA calculated without GPS",
+        "Student maintains navigation capability without GPS",
+        "Student appreciates importance of backup navigation skills",
+        "Confidence built in ability to navigate if technology fails"
+      ],
+      "commonErrors": [
+        "Panic when GPS fails instead of reverting to basics",
+        "Not knowing position before GPS failure",
+        "Unable to read sectional chart without GPS",
+        "Not maintaining heading and navigation after GPS loss"
+      ]
+    },
+    {
+      "name": "Arrival_KSBP",
+      "prompt": "Navigate to KSBP and execute arrival.",
+      "steps": [
+        "GPS navigation restored, continue toward KSBP following magenta line",
+        "Monitor distance: approaching KSBP, ~15-20 nm out",
+        "Begin descent planning: 5,500 ft to pattern altitude ~1,200 AGL (~1,400 MSL, KSBP elevation 212 ft)",
+        "Need ~4,200 ft descent, at 500 fpm = ~8 minutes, begin descent ~10-12 nm out",
+        "Reduce power to ~2,000 RPM, pitch for 500 fpm descent, maintain 90-100 KIAS",
+        "Continue following GPS course during descent",
+        "Contact KSBP tower when ~10 nm out: 'San Luis Obispo Tower, Cessna [callsign], 10 miles northwest, inbound landing with information [ATIS]'",
+        "Tower provides instructions: runway in use, traffic pattern entry, altimeter setting",
+        "Look for KSBP airport: identify runway using GPS guidance and visual acquisition",
+        "Student adds marker 'KSBP Visual' when airport identified",
+        "Descend to pattern altitude, enter pattern as directed by tower",
+        "Execute normal traffic pattern and landing on assigned runway",
+        "Student adds marker 'Landed KSBP' at touchdown",
+        "Stop challenge timer: note total time from KWVI to KSBP",
+        "Taxi to parking per ground control instructions",
+        "Coach: 'Outstanding! You navigated 75 nm across mountains using GPS with full awareness!'"
+      ],
+      "goals": [
+        "GPS navigation to destination successful",
+        "Descent planning and execution appropriate for arrival",
+        "Proper communication with KSBP tower",
+        "Airport identified using GPS and visual confirmation",
+        "Standard pattern entry and landing completed",
+        "Total flight time tracked for analysis",
+        "Student successfully completes longest navigation leg yet",
+        "Student demonstrates GPS proficiency with situational awareness"
+      ],
+      "commonErrors": [
+        "Late descent planning (arriving too high)",
+        "Not contacting tower at appropriate distance",
+        "Following GPS to runway without visual pattern entry",
+        "Poor fuel monitoring on extended leg"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review GPS navigation and prepare for complete cross-country integration.",
+      "steps": [
+        "Review complete flight: KWVI → KSBP, 75 nm across mountains using GPS",
+        "Analyze timer data: actual time vs flight plan estimate, ~40-45 minutes typical",
+        "Use analyzeFlightData to examine GPS track and altitude profile",
+        "Review markers: departure, GPS programmed, mountain crossing, GPS failure/restore, arrival",
+        "Discuss GPS advantages: 'What made GPS navigation easier than VOR or pilotage alone?'",
+        "Assess GPS operation: 'Were you comfortable programming and following GPS?'",
+        "Review backup navigation: 'When GPS failed, how quickly did you adapt? Good pilotage?'",
+        "Discuss situational awareness: 'Did you maintain visual scan? Know position always?'",
+        "Evaluate terrain navigation: 'Comfortable with 5,500 ft altitude? Terrain awareness good?'",
+        "Review fuel management: 'Fuel consumption as planned? Adequate reserves maintained?'",
+        "Compare navigation methods: pilotage (visual), VOR (radio), GPS (satellite) - each has role",
+        "Emphasize integration: 'Best pilots use all methods - GPS primary, VOR backup, pilotage always'",
+        "Discuss GPS limitations: can fail, requires power, satellite signal, current database for IFR",
+        "Preview next challenge: Complete Cross-Country - KPAO → KSBP → KSNS → KPAO, 150+ nm, three legs",
+        "Explain: 'Next is capstone - complete cross-country integrating ALL navigation techniques learned'",
+        "Celebrate: 'You've mastered modern GPS navigation! Ready for complete cross-country integration!'"
+      ],
+      "goals": [
+        "Student sees complete GPS navigation performance data",
+        "GPS advantages and limitations fully understood",
+        "Backup navigation capability confirmed",
+        "Situational awareness maintained throughout flight",
+        "Terrain navigation skills demonstrated",
+        "Fuel management on extended leg successful",
+        "Student appreciates integration of all navigation methods",
+        "Student prepared for final navigation challenge",
+        "Confidence built for complete cross-country flights"
+      ]
+    }
+  ]
+}

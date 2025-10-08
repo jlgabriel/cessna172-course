@@ -1,0 +1,335 @@
+{
+  "name": "Complete_Cross_Country",
+  "shortDescription": "Execute a complete multi-leg cross-country flight integrating all navigation techniques. Plan and fly KPAO to KSBP to KSNS and return to KPAO, covering 150+ nautical miles with fuel management, weather monitoring, and professional cross-country operations.",
+  "prompt": "You are teaching complete cross-country navigation integration to a private pilot student. This is the capstone navigation challenge combining all techniques learned.\n\n**ROUTE:** Three legs totaling 150+ nm:\n- Leg 1: KPAO → KSBP (~90 nm) - GPS navigation with pilotage\n- Leg 2: KSBP → KSNS (~35 nm) - VOR navigation with pilotage  \n- Leg 3: KSNS → KPAO (~30 nm) - Pilotage and dead reckoning\n\n**NAVIGATION INTEGRATION:**\nEach leg uses different primary technique, demonstrating pilot proficiency with all methods. GPS for Leg 1 (long distance efficiency), VOR for Leg 2 (radio navigation practice), pilotage/DR for Leg 3 (fundamental skills). All legs supplement with visual navigation.\n\n**COMPLETE FLIGHT PLANNING:**\nRoute selection, altitude planning, fuel calculations for entire trip including reserves, weight & balance, weather briefing, NOTAMs, airport information for all destinations. Professional flight planning as used in real cross-country operations.\n\n**FUEL MANAGEMENT:**\nTotal distance ~155 nm at 110 knots = ~85 minutes flight time. At 9 gph = ~13 gallons plus VFR reserve 30 min (4.5 gal) = ~17.5 gallons required. C172 has 53 gallons usable, adequate with reserves. Monitor fuel each leg.\n\n**WEATHER MONITORING:**\nCheck weather at each stop, monitor conditions enroute, be prepared to divert if weather deteriorates. Real-world decision making throughout flight.\n\n**DIVERSION PLANNING:**\nKnow alternate airports along route. If unable to continue, select nearest suitable airport and navigate there.\n\n**VORs:** SNS (117.0), MRY (115.1) useful for Leg 2. Student maintains appropriate cruise altitudes per leg (3,500-5,500 ft). Use markers extensively, challenge timer tracks total trip time.",
+  "openingLine": "Welcome to your complete cross-country! Today you'll fly 150+ nm across three legs, using GPS, VOR, and pilotage to navigate KPAO to KSBP to KSNS and home. This is real cross-country flying - let's make it professional!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief complete cross-country flight plan and integration of all navigation techniques.",
+      "steps": [
+        "Explain capstone challenge: three-leg cross-country, 150+ nm total, integrating all navigation learned",
+        "Review route: KPAO → KSBP (~90 nm, GPS + pilotage), KSBP → KSNS (~35 nm, VOR + pilotage), KSNS → KPAO (~30 nm, pilotage + DR)",
+        "Discuss navigation integration: each leg emphasizes different technique, all supplement with visual navigation",
+        "Explain complete flight planning: weather briefing, fuel calculations, weight & balance, airport info, NOTAMs",
+        "Review fuel management: ~155 nm total, ~85 min flight time, ~13 gallons plus VFR reserve = adequate with monitoring",
+        "Discuss weather monitoring: check conditions at each stop, be prepared to divert if needed",
+        "Teach professional operations: proper communications at three towered airports, fuel stops, passenger considerations",
+        "Set expectations: this represents real-world cross-country flying, comprehensive planning and execution",
+        "Emphasize decision-making: pilot in command responsibility for safe flight, divert if conditions warrant",
+        "Preview challenges: distance management, fuel monitoring, fatigue consideration, multiple airport operations",
+        "Build confidence: 'You've learned pilotage, VOR, GPS - today you put it all together professionally!'",
+        "Set up for success: comprehensive planning now makes execution easier later"
+      ],
+      "goals": [
+        "Student understands complete cross-country scope: three legs, 150+ nm, multiple techniques",
+        "Student knows navigation emphasis per leg: GPS/pilotage, VOR/pilotage, pilotage/DR",
+        "Student prepared for comprehensive flight planning process",
+        "Student aware of fuel management requirements across multiple legs",
+        "Student understands pilot-in-command decision-making responsibility",
+        "Student motivated for capstone cross-country achievement",
+        "Student ready for professional cross-country operations"
+      ],
+      "commonErrors": [
+        "Underestimating planning time required for multi-leg XC",
+        "Inadequate fuel reserve planning",
+        "Not considering weather at all destinations",
+        "Not prepared for fatigue over extended flight"
+      ]
+    },
+    {
+      "name": "Flight_Planning",
+      "prompt": "Complete comprehensive flight planning for three-leg cross-country.",
+      "steps": [
+        "Get complete weather briefing: KPAO, KSBP, KSNS current conditions and forecasts, winds aloft, NOTAMs",
+        "Use weatherLookup for each airport, note any weather concerns or trends",
+        "Review sectional chart: identify route for all three legs, terrain, airspace, landmarks",
+        "Plan Leg 1 (KPAO→KSBP, 90nm): direct GPS routing, altitude 5,500 ft (terrain), time ~50 min, fuel ~8 gal",
+        "Plan Leg 2 (KSBP→KSNS, 35nm): VOR navigation using SNS VOR (117.0), altitude 3,500 ft, time ~20 min, fuel ~3 gal",
+        "Plan Leg 3 (KSNS→KPAO, 30nm): pilotage/DR northbound, altitude 3,500 ft, time ~17 min, fuel ~2.5 gal",
+        "Calculate total: 155 nm, 87 minutes flight time, 13.5 gallons plus VFR reserve 4.5 gal = 18 gallons required",
+        "Verify fuel on board: C172 with 53 gallons usable is adequate with good margin",
+        "Weight & balance: calculate for pilot, passenger if any, fuel, baggage - verify within limits",
+        "Use airportCodeLookup for all three airports: frequencies, runway info, elevations, services",
+        "Identify checkpoints: Leg 1 waypoints, Leg 2 VOR radials, Leg 3 visual landmarks",
+        "Record complete plan in pilotNotes: routes, altitudes, times, fuel, frequencies, waypoints",
+        "Plan go/no-go decision: weather acceptable? Fuel adequate? Aircraft airworthy? Pilot fit to fly?",
+        "Student demonstrates comprehensive planning: 'This is a real cross-country flight plan!'"
+      ],
+      "goals": [
+        "Student completes professional multi-leg flight plan",
+        "Weather briefing obtained for all destinations",
+        "All three legs planned with routes, altitudes, times, fuel",
+        "Total fuel requirements calculated with adequate VFR reserves",
+        "Weight & balance verified within limits",
+        "All airport information obtained",
+        "Checkpoints identified for each leg",
+        "Written flight plan in pilot notes for reference",
+        "Go/no-go decision made professionally"
+      ],
+      "commonErrors": [
+        "Not planning all legs in detail before departure",
+        "Fuel calculations incomplete or inaccurate",
+        "Not obtaining complete weather picture",
+        "Weight & balance not calculated"
+      ]
+    },
+    {
+      "name": "Preflight",
+      "prompt": "Preflight preparation and departure briefing from KPAO.",
+      "steps": [
+        "Position aircraft at KPAO using setPosition (on ground, fueled, ready)",
+        "Review Leg 1 plan: KPAO → KSBP, 90 nm, GPS primary navigation with pilotage backup",
+        "Program GPS: enter KSBP as destination, verify direct-to routing shows ~90 nm",
+        "Brief departure: KPAO runway 31 typical, left traffic, depart southbound per plan",
+        "Review altitude: climb to 5,500 ft MSL for terrain clearance crossing mountains to KSBP",
+        "Set first waypoint: mountain crossing area midpoint using setUserWaypoint",
+        "Verify frequencies: KPAO tower, KSBP tower, emergency 121.5",
+        "Brief passenger if applicable: flight duration ~1.5 hours total, three stops, sightseeing opportunities",
+        "Start challenge timer at KPAO departure: will track entire three-leg cross-country time",
+        "Review fuel: tanks full, ~53 gallons, adequate for entire trip with reserves",
+        "Student adds marker 'Preflight Complete KPAO' when ready to begin",
+        "Mental preparation: 'This is your complete cross-country. Fly professionally, navigate accurately, enjoy the journey!'"
+      ],
+      "goals": [
+        "Aircraft positioned at KPAO ready for departure",
+        "GPS programmed for Leg 1 to KSBP",
+        "Departure procedures reviewed",
+        "Altitude plan clear for terrain crossing",
+        "Waypoints set for Leg 1",
+        "Challenge timer ready to track complete trip",
+        "Fuel verified adequate",
+        "Student mentally prepared for extended cross-country",
+        "Professional mindset established"
+      ]
+    },
+    {
+      "name": "Leg_1_To_KSBP",
+      "prompt": "Execute Leg 1: KPAO to KSBP using GPS navigation with pilotage.",
+      "steps": [
+        "Depart KPAO: obtain clearance, takeoff, student adds marker 'Departure KPAO' and starts timer",
+        "Turn southbound, follow GPS course to KSBP, climb to 5,500 ft MSL",
+        "Establish cruise: 2,400 RPM, 105-110 KIAS, monitor GPS groundspeed and ETA",
+        "Student adds marker 'On Course Leg 1' when cruise established",
+        "Follow GPS magenta line while maintaining visual scan and pilotage cross-check",
+        "Approaching mountains: monitor terrain clearance, verify 5,500 ft adequate (should be 2,000+ ft above terrain)",
+        "Student marks 'Mountain Crossing' at midpoint waypoint",
+        "Monitor fuel: check consumption matches plan, adequate for KSBP plus reserves",
+        "Cross-check GPS with visual landmarks: 'Do you see terrain features matching GPS position?'",
+        "Approaching KSBP: begin descent ~10 nm out, contact KSBP tower",
+        "Execute approach and landing at KSBP, student adds marker 'Landed KSBP Leg 1 Complete'",
+        "Note Leg 1 time: actual vs planned, groundspeed achieved, fuel used",
+        "Taxi to transient parking: 'First leg done - 90 nm complete!'"
+      ],
+      "goals": [
+        "Successful departure from KPAO",
+        "GPS navigation executed professionally on Leg 1",
+        "5,500 ft altitude maintained for terrain safety",
+        "Pilotage cross-check maintained with GPS",
+        "Fuel monitoring throughout leg",
+        "Successful arrival at KSBP",
+        "Leg 1 performance data recorded",
+        "Student confident after first long leg"
+      ]
+    },
+    {
+      "name": "KSBP_Stop",
+      "prompt": "Brief stop at KSBP, prepare for Leg 2 to KSNS.",
+      "steps": [
+        "Shut down at KSBP, student adds marker 'KSBP Stop - Leg 2 Briefing'",
+        "Check fuel: note fuel remaining, consumption for Leg 1 as expected?",
+        "Calculate fuel remaining adequate for Legs 2 and 3 plus reserves",
+        "Brief Leg 2: KSBP → KSNS, ~35 nm, VOR navigation using SNS VOR (117.0)",
+        "Review Leg 2 plan: tune SNS VOR, intercept appropriate radial toward KSNS, altitude 3,500 ft",
+        "Check weather at KSNS: use weatherLookup, conditions suitable for continued flight?",
+        "Quick weather assessment: any changes from original briefing? Continue or divert?",
+        "Student decision: 'Conditions acceptable to continue?' (teaches pilot-in-command decision-making)",
+        "If conditions good, prepare for Leg 2 departure",
+        "Use airportCodeLookup to confirm KSNS details: tower frequency, runway, elevation",
+        "Set destination for Leg 2: use setDestinationRunway for KSNS",
+        "Brief: 'Leg 2 is shorter, using VOR navigation, good practice for radio nav!'",
+        "Student ready to continue when briefed"
+      ],
+      "goals": [
+        "Fuel status assessed and adequate for remaining legs",
+        "Leg 2 VOR navigation plan reviewed",
+        "Weather checked at next destination",
+        "Go/continue decision made professionally",
+        "Destination set for Leg 2",
+        "Student prepared for VOR navigation leg",
+        "Brief stop demonstrates real cross-country operations"
+      ]
+    },
+    {
+      "name": "Leg_2_To_KSNS",
+      "prompt": "Execute Leg 2: KSBP to KSNS using VOR navigation with pilotage.",
+      "steps": [
+        "Depart KSBP: obtain clearance, takeoff, student adds marker 'Departure KSBP Leg 2'",
+        "Climb to 3,500 ft MSL (lower terrain on this leg)",
+        "Tune SNS VOR frequency 117.0, identify station (SNS in Morse code)",
+        "Select appropriate VOR course toward KSNS, intercept using CDI guidance",
+        "Student adds marker 'On SNS VOR Course' when established tracking",
+        "Track VOR radial toward KSNS, maintain CDI centered, apply wind correction as needed",
+        "Cross-check VOR with visual landmarks: Salinas Valley visible, agricultural areas",
+        "Monitor distance to KSNS: ~35 nm leg, ~20 minutes flight time expected",
+        "Approaching KSNS: VOR guidance leads to airport area, look for field visually",
+        "Contact KSNS tower for landing clearance",
+        "Execute approach and landing at KSNS, student adds marker 'Landed KSNS Leg 2 Complete'",
+        "Note Leg 2 time: actual vs planned, VOR tracking quality",
+        "Taxi to transient parking: 'Two legs done, one to go!'"
+      ],
+      "goals": [
+        "Successful departure from KSBP",
+        "VOR navigation executed on Leg 2",
+        "SNS VOR correctly tuned and tracked",
+        "3,500 ft cruise altitude maintained",
+        "Pilotage cross-check with VOR navigation",
+        "Successful arrival at KSNS",
+        "Leg 2 performance noted",
+        "Student confident with VOR navigation application"
+      ]
+    },
+    {
+      "name": "KSNS_Stop",
+      "prompt": "Final stop at KSNS, prepare for Leg 3 return to KPAO.",
+      "steps": [
+        "Shut down at KSNS, student adds marker 'KSNS Stop - Leg 3 Briefing'",
+        "Check fuel: sufficient for final leg plus VFR reserves? Should have adequate margin",
+        "Calculate Leg 3 fuel: ~30 nm, ~17 minutes, ~2.5 gallons needed plus reserve",
+        "Brief Leg 3: KSNS → KPAO, ~30 nm northbound, pilotage and dead reckoning primary",
+        "Review route: follow Salinas Valley northbound, San Francisco Bay landmarks, arrive KPAO",
+        "Identify visual checkpoints: valley, Highway 101, Bay shoreline, Palo Alto landmarks",
+        "Calculate heading: approximately 340-350° magnetic (northbound with slight west component)",
+        "Estimate groundspeed and ETA based on winds: ~110 knots = ~17 minutes",
+        "Check weather at KPAO: use weatherLookup for arrival conditions",
+        "Brief arrival: KPAO runway 31 likely, left traffic, contact tower ~10 nm out",
+        "Set destination: use setDestinationRunway for KPAO",
+        "Mental preparation: 'Final leg home - demonstrate pilotage and DR proficiency!'",
+        "Student ready for final leg when briefed"
+      ],
+      "goals": [
+        "Fuel confirmed adequate for final leg with reserves",
+        "Leg 3 pilotage/DR plan reviewed",
+        "Visual checkpoints identified",
+        "Heading and ETA calculated",
+        "Weather checked at home base",
+        "Student prepared for pilotage/DR navigation",
+        "Anticipation built for successful completion"
+      ]
+    },
+    {
+      "name": "Leg_3_Home",
+      "prompt": "Execute Leg 3: KSNS to KPAO using pilotage and dead reckoning.",
+      "steps": [
+        "Depart KSNS: obtain clearance, takeoff, student adds marker 'Departure KSNS Leg 3'",
+        "Turn northbound, fly calculated heading ~340-350° magnetic",
+        "Climb to 3,500 ft MSL, establish cruise",
+        "Student adds marker 'On Course Leg 3 Pilotage' when established",
+        "Navigate using visual landmarks: Salinas Valley, Highway 101, agricultural patterns",
+        "Update heading based on wind drift observed, maintain track toward KPAO",
+        "Calculate ETA to checkpoints and KPAO based on groundspeed",
+        "Cross-check position continuously: 'Where are we? What landmarks confirm position?'",
+        "Approaching San Francisco Bay area: Bay becomes visible, Palo Alto area ahead",
+        "Contact KPAO tower ~10 nm out: request landing, receive instructions",
+        "Identify KPAO visually using landmarks and tower guidance",
+        "Execute approach and landing at KPAO, student adds marker 'Landed KPAO - XC Complete!'",
+        "Stop challenge timer: note total time for entire three-leg cross-country",
+        "Taxi to parking: 'Congratulations! Complete cross-country accomplished - 150+ nm!'"
+      ],
+      "goals": [
+        "Successful departure from KSNS",
+        "Pilotage and dead reckoning navigation on final leg",
+        "Calculated heading maintained with drift corrections",
+        "Visual landmarks used for position confirmation",
+        "Successful arrival back at KPAO",
+        "Complete cross-country accomplished!",
+        "Total trip time recorded",
+        "Student achieves major milestone"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze complete three-leg cross-country performance.",
+      "steps": [
+        "Review complete flight: three legs, 150+ nm, multiple navigation techniques, all airports",
+        "Analyze challenge timer: total time from KPAO departure to return, compare to flight plan",
+        "Review all markers: departures, on-course points, arrivals at each airport, complete journey tracked",
+        "Use analyzeFlightData to examine entire cross-country: routes, altitudes, speeds, navigation accuracy",
+        "Assess Leg 1 (GPS): track accuracy, pilotage cross-check quality, mountain crossing safety",
+        "Assess Leg 2 (VOR): CDI tracking, station usage, radio navigation proficiency",
+        "Assess Leg 3 (Pilotage/DR): heading accuracy, checkpoint identification, dead reckoning calculations",
+        "Review fuel management: actual consumption vs plan, reserves maintained throughout",
+        "Evaluate decision-making: weather assessments at stops, continue/divert decisions",
+        "Discuss navigation integration: 'Each technique has strengths - you used them all appropriately!'",
+        "Identify best leg performance: which navigation method felt most comfortable?",
+        "Identify areas for improvement: any leg challenging? Navigation technique needing practice?",
+        "Student self-assessment: 'How do you feel about cross-country proficiency now?'"
+      ],
+      "goals": [
+        "Complete cross-country performance data analyzed",
+        "Each leg navigation technique assessed individually",
+        "Fuel management evaluated across entire trip",
+        "Decision-making quality reviewed",
+        "Navigation integration appreciated",
+        "Student identifies personal strengths and growth areas",
+        "Objective data supports proficiency assessment"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Celebrate cross-country completion and preview next training.",
+      "steps": [
+        "Celebrate major achievement: 'You completed a 150+ nm three-leg cross-country! Professional flying!'",
+        "Review Module 7 progression: pilotage/DR → VOR → GPS → complete integration",
+        "Emphasize skills developed: chart reading, calculations, radio nav, GPS operation, fuel management",
+        "Discuss real-world application: 'This is how pilots plan and execute cross-country flights'",
+        "Review navigation hierarchy: GPS primary (when available), VOR backup, pilotage always",
+        "Emphasize pilot-in-command responsibility: weather decisions, fuel planning, safety throughout",
+        "Ask: 'Do you feel confident planning and flying cross-country trips now?'",
+        "Discuss confidence building: from first 35 nm flight to 150+ nm multi-leg trip!",
+        "Preview next module: Wind Operations - crosswind takeoffs and landings at KHWD",
+        "Explain transition: 'You can navigate anywhere now. Next we master wind operations for all conditions.'",
+        "Encourage continued practice: 'Every flight is navigation practice. Keep building proficiency!'",
+        "Final celebration: 'Module 7 complete! You're a cross-country pilot now!'",
+        "Acknowledge hard work: 'Four navigation challenges completed - you've earned this skill!'"
+      ],
+      "goals": [
+        "Student celebrates significant accomplishment",
+        "Module 7 learning objectives reviewed and achieved",
+        "Real-world cross-country capability established",
+        "Student feels confident in navigation proficiency",
+        "Pilot-in-command mindset reinforced",
+        "Student prepared for next training module",
+        "Module 7 completion recognized as major milestone",
+        "Student motivated to continue flight training"
+      ]
+    }
+  ]
+}
