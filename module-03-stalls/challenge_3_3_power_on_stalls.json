@@ -1,0 +1,248 @@
+{
+  "name": "Power_On_Stalls",
+  "shortDescription": "Practice power-on stalls simulating departure configuration. Master recovery from high nose-up attitudes with strong left turning tendencies and proper rudder coordination.",
+  "prompt": "You are teaching power-on stalls to a private pilot student who is proficient in power-off stalls. Power-on stalls are more challenging due to high pitch attitude and strong left turning tendency.\n\n**PURPOSE OF POWER-ON STALLS:**\nPower-on stalls simulate a stall during takeoff or go-around - critical phases where the aircraft is in a high power, nose-up attitude. These scenarios are particularly dangerous due to proximity to the ground. The goal is to develop immediate recognition and recovery reflexes.\n\n**CONFIGURATION:**\n- Takeoff/departure configuration: Gear down (fixed gear), flaps up or takeoff flaps (10°)\n- Power: Full or climb power (2,400-2,500 RPM)\n- Higher pitch attitude than power-off stalls (~15-20° nose up)\n- Stall speed approximately 45 KIAS with power on\n\n**ENTRY PROCEDURE:**\n1. Perform clearing turns (90° left, 90° right)\n2. Reduce power and slow to rotation speed (~60 KIAS)\n3. Apply full power (or climb power)\n4. Smoothly pitch up to climbing attitude (15-20° nose up)\n5. Continue increasing pitch to maintain a deceleration\n6. CRITICAL: Maintain coordination with RIGHT RUDDER (significant left turning tendency)\n7. At first indication of stall, initiate recovery\n\n**PARE RECOVERY (with emphasis on coordination):**\n- **P**ower: Already at full power (maintain it)\n- **A**ttitude: Reduce angle of attack immediately (forward pressure)\n- **R**udder: CRITICAL - continue right rudder to counteract left turning tendency, prevent wing drop\n- **E**levator: Return to climb attitude smoothly, no secondary stall\n\n**KEY DIFFERENCES FROM POWER-OFF STALLS:**\n- Power is ALREADY at maximum (don't add power during recovery)\n- Much stronger left turning tendency requires constant right rudder\n- Higher nose-up attitude makes recognition different\n- Wing drop more likely if not coordinated (can lead to spin)\n- P-factor, torque, and gyroscopic precession all create left turning tendency\n\n**PERFORMANCE STANDARDS:**\n- Entry altitude: minimum 3,000 AGL (recommend 3,500-4,000 AGL)\n- Recovery initiated at first indication (buffet/stall horn)\n- Altitude loss: less than 200 feet (typically more than power-off due to higher pitch)\n- Heading maintained within ±10° during recovery\n- Wings level throughout (no wing drop)\n- Smooth, coordinated recovery with no secondary stall\n\n**CRITICAL SAFETY EMPHASIS:**\n- RIGHT RUDDER is essential - insufficient rudder can cause left wing to drop and spin entry\n- Never let the wing drop - if it starts, opposite rudder immediately and reduce angle of attack\n- If spin develops: PARE (Power idle, Aileron neutral, Rudder opposite, Elevator forward)\n- Maintain coordination throughout - this is THE critical skill for power-on stalls\n\n**COMMON ERRORS TO WATCH FOR:**\n- Insufficient right rudder (THE most common error)\n- Using aileron to prevent wing drop instead of rudder (wrong, can aggravate)\n- Not maintaining coordination during entry\n- Excessive forward pressure causing negative G\n- Secondary stall from returning to climb attitude too quickly\n- Not recognizing the stall in the high nose-up attitude\n- Letting the nose get too high before recovery\n\n**COACHING POINTS:**\n- \"Right rudder, right rudder, more right rudder\" - constant reminder\n- Feel the pressure on right rudder pedal - it should be significant\n- Wings must stay level - any bank is too much\n- Nose attitude is much higher than power-off stalls\n- Recovery is pitch reduction, not power addition (power already full)\n- After recovery, maintain climb attitude and airspeed\n\nUse markers extensively. Record flight data to analyze coordination (heading changes indicate coordination issues). Goal: 6-8 successful power-on stalls with improving coordination.",
+  "openingLine": "Today we're practicing power-on stalls - simulating departure configuration. The key challenge is maintaining coordination with strong right rudder pressure.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on power-on stalls, emphasizing the critical importance of rudder coordination.",
+      "steps": [
+        "Explain that power-on stalls simulate takeoff/go-around configuration stalls",
+        "Emphasize this is more challenging than power-off: higher nose attitude, stronger left turning tendency",
+        "Discuss the three left-turning forces: P-factor, torque, and gyroscopic precession",
+        "CRITICAL: Stress that RIGHT RUDDER coordination is essential to prevent wing drop and spin entry",
+        "Review entry procedure: slow to rotation speed, full power, pitch up smoothly, maintain coordination",
+        "Explain PARE recovery with emphasis that power is already at maximum",
+        "Discuss performance standards: <200 ft altitude loss, wings level throughout, heading ±10°",
+        "Address spin awareness: if wing drops, opposite rudder + reduce angle of attack immediately",
+        "Set expectations: 6-8 repetitions focusing on coordination"
+      ],
+      "goals": [
+        "Student understands purpose and danger of departure stall scenarios",
+        "Student knows that RIGHT RUDDER is the critical skill for power-on stalls",
+        "Student understands difference from power-off stalls (power already full)",
+        "Student is aware of spin potential if coordination lost"
+      ],
+      "commonErrors": [
+        "Underestimating the amount of right rudder needed",
+        "Thinking power-on stalls are just like power-off with power added",
+        "Not mentally preparing for the high nose-up attitude",
+        "Planning to use aileron instead of rudder to keep wings level"
+      ]
+    },
+    {
+      "name": "Setup_And_Clearing",
+      "prompt": "Position aircraft in practice area with emphasis on altitude and area clearance.",
+      "steps": [
+        "Navigate to practice area away from airports and traffic",
+        "Climb to 3,500-4,000 feet AGL (need more buffer than power-off due to higher pitch)",
+        "Perform pre-maneuver checklist: altitude adequate, mixture full rich for full power, engine normal",
+        "Execute thorough clearing turns: 90° left, 90° right with careful traffic scan",
+        "Establish straight and level flight",
+        "Note starting altitude and heading for reference",
+        "Add marker 'Power-On Stalls Practice Start'"
+      ],
+      "goals": [
+        "Aircraft at safe altitude (3,500+ AGL recommended)",
+        "Thorough clearing turns completed with traffic scan",
+        "Practice area clear of traffic and hazards",
+        "Mixture rich for full power operations",
+        "Aircraft stable and ready for first power-on stall"
+      ],
+      "commonErrors": [
+        "Not ensuring adequate altitude buffer",
+        "Not checking mixture is full rich before full power operations",
+        "Rushing through clearing turns"
+      ]
+    },
+    {
+      "name": "Coordination_Demo",
+      "prompt": "Demonstrate the entry phase focusing on right rudder coordination before attempting full stall.",
+      "steps": [
+        "Slow aircraft to rotation speed (~60 KIAS)",
+        "Apply full power smoothly",
+        "Demonstrate the immediate need for right rudder as power is applied",
+        "Pitch up to climb attitude (~15° nose up)",
+        "Show how much right rudder pressure is needed to maintain coordination",
+        "Continue pitching up slowly while maintaining heading with rudder",
+        "Point out the ball position - keep it centered with rudder",
+        "Before reaching stall, reduce power and return to level flight",
+        "Emphasize: 'This is how much right rudder you'll need during the stall'"
+      ],
+      "goals": [
+        "Student sees the significant right rudder pressure required",
+        "Student understands coordination check: ball centered, heading constant",
+        "Student observes high nose-up attitude before attempting full stall",
+        "Student prepared for coordination challenge"
+      ],
+      "commonErrors": [
+        "Not demonstrating enough right rudder (making it look easier than it is)",
+        "Not pointing out ball position and heading",
+        "Rushing to full stall without establishing coordination awareness"
+      ]
+    },
+    {
+      "name": "First_Stall_Demo",
+      "prompt": "Demonstrate one complete power-on stall with narration of coordination and recovery.",
+      "steps": [
+        "Perform clearing turns before demonstration",
+        "Slow to rotation speed (~60 KIAS)",
+        "Add marker 'Demo Power-On Stall - Entry'",
+        "Apply full power, immediately add right rudder",
+        "Narrate: 'Full power, right rudder to keep heading constant'",
+        "Smoothly pitch up to climb attitude, continue increasing pitch",
+        "Narrate: 'Holding right rudder, more right rudder as nose comes up'",
+        "Watch for first indication: buffet, stall horn (at high nose-up attitude)",
+        "Add marker 'First Indication'",
+        "Execute recovery: reduce angle of attack immediately, maintain right rudder, return to climb",
+        "Add marker 'Recovery Complete'",
+        "Debrief: nose attitude was very high, significant right rudder needed, recovery is pitch reduction"
+      ],
+      "goals": [
+        "Student observes complete power-on stall entry and recovery",
+        "Student hears constant emphasis on right rudder throughout",
+        "Student sees high nose-up attitude at stall",
+        "Student understands recovery is primarily pitch reduction"
+      ],
+      "commonErrors": [
+        "Not narrating rudder inputs during demonstration",
+        "Allowing wing to drop slightly (even small drop is instructional error)",
+        "Not pointing out how high the nose was at stall"
+      ]
+    },
+    {
+      "name": "Initial_Practice",
+      "prompt": "Student practices first 2-3 power-on stalls with intensive coaching on coordination.",
+      "steps": [
+        "Student performs power-on stall with your active coaching",
+        "Coach throughout: 'Slow to 60, full power - RIGHT RUDDER NOW'",
+        "Continue coaching: 'More right rudder, pitch up, hold that rudder'",
+        "Student adds markers: entry, first indication, recovery complete",
+        "Monitor heading constantly - any deviation means insufficient rudder",
+        "Monitor for wing drop - if starts, immediate callout: 'Right rudder! Reduce pitch!'",
+        "After each stall, debrief coordination: was heading held? Any wing drop?",
+        "Repeat for 2-3 stalls with intensive coaching",
+        "Check altitude between attempts, climb back to 3,500+ AGL",
+        "Emphasize improvement with each attempt"
+      ],
+      "goals": [
+        "Student completes 2-3 power-on stalls with coaching",
+        "Student begins to feel the right rudder pressure needed",
+        "Wings stay level (no drops)",
+        "Heading maintained within ±10° (improving with each attempt)",
+        "Student becoming more comfortable with high nose attitude"
+      ],
+      "commonErrors": [
+        "Insufficient right rudder causing heading drift",
+        "Left wing drop due to poor coordination",
+        "Using aileron to prevent wing drop instead of rudder",
+        "Not maintaining right rudder pressure throughout stall",
+        "Excessive forward pressure during recovery"
+      ]
+    },
+    {
+      "name": "Independent_Practice",
+      "prompt": "Student practices 4-5 more power-on stalls with less coaching, building proficiency.",
+      "steps": [
+        "Student performs power-on stalls with reduced coaching",
+        "Provide reminders only as needed: 'Right rudder' if coordination slipping",
+        "Student should be self-correcting coordination by watching heading and ball",
+        "Student adds markers consistently for each stall",
+        "Monitor for improvement: faster coordination response, less altitude loss, smoother recovery",
+        "Watch for consistency across multiple attempts",
+        "If wing drop occurs, immediate recovery coaching, then discuss what caused it",
+        "After each stall, brief debrief on altitude loss and coordination",
+        "Continue until 4-5 more stalls completed (total 6-8 for session)",
+        "Ensure altitude maintained above 3,000 AGL"
+      ],
+      "goals": [
+        "Student completes 4-5 additional power-on stalls with less coaching",
+        "Coordination becoming more automatic",
+        "Altitude loss consistently <200 feet",
+        "No wing drops",
+        "Student demonstrates improving proficiency and confidence",
+        "Total of 6-8 power-on stalls for the session"
+      ],
+      "commonErrors": [
+        "Becoming complacent with rudder pressure as practice continues",
+        "Rushing the entry without establishing proper coordination",
+        "Not self-correcting when coordination starts to slip",
+        "Fatigue affecting coordination on later attempts"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all recorded stalls with emphasis on coordination and technique progression.",
+      "steps": [
+        "Review all markers from the practice session",
+        "Use analyzeFlightData to examine each stall sequence",
+        "Focus on heading data: which stalls maintained heading best? (indicates best coordination)",
+        "Analyze altitude loss progression: is technique improving?",
+        "Compare first few stalls (with coaching) to later stalls (more independent)",
+        "Identify any stalls where wing drop occurred or heading drifted",
+        "Review best stall of session: why was it best? What coordination cues worked?",
+        "Note any patterns: does coordination improve or degrade as practice continues?",
+        "Discuss differences from power-off stalls in the data"
+      ],
+      "goals": [
+        "Student sees objective data showing coordination performance",
+        "Heading deviations correlate with coordination issues",
+        "Altitude loss trends show improving technique",
+        "Student can identify their best-coordinated stall",
+        "Student understands the data shows coordination quality"
+      ],
+      "commonErrors": [
+        "Not connecting heading changes to insufficient right rudder",
+        "Ignoring the coordination data",
+        "Focusing only on altitude loss without considering coordination"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review the session, assess proficiency, and preview next challenge.",
+      "steps": [
+        "Summarize total stalls completed (should be 6-8)",
+        "Review coordination performance: heading maintenance, wing drops avoided",
+        "Discuss altitude loss: average and trend",
+        "Compare power-on vs power-off stalls: which was more challenging? Why?",
+        "Assess proficiency: consistent coordination? Recovery technique solid?",
+        "Address any remaining questions about right rudder or high-altitude attitude",
+        "Preview next challenge: Accelerated and Turning Stalls",
+        "Explain that turning stalls combine elements of both power-off and power-on, plus increased stall speed in turns",
+        "Emphasize that coordination will be even more critical in turning stalls",
+        "Encourage mental review of right rudder coordination before next session"
+      ],
+      "goals": [
+        "Student demonstrates consistent power-on stall coordination",
+        "Wings stayed level throughout all stalls (or near-perfect)",
+        "Altitude loss consistently <200 feet",
+        "Student understands critical importance of right rudder",
+        "Student ready for more advanced turning stalls",
+        "Student feels confident in departure configuration stall recovery"
+      ]
+    }
+  ]
+}

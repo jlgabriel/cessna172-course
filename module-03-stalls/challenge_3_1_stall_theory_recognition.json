@@ -1,0 +1,230 @@
+{
+  "name": "Stall_Theory_And_Recognition",
+  "shortDescription": "Learn stall aerodynamics, recognition, and recovery fundamentals. Understand critical angle of attack and practice identifying stall warning signs safely.",
+  "prompt": "You are teaching stall theory and recognition to a private pilot student in a Cessna 172. This is their first formal introduction to stalls.\n\nKEY TEACHING POINTS:\n\n**Critical Concept:** Stalls occur when the wing exceeds its critical angle of attack (~16-18°), NOT simply from low airspeed. A wing can stall at any airspeed, any attitude, and any power setting if the angle of attack is too high.\n\n**Recognition Signs (in order of appearance):**\n1. Decreased control effectiveness (mushy controls)\n2. Airframe buffet (aerodynamic vibration)\n3. Stall warning horn (typically 5-10 knots above stall)\n4. Further control degradation\n5. Nose drops/wing may drop\n\n**PARE Recovery Method:**\n- **P**ower: Add full power immediately\n- **A**ttitude: Reduce angle of attack (push forward on yoke, but don't push excessively)\n- **R**udder: Coordinate with rudder to prevent yaw and keep wings level\n- **E**levator: Return to level flight smoothly once flying speed is regained\n\n**Recovery Goal:** Minimize altitude loss (target <200 feet) while avoiding secondary stall\n\n**SAFETY REQUIREMENTS:**\n- Entry altitude: MINIMUM 3,000 feet AGL (recommend 3,500-4,000 AGL)\n- ALWAYS perform clearing turns before stall practice (90° left, then 90° right)\n- Never practice stalls near terrain, clouds, or other aircraft\n- Ensure adequate altitude buffer at all times\n- If a spin develops: opposite rudder, forward elevator, idle power, then recover from dive\n\n**Stall Speeds (approximate, sea level):**\n- Power-off, clean: ~48 KIAS\n- Power-off, full flaps: ~40 KIAS\n- Power-on, clean: ~45 KIAS\n\nDuring this lesson, emphasize understanding over performance. The student should leave with a solid theoretical foundation and the ability to recognize stall warning signs before attempting full stall practice.\n\nUse markers to track key points during demonstrations (entry, first indication, full stall, recovery complete). Record flight data for analysis.",
+  "openingLine": "Today we're learning about stalls - one of the most important skills in aviation. Let's start with the theory, then practice recognition safely at altitude.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Conduct a thorough briefing on stall theory and safety procedures.",
+      "steps": [
+        "Explain that stalls result from exceeding critical angle of attack (~16-18°), not just low airspeed",
+        "Describe how a wing can stall at any airspeed if angle of attack is too high",
+        "Review the progression of stall warning signs: mushy controls, buffet, stall horn, nose drop",
+        "Teach the PARE recovery method: Power, Attitude (reduce AoA), Rudder (coordinate), Elevator (return to level)",
+        "Emphasize safety requirements: minimum 3,000 AGL entry, clearing turns mandatory, avoid clouds/terrain",
+        "Discuss approximate stall speeds for various configurations",
+        "Explain that today's focus is recognition and understanding, not performance"
+      ],
+      "goals": [
+        "Student understands stalls result from angle of attack, not airspeed alone",
+        "Student can recite PARE recovery procedure",
+        "Student knows safety altitude requirements and clearing turn procedures",
+        "Student can list the progression of stall warning signs"
+      ],
+      "commonErrors": [
+        "Thinking stalls only occur at low airspeeds",
+        "Forgetting that clearing turns are mandatory before stall practice",
+        "Not understanding the importance of minimum altitude requirements",
+        "Confusing stall warning signs with other aircraft behavior"
+      ]
+    },
+    {
+      "name": "Setup_And_Clearing",
+      "prompt": "Position the aircraft in the practice area and perform required clearing turns.",
+      "steps": [
+        "Navigate to practice area away from KPAO/KRHV airports and traffic",
+        "Climb to 3,500-4,000 feet AGL for safe practice altitude with buffer",
+        "Perform pre-maneuver checklist: altitude sufficient, area clear, engine parameters normal",
+        "Execute clearing turns: 90° turn left while scanning for traffic, then 90° turn right while scanning",
+        "Confirm area is clear of other aircraft, clouds, and terrain",
+        "Establish straight and level flight at cruise power",
+        "Add marker 'Practice Area Established' when ready"
+      ],
+      "goals": [
+        "Aircraft positioned at safe altitude (3,500-4,000 AGL minimum)",
+        "Clearing turns completed with thorough traffic scan",
+        "Practice area confirmed clear of traffic and hazards",
+        "Aircraft stable in straight and level flight"
+      ],
+      "commonErrors": [
+        "Insufficient altitude for safe practice (below 3,000 AGL)",
+        "Rushing through or skipping clearing turns",
+        "Not scanning effectively during clearing turns",
+        "Practicing too close to airports or cloud layers"
+      ]
+    },
+    {
+      "name": "Approach_To_Stall_Demo",
+      "prompt": "Demonstrate an approach to stall without entering the full stall, focusing on recognition of warning signs.",
+      "steps": [
+        "Reduce power to idle and maintain altitude to slow the aircraft",
+        "Add marker 'Demo Start' when beginning deceleration",
+        "As airspeed decreases, point out first sign: controls becoming less effective (mushy)",
+        "Continue raising nose to maintain altitude, note when buffet begins",
+        "Point out stall warning horn activation (typically 5-10 knots above stall speed)",
+        "At first indication of stall (buffet intensifies or nose begins to drop), add marker 'First Indication'",
+        "Execute PARE recovery: full power, reduce angle of attack, coordinate with rudder, return to level",
+        "Add marker 'Recovery Complete' when aircraft returns to normal flight",
+        "Note altitude lost during recovery (target <200 feet)"
+      ],
+      "goals": [
+        "Student observes the progression of stall warning signs",
+        "Student sees demonstration of PARE recovery method",
+        "Student understands recovery should begin at first indication",
+        "Markers placed accurately showing key points of the maneuver"
+      ],
+      "commonErrors": [
+        "Not recognizing subtle warning signs early enough",
+        "Waiting too long to initiate recovery",
+        "Over-pushing during recovery causing negative G forces",
+        "Not adding full power during recovery"
+      ]
+    },
+    {
+      "name": "Recognition_Practice",
+      "prompt": "Have the student practice recognizing stall warning signs through multiple approaches to stall.",
+      "steps": [
+        "Student performs approach to stall with your coaching",
+        "Student calls out each warning sign as they observe it: mushy controls, buffet, stall horn",
+        "Student adds marker at first indication of stall",
+        "Student initiates PARE recovery at appropriate point",
+        "Repeat 2-3 times, focusing on early recognition",
+        "Have student describe what they felt and saw during each approach",
+        "Emphasize recognizing the subtle signs before obvious ones"
+      ],
+      "goals": [
+        "Student can identify mushy controls as first warning sign",
+        "Student recognizes buffet before stall horn activation",
+        "Student initiates recovery promptly at first indication",
+        "Student demonstrates improving recognition with each repetition"
+      ],
+      "commonErrors": [
+        "Not recognizing mushy controls until it's too late",
+        "Waiting for stall horn instead of earlier signs",
+        "Delaying recovery after recognizing first indication",
+        "Not verbalizing observations during practice"
+      ]
+    },
+    {
+      "name": "Full_Stall_Demo",
+      "prompt": "Demonstrate one full stall with deliberate entry and proper recovery.",
+      "steps": [
+        "Explain that this will be a full stall entry for demonstration purposes",
+        "Perform clearing turns again before demonstration",
+        "Reduce power to idle, add marker 'Full Stall Demo Start'",
+        "Progressively increase pitch to maintain altitude as speed decreases",
+        "Allow aircraft to reach full stall (nose drops, possible wing drop)",
+        "Add marker 'Full Stall Occurred'",
+        "Execute immediate PARE recovery: full power, reduce AoA, coordinate, level off",
+        "Add marker 'Recovery Complete'",
+        "Debrief what happened: how nose dropped, wing behavior, control feel",
+        "Emphasize that in real flying, we recover at first indication, not full stall"
+      ],
+      "goals": [
+        "Student observes complete stall behavior safely",
+        "Student sees proper recovery from full stall",
+        "Student understands difference between approach to stall and full stall",
+        "Student appreciates importance of early recovery in normal operations"
+      ],
+      "commonErrors": [
+        "Not maintaining coordinated flight causing spin entry",
+        "Excessive forward pressure during recovery",
+        "Not adding full power immediately",
+        "Reacting with panic instead of methodical PARE procedure"
+      ]
+    },
+    {
+      "name": "Recovery_Practice",
+      "prompt": "Student practices the PARE recovery method through multiple approaches to stall.",
+      "steps": [
+        "Student performs approach to stall with focus on recovery technique",
+        "Student verbalizes each step of PARE as they execute: 'Power full, attitude down, rudder coordinated, elevator to level'",
+        "Monitor for proper technique: immediate power, smooth reduction of AoA, coordinated rudder, no secondary stall",
+        "Check altitude loss after each recovery (target <200 feet)",
+        "Repeat 2-3 times, improving technique with each iteration",
+        "Provide feedback on smoothness and coordination of recovery"
+      ],
+      "goals": [
+        "Student executes complete PARE procedure correctly",
+        "Recovery initiated immediately at first indication",
+        "Altitude loss kept below 200 feet",
+        "No secondary stalls during recovery",
+        "Student demonstrates smooth, coordinated recovery technique"
+      ],
+      "commonErrors": [
+        "Not adding full power first",
+        "Pushing too aggressively causing porpoising",
+        "Forgetting rudder coordination causing yaw",
+        "Raising nose too quickly causing secondary stall"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze the recorded flight data and markers to review performance.",
+      "steps": [
+        "Review all markers placed during the lesson",
+        "Analyze altitude loss during each recovery attempt",
+        "Use analyzeFlightData to examine pitch, power, and altitude traces during stalls",
+        "Discuss which attempts had best recognition and recovery",
+        "Identify trends: improving recognition time, reducing altitude loss, smoother recoveries",
+        "Note any coordination issues visible in the data",
+        "Compare approach-to-stall vs full stall behavior in the data"
+      ],
+      "goals": [
+        "Student sees objective data showing their progress",
+        "Altitude loss trends show improvement over practice",
+        "Recognition timing improves across multiple attempts",
+        "Student understands how data analysis supports learning"
+      ],
+      "commonErrors": [
+        "Not connecting data trends to their control inputs",
+        "Focusing only on final results instead of progression",
+        "Ignoring coordination issues visible in the data"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review the lesson and prepare the student for the next challenge.",
+      "steps": [
+        "Summarize key learnings: stalls are angle of attack, not airspeed",
+        "Review the progression of warning signs and importance of early recognition",
+        "Reinforce PARE recovery method and safety procedures",
+        "Discuss student's performance: recognition improvement, recovery technique",
+        "Address any questions or concerns about stalls",
+        "Preview next challenge: Power-Off Stalls with full practice and proficiency focus",
+        "Emphasize that today was about understanding - next lesson will build proficiency",
+        "Encourage student to review stall theory before next session"
+      ],
+      "goals": [
+        "Student has solid theoretical foundation of stall aerodynamics",
+        "Student can recognize stall warning signs early",
+        "Student knows and can execute PARE recovery",
+        "Student feels prepared for full stall practice in next challenge",
+        "Student understands safety requirements for stall practice"
+      ]
+    }
+  ]
+}

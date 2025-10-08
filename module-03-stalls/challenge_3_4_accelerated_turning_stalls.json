@@ -1,0 +1,314 @@
+{
+  "name": "Accelerated_And_Turning_Stalls",
+  "shortDescription": "Master accelerated stalls in turning flight. Understand load factor effects, increased stall speeds in banks, and critical coordination required to prevent spin entry.",
+  "prompt": "You are teaching accelerated and turning stalls - the most advanced stall training. These stalls occur when load factor increases stall speed, particularly dangerous in the base-to-final turn scenario.\n\n**CRITICAL THEORY:**\n- Level flight: 1G, stall ~48 KIAS\n- 30° bank: 1.15G, stall ~54 KIAS (+15%)\n- 45° bank: 1.41G, stall ~64 KIAS (+41%)\n- Formula: New stall speed = Base × √(load factor)\n- KEY: Can stall at 'safe' airspeeds in turns!\n\n**PRACTICE CONFIGURATIONS:**\n1. 30° bank stalls (~54 KIAS) - forgiving introduction\n2. 45° bank stalls (~64 KIAS) - more aggressive, higher spin risk\n3. Cross-control demo only - base-to-final accident scenario\n\n**ENTRY:** Clearing turns → establish bank → reduce power → maintain altitude with pitch → maintain coordination (ball centered) → recover at first indication\n\n**RECOVERY:** Simultaneous: reduce AoA, full power, level wings, coordinate with rudder\n\n**SPIN AWARENESS:**\n- Uncoordinated turning stall = likely spin entry\n- Signs: rapid yaw and roll\n- Recovery: opposite rudder, forward elevator, level wings, power idle\n- NEVER practice >45° bank or cross-controlled stalls solo\n\n**CROSS-CONTROL STALL (demo only):**\nOvershooting final → bottom rudder to tighten turn → opposite aileron → uncoordinated stall → spin likely. This is the classic stall-spin accident. Recovery: neutralize controls, opposite rudder if spinning, reduce AoA.\n\n**PERFORMANCE STANDARDS:**\n- Minimum 3,500 AGL (recommend 4,000+)\n- Recovery at first indication\n- <300 ft altitude loss acceptable\n- Ball centered throughout (CRITICAL)\n- No spin entry\n- Wings leveled during recovery\n\n**COMMON ERRORS:**\n- Poor coordination (most dangerous)\n- Not recognizing higher stall speeds\n- Using rudder to maintain altitude\n- Not leveling wings in recovery\n- Practicing >45° bank\n- Bottom rudder in turns (spin setup)\n\n**TEACHING EMPHASIS:**\nCoordination is CRITICAL - watch ball constantly. Normal approach speeds become stall speeds in turns. Base-to-final requires vigilance: maintain airspeed, stay coordinated, never skid turns. If tempted to use rudder to tighten turn - STOP.\n\nUse markers extensively. Record flight data for coordination analysis. Goal: 6-8 turning stalls with perfect coordination.",
+  "openingLine": "Today's the most advanced stall training: turning stalls where load factor increases stall speed. Coordination is absolutely critical to prevent spins.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Conduct comprehensive briefing on accelerated stalls, load factor, and spin awareness.",
+      "steps": [
+        "Explain load factor concept: force on aircraft increases in turns, increasing stall speed",
+        "Present load factor numbers: 30° bank = 1.15G (~54 KIAS), 45° bank = 1.41G (~64 KIAS)",
+        "Emphasize that you can stall at 'normal' airspeeds in turns (60 KIAS is below stall in 45° bank!)",
+        "Discuss the base-to-final turn stall accident scenario: overshooting, skidding turn, stall, spin",
+        "CRITICAL: Stress that coordination is essential - uncoordinated stall in turn = likely spin",
+        "Review recovery: reduce AoA, full power, level wings, coordinate throughout",
+        "Explain cross-control stall demonstration: shows dangerous scenario, demonstration only",
+        "Set altitude requirement: 3,500 AGL minimum (4,000+ recommended for turning stalls)",
+        "Emphasize: never practice banks steeper than 45°, never practice cross-controlled stalls solo",
+        "Performance standards: <300 ft altitude loss acceptable, coordination is primary focus"
+      ],
+      "goals": [
+        "Student understands load factor increases stall speed in turns",
+        "Student can calculate approximate stall speeds for 30° and 45° banks",
+        "Student understands spin risk from uncoordinated turning stalls",
+        "Student knows the base-to-final stall-spin accident scenario",
+        "Student prepared for coordination challenge"
+      ],
+      "commonErrors": [
+        "Not understanding that normal airspeeds can be stall speeds in turns",
+        "Thinking coordination is less important than straight flight stalls",
+        "Not appreciating the real-world danger of base-to-final turn stalls",
+        "Planning to practice steep banks (never go beyond 45°)"
+      ]
+    },
+    {
+      "name": "Setup_And_Safety",
+      "prompt": "Position aircraft with extra altitude buffer and comprehensive safety briefing.",
+      "steps": [
+        "Navigate to practice area well away from airports and traffic",
+        "Climb to 4,000-4,500 feet AGL (extra buffer for turning stalls)",
+        "Review spin recovery procedure: opposite rudder, forward elevator, level wings, power idle, recover dive",
+        "Perform thorough pre-maneuver checklist: altitude adequate, mixture rich, engine normal",
+        "Execute comprehensive clearing turns: 90° left, 90° right, scan above and below",
+        "Emphasize: if spin entry occurs, recover immediately using spin recovery procedure",
+        "Establish straight and level flight",
+        "Add marker 'Turning Stalls Practice Start'"
+      ],
+      "goals": [
+        "Aircraft at safe altitude (4,000+ AGL)",
+        "Student knows spin recovery procedure",
+        "Thorough clearing turns completed",
+        "Practice area clear of all traffic",
+        "Student mentally prepared for advanced maneuver"
+      ],
+      "commonErrors": [
+        "Not having enough altitude buffer (turning stalls use more altitude)",
+        "Not reviewing spin recovery before starting",
+        "Inadequate clearing turns for complex maneuver"
+      ]
+    },
+    {
+      "name": "Theory_Demo",
+      "prompt": "Demonstrate load factor effect by showing how bank angle affects stall without entering stall.",
+      "steps": [
+        "Establish level flight at cruise power (~100 KIAS)",
+        "Note the airspeed and that aircraft is not near stall",
+        "Establish 30° bank and maintain altitude with back pressure",
+        "Point out that maintaining altitude requires more back pressure (increasing angle of attack)",
+        "Note: 'At 54 KIAS in this 30° bank, we would be at stall speed'",
+        "Roll to 45° bank, maintain altitude",
+        "Point out significant back pressure needed",
+        "Note: 'At 64 KIAS in this 45° bank, we would be at stall speed - that's approach speed!'",
+        "Roll wings level, return to straight and level",
+        "Debrief: turns increase stall speed due to load factor, must maintain higher airspeed in turns"
+      ],
+      "goals": [
+        "Student feels the increased back pressure required in turns",
+        "Student understands that approach speeds become stall speeds in steep turns",
+        "Student sees load factor effect demonstrated safely",
+        "Student prepared to recognize stall at higher airspeeds"
+      ],
+      "commonErrors": [
+        "Not pointing out the specific airspeeds where stall would occur",
+        "Not letting student feel the back pressure increase",
+        "Rushing through the demonstration"
+      ]
+    },
+    {
+      "name": "Demo_30_Bank_Stall",
+      "prompt": "Demonstrate one complete 30° bank turning stall with emphasis on coordination.",
+      "steps": [
+        "Perform clearing turns before demonstration",
+        "Slow to approach speed (~70 KIAS)",
+        "Establish 30° bank turn (either direction)",
+        "Add marker '30-Degree Stall Demo - Entry'",
+        "Reduce power to idle, maintain altitude with back pressure",
+        "Narrate: 'Watching the ball - keeping it centered with coordinated rudder'",
+        "Continue increasing pitch to maintain altitude as speed decreases",
+        "Point out when airspeed reaches ~54 KIAS: 'This is near stall speed for this bank'",
+        "At first indication (buffet/horn), add marker 'First Indication'",
+        "Execute recovery: reduce AoA, full power, level wings, coordinate throughout",
+        "Add marker 'Recovery Complete'",
+        "Debrief: stall occurred at higher airspeed, coordination was critical, wings leveled as part of recovery"
+      ],
+      "goals": [
+        "Student observes 30° bank stall successfully",
+        "Student sees coordination maintained throughout",
+        "Student notes higher stall speed than wings-level",
+        "Student understands recovery includes leveling wings"
+      ],
+      "commonErrors": [
+        "Not narrating coordination inputs during demo",
+        "Allowing ball to slip off center",
+        "Not pointing out the airspeed at stall (higher than expected)"
+      ]
+    },
+    {
+      "name": "Practice_30_Bank",
+      "prompt": "Student practices 3-4 turning stalls in 30° bank with coaching.",
+      "steps": [
+        "Student establishes 30° bank turn",
+        "Coach: 'Watch your ball - keep it centered'",
+        "Student reduces power, maintains altitude with pitch",
+        "Student adds markers: entry, first indication, recovery",
+        "Monitor ball position constantly - call out if not centered: 'Ball! Coordinate!'",
+        "Student recovers at first indication: reduce AoA, power, level wings, coordinate",
+        "After each stall, debrief coordination quality and altitude loss",
+        "Repeat for 3-4 stalls in 30° bank",
+        "Practice both left and right turns (at least one each direction)",
+        "Emphasize maintaining coordination throughout"
+      ],
+      "goals": [
+        "Student completes 3-4 turning stalls in 30° bank",
+        "Coordination maintained (ball centered) throughout",
+        "Student recognizes stall at higher airspeed",
+        "Recovery technique includes leveling wings",
+        "Altitude loss <300 feet"
+      ],
+      "commonErrors": [
+        "Ball not centered during stall",
+        "Not leveling wings during recovery",
+        "Trying to maintain altitude with rudder instead of coordinated turn",
+        "Not recognizing stall because airspeed seems 'safe'",
+        "Excessive control inputs during recovery"
+      ]
+    },
+    {
+      "name": "Demo_45_Bank_Stall",
+      "prompt": "Demonstrate one 45° bank turning stall - more aggressive, higher stall speed.",
+      "steps": [
+        "Perform clearing turns before demonstration",
+        "Slow to approach speed (~70 KIAS)",
+        "Establish 45° bank turn",
+        "Add marker '45-Degree Stall Demo - Entry'",
+        "Reduce power to idle",
+        "Narrate: 'Significant back pressure needed to maintain altitude, watching ball carefully'",
+        "Continue slowing, point out ~64 KIAS: 'Stall speed is now 64 knots - normal approach speed!'",
+        "Maintain coordination emphasis: 'Ball centered, coordinated rudder'",
+        "At first indication, add marker 'First Indication'",
+        "Execute recovery: reduce AoA, full power, level wings promptly, maintain coordination",
+        "Add marker 'Recovery Complete'",
+        "Debrief: much higher stall speed, more aggressive stall, greater coordination challenge"
+      ],
+      "goals": [
+        "Student observes 45° bank stall successfully",
+        "Student sees significantly higher stall speed (~64 KIAS)",
+        "Student understands this is more aggressive and dangerous",
+        "Student appreciates critical need for coordination"
+      ],
+      "commonErrors": [
+        "Not emphasizing the dramatic increase in stall speed",
+        "Allowing any coordination slip (critical at 45°)",
+        "Not showing how quickly wings must be leveled in recovery"
+      ]
+    },
+    {
+      "name": "Practice_45_Bank",
+      "prompt": "Student practices 2-3 turning stalls in 45° bank with intensive coordination coaching.",
+      "steps": [
+        "Student establishes 45° bank turn",
+        "Intensive coaching: 'Ball centered! Watch that ball constantly!'",
+        "Student reduces power, increases pitch to maintain altitude",
+        "Point out airspeed: 'You're approaching 64 knots - stall speed for this bank'",
+        "Student adds markers: entry, first indication, recovery",
+        "Monitor coordination critically - any ball movement requires callout",
+        "Student recovers: reduce AoA, power, level wings immediately, coordinate",
+        "Debrief after each stall: coordination quality, recognition timing, altitude loss",
+        "Repeat for 2-3 stalls in 45° bank",
+        "Practice both directions if time/altitude permits",
+        "Ensure altitude stays above 3,500 AGL"
+      ],
+      "goals": [
+        "Student completes 2-3 turning stalls in 45° bank successfully",
+        "Perfect coordination maintained throughout (ball centered)",
+        "Student recognizes stall at much higher airspeed (~64 KIAS)",
+        "Smooth, coordinated recovery with wings leveled promptly",
+        "No spin entry on any attempt"
+      ],
+      "commonErrors": [
+        "Any deviation from coordinated flight (ball off center)",
+        "Hesitation in leveling wings during recovery",
+        "Not recognizing stall because airspeed 'seems normal'",
+        "Overbanking beyond 45° (dangerous)",
+        "Not being aggressive enough with recovery"
+      ]
+    },
+    {
+      "name": "Cross_Control_Demo",
+      "prompt": "Demonstrate the dangerous cross-control stall scenario (demonstration only, student observes).",
+      "steps": [
+        "Explain this simulates the base-to-final turn stall-spin accident",
+        "Set up: establish 30° bank turn as if turning from base to final",
+        "Add marker 'Cross-Control Demo - Setup'",
+        "Demonstrate overshooting: 'Pilot realizes they're overshooting final'",
+        "Apply inside (bottom) rudder to 'tighten' the turn (skidding turn)",
+        "Apply opposite aileron to prevent bank from steepening",
+        "Note: 'Ball is WAY off center - this is uncoordinated, dangerous flight'",
+        "Increase pitch slightly",
+        "Add marker 'Cross-Control Stall Entry'",
+        "Allow stall to occur - likely rapid wing drop and snap roll",
+        "Immediate recovery: neutralize controls, opposite rudder if spinning, reduce AoA, recover",
+        "Add marker 'Recovery Complete'",
+        "Debrief: 'This is how stall-spin accidents happen. NEVER fly cross-controlled, especially in turns near the ground'",
+        "Emphasize: NEVER practice this solo, demonstration only"
+      ],
+      "goals": [
+        "Student sees the dangerous cross-control stall scenario",
+        "Student understands how overshooting leads to cross-control",
+        "Student recognizes uncoordinated flight is extremely dangerous",
+        "Student understands this must NEVER be practiced solo",
+        "Student appreciates why base-to-final turn requires vigilance"
+      ],
+      "commonErrors": [
+        "Not making it clear this is demonstration only",
+        "Not emphasizing how common this accident scenario is",
+        "Not showing clear recovery technique if spin develops"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze recorded data focusing on coordination quality and stall speed trends.",
+      "steps": [
+        "Review all markers from turning stalls practice",
+        "Use analyzeFlightData to examine each turning stall",
+        "Analyze coordination: heading and bank angle stability shows coordination quality",
+        "Compare stall airspeeds: 30° bank stalls vs 45° bank stalls - data should show higher speeds",
+        "Review altitude loss: acceptable if <300 feet, compare across attempts",
+        "Identify best-coordinated stall: steady heading, wings level recovery, minimal altitude loss",
+        "Compare to wings-level stalls from previous challenges: higher stall speeds confirmed",
+        "Discuss cross-control demo data: dramatic difference in coordination",
+        "Review any coordination issues that appeared in the data"
+      ],
+      "goals": [
+        "Student sees data confirming higher stall speeds in turns",
+        "Coordination quality visible in heading/bank stability data",
+        "Student can identify their best-coordinated turning stall",
+        "Data reinforces the danger of cross-control flight",
+        "Student understands relationship between bank angle and stall speed from data"
+      ],
+      "commonErrors": [
+        "Not connecting bank angle to stall speed in data",
+        "Ignoring coordination issues visible in heading changes",
+        "Not appreciating the altitude used in turning stalls"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Comprehensive debrief on turning stalls, real-world application, and module completion.",
+      "steps": [
+        "Summarize turning stalls completed: 3-4 at 30°, 2-3 at 45° bank",
+        "Review load factor concept and increased stall speeds",
+        "Discuss coordination performance: was ball centered throughout?",
+        "Review cross-control stall demo: why it's dangerous, how to avoid",
+        "Real-world application: base-to-final turn safety - maintain airspeed, stay coordinated, never skid",
+        "Emphasize: if overshooting final, GO AROUND - don't try to 'tighten' turn with rudder",
+        "Assess overall stall proficiency: theory understood? Recognition skills? Recovery technique?",
+        "Congratulate on completing Module 3: Stalls",
+        "Preview Module 4: Ground Reference Maneuvers at KWVI - different challenge, wind awareness, visual references",
+        "Encourage continued practice of stall awareness and coordination skills"
+      ],
+      "goals": [
+        "Student demonstrates proficiency in turning stalls with coordination",
+        "Student understands real-world application to base-to-final turn safety",
+        "Student knows to go around rather than force a turn",
+        "Complete Module 3: All stall types mastered",
+        "Student prepared for next module's different challenges",
+        "Student has complete stall recovery skillset for PPL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "name": "Power_Off_Stalls",
+  "shortDescription": "Practice power-off stalls simulating approach-to-landing configuration. Develop proficiency in both clean and landing configurations with consistent recovery technique.",
+  "prompt": "You are teaching power-off stalls to a private pilot student who has completed stall theory and recognition. This lesson focuses on developing proficiency through repetition.\n\n**PURPOSE OF POWER-OFF STALLS:**\nPower-off stalls simulate the critical scenario of a stall during approach to landing. This is one of the most dangerous times for a stall because altitude is limited. The goal is to develop muscle memory for immediate recognition and recovery.\n\n**CONFIGURATION:**\n- **Clean configuration:** Gear down (fixed gear), flaps up, power idle\n- **Landing configuration:** Gear down, full flaps, power idle\n- Landing configuration stalls occur at lower airspeed (~40 KIAS vs ~48 KIAS clean)\n\n**ENTRY PROCEDURE:**\n1. Perform clearing turns (90° left, 90° right)\n2. Reduce power to idle\n3. Maintain altitude by increasing pitch\n4. As airspeed decreases, continue raising nose to maintain altitude\n5. Trim as needed (but be ready to remove trim during recovery)\n6. At first indication of stall (buffet, stall horn, nose drop), initiate recovery\n\n**PARE RECOVERY (review):**\n- **P**ower: Full power immediately\n- **A**ttitude: Reduce angle of attack (forward pressure, don't push excessively)\n- **R**udder: Coordinate to prevent yaw, counteract left turning tendencies\n- **E**levator: Return to level flight smoothly, no secondary stall\n\n**PERFORMANCE STANDARDS:**\n- Entry altitude: minimum 3,000 AGL (recommend 3,500-4,000 AGL)\n- Recovery initiated at first indication (not full stall unless specified)\n- Altitude loss: less than 200 feet\n- Heading maintained within ±10° during recovery\n- Smooth, coordinated recovery with no secondary stall\n- No excessive forward pressure causing negative G\n\n**KEY TEACHING POINTS:**\n- Power-off stalls can occur during go-around if pilot doesn't reduce pitch\n- First indication = immediate recovery (don't wait for full stall break)\n- Full power creates left turning tendency - be ready with right rudder\n- Trim change with power - be ready to hold forward pressure\n- In landing config, less altitude loss due to lower stall speed\n- Recovery must be immediate - altitude is limited in real approach scenario\n\n**COMMON ERRORS TO WATCH FOR:**\n- Not adding full power immediately\n- Excessive forward pressure (porpoising)\n- Not compensating for left turning tendency\n- Secondary stall from raising nose too quickly\n- Not maintaining coordination (can lead to spin)\n- Forgetting to retract flaps during recovery (do this after positive climb established)\n\nUse markers extensively to track each stall: entry, first indication, recovery complete. Record flight data for the entire session. After multiple repetitions, analyze performance trends.\n\nThe goal is 6-8 successful stalls with consistent technique and decreasing altitude loss.",
+  "openingLine": "Let's practice power-off stalls today - simulating approach-to-landing scenarios. We'll work on building consistent recovery technique through repetition.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on power-off stalls, their purpose, and performance standards.",
+      "steps": [
+        "Review PARE recovery procedure from previous lesson",
+        "Explain that power-off stalls simulate approach-to-landing configuration stalls",
+        "Discuss why this is critical: stalls on approach have limited altitude for recovery",
+        "Review entry procedure: power idle, maintain altitude with pitch, recover at first indication",
+        "Emphasize performance standards: <200 ft altitude loss, heading ±10°, no secondary stall",
+        "Discuss configurations: clean (flaps up) vs landing (full flaps)",
+        "Explain that full power creates left turning tendency requiring right rudder",
+        "Set expectations: 6-8 repetitions to build proficiency and muscle memory"
+      ],
+      "goals": [
+        "Student understands purpose of power-off stalls",
+        "Student knows entry procedure and recovery standards",
+        "Student is prepared for left turning tendency with full power",
+        "Student understands goal is repetition for proficiency"
+      ],
+      "commonErrors": [
+        "Thinking this is just theory review instead of hands-on practice",
+        "Not mentally preparing for multiple repetitions",
+        "Forgetting about left turning tendency at low airspeed with full power"
+      ]
+    },
+    {
+      "name": "Setup_And_Clearing",
+      "prompt": "Position aircraft in practice area and establish starting conditions.",
+      "steps": [
+        "Navigate to practice area away from airports and traffic",
+        "Climb to 3,500-4,000 feet AGL for safe practice altitude",
+        "Perform pre-maneuver checklist: altitude adequate, area clear, engine normal",
+        "Execute thorough clearing turns: 90° left, 90° right with traffic scan",
+        "Establish straight and level flight in clean configuration",
+        "Note starting altitude and heading for reference",
+        "Add marker 'Practice Session Start'"
+      ],
+      "goals": [
+        "Aircraft at safe altitude with adequate buffer (3,500+ AGL)",
+        "Thorough clearing turns completed",
+        "Practice area clear of traffic and hazards",
+        "Aircraft stable and ready for first stall"
+      ],
+      "commonErrors": [
+        "Rushing through clearing turns",
+        "Not noting starting altitude for altitude loss tracking",
+        "Practicing too close to cloud layers or terrain"
+      ]
+    },
+    {
+      "name": "Clean_Config_Demo",
+      "prompt": "Demonstrate one power-off stall in clean configuration (flaps up).",
+      "steps": [
+        "Confirm clean configuration: flaps up, gear down (fixed)",
+        "Reduce power to idle smoothly",
+        "Add marker 'Clean Stall 1 - Entry'",
+        "Maintain altitude by increasing pitch as airspeed decreases",
+        "Call out warning signs as they appear: mushy controls, buffet, stall horn",
+        "At first indication (typically stall horn + buffet), add marker 'First Indication'",
+        "Execute PARE: full power, reduce AoA, right rudder for coordination, level off smoothly",
+        "Add marker 'Recovery Complete' when back to normal flight",
+        "Note altitude lost and heading change",
+        "Debrief what happened and what to focus on"
+      ],
+      "goals": [
+        "Clean configuration stall demonstrated successfully",
+        "Student observes complete entry and recovery sequence",
+        "Markers accurately placed for analysis",
+        "Student prepared to practice themselves"
+      ],
+      "commonErrors": [
+        "Not maintaining altitude long enough (entering stall too soon)",
+        "Insufficient right rudder during power application",
+        "Not noting altitude loss for comparison"
+      ]
+    },
+    {
+      "name": "Clean_Config_Practice",
+      "prompt": "Student practices 3-4 power-off stalls in clean configuration.",
+      "steps": [
+        "Student performs power-off stall in clean configuration with coaching",
+        "Student adds markers at entry, first indication, and recovery complete",
+        "Monitor technique: idle power, pitch for altitude, recognize first indication, PARE recovery",
+        "After each stall, debrief: altitude loss, coordination, recovery smoothness",
+        "Repeat for total of 3-4 stalls in clean configuration",
+        "Watch for improvement: faster recognition, less altitude loss, smoother recovery",
+        "Provide real-time feedback on rudder coordination and pitch control",
+        "Ensure adequate altitude maintained between practice attempts (climb back to 3,500+ AGL)"
+      ],
+      "goals": [
+        "Student completes 3-4 clean configuration stalls successfully",
+        "Altitude loss decreasing with each attempt (target <200 ft)",
+        "Recovery technique becoming more consistent",
+        "Student recognizing first indication more quickly",
+        "Coordination improving with each repetition"
+      ],
+      "commonErrors": [
+        "Not adding full power immediately",
+        "Inadequate right rudder causing yaw during recovery",
+        "Raising nose too quickly causing secondary stall",
+        "Not maintaining heading during recovery",
+        "Excessive forward pressure during recovery"
+      ]
+    },
+    {
+      "name": "Landing_Config_Demo",
+      "prompt": "Demonstrate one power-off stall in landing configuration (full flaps).",
+      "steps": [
+        "Perform clearing turns before configuration change",
+        "Configure for landing: reduce to approach speed (~70 KIAS), extend full flaps",
+        "Add marker 'Landing Config Stall 1 - Entry'",
+        "Reduce power to idle",
+        "Maintain altitude with increasing pitch as airspeed decreases",
+        "Note that stall occurs at lower airspeed (~40 KIAS vs ~48 clean)",
+        "At first indication, add marker 'First Indication'",
+        "Execute PARE: full power, reduce AoA, right rudder, level off",
+        "After positive climb established, retract flaps incrementally (one notch at a time)",
+        "Add marker 'Recovery Complete'",
+        "Compare to clean stall: lower stall speed, less altitude loss potential"
+      ],
+      "goals": [
+        "Landing configuration stall demonstrated successfully",
+        "Student sees difference from clean configuration stall",
+        "Proper flap retraction technique during recovery shown",
+        "Student understands lower stall speed in landing config"
+      ],
+      "commonErrors": [
+        "Retracting flaps too early (do this after positive climb)",
+        "Retracting all flaps at once (causes sink)",
+        "Not anticipating even stronger left turning tendency with full power + full flaps"
+      ]
+    },
+    {
+      "name": "Landing_Config_Practice",
+      "prompt": "Student practices 3-4 power-off stalls in landing configuration.",
+      "steps": [
+        "Student configures for landing: approach speed, full flaps",
+        "Student performs power-off stall in landing configuration",
+        "Student adds markers: entry, first indication, recovery complete",
+        "Emphasize proper flap retraction after positive climb established",
+        "Monitor for coordination and smooth recovery technique",
+        "Repeat for total of 3-4 landing configuration stalls",
+        "Compare altitude loss to clean configuration (typically less)",
+        "Watch for consistency in recognition and recovery timing",
+        "Ensure student climbs back to safe altitude between attempts"
+      ],
+      "goals": [
+        "Student completes 3-4 landing configuration stalls successfully",
+        "Proper flap retraction technique during recovery",
+        "Altitude loss <200 ft consistently",
+        "Student recognizes lower stall speed in landing config",
+        "Coordination maintained throughout recovery"
+      ],
+      "commonErrors": [
+        "Retracting flaps before establishing positive climb",
+        "Not being aggressive enough with right rudder",
+        "Secondary stall during flap retraction",
+        "Forgetting to retract flaps at all"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all recorded stalls using markers and flight data.",
+      "steps": [
+        "Review all markers placed during the session",
+        "Use analyzeFlightData to examine each stall sequence",
+        "Compare altitude loss across all stalls: clean vs landing config",
+        "Analyze recognition timing: how quickly student identified first indication",
+        "Review coordination: any heading deviations or yaw during recovery",
+        "Identify best stall of the session and explain why it was best",
+        "Identify trends: is technique improving? Is altitude loss decreasing?",
+        "Note any persistent issues to address in future practice"
+      ],
+      "goals": [
+        "Student sees objective data showing progress",
+        "Altitude loss trends demonstrate improving technique",
+        "Recognition timing improving across repetitions",
+        "Student can identify their best-performing stall",
+        "Areas for improvement clearly identified"
+      ],
+      "commonErrors": [
+        "Not seeing the connection between their inputs and altitude loss",
+        "Focusing only on final stall instead of progression",
+        "Not recognizing coordination issues in the data"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review the session and assess proficiency level.",
+      "steps": [
+        "Summarize total number of stalls performed (should be 6-8)",
+        "Review performance: average altitude loss, consistency, coordination",
+        "Discuss improvement seen from first to last stall",
+        "Address any persistent issues or questions",
+        "Assess proficiency level: ready for power-on stalls, or need more practice?",
+        "Preview next challenge: Power-On Stalls (departure configuration)",
+        "Emphasize that power-on stalls have different characteristics: more nose-up attitude, stronger left turning tendency",
+        "Encourage continued mental review of PARE procedure"
+      ],
+      "goals": [
+        "Student demonstrates consistent power-off stall recovery technique",
+        "Altitude loss consistently <200 feet",
+        "Student ready to move to power-on stalls",
+        "Student understands differences between configurations",
+        "Student feels confident in power-off stall recovery"
+      ]
+    }
+  ]
+}
