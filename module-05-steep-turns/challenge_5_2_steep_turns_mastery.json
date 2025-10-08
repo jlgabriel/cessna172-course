@@ -1,0 +1,268 @@
+{
+  "name": "Steep_Turns_Mastery",
+  "shortDescription": "Demonstrate steep turn mastery with immediate reversals, tighter tolerances, and real-world scenarios. Complete consecutive turns and integrate with other flight operations.",
+  "prompt": "You are teaching steep turn mastery to a student proficient in basic steep turns. This lesson refines precision with tighter standards, immediate reversals, and real-world integration.\n\n**MASTERY ELEMENTS:**\n- **Immediate reversals:** Complete 360° left, immediately roll into 360° right without pause\n- **Tighter tolerances:** Altitude ±50 ft (vs ±100 ft), bank 45° ±3° (vs ±5°)\n- **Consecutive turns:** Multiple turns in sequence demonstrating consistency\n- **Integration:** Steep turns combined with navigation, communication, or scenario-based tasks\n\n**IMMEDIATE REVERSAL TECHNIQUE:**\nComplete first turn on heading, smoothly reverse bank (left 45° → wings level → right 45°) in one continuous motion. Manage power and back pressure transitions. Common error: losing altitude during reversal.\n\n**PERFORMANCE STANDARDS (MASTERY):**\n- Bank: 45° ±3° (tighter than basic)\n- Altitude: ±50 feet (tighter than basic)\n- Airspeed: ±5 knots\n- Rollout: ±5° heading (tighter than basic)\n- Reversals: Smooth, no pause, minimal altitude loss (<50 ft)\n- Consecutive turns: Consistent performance across 3-4 turns\n\n**REAL-WORLD SCENARIOS:**\nSteep turns demonstrate ability to maneuver in confined airspace, avoid weather/terrain, perform clearing turns before aerobatics, or execute course reversals. Integration scenarios include: steep turn while monitoring traffic, steep turn with radio work, steep turn followed by immediate descent/climb.\n\n**KEY MASTERY POINTS:**\nSmooth reversal transitions. Tighter scan (instruments + outside). Anticipatory control (not reactive). Consistent performance. Mental management during consecutive turns. Situational awareness maintained throughout.\n\n**COMMON MASTERY CHALLENGES:**\nAltitude loss during reversals. Inconsistent bank angle between consecutive turns. Fatigue affecting later turns. Losing orientation during multiple turns. Not meeting tighter tolerances. Uncoordinated reversals.\n\nUse markers: each turn entry/completion, reversal points, scenario elements. Record flight data for precision analysis. Goal: demonstrate checkride-ready steep turn proficiency.",
+  "openingLine": "Time to master steep turns! Today we'll do immediate reversals, tighter tolerances, and real-world scenarios. Let's refine your precision to checkride standards!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on mastery elements: reversals, tighter tolerances, real-world integration.",
+      "steps": [
+        "Review basic steep turn performance from previous lesson",
+        "Introduce mastery standards: bank ±3° (vs ±5°), altitude ±50 ft (vs ±100 ft), rollout ±5° (vs ±10°)",
+        "Teach immediate reversal technique: complete turn, roll through level to opposite bank smoothly",
+        "Explain reversal challenges: power/back pressure transitions, altitude maintenance during reversal",
+        "Discuss consecutive turns: 3-4 turns showing consistency, not just one good performance",
+        "Preview scenarios: steep turn with task management (traffic watch, radio, navigation)",
+        "Set expectations: demonstrate checkride-ready precision and consistency",
+        "Emphasize: this is performance refinement, building on solid foundation from basic lesson"
+      ],
+      "goals": [
+        "Student understands tighter mastery standards",
+        "Student knows reversal technique and challenges",
+        "Student prepared for consecutive turn consistency requirement",
+        "Student aware scenarios will test task management during steep turns",
+        "Student motivated to refine precision to checkride level"
+      ],
+      "commonErrors": [
+        "Thinking mastery is just repeating basic steep turns",
+        "Not understanding why reversals are challenging",
+        "Expecting immediate perfection instead of progressive refinement"
+      ]
+    },
+    {
+      "name": "Setup_Baseline",
+      "prompt": "Establish baseline with 1-2 steep turns at basic standards to assess starting proficiency.",
+      "steps": [
+        "Navigate to practice area, climb to 3,500-4,500 AGL minimum",
+        "Establish cruise configuration, perform clearing turns",
+        "Student performs 1-2 steep turns (one each direction) at basic standards (±5° bank, ±100 ft altitude)",
+        "Add markers for entry, 90°/180°/270°, rollout, completion",
+        "Assess current proficiency: meeting basic standards consistently? Ready for mastery work?",
+        "Brief feedback: 'Your basic technique is solid, now we'll refine precision'",
+        "Note specific areas to focus: altitude control? bank consistency? rollout accuracy?"
+      ],
+      "goals": [
+        "Baseline performance established",
+        "Student demonstrates solid basic steep turn proficiency",
+        "Specific refinement areas identified",
+        "Student warmed up and ready for mastery practice"
+      ],
+      "commonErrors": [
+        "Skipping baseline assessment (need to confirm readiness)",
+        "Not identifying specific areas needing refinement"
+      ]
+    },
+    {
+      "name": "Reversal_Demo",
+      "prompt": "Demonstrate immediate reversal: left 360° followed immediately by right 360° without pause.",
+      "steps": [
+        "Establish entry configuration, note heading and altitude precisely",
+        "Add marker 'Reversal Demo - Entry'",
+        "Execute left 360° steep turn with narration",
+        "At completion of left turn, narrate: 'Now reversing immediately, rolling through level to right 45°'",
+        "Add marker 'Reversal Point' at wings-level moment",
+        "Continue smooth roll into right 45° bank, manage power/back pressure transition",
+        "Complete right 360° turn, add marker 'Reversal Complete' on final heading",
+        "Debrief reversal: 'Key is smooth continuous motion, managing power/pressure throughout transition, minimize altitude deviation'",
+        "Show altitude trace during reversal: 'Notice slight altitude change during reversal, normal if kept under 50 ft'"
+      ],
+      "goals": [
+        "Student observes smooth immediate reversal technique",
+        "Student sees power and back pressure management during transition",
+        "Student understands altitude challenge during reversal",
+        "Student ready to attempt reversals themselves"
+      ],
+      "commonErrors": [
+        "Pausing at wings level (not immediate reversal)",
+        "Not explaining power/pressure transition clearly",
+        "Demo too fast without adequate reversal focus"
+      ]
+    },
+    {
+      "name": "Reversal_Practice",
+      "prompt": "Student practices 2-3 immediate reversals with coaching on transition smoothness.",
+      "steps": [
+        "Student establishes entry, adds marker 'Reversal Practice 1 - Entry'",
+        "Student executes first 360° turn (either direction) with coaching",
+        "At completion, coach reversal: 'Start rolling now, smooth continuous motion, manage back pressure'",
+        "Student adds marker 'Reversal Point' at wings level",
+        "Coach second turn: 'Adjust power for new turn, maintain altitude through transition'",
+        "Student completes second 360°, adds marker 'Reversal Complete'",
+        "Debrief reversal: altitude change during transition? smoothness? timing?",
+        "Repeat for 2-3 total reversals with focus on reducing altitude deviation",
+        "Watch for improvement: smoother transitions? less altitude loss? more confidence?"
+      ],
+      "goals": [
+        "Student completes 2-3 immediate reversals",
+        "Reversal smoothness improving with practice",
+        "Altitude loss during reversal decreasing (target <50 ft)",
+        "Student managing power and back pressure transitions competently",
+        "Confidence building in reversal technique"
+      ],
+      "commonErrors": [
+        "Pausing between turns (not immediate reversal)",
+        "Significant altitude loss during transition (>100 ft)",
+        "Abrupt control inputs during reversal instead of smooth transition",
+        "Not adjusting power appropriately for second turn"
+      ]
+    },
+    {
+      "name": "Precision_Refinement",
+      "prompt": "Focus on meeting tighter mastery tolerances: ±3° bank, ±50 ft altitude, ±5° rollout.",
+      "steps": [
+        "Brief tighter standards: 'Now we're targeting mastery tolerances for checkride precision'",
+        "Student performs steep turns (individual, not reversals) with focus on precision",
+        "Monitor and coach to tighter standards: 'Bank wandering to 47°, back to 45°' or 'Altitude at +60 ft, pull back'",
+        "Add markers at entry and completion with precise deviations noted",
+        "Perform 3-4 turns total focusing exclusively on meeting tighter tolerances",
+        "Provide specific numerical feedback: 'Bank varied 43-47°, work on holding 45° ±3°'",
+        "Identify which parameter needs most attention: bank? altitude? rollout?",
+        "Final turn should be best precision attempt"
+      ],
+      "goals": [
+        "Student demonstrates ability to meet tighter tolerances",
+        "Bank angle held within ±3° of 45°",
+        "Altitude maintained within ±50 feet",
+        "Rollout completed within ±5° of entry heading",
+        "Student understands precision requirements for checkride",
+        "At least 1-2 turns meeting all mastery standards"
+      ],
+      "commonErrors": [
+        "Accepting basic standards instead of pushing for mastery",
+        "Fixating on one parameter while ignoring others",
+        "Not scanning instruments frequently enough for precision",
+        "Trying too hard (overcontrolling instead of smooth adjustments)"
+      ]
+    },
+    {
+      "name": "Scenario_Integration",
+      "prompt": "Integrate steep turns with real-world tasks: traffic watch, radio calls, navigation awareness.",
+      "steps": [
+        "Brief scenario: 'You need to reverse course to avoid weather ahead while maintaining traffic awareness'",
+        "Student performs reversal steep turn while also: scanning for traffic, reporting position, monitoring heading",
+        "Add task management: 'While in steep turn, tell me when you see traffic at 2 o'clock' (provide simulated traffic)",
+        "Another scenario: 'Perform steep turn while monitoring for an airport off your left wing - report when you see it'",
+        "Coach task prioritization: 'Steep turn precision first, then additional tasks'",
+        "Perform 2-3 scenario-based steep turns with different tasks",
+        "Debrief: 'How did task management affect your steep turn performance? Maintaining standards while distracted?'",
+        "Assess ability to maintain steep turn proficiency while managing other cockpit responsibilities"
+      ],
+      "goals": [
+        "Student maintains steep turn standards while managing additional tasks",
+        "Student demonstrates proper task prioritization (fly the airplane first)",
+        "Student shows ability to divide attention effectively",
+        "Real-world application of steep turn proficiency demonstrated",
+        "Student prepared for distractions that occur during checkride"
+      ],
+      "commonErrors": [
+        "Letting steep turn precision degrade due to task distraction",
+        "Focusing entirely on additional task, ignoring airplane control",
+        "Not dividing attention effectively between tasks",
+        "Getting flustered when multitasking"
+      ]
+    },
+    {
+      "name": "Consecutive_Turns",
+      "prompt": "Demonstrate consistency with 3-4 consecutive steep turns showing sustained proficiency.",
+      "steps": [
+        "Brief: 'Now demonstrate consistent mastery across multiple consecutive turns'",
+        "Student performs 3-4 steep turns in sequence (mix of individual and reversals)",
+        "Add markers for each turn: entry, key points, completion",
+        "Monitor consistency: 'Are all turns similar quality? Or getting better/worse?'",
+        "Minimal coaching - this is demonstration of mastery",
+        "Watch for fatigue effects on later turns",
+        "Between turns, allow brief rest/reset but keep sequence flowing",
+        "Final assessment: consistent performance meeting mastery standards?"
+      ],
+      "goals": [
+        "Student completes 3-4 consecutive steep turns",
+        "Consistent performance across all turns (not just one good turn)",
+        "All mastery standards met: bank ±3°, altitude ±50 ft, rollout ±5°",
+        "No degradation in later turns due to fatigue",
+        "Student demonstrates checkride-ready steep turn proficiency"
+      ],
+      "commonErrors": [
+        "First turn great, quality degrading in subsequent turns",
+        "Fatigue causing altitude deviations in later turns",
+        "Inconsistent bank angle across different turns",
+        "Not maintaining focus through entire sequence"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Comprehensive analysis of mastery performance using markers and flight data.",
+      "steps": [
+        "Review all markers from mastery practice: baseline, reversals, precision, scenarios, consecutive",
+        "Use analyzeFlightData for detailed examination",
+        "Compare baseline to final performance: what improved most?",
+        "Analyze reversal altitude deviations: all under 50 ft?",
+        "Review precision turns: how many met all mastery standards (±3° bank, ±50 ft altitude, ±5° rollout)?",
+        "Assess consistency: similar performance across consecutive turns?",
+        "Compare scenario turns to non-scenario: maintained standards with distractions?",
+        "Identify best overall steep turn and explain why it was successful",
+        "Student self-assessment: 'Ready for checkride steep turns? What still needs work?'"
+      ],
+      "goals": [
+        "Student sees objective data showing mastery progression",
+        "Clear evidence of improvement from baseline to final performance",
+        "Reversal proficiency quantified",
+        "Precision improvements documented",
+        "Consistency across turns demonstrated",
+        "Student understands current mastery level and any remaining work needed"
+      ],
+      "commonErrors": [
+        "Only looking at best turn instead of overall consistency",
+        "Not recognizing significant improvement that occurred",
+        "Unrealistic expectations (perfection not required, proficiency is)"
+      ]
+    },
+    {
+      "name": "Debrief_Module_5",
+      "prompt": "Review Module 5 completion and assess steep turn checkride readiness.",
+      "steps": [
+        "Summarize Module 5 journey: basic steep turns → mastery with reversals and precision",
+        "Review key concepts: 45° bank, 1.4 G load factor, power/back pressure required, overbanking tendency",
+        "Discuss mastery elements achieved: reversals, tighter tolerances, task integration, consistency",
+        "Assess checkride readiness: 'Can you perform steep turns to ACS standards? Consistently?'",
+        "Address any remaining questions or concerns about steep turns",
+        "Recognize achievement: 'Module 5 complete - you've mastered steep turns!'",
+        "Preview Module 6: Emergency Procedures at Monterey (KMRY)",
+        "Explain Module 6 focus: engine failures, fires, electrical emergencies - critical decision making",
+        "Note transition: from precision maneuvering to emergency management and systems knowledge",
+        "Encourage practice: 'Steep turns are checkride maneuver - practice maintaining proficiency'",
+        "Congratulate on Module 5 completion and steep turn mastery"
+      ],
+      "goals": [
+        "Student demonstrates steep turn mastery meeting checkride standards",
+        "Student can perform reversals smoothly with minimal altitude loss",
+        "Student shows consistent precision across multiple turns",
+        "Module 5 officially complete with both challenges mastered",
+        "Student prepared for different challenges in Module 6 (emergencies)",
+        "Student feels confident and accomplished, ready to progress"
+      ]
+    }
+  ]
+}
