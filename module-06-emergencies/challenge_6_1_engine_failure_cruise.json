@@ -1,0 +1,318 @@
+{
+  "name": "Engine_Failure_Cruise",
+  "shortDescription": "Master engine failure procedures at cruise altitude. Develop proficiency in forced landing site selection, emergency checklist execution, and communications under pressure.",
+  "prompt": "You are teaching engine failure emergency procedures to a private pilot student. This critical lesson covers total engine failure at cruise altitude.\n\n**IMMEDIATE ACTIONS (MEMORY ITEMS):**\n1. AIRSPEED - Best glide 68 KIAS immediately\n2. FIELD - Select forced landing site (Wind, Surface, Size, Approach path)\n3. CHECKLIST - Attempt engine restart\n\n**BEST GLIDE:** 68 KIAS clean gives maximum glide distance (~1.5 nm per 1,000 ft AGL). Maintain this speed precisely - too fast or slow reduces glide range.\n\n**SITE SELECTION (WSSA):**\n- Wind: Into wind if possible (reduces groundspeed at touchdown)\n- Surface: Hard, smooth preferred (roads, fields, beaches)\n- Size: Adequate length and width for safe landing\n- Approach: Clear of obstacles, manageable pattern\n\n**ENGINE RESTART ATTEMPT:**\nFuel selector - BOTH, Mixture - RICH, Carb heat - ON, Primer - locked, Mags - check BOTH, Throttle - advance. If no restart after 2-3 attempts, focus on landing.\n\n**COMMUNICATIONS:**\nMayday on 121.5 or current freq: \"Mayday, Mayday, Mayday, [callsign], engine failure, [position], [intentions], [POB], [fuel remaining]\".\n\n**LANDING PREP:**\nPassengers brief, secure cabin, emergency equipment ready, approach into wind at 65-70 KIAS, land slightly nose-high with full flaps if field length allows.\n\n**KEY PRINCIPLE:** FLY THE AIRPLANE FIRST. Aviate, Navigate, Communicate - in that order. Never sacrifice aircraft control for troubleshooting or radio calls.\n\nUse markers at: failure recognition, best glide established, site selected, restart attempted, mayday declared, final approach, touchdown. Multiple scenarios at different altitudes and terrain types.",
+  "openingLine": "Today we're training for engine failure at cruise - a critical emergency every pilot must master. We'll practice site selection, restart procedures, and emergency landings from various altitudes and conditions.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "checklists": true,
+    "pohLookup": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on engine failure emergency priorities and procedures.",
+      "steps": [
+        "Explain that engine failure is rare but every pilot must be proficient in handling it",
+        "Emphasize CRITICAL PRIORITY: Aviate first, Navigate second, Communicate third - fly airplane always",
+        "Teach immediate action sequence: AIRSPEED (best glide 68 KIAS), FIELD (select site), CHECKLIST (restart attempt)",
+        "Explain best glide speed: 68 KIAS clean gives maximum range, approximately 1.5 nm per 1,000 ft AGL",
+        "Teach forced landing site selection: WSSA mnemonic (Wind, Surface, Size, Approach path)",
+        "Review engine restart procedure: fuel BOTH, mixture rich, carb heat on, primer locked, mags BOTH, throttle advance",
+        "Explain emergency communications: Mayday call on 121.5 or current freq with position, intentions, POB, fuel",
+        "Discuss landing prep: secure cabin, brief passengers, final approach 65-70 KIAS, land slightly nose-high",
+        "Set expectations: practice multiple scenarios at different altitudes and terrain types today",
+        "Emphasize: this is PRACTICE - we simulate failure but never actually shut down engine"
+      ],
+      "goals": [
+        "Student understands Aviate-Navigate-Communicate priority order",
+        "Student knows immediate actions: establish best glide, select site, attempt restart",
+        "Student memorizes best glide speed: 68 KIAS",
+        "Student understands WSSA site selection criteria",
+        "Student prepared to execute emergency checklist under pressure",
+        "Student ready to practice multiple engine failure scenarios"
+      ],
+      "commonErrors": [
+        "Fixating on restart attempt instead of flying airplane first",
+        "Not establishing best glide speed quickly enough (altitude loss)",
+        "Poor site selection (choosing unsuitable fields)",
+        "Attempting restart indefinitely instead of focusing on landing"
+      ]
+    },
+    {
+      "name": "Engine_Systems",
+      "prompt": "Review Cessna 172 engine and fuel systems relevant to failures and restart.",
+      "steps": [
+        "Review engine basics: Lycoming O-360, 4-cylinder, fuel-injected or carbureted, ~180 HP",
+        "Explain fuel system: two wing tanks, fuel selector (LEFT/RIGHT/BOTH/OFF), gravity feed system",
+        "Discuss common failure causes: fuel starvation (wrong tank, empty, contamination), carb ice, mechanical failure",
+        "Review fuel management: use BOTH in cruise for balance, but be aware of unporting in slips with low fuel",
+        "Explain carburetor ice: can form in cruise even on warm days if humidity high, carb heat prevents/removes ice",
+        "Discuss mixture: too lean can cause rough running or failure, should be properly leaned in cruise",
+        "Review ignition: dual magneto system (LEFT, RIGHT, BOTH), engine runs on either mag but less efficiently",
+        "Explain primer: used for cold starts, must be locked in flight or can cause over-rich mixture",
+        "Teach realistic assessment: if restart attempts fail after 2-3 tries, accept failure and focus on landing",
+        "Use POH lookup tool to review emergency procedures section for engine failure in flight"
+      ],
+      "goals": [
+        "Student understands fuel system operation and common fuel-related failures",
+        "Student knows carburetor ice can occur in cruise and how to address it",
+        "Student familiar with ignition system and magneto function",
+        "Student prepared to systematically troubleshoot during restart attempt",
+        "Student understands when to stop troubleshooting and focus on landing"
+      ],
+      "commonErrors": [
+        "Not considering fuel starvation as primary cause (wrong tank selected)",
+        "Ignoring carburetor ice possibility",
+        "Continuing restart attempts indefinitely instead of preparing for landing"
+      ]
+    },
+    {
+      "name": "Emergency_Checklist",
+      "prompt": "Practice emergency checklist procedures for engine failure in flight.",
+      "steps": [
+        "Access emergency checklist using checklists tool: 'Engine Failure in Flight'",
+        "Review memory items that must be done immediately before reaching for checklist",
+        "Walk through complete checklist step by step: fuel selector, mixture, carb heat, primer, mags, throttle",
+        "Explain fuel selector: switch to BOTH to ensure fuel from both tanks, or try switching tanks if one empty",
+        "Discuss mixture: full RICH for restart attempt (was likely leaned in cruise)",
+        "Explain carb heat: full ON to remove any ice that may have formed",
+        "Check primer: ensure fully locked, unlocked primer can cause over-rich mixture preventing start",
+        "Review magnetos: verify on BOTH, if one mag failed engine may restart on other mag",
+        "Practice throttle: advance smoothly after checking everything else, don't over-prime",
+        "Emphasize: if restart unsuccessful after 2-3 attempts, secure engine (mixture idle, fuel off, mags off, master off)",
+        "Time management: don't spend too much time troubleshooting, monitor altitude and prepare for landing"
+      ],
+      "goals": [
+        "Student can recite memory items: best glide, select field, start checklist",
+        "Student understands complete emergency checklist sequence",
+        "Student knows when to stop restart attempts and focus on landing",
+        "Student prepared to execute checklist efficiently under pressure",
+        "Student understands importance of time management during emergency"
+      ],
+      "commonErrors": [
+        "Skipping memory items and going straight to checklist",
+        "Not securing engine if restart fails (continued windmilling drag)",
+        "Spending too much time troubleshooting at expense of landing preparation"
+      ]
+    },
+    {
+      "name": "High_Alt_Scenario",
+      "prompt": "Practice engine failure from high altitude (5,000+ AGL) with ample time for procedures.",
+      "steps": [
+        "Position aircraft at 5,500 AGL in cruise configuration near KMRY area",
+        "Establish normal cruise: 2,400 RPM, 100-110 KIAS, trimmed for level flight",
+        "Announce: 'I'm simulating total engine failure now' - use setSimulatorSetpoints to simulate",
+        "Student adds marker immediately: 'High Alt Failure - 5,500 AGL'",
+        "Student IMMEDIATELY establishes best glide: pitch for 68 KIAS, maintain precisely",
+        "Student scans for forced landing sites below: fields, roads, beaches - select best option",
+        "Student adds marker 'Site Selected' and sets user waypoint at chosen landing site",
+        "Student begins emergency checklist: fuel BOTH, mixture rich, carb heat on, primer locked, mags BOTH, throttle advance",
+        "Student adds marker 'Restart Attempted' - if no restart after 2-3 tries, secure engine",
+        "Student makes Mayday call: 'Mayday Mayday Mayday, [callsign], engine failure, [position/altitude], landing [site description], 2 POB, 3 hours fuel'",
+        "Student adds marker 'Mayday Declared' after transmission",
+        "Student navigates toward landing site, maintaining best glide, planning approach into wind if possible",
+        "Coach site selection: 'Why did you choose that field? What about wind direction? Adequate length?'",
+        "Student prepares for landing: passenger brief, secure cabin, final approach at 65-70 KIAS",
+        "Add marker 'Final Approach' and 'Touchdown' - simulate landing or go-around at 500 AGL",
+        "Debrief: time from failure to established best glide, site selection quality, checklist execution, communication"
+      ],
+      "goals": [
+        "Student establishes best glide within 5-10 seconds of failure",
+        "Student selects suitable forced landing site using WSSA criteria",
+        "Student executes emergency checklist systematically",
+        "Student makes proper Mayday call with all required information",
+        "Student maintains aircraft control throughout entire emergency",
+        "High altitude scenario provides time for all procedures without rushing"
+      ],
+      "commonErrors": [
+        "Not pitching immediately for best glide (letting airspeed decay or build)",
+        "Selecting first visible field instead of evaluating multiple options",
+        "Starting troubleshooting before establishing best glide and selecting field",
+        "Incomplete Mayday call (missing POB, position, or intentions)",
+        "Poor heading control toward landing site while managing emergency"
+      ]
+    },
+    {
+      "name": "Low_Alt_Scenario",
+      "prompt": "Practice engine failure from lower altitude (2,500 AGL) requiring faster decision-making.",
+      "steps": [
+        "Position aircraft at 2,500 AGL in cruise near KMRY",
+        "Brief student: 'Less altitude means less time - decisions must be faster, prioritize flying over troubleshooting'",
+        "Simulate engine failure, student marks 'Low Alt Failure - 2,500 AGL'",
+        "Student IMMEDIATELY establishes 68 KIAS best glide",
+        "Student quickly scans for landing site - limited options and time, select best available NOW",
+        "Student sets marker and waypoint for chosen site rapidly",
+        "Student begins checklist but monitors altitude carefully - may not have time for full restart attempt",
+        "If altitude dropping below 1,500 AGL during checklist, coach: 'Decision point - commit to landing now'",
+        "Student makes Mayday call concise: essential info only due to time pressure",
+        "Student marks Mayday declared and focuses on reaching landing site",
+        "Emphasize: at low altitude, landing site and best glide are MORE important than restart attempts",
+        "Student plans approach, maintains best glide, prepares for landing",
+        "Simulate landing or go-around at 500 AGL",
+        "Debrief: compare to high altitude scenario, discuss time pressure, decision-making under stress"
+      ],
+      "goals": [
+        "Student recognizes less altitude = less time for procedures",
+        "Student prioritizes best glide and site selection over restart attempts",
+        "Student makes faster decisions appropriate for altitude available",
+        "Student maintains aircraft control despite time pressure",
+        "Student demonstrates sound judgment: when to stop troubleshooting"
+      ],
+      "commonErrors": [
+        "Spending too much time on restart attempt at expense of landing prep",
+        "Not recognizing when altitude is too low to continue troubleshooting",
+        "Poor site selection due to rushing decision",
+        "Letting airspeed deviate from best glide while distracted by checklist"
+      ]
+    },
+    {
+      "name": "Terrain_Scenarios",
+      "prompt": "Practice forced landing site selection over varied terrain types.",
+      "steps": [
+        "Scenario 1 - Over agricultural fields: Simulate failure, student selects best field considering rows/crop direction",
+        "Coach: 'Notice field surface - plowed? Growing crop? Harvested? Which is best for landing?'",
+        "Scenario 2 - Over hilly/mountainous terrain: Limited flat options, may need to accept sloped field",
+        "Coach: 'Can you land uphill? Downhill? Which is safer? What about wind?'",
+        "Scenario 3 - Over urban area: Roads, parking lots, golf courses - non-traditional sites",
+        "Coach: 'Power lines? Traffic? Width adequate? Better to land on wide road or small field?'",
+        "Scenario 4 - Over water/coastline: Beach landing option, ditching considerations",
+        "Coach: 'Beach at low tide better? Soft sand vs hard sand? Ditching procedures if no beach?'",
+        "Scenario 5 - Over forested area: Worst case scenario, clearing selection, tree landing techniques",
+        "Coach: 'Smallest clearing? Land parallel to trees? Touchdown slow and level? Protect cabin?'",
+        "Each scenario: student evaluates options, makes selection, justifies choice using WSSA criteria",
+        "Emphasize: there may not be a 'good' option - choose 'least bad' and execute it well",
+        "Discuss decision-making: 'Known site with minor issues vs unknown site that looks better?'"
+      ],
+      "goals": [
+        "Student can evaluate forced landing sites over varied terrain",
+        "Student understands field surface characteristics matter for landing",
+        "Student recognizes limitations and chooses best available option",
+        "Student prepared for non-traditional landing sites (roads, beaches)",
+        "Student has realistic expectations: not every site will be ideal",
+        "Student demonstrates adaptable decision-making"
+      ],
+      "commonErrors": [
+        "Fixating on finding perfect field instead of choosing adequate option",
+        "Not considering wind direction when selecting site",
+        "Overlooking obstacles in approach path to otherwise good field",
+        "Underestimating challenges of non-traditional sites (power lines, traffic)"
+      ]
+    },
+    {
+      "name": "Communications",
+      "prompt": "Practice emergency radio communications and Mayday procedures.",
+      "steps": [
+        "Review Mayday call structure: 'Mayday Mayday Mayday' (3 times), callsign, nature of emergency, position, intentions, POB, fuel",
+        "Practice example: 'Mayday Mayday Mayday, Cessna 123AB, engine failure, 10 miles east of Monterey at 3,000 feet, landing in field near Highway 1, 2 persons on board, 3 hours fuel remaining'",
+        "Discuss frequency selection: stay on current ATC freq if possible, or switch to 121.5 emergency frequency",
+        "Explain transponder: squawk 7700 for emergency (ATC will track you)",
+        "Practice concise follow-up calls: 'Monterey Tower, Cessna 123AB, still managing emergency, now 2,000 feet'",
+        "Discuss when to communicate: AFTER aircraft under control and site selected, not before",
+        "Explain ELT: will activate automatically on impact, or manually if time permits",
+        "Practice student making Mayday call in simulated scenario: clear, complete, calm delivery",
+        "Role-play ATC response: 'Cessna 123AB, Monterey Tower, roger your Mayday, emergency equipment alerted, altimeter 30.12, say fuel souls on board'",
+        "Student responds with requested info concisely",
+        "Emphasize: communication is THIRD priority after flying airplane and navigating to landing site"
+      ],
+      "goals": [
+        "Student can make proper Mayday call with all required information",
+        "Student knows to squawk 7700 emergency transponder code",
+        "Student understands when to communicate (after flying and navigating secured)",
+        "Student can remain calm and clear in radio calls despite emergency",
+        "Student prepared to respond to ATC requests for additional information"
+      ],
+      "commonErrors": [
+        "Making radio call before establishing best glide or selecting site",
+        "Incomplete Mayday call (forgetting POB, fuel, or position)",
+        "Panicked or rushed delivery instead of clear calm communication",
+        "Not squawking 7700 emergency code"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all engine failure scenarios using markers and flight data.",
+      "steps": [
+        "Review markers from all scenarios: high altitude, low altitude, terrain variations",
+        "Use analyzeFlightData to examine each emergency sequence",
+        "Analyze immediate response: time from failure to best glide established (goal: under 10 seconds)",
+        "Review site selection decisions: were WSSA criteria applied? Best available options chosen?",
+        "Evaluate checklist execution: systematic? Complete? Time management appropriate for altitude?",
+        "Check communications: proper Mayday format? Included all required info? Appropriate timing?",
+        "Compare high vs low altitude scenarios: decision-making speed, procedure completion, stress management",
+        "Analyze airspeed control: how well was 68 KIAS best glide maintained throughout emergency?",
+        "Review navigation: did student successfully navigate toward selected landing site?",
+        "Identify best scenario performance and explain what made it successful",
+        "Identify weakest scenario and specific areas for improvement",
+        "Student self-reflects: 'What was most challenging? What would you do differently? What felt natural?'"
+      ],
+      "goals": [
+        "Student sees objective performance data across all scenarios",
+        "Time to establish best glide quantified (should improve over scenarios)",
+        "Site selection quality assessed using WSSA criteria",
+        "Checklist execution and time management evaluated",
+        "Communication effectiveness reviewed",
+        "Student identifies personal strengths and areas needing more practice",
+        "Clear understanding of proficiency level for engine failure emergencies"
+      ],
+      "commonErrors": [
+        "Not recognizing improvement that occurred across scenarios",
+        "Focusing only on restart success/failure instead of overall emergency management",
+        "Not appreciating importance of maintaining best glide speed precisely"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review engine failure emergency proficiency and prepare for next challenges.",
+      "steps": [
+        "Summarize total scenarios completed: high altitude, low altitude, varied terrain types",
+        "Review critical priorities: Aviate (fly airplane), Navigate (select/reach site), Communicate (declare emergency)",
+        "Emphasize most important skill: establishing and maintaining 68 KIAS best glide immediately",
+        "Discuss site selection: WSSA criteria (Wind, Surface, Size, Approach), choosing best available option",
+        "Review emergency checklist: fuel BOTH, mixture rich, carb heat on, primer locked, mags BOTH, throttle",
+        "Assess restart attempts: systematic approach, knowing when to stop and secure engine",
+        "Evaluate communications: proper Mayday call with all info, squawk 7700, appropriate timing",
+        "Ask student: 'Do you feel prepared to handle real engine failure? What still feels uncomfortable?'",
+        "Discuss psychological aspects: staying calm, task prioritization, avoiding fixation or panic",
+        "Preview next challenge: Engine Failure on Takeoff - different scenarios, different decisions (land ahead vs return)",
+        "Explain difference: takeoff failures have less altitude, different decision criteria, 'impossible turn' considerations",
+        "Encourage mental practice: visualize engine failure scenarios, rehearse immediate actions mentally",
+        "Celebrate proficiency: 'You handled multiple engine failures today with sound decision-making!'",
+        "Emphasize: engine failure is rare, but being prepared gives confidence for all flying"
+      ],
+      "goals": [
+        "Student demonstrates understanding of engine failure emergency priorities",
+        "Student proficient in establishing best glide and selecting forced landing sites",
+        "Student can execute emergency checklist under pressure",
+        "Student prepared for proper emergency communications",
+        "Student ready to progress to engine failure on takeoff challenge",
+        "Student feels more confident in emergency preparedness",
+        "Student understands importance of these life-saving skills"
+      ]
+    }
+  ]
+}

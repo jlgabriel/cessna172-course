@@ -1,0 +1,310 @@
+{
+  "name": "Electrical_Emergency",
+  "shortDescription": "Master electrical system failure procedures. Develop proficiency in recognizing failures, battery conservation, no-radio operations, light gun signals, and landing without electrical systems.",
+  "prompt": "You are teaching electrical emergency procedures - electrical system failures without fire. Different from electrical fire (which requires immediate landing), electrical failure allows more troubleshooting but requires battery conservation and no-radio procedures.\n\n**FAILURE RECOGNITION:**\nAmmeter shows discharge, low voltage light illuminated, radios fail/weak, lights dim, instruments fail if electrically powered. Distinguish: alternator failure (battery still charging from failed alternator) vs complete failure (alternator + battery).\n\n**ALTERNATOR FAILURE:**\nRecognize: ammeter discharge, low voltage light on, but systems still working (battery power). Actions: reduce electrical load (shed non-essential: unnecessary lights, one radio, GPS, unnecessary avionics), conserve battery, land at nearest suitable airport. Battery life: ~30-60 minutes depending on load.\n\n**COMPLETE ELECTRICAL FAILURE:**\nAlternator AND battery failed or master switch inadvertently off. Total loss: radios, transponder, electrical instruments, lights (if night), fuel gauges (if electric). Actions: check master switch ON, if still failed then fly VFR, navigate by pilotage/dead reckoning, prepare for no-radio arrival.\n\n**BATTERY CONSERVATION:**\nShed all non-essential electrical: GPS (use pilotage), second radio, unnecessary lights, cabin fans, pitot heat (unless IMC). Keep essential: one radio for critical calls only (brief transmissions), transponder if in controlled airspace, one nav/com. Estimate remaining battery time based on load.\n\n**NO-RADIO PROCEDURES:**\nSquawk 7600 (radio failure). At towered airport: expect light gun signals, overfly tower for signals, enter pattern normally, watch for light gun throughout. Light gun signals: Steady green=cleared land/takeoff, Flashing green=return for landing/cleared taxi, Steady red=give way/stop, Flashing red=unsafe/taxi clear, Flashing white=return to start, Alt red/green=extreme caution.\n\n**DAY vs NIGHT:**\nDay electrical failure manageable with VFR pilotage/dead reckoning. Night electrical failure more serious: no landing light makes landing very difficult, navigation by lights/landmarks harder, consider diverting to lighted airport if possible before battery dies.\n\nUse markers: failure recognition, load reduction, battery conservation initiated, light gun signal received, no-radio approach, landing. Scenarios: alternator failure, complete failure, night implications.",
+  "openingLine": "Today we train for electrical system failures - losing your radios, instruments, and lights. You'll learn to recognize failures, conserve battery power, use light gun signals, and land without electrical systems.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "checklists": true,
+    "pohLookup": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on electrical system failures, recognition, and management strategies.",
+      "steps": [
+        "Explain electrical failures come in types: alternator failure (battery still works), complete failure (alternator + battery), or inadvertent master off",
+        "Teach failure recognition: ammeter discharge, low voltage light, radios fail/weak, lights dim, instruments fail",
+        "Distinguish alternator vs complete failure: alternator failure shows discharge but systems still work on battery; complete failure = total loss immediately",
+        "Emphasize electrical failure (no fire) is NOT immediate landing emergency - allows troubleshooting and battery conservation",
+        "Teach battery conservation: shed non-essential loads (GPS, second radio, unnecessary lights, pitot heat unless needed), keep essential (one radio, transponder)",
+        "Explain battery life: depends on load, typically 30-60 minutes after alternator failure with reduced load",
+        "Review no-radio procedures: squawk 7600, light gun signals at towered airports, fly standard pattern",
+        "Teach light gun signals: steady green (cleared), flashing green (return/taxi), steady red (give way), flashing red (unsafe), flashing white (return to start), alternating red/green (caution)",
+        "Discuss day vs night: day manageable with VFR pilotage, night more serious (no landing light, harder navigation)",
+        "Set expectations: practice alternator failure, complete failure, light gun signals, no-radio procedures today",
+        "Emphasize: this is PRACTICE - we simulate failures but all systems remain functional"
+      ],
+      "goals": [
+        "Student can distinguish alternator failure from complete electrical failure",
+        "Student recognizes electrical failure indicators: ammeter, voltage light, failing systems",
+        "Student understands battery conservation strategies and load shedding",
+        "Student knows electrical failure (no fire) allows troubleshooting time",
+        "Student familiar with light gun signals for no-radio operations",
+        "Student aware night electrical failure is more serious than day"
+      ],
+      "commonErrors": [
+        "Treating electrical failure as immediate emergency (like fire) instead of manageable situation",
+        "Not shedding electrical load (drains battery faster)",
+        "Not knowing light gun signals before losing radio",
+        "Panicking when losing electrical instead of systematic troubleshooting"
+      ]
+    },
+    {
+      "name": "Electrical_System",
+      "prompt": "Review Cessna 172 electrical system architecture and failure modes.",
+      "steps": [
+        "Review electrical system components: alternator (generates power), battery (stores power, provides backup), master switch (controls power), circuit breakers (protect circuits)",
+        "Explain alternator: belt-driven by engine, produces 14V power, charges battery, powers all electrical systems when functioning",
+        "Discuss battery: 12V (14V when charged), provides backup power if alternator fails, limited capacity (~30-60 min depending on load)",
+        "Review ammeter: shows charging (+) when alternator working, discharge (-) when alternator failed or load exceeds alternator capacity",
+        "Explain low voltage light: illuminates when voltage drops below ~12.5V, indicates alternator failure or excessive load",
+        "Teach alternator failure causes: drive belt failure (most common), alternator internal failure, voltage regulator failure",
+        "Discuss battery failure modes: old battery won't hold charge, internal short, corroded connections",
+        "Review electrical bus: distribution system for electrical power to avionics, lights, instruments, fuel pump (if electric), etc",
+        "Explain circuit breakers: protect circuits from overload, can pop if short circuit or excessive load, check before assuming alternator failure",
+        "Use POH lookup for electrical system diagram and emergency procedures",
+        "Practice identifying electrical components and understanding power flow from alternator/battery to systems"
+      ],
+      "goals": [
+        "Student understands alternator generates power and battery provides backup",
+        "Student knows ammeter shows charging vs discharge status",
+        "Student familiar with low voltage light meaning",
+        "Student aware of common failure modes: alternator most common, battery or connections less common",
+        "Student understands electrical bus distributes power to systems",
+        "Student prepared to troubleshoot electrical problems systematically"
+      ],
+      "commonErrors": [
+        "Not checking circuit breakers before assuming alternator failure",
+        "Not understanding ammeter indications (charging vs discharge)",
+        "Confusing voltage light with other warning lights",
+        "Not recognizing early signs of electrical problems"
+      ]
+    },
+    {
+      "name": "Alternator_Failure",
+      "prompt": "Practice alternator failure recognition, load shedding, and battery conservation.",
+      "steps": [
+        "Position aircraft at 3,500 AGL in cruise near KMRY, 15 nm out",
+        "Establish normal cruise: all electrical systems working, radios active, lights as needed",
+        "Simulate alternator failure: ammeter shows discharge, low voltage light illuminates",
+        "Student recognizes failure indicators and marks 'Alternator Failure Detected'",
+        "Student checks circuit breakers: all in, no popped breakers",
+        "Student confirms alternator failure (not circuit breaker): ammeter discharge, voltage light on, breakers OK",
+        "Student begins LOAD SHEDDING immediately to conserve battery:",
+        "Student turns off: GPS (navigate by pilotage), one radio (keep one for essential calls), unnecessary lights, pitot heat (if VFR), cabin fan, any other non-essential",
+        "Student keeps essential: one nav/com radio, transponder (in controlled airspace), flight instruments, fuel pump if electric",
+        "Student marks 'Load Reduced' and estimates remaining battery time (30-45 min with reduced load)",
+        "Student makes brief radio call to ATC: 'Monterey Tower, Cessna 123AB, alternator failure, conserving battery, requesting direct KMRY for landing'",
+        "Student navigates to KMRY using pilotage (not GPS), conserves battery by minimizing radio use",
+        "Student prepares for approach: brief passengers, review no-flap landing if needed (flaps may be electric), plan for possible radio loss before landing",
+        "Student establishes approach, makes brief position reports only",
+        "Marks final approach and landing/go-around",
+        "Debrief: recognition timing, load shedding effectiveness, battery conservation, communication efficiency"
+      ],
+      "goals": [
+        "Student recognizes alternator failure: ammeter discharge, voltage light on",
+        "Student checks circuit breakers before concluding alternator failed",
+        "Student sheds non-essential electrical load immediately",
+        "Student estimates remaining battery time accurately",
+        "Student makes efficient brief radio calls to conserve battery",
+        "Student lands at nearest suitable airport while battery still functional"
+      ],
+      "commonErrors": [
+        "Not shedding electrical load immediately (battery drains quickly)",
+        "Making lengthy radio calls (wastes battery)",
+        "Attempting to troubleshoot/fix alternator in flight (not fixable, wastes time)",
+        "Not landing promptly at nearest suitable airport",
+        "Continuing to use GPS and non-essential systems"
+      ]
+    },
+    {
+      "name": "Complete_Failure",
+      "prompt": "Practice complete electrical failure - no radio, no electrical systems.",
+      "steps": [
+        "Position aircraft at 3,000 AGL, 10 nm from KMRY in cruise",
+        "Establish cruise configuration with all electrical systems working",
+        "Simulate complete electrical failure: total loss of all electrical (alternator + battery or master inadvertently off)",
+        "Student notices: radios dead, transponder off, electrical instruments fail, lights out (if on)",
+        "Student marks 'Complete Electrical Failure' and begins systematic troubleshooting",
+        "Student first checks: Master switch ON? (common cause - inadvertently turned off)",
+        "If master on and still no electrical: complete failure confirmed (alternator + battery both failed)",
+        "Student marks 'Complete Failure Confirmed - No Electrical Power'",
+        "Student assesses situation: VFR conditions? Can navigate by pilotage? Daylight or night?",
+        "Student navigates to KMRY using pilotage and dead reckoning (no GPS, no radio)",
+        "Student sets transponder to 7600 (if able before total failure, or notes would have if had power)",
+        "Student identifies KMRY visually, notes tower location",
+        "Student overflies tower to be noticed, watches for light gun signals",
+        "Coach simulates light gun: 'You see flashing green light from tower' (return for landing)",
+        "Student enters standard pattern for runway in use (observing other traffic)",
+        "Coach provides light gun signals: 'On downwind you see steady green' (cleared to land)",
+        "Student completes approach and landing with no radio communication",
+        "After landing: coach provides 'flashing green' (cleared to taxi), student taxis to ramp",
+        "Debrief: troubleshooting (master switch check), navigation without electrical, light gun signal recognition, standard no-radio procedures"
+      ],
+      "goals": [
+        "Student checks master switch first (common cause of total electrical loss)",
+        "Student navigates successfully using pilotage without GPS/radio",
+        "Student recognizes and responds correctly to light gun signals",
+        "Student flies standard pattern for no-radio arrival",
+        "Student demonstrates proficiency in complete electrical failure management",
+        "Student lands safely without radio communication"
+      ],
+      "commonErrors": [
+        "Not checking master switch first (simple fix if inadvertently off)",
+        "Getting lost without GPS (not using pilotage/dead reckoning)",
+        "Not overflying tower to get attention and light gun signals",
+        "Not flying standard pattern (tower can't predict non-standard)",
+        "Not watching for light gun signals continuously"
+      ]
+    },
+    {
+      "name": "Light_Gun_Signals",
+      "prompt": "Practice comprehensive light gun signal recognition and responses.",
+      "steps": [
+        "Review all light gun signals systematically with meanings for ground and flight:",
+        "Steady green FLIGHT: cleared to land; GROUND: cleared for takeoff",
+        "Flashing green FLIGHT: return for landing (sequence not available yet); GROUND: cleared to taxi",
+        "Steady red FLIGHT: give way to other aircraft and continue circling; GROUND: stop",
+        "Flashing red FLIGHT: airport unsafe do not land; GROUND: taxi clear of runway in use",
+        "Flashing white FLIGHT: not applicable; GROUND: return to starting point on airport",
+        "Alternating red and green FLIGHT and GROUND: exercise extreme caution",
+        "Practice scenario 1: Student on final approach without radio, sees steady green - 'What does this mean? What do you do?' (cleared to land, continue approach)",
+        "Scenario 2: Student on downwind, sees flashing green - meaning? (return for landing, sequence not available, continue pattern and watch for steady green)",
+        "Scenario 3: Student on final, sees steady red - meaning? (give way to other aircraft, go around and continue circling)",
+        "Scenario 4: Student approaching airport, sees flashing red - meaning? (airport unsafe, do not land, go elsewhere or hold)",
+        "Scenario 5: Student anywhere, sees alternating red/green - meaning? (extreme caution, something unusual/dangerous, be very alert)",
+        "Scenario 6: After landing, taxiing, sees flashing green - meaning? (cleared to taxi, continue)",
+        "Scenario 7: After landing, taxiing, sees steady red - meaning? (stop immediately)",
+        "Student uses pilot notes to record all light gun signals for quick reference",
+        "Emphasize: watch for signals continuously, if unsure of signal ask (oh wait, no radio - follow standard procedures and watch carefully)",
+        "Practice recognition speed: instructor flashes light (phone flashlight), student identifies signal and appropriate action immediately"
+      ],
+      "goals": [
+        "Student memorizes all light gun signals for in flight and on ground",
+        "Student can instantly recognize steady green, flashing green, steady red, flashing red, alternating red/green",
+        "Student knows appropriate response to each signal",
+        "Student understands to watch tower continuously for signals when no radio",
+        "Student prepared to use light gun signals in real no-radio situation",
+        "Recognition speed: immediate (under 2 seconds)"
+      ],
+      "commonErrors": [
+        "Confusing steady vs flashing (steady more urgent generally)",
+        "Not knowing ground vs flight meanings differ for same signal",
+        "Not watching for signals continuously (missing signal)",
+        "Confusing flashing green (return for landing) with steady green (cleared to land)"
+      ]
+    },
+    {
+      "name": "Night_Electrical",
+      "prompt": "Discuss night electrical failure implications and special considerations.",
+      "steps": [
+        "Explain night electrical failure is MORE SERIOUS than day: no landing light makes landing very difficult, navigation by visual landmarks harder, safety concerns increase",
+        "Discuss loss of landing light: landing without landing light possible but difficult, runway lights help but judging flare difficult, higher risk of hard landing",
+        "Review loss of position lights: other aircraft can't see you easily, collision risk increases, stay clear of traffic",
+        "Explain instrument lighting loss: flashlight essential for checking instruments, student should always have flashlight available",
+        "Discuss navigation challenges: landmarks harder to identify at night, city lights help but detailed navigation difficult without GPS",
+        "Teach strategy if alternator fails at night: LAND IMMEDIATELY at nearest lighted airport before battery dies, prioritize landing light over other systems if must choose",
+        "If complete electrical failure at night: find lighted airport quickly, use flashlight for instruments, prepare for no-landing-light landing (difficult)",
+        "Review landing without landing light: use runway lights for alignment, judge flare by peripheral vision and runway lights passing by, expect harder landing, slight nose-high attitude",
+        "Discuss battery priority at night: landing light MORE important than radio (can land no-radio easier than no-light), save battery for landing light if must choose",
+        "Practice scenario: Night flight, alternator fails, 30 minutes to nearest lighted airport, battery ~30 min remaining with current load - what do you shed?",
+        "Answer: shed everything except landing light and essential instruments, maybe one radio for one call, conserve battery for landing light at destination",
+        "Emphasize: night electrical failure requires immediate diversion to nearest LIGHTED airport, don't attempt to reach distant destination"
+      ],
+      "goals": [
+        "Student understands night electrical failure is more serious than day",
+        "Student recognizes landing light is highest priority at night",
+        "Student knows to land immediately at nearest lighted airport if night alternator failure",
+        "Student prepared for landing without landing light if necessary (difficult but possible)",
+        "Student carries flashlight for night flight (always)",
+        "Student knows to prioritize landing light over other electrical systems at night"
+      ],
+      "commonErrors": [
+        "Not recognizing night electrical is more serious than day",
+        "Continuing flight at night after alternator failure instead of landing immediately",
+        "Not prioritizing landing light battery conservation",
+        "Attempting to reach distant destination instead of nearest lighted airport",
+        "Not carrying flashlight for night flight"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all electrical emergency scenarios using markers and flight data.",
+      "steps": [
+        "Review markers from all scenarios: alternator failure, complete electrical failure, light gun signals",
+        "Use analyzeFlightData to examine each electrical emergency sequence",
+        "Analyze failure recognition: how quickly was electrical problem identified? (ammeter, voltage light, system failures)",
+        "Review troubleshooting: was master switch checked? Circuit breakers checked? Systematic approach?",
+        "Evaluate load shedding: how quickly were non-essential systems turned off? Appropriate prioritization?",
+        "Check battery conservation: adequate load reduction? Minimal radio use? Effective conservation?",
+        "Analyze navigation: successful pilotage without GPS? Maintained course to airport?",
+        "Review light gun signal recognition: correct identification? Appropriate responses? Continuous watch?",
+        "Evaluate no-radio procedures: standard pattern flown? Traffic awareness? Safe operations without communication?",
+        "Compare day vs night considerations: understanding of increased difficulty at night? Appropriate priorities?",
+        "Check decision-making: land at nearest suitable airport? Appropriate urgency without panic?",
+        "Identify best electrical emergency performance and contributing factors",
+        "Identify areas for improvement: faster recognition? Better load shedding? Light gun signals?",
+        "Student self-reflects: 'Could you handle real electrical failure? What felt challenging? What preparation needed?'"
+      ],
+      "goals": [
+        "Student sees objective performance data for electrical emergencies",
+        "Recognition timing quantified (goal: within seconds of failure)",
+        "Load shedding effectiveness evaluated",
+        "Navigation proficiency without electrical systems assessed",
+        "Light gun signal recognition speed and accuracy evaluated",
+        "Student identifies personal strengths and areas for continued practice",
+        "Clear understanding of electrical emergency management proficiency"
+      ],
+      "commonErrors": [
+        "Not recognizing slow response to electrical failure",
+        "Not seeing inadequate load shedding (battery drained too quickly)",
+        "Not appreciating navigation challenges without GPS"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review electrical emergency proficiency and establish preparedness standards.",
+      "steps": [
+        "Summarize all electrical scenarios practiced: alternator failure, complete failure, light gun signals, night considerations",
+        "Review fundamental difference: electrical failure (no fire) is NOT immediate landing emergency but requires prompt action and battery conservation",
+        "Reinforce alternator failure procedure: recognize (ammeter discharge, voltage light), shed load immediately, conserve battery, land nearest suitable airport",
+        "Review complete electrical failure: check master switch first, navigate by pilotage, use light gun signals, fly standard pattern",
+        "Discuss light gun signals mastery: steady green (cleared), flashing green (return/taxi), steady red (give way/stop), flashing red (unsafe/clear runway), alternating (caution)",
+        "Emphasize battery conservation: shed all non-essential immediately, brief radio calls only, GPS off (use pilotage), unnecessary lights off",
+        "Review night special considerations: landing light priority, land immediately at nearest LIGHTED airport, flashlight essential",
+        "Assess preparedness: 'Do you know light gun signals? Can you navigate without GPS? Ready to land without radio?'",
+        "Discuss prevention: monitor ammeter in flight, respond to voltage light immediately, carry flashlight for night flight",
+        "Compare to previous emergencies: engine failure (immediate best glide and land), fire (immediate action and land ASAP), electrical (troubleshoot and conserve battery while proceeding to airport)",
+        "Preview next challenge: Complex Emergency Scenario - multiple system failures, decision-making under pressure, integration of all emergency procedures",
+        "Explain next challenge will combine: engine issues + electrical issues + weather + other factors requiring prioritization and sound judgment",
+        "Encourage continued learning: review light gun signals regularly, practice pilotage navigation, always carry flashlight",
+        "Celebrate progress: 'You mastered electrical emergencies and can operate safely without electrical systems!'",
+        "Final thought: 'Electrical failure is manageable - stay calm, shed load, conserve battery, navigate by pilotage, use light gun signals, land safely'"
+      ],
+      "goals": [
+        "Student demonstrates comprehensive understanding of electrical emergency procedures",
+        "Student knows alternator failure vs complete failure recognition and responses",
+        "Student has light gun signals memorized and can recognize/respond correctly",
+        "Student prepared for no-radio operations and navigation without electrical",
+        "Student understands night electrical failure increased difficulty and priorities",
+        "Student ready to progress to complex emergency scenarios challenge",
+        "Student feels confident managing electrical emergencies in real flight"
+      ]
+    }
+  ]
+}

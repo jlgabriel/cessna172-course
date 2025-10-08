@@ -1,0 +1,350 @@
+{
+  "name": "Complex_Emergency",
+  "shortDescription": "Master complex multi-system emergency scenarios requiring prioritization and sound decision-making under pressure. Integrate all emergency procedures with real-world complications and multiple simultaneous failures.",
+  "prompt": "You are teaching complex emergency management - multiple system failures occurring simultaneously or in sequence, requiring prioritization, sound judgment, and integration of all emergency procedures learned. These scenarios simulate real-world emergencies where problems compound and pilots must maintain aircraft control while managing multiple critical situations.\n\n**PRIORITY FRAMEWORK:**\nAVIATE (fly airplane first, always) > NAVIGATE (know where going, select landing site) > COMMUNICATE (declare emergency, get help). Never sacrifice aircraft control for troubleshooting or communication.\n\n**TASK PRIORITIZATION:**\nImmediate threats to flight safety first (fire, structural, control issues), then threats to continued flight (engine, systems), then navigation and landing planning, finally communication. Don't fixate on one problem - assess, prioritize, delegate if possible, execute systematically.\n\n**DECISION-MAKING UNDER PRESSURE:**\nRecognize multiple failures, avoid fixation on single issue, prioritize immediate actions, maintain aircraft control throughout, accept imperfect solutions (good decision now beats perfect decision too late), land ASAP when multiple systems failing.\n\n**COMMON COMBINATIONS:**\n- Engine failure + electrical failure (navigate without GPS/radio)\n- Electrical failure + degraded weather (IMC entry risk)\n- Engine issue + passenger medical emergency (time pressure increases)\n- Multiple instrument failures + navigation uncertainty (lost + partial panel)\n- Fire + other system failures (immediate landing complicated by other issues)\n\n**WORKLOAD MANAGEMENT:**\nPrioritize ruthlessly, don't attempt to fix everything, secure critical systems first, delegate to passengers if capable and appropriate, maintain aircraft control always (first priority), communicate essential info only (brief transmissions), land as soon as practical (don't continue with multiple failures).\n\n**STRESS MANAGEMENT:**\nStay calm (panic reduces capability), work systematically (checklist discipline), make decisions promptly (don't freeze), accept uncertainty (won't know everything), trust training (procedures work), fly the airplane (never forget basic piloting).\n\nUse markers: each failure/complication, decision points, prioritization choices, actions taken, resolution. Progressive scenarios: dual failures, triple failures, cascading failures with time pressure and compounding factors.",
+  "openingLine": "Today we face complex emergency scenarios - multiple simultaneous failures requiring you to prioritize, make quick decisions, and integrate everything you've learned. This is where training meets reality. Stay calm, fly the airplane, and work systematically.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "checklists": true,
+    "pohLookup": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on complex emergency management, prioritization framework, and stress management.",
+      "steps": [
+        "Explain real emergencies often involve multiple failures, not single isolated problems as practiced previously",
+        "Emphasize critical priority framework: AVIATE first (fly airplane, maintain control), NAVIGATE second (where am I going), COMMUNICATE third (get help)",
+        "Teach task prioritization: immediate safety threats first (fire, control issues), then flight continuation threats (engine, systems), then planning and communication",
+        "Discuss decision-making under pressure: recognize all problems, avoid fixation on single issue, prioritize ruthlessly, make timely decisions, accept imperfect solutions",
+        "Explain workload management: can't fix everything, secure critical systems only, delegate if possible, maintain aircraft control always, land ASAP with multiple failures",
+        "Teach stress management: stay calm (panic reduces capability), work systematically, make decisions promptly, trust training, accept uncertainty",
+        "Review that good immediate decision beats perfect delayed decision - timeliness matters in emergencies",
+        "Discuss common failure combinations: engine + electrical, electrical + weather, engine + passenger emergency, multiple instruments + navigation issues",
+        "Explain today's scenarios will progressively increase in complexity: dual failures, triple failures, cascading failures with time pressure",
+        "Set expectations: scenarios will be challenging and realistic, goal is developing sound judgment and systematic approach under pressure",
+        "Emphasize: this is PRACTICE but simulate maximum realism - treat as if real emergency but remember it's training environment"
+      ],
+      "goals": [
+        "Student understands Aviate-Navigate-Communicate priority order",
+        "Student prepared to prioritize multiple simultaneous problems",
+        "Student knows to avoid fixation on single issue when multiple failures present",
+        "Student ready to make timely decisions under pressure",
+        "Student understands workload management: can't fix everything, prioritize critical items",
+        "Student prepared for realistic complex scenarios"
+      ],
+      "commonErrors": [
+        "Fixating on one problem while ignoring others (tunnel vision)",
+        "Attempting to troubleshoot everything instead of securing and landing",
+        "Sacrificing aircraft control to work on systems",
+        "Freezing under pressure instead of making timely decisions",
+        "Not prioritizing correctly (working on minor issues before critical ones)"
+      ]
+    },
+    {
+      "name": "Priority_Framework",
+      "prompt": "Develop comprehensive understanding of emergency prioritization and decision-making.",
+      "steps": [
+        "Review Aviate-Navigate-Communicate in detail: what each means and why this order",
+        "Aviate: fly airplane first, maintain control, establish safe configuration, trim for hands-off if possible to free attention for other tasks",
+        "Navigate: know position, select landing site if needed, plan route to safety, orient to airport or forced landing area",
+        "Communicate: declare emergency, provide essential info to ATC, brief passengers, get help - but only after flying and navigating secure",
+        "Teach immediate threat hierarchy: fire or smoke (land ASAP), engine failure (land soon), electrical failure (land promptly), minor issues (continue to destination or divert)",
+        "Discuss time-critical vs important: fire is time-critical (land NOW), engine failure is important (land ASAP), electrical is significant (land soon), minor issues can wait",
+        "Practice prioritization scenarios: 'Engine failure + electrical failure - what first?' (establish best glide, then shed electrical load, then communicate)",
+        "Scenario: 'Fire indication + passenger medical emergency - priority?' (fire immediate action, then brief passenger to stay calm, fire is #1 priority)",
+        "Scenario: 'Lost navigation + fuel low + electrical failure - priority?' (navigate to nearest airport using pilotage, monitor fuel, manage electrical, land ASAP)",
+        "Teach delegation: if passenger capable, can help (read checklist, watch for traffic, operate radio if instructed) - frees pilot for flying",
+        "Discuss when to stop troubleshooting: if problem not resolved quickly and multiple issues present, secure systems and focus on landing",
+        "Student creates personal priority card using pilot notes: decision framework for complex scenarios"
+      ],
+      "goals": [
+        "Student demonstrates clear understanding of Aviate-Navigate-Communicate priority",
+        "Student can prioritize multiple simultaneous failures correctly",
+        "Student knows when to stop troubleshooting and focus on landing",
+        "Student understands appropriate delegation to passengers when applicable",
+        "Student has systematic framework for decision-making under pressure",
+        "Student prepared to apply priority framework in complex scenarios"
+      ],
+      "commonErrors": [
+        "Communicating before flying airplane secured (wrong priority order)",
+        "Spending too much time troubleshooting instead of securing and landing",
+        "Not considering delegation when overwhelmed",
+        "Treating all problems as equally urgent instead of prioritizing"
+      ]
+    },
+    {
+      "name": "Dual_Failure_1",
+      "prompt": "Practice first dual failure: engine partial power loss + alternator failure.",
+      "steps": [
+        "Position aircraft at 4,000 AGL, 20 nm from KMRY, cruise configuration",
+        "Student established in normal cruise, all systems operating",
+        "Simulate first failure: engine runs rough, power drops to ~1,800 RPM (partial power loss)",
+        "Student recognizes engine issue, marks 'Engine Rough - Partial Power Loss'",
+        "Student begins troubleshooting: carb heat on, mixture adjust, mags check, fuel selector BOTH",
+        "After ~30 seconds of troubleshooting, simulate second failure: alternator fails (ammeter discharge, voltage light on)",
+        "Student recognizes second failure, marks 'Alternator Failure - Dual Emergency'",
+        "Student must now prioritize: engine issue (can maintain flight with reduced power) vs electrical (battery draining)",
+        "Coach: 'Two problems now - which is more urgent? What's your priority?'",
+        "Correct prioritization: engine is partial power (can fly), electrical is time-limited (battery), so: maintain flight with rough engine, shed electrical load immediately, navigate to KMRY, land ASAP",
+        "Student sheds electrical load: GPS off (pilotage), unnecessary systems off, one radio only",
+        "Student navigates to KMRY using pilotage, maintains best altitude with reduced power",
+        "Student makes brief Mayday call: 'Monterey Tower, Cessna 123AB, engine rough with partial power and alternator failure, landing KMRY, 2 POB'",
+        "Student establishes approach with reduced power, lands safely",
+        "Debrief: prioritization (engine vs electrical), task management (troubleshoot vs secure), decision to land ASAP, communication efficiency"
+      ],
+      "goals": [
+        "Student correctly prioritizes dual failures: partial power engine (can fly) and electrical (time-limited)",
+        "Student maintains aircraft control while managing two problems",
+        "Student makes timely decision to land ASAP rather than troubleshoot extensively",
+        "Student demonstrates efficient communication despite multiple problems",
+        "Student successfully manages dual emergency to safe landing"
+      ],
+      "commonErrors": [
+        "Fixating on engine troubleshooting while ignoring electrical failure",
+        "Not shedding electrical load promptly (battery drains)",
+        "Continuing flight attempting to reach distant airport instead of landing ASAP",
+        "Losing aircraft control while managing systems"
+      ]
+    },
+    {
+      "name": "Dual_Failure_2",
+      "prompt": "Practice second dual failure: complete electrical failure + degraded weather (IMC risk).",
+      "steps": [
+        "Position aircraft at 3,500 AGL, 15 nm from KMRY, VFR but scattered clouds present",
+        "Brief: 'Weather is marginal VFR with lowering ceilings - visibility OK but clouds increasing'",
+        "Simulate complete electrical failure: all electrical systems dead (alternator + battery)",
+        "Student recognizes total electrical loss, marks 'Complete Electrical Failure'",
+        "Student checks master switch (on), confirms complete failure, marks 'No Electrical Power Available'",
+        "Student assesses situation: no radio, no GPS, no transponder, must navigate VFR by pilotage",
+        "Coach introduces complication: 'Ceiling appears to be lowering ahead, you see rain showers, visibility decreasing'",
+        "Student faces decision: continue direct to KMRY (might encounter IMC without instruments) or divert to remain VFR?",
+        "Coach: 'No electrical means no communication and limited instruments - can you afford to enter IMC? What's your decision?'",
+        "Correct decision: REMAIN VFR at all costs (no electrical = no instruments for IMC), divert around weather if needed, find VFR route to KMRY or alternate airport",
+        "Student navigates avoiding clouds/weather, uses pilotage to reach KMRY or alternate",
+        "Student identifies KMRY visually, overflies tower for light gun signals",
+        "Coach provides light gun: 'You see flashing green' (return for landing)",
+        "Student enters pattern, receives 'steady green' (cleared to land), lands without radio",
+        "Debrief: prioritization (VFR vs IMC with no electrical), weather avoidance decision, navigation without GPS, light gun signals"
+      ],
+      "goals": [
+        "Student prioritizes remaining VFR over direct route to airport",
+        "Student recognizes IMC entry without electrical is extremely dangerous",
+        "Student navigates successfully avoiding weather using pilotage",
+        "Student executes no-radio arrival with light gun signals",
+        "Student demonstrates sound aeronautical decision-making prioritizing safety over efficiency"
+      ],
+      "commonErrors": [
+        "Continuing direct toward airport despite IMC threat (dangerous without instruments)",
+        "Not considering weather avoidance route",
+        "Entering IMC without electrical/instruments (potentially fatal error)",
+        "Not monitoring weather conditions continuously"
+      ]
+    },
+    {
+      "name": "Triple_Failure",
+      "prompt": "Practice triple failure: engine failure + electrical failure + passenger medical emergency.",
+      "steps": [
+        "Position aircraft at 3,000 AGL, 12 nm from KMRY, cruise configuration",
+        "Establish normal cruise, student comfortable with current phase",
+        "Simulate first failure: complete engine failure (silence, windmilling prop)",
+        "Student recognizes engine failure, marks 'Engine Failure', establishes best glide 68 KIAS immediately",
+        "Student selects forced landing site (field or KMRY if within glide range), marks site",
+        "Student begins engine restart checklist: fuel BOTH, mixture rich, carb heat on, mags BOTH",
+        "After 15 seconds, simulate second failure: alternator failure during restart attempt (ammeter discharge)",
+        "Student recognizes electrical issue but must prioritize: engine restart more critical than electrical",
+        "Student continues restart attempt briefly, but engine doesn't restart",
+        "After 30 seconds total, introduce third complication: 'Your passenger says they feel chest pain and difficulty breathing'",
+        "Student now faces: dead engine (gliding), electrical failure, passenger medical emergency - extreme pressure",
+        "Coach: 'Three major problems - what's your priority? What do you do?'",
+        "Correct prioritization: 1) FLY AIRPLANE (maintain best glide), 2) NAVIGATE (reach landing site), 3) PASSENGER (reassure but can't help much until landing), 4) COMMUNICATE (brief Mayday)",
+        "Student maintains best glide, navigates toward landing site (KMRY if in range, or selected field)",
+        "Student briefly reassures passenger: 'Stay calm, landing soon, help coming' (can't do more while flying)",
+        "Student makes brief Mayday: 'Mayday, Cessna 123AB, engine failure, 8 miles east KMRY, gliding to airport, medical emergency onboard, need ambulance, 2 POB'",
+        "Student focuses on landing, maintains aircraft control throughout despite multiple stressors",
+        "Student executes emergency landing (or go-around at safe altitude), prioritizes smooth landing for passenger",
+        "Debrief: extreme prioritization (fly airplane first despite passenger emergency), maintaining control under pressure, communication efficiency, decision-making"
+      ],
+      "goals": [
+        "Student correctly prioritizes flying airplane over all other concerns including passenger emergency",
+        "Student maintains best glide and aircraft control despite three simultaneous emergencies",
+        "Student reassures passenger briefly without losing focus on flying",
+        "Student makes efficient comprehensive Mayday call despite time pressure",
+        "Student successfully manages triple emergency to safe landing",
+        "Student demonstrates ability to function under extreme pressure"
+      ],
+      "commonErrors": [
+        "Fixating on passenger emergency and losing aircraft control (fatal error)",
+        "Attempting extensive passenger care while still flying (wrong priority)",
+        "Not maintaining best glide speed (altitude loss = reduced landing options)",
+        "Panic or freezing under pressure of multiple emergencies",
+        "Lengthy communication instead of brief essential Mayday"
+      ]
+    },
+    {
+      "name": "Cascading_Failure",
+      "prompt": "Practice cascading failures: problems develop in sequence, increasing complexity.",
+      "steps": [
+        "Position aircraft at 4,500 AGL, 25 nm from KMRY, normal cruise, student relaxed",
+        "Begin with minor issue: rough engine, slight power loss (1,900 RPM), still flyable",
+        "Student troubleshoots: carb heat, mixture, fuel selector, mags - rough running continues but stable",
+        "Student makes decision to divert to KMRY for precautionary landing (sound decision)",
+        "Student navigates toward KMRY, monitors engine carefully",
+        "After 3-4 minutes: oil pressure begins dropping, oil temp rising - engine problem worsening",
+        "Student recognizes escalation, marks 'Engine Problem Escalating - Oil Pressure Low'",
+        "Student increases urgency: establishes faster descent toward KMRY, prepares for possible complete failure",
+        "After 2 more minutes: electrical failure occurs (ammeter discharge, voltage light on) - problems compounding",
+        "Student recognizes second issue, marks 'Alternator Failure Added', but must prioritize",
+        "Student prioritizes: engine is primary concern (could fail completely), electrical is secondary",
+        "Student continues toward KMRY, monitoring engine continuously for complete failure",
+        "Student sheds electrical load to conserve battery, makes brief radio call: 'Monterey Tower, Cessna 123AB, engine problems with low oil pressure and electrical failure, proceeding direct, request priority landing'",
+        "After 2 more minutes approaching KMRY: engine begins running very rough, RPM dropping further - imminent failure",
+        "Student prepares for complete engine failure: best glide attitude ready, landing site identified (KMRY runway or field short)",
+        "Student reaches KMRY pattern, flies approach with failing engine, lands safely",
+        "Debrief: managing evolving situation, recognizing escalation, appropriate urgency increases, prioritization as problems compound, decision-making under worsening conditions"
+      ],
+      "goals": [
+        "Student recognizes when situation is deteriorating and increases urgency appropriately",
+        "Student prioritizes correctly as problems compound",
+        "Student maintains aircraft control throughout evolving emergency",
+        "Student adapts plan as situation changes (minor issue → precautionary landing → emergency landing)",
+        "Student successfully manages cascading failures to safe landing",
+        "Student demonstrates sound judgment recognizing when to increase urgency"
+      ],
+      "commonErrors": [
+        "Not recognizing situation is escalating (continuing original plan despite worsening conditions)",
+        "Not increasing urgency as problems worsen",
+        "Fixating on one problem (engine) while ignoring new problem (electrical)",
+        "Not preparing for worst case (complete failure) while hoping for best"
+      ]
+    },
+    {
+      "name": "Decision_Under_Uncertainty",
+      "prompt": "Practice making sound decisions with incomplete information and uncertainty.",
+      "steps": [
+        "Position aircraft at 3,500 AGL, 18 nm from KMRY, cruise configuration",
+        "Simulate ambiguous problem: unusual smell in cabin (could be burning, could be environmental), no other indications yet",
+        "Student recognizes smell, marks 'Unusual Smell Detected - Unknown Source'",
+        "Student must make decisions with uncertainty: serious (fire starting?) or benign (outside smell entering vents)?",
+        "Student takes precautionary actions: check engine instruments (all normal), check electrical (all normal), check cabin for smoke (none visible yet)",
+        "Coach: 'Smell continues, slightly stronger, still no visible smoke or abnormal indications - what do you do?'",
+        "Student faces decision: continue to destination assuming benign, or divert immediately assuming potential fire?",
+        "Correct decision: err on side of caution - divert to KMRY immediately, prepare for fire emergency, better to be safe than sorry",
+        "Student diverts immediately, marks 'Diverting Precautionary - Unknown Issue'",
+        "Student prepares: locates fire extinguisher, reviews fire procedures, briefs passenger, navigates to KMRY",
+        "After 2 minutes: smell intensifies, slight haze visible - confirms problem is real",
+        "Student marks 'Problem Confirmed - Smoke Present', executes electrical fire procedure: master OFF",
+        "Smoke decreases after master off - confirms electrical fire, now controlled",
+        "Student marks 'Electrical Fire - Controlled', continues to KMRY without electrical, uses light gun signals",
+        "Student lands safely without further complications",
+        "Debrief: decision-making with uncertainty, appropriate caution (divert early rather than wait), preparing for worst while hoping for best, validation that early diversion was correct decision"
+      ],
+      "goals": [
+        "Student makes sound precautionary decision despite incomplete information",
+        "Student errs on side of caution when uncertain (divert early)",
+        "Student prepares for potential worst case while continuing to assess",
+        "Student demonstrates risk management: better early unnecessary diversion than late necessary emergency",
+        "Student validates that cautious decision was appropriate when problem confirmed",
+        "Student comfortable making decisions without perfect information"
+      ],
+      "commonErrors": [
+        "Continuing flight hoping problem resolves instead of diverting early",
+        "Waiting for definitive confirmation before acting (too late)",
+        "Not preparing for worst case (fire) while assessing unclear situation",
+        "Dismissing ambiguous warning signs as unimportant"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all complex emergency scenarios using markers and flight data.",
+      "steps": [
+        "Review markers from all complex scenarios: dual failures (2 types), triple failure, cascading failure, decision under uncertainty",
+        "Use analyzeFlightData to examine each complex emergency sequence",
+        "Analyze prioritization decisions: did student correctly prioritize Aviate-Navigate-Communicate in each scenario?",
+        "Evaluate aircraft control: maintained throughout all scenarios despite high workload and pressure?",
+        "Review decision-making timing: prompt decisions or hesitation/freezing? (goal: timely decisions even under pressure)",
+        "Check workload management: attempted to fix everything or appropriately secured and landed? Effective prioritization?",
+        "Analyze stress management: stayed calm? Systematic approach? Functional performance under pressure?",
+        "Evaluate adaptability: adjusted plan as situations evolved? Appropriate urgency increases as problems compounded?",
+        "Review communication: efficient brief Mayday calls? Essential info only? Or lengthy transmissions wasting time?",
+        "Compare scenario performances: which scenario most challenging? Which best handled? Why?",
+        "Analyze passenger management (in triple failure scenario): appropriate brief reassurance without losing focus on flying?",
+        "Evaluate decision under uncertainty: appropriately cautious? Prepared for worst case? Early action?",
+        "Identify best complex emergency performance: what factors contributed to success?",
+        "Identify areas needing improvement: prioritization? Workload management? Stress response? Decision timing?",
+        "Student comprehensive self-reflection: 'Could you handle real complex emergency? What's your confidence level? What concerns remain?'"
+      ],
+      "goals": [
+        "Student sees objective performance data across all complex emergencies",
+        "Prioritization effectiveness evaluated in multiple scenarios",
+        "Aircraft control maintenance under pressure verified",
+        "Decision-making timing assessed (prompt vs hesitant)",
+        "Stress management and functionality under pressure evaluated",
+        "Student recognizes personal strengths and specific areas for continued development",
+        "Clear understanding of complex emergency management proficiency"
+      ],
+      "commonErrors": [
+        "Not recognizing prioritization errors that occurred",
+        "Not seeing stress-related performance degradation",
+        "Not appreciating importance of timely decisions vs perfect decisions",
+        "Overestimating performance under pressure"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review complex emergency proficiency and assess overall emergency preparedness.",
+      "steps": [
+        "Summarize all Module 6 emergencies: engine failures (cruise, takeoff), fires (engine, cabin, electrical), electrical failures, complex scenarios",
+        "Review complete emergency proficiency progression: single failures → dual failures → triple failures → cascading failures → uncertainty",
+        "Reinforce fundamental principle: Aviate-Navigate-Communicate priority order ALWAYS, never sacrifice aircraft control",
+        "Discuss emergency decision-making framework: prioritize immediate threats, maintain aircraft control, secure critical systems, land ASAP with multiple failures, accept imperfect solutions",
+        "Review workload management: can't fix everything in complex emergency, prioritize ruthlessly, delegate when possible, stay calm and systematic",
+        "Emphasize stress management: training builds correct responses, trust procedures, make timely decisions, accept uncertainty, fly the airplane first",
+        "Assess overall emergency preparedness: 'Are you prepared for engine failure? Fire? Electrical? Multiple failures? What's your confidence level?'",
+        "Discuss real-world perspective: emergencies are rare but preparedness is essential, training builds competence and confidence, proficiency requires ongoing practice",
+        "Review prevention: good maintenance, proper pre-flights, monitoring systems in flight, early recognition of problems, precautionary diversions when uncertain",
+        "Preview course continuation: Module 7 Navigation (pilotage, VOR, GPS, cross-country), return to skill-building after emergency proficiency",
+        "Explain navigation module will be different: less pressure, more planning, building on fundamentals for cross-country flight",
+        "Encourage ongoing emergency procedure review: mental practice, periodic review of checklists, maintaining proficiency",
+        "Celebrate major achievement: 'You completed comprehensive emergency training - engine, fire, electrical, complex scenarios - critical life-saving skills!'",
+        "Assess Module 6 completion: all five challenges completed successfully, emergency proficiency demonstrated across all categories",
+        "Final thought: 'Emergency preparedness gives confidence for all flying - you know you can handle whatever happens - now you're a safer, more confident pilot'"
+      ],
+      "goals": [
+        "Student demonstrates comprehensive understanding of all emergency procedures from Module 6",
+        "Student has clear emergency decision-making framework: Aviate-Navigate-Communicate, prioritization, workload management",
+        "Student proficient in single and complex emergencies across all categories",
+        "Student confident in emergency preparedness and ability to handle real emergencies",
+        "Student understands importance of ongoing practice and proficiency maintenance",
+        "Student ready to progress to Module 7 (Navigation) with confidence",
+        "Student feels accomplished completing comprehensive emergency training",
+        "Module 6 successfully completed with all learning objectives achieved"
+      ]
+    }
+  ]
+}

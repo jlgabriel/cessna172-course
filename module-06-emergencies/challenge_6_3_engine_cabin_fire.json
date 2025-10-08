@@ -1,0 +1,346 @@
+{
+  "name": "Engine_Cabin_Fire",
+  "shortDescription": "Master fire emergency procedures for engine and cabin fires. Develop proficiency in immediate action procedures, fire suppression techniques, and emergency landing execution with fire present.",
+  "prompt": "You are teaching fire emergency procedures - among the most time-critical emergencies requiring immediate action and landing ASAP. Different fire types require different responses but all demand: recognize, act immediately, land now.\n\n**ENGINE FIRE IN FLIGHT:**\nImmediate actions: Mixture IDLE, Fuel selector OFF, Throttle CLOSED, Cabin heat/air OFF. Increase airspeed to blow fire out (may use forward slip if needed). Establish emergency descent. Land ASAP at nearest suitable airport or field. No troubleshooting - secure engine and land.\n\n**ENGINE FIRE ON GROUND:**\nIf during start: Continue cranking to suck fire into engine. If fire persists: Mixture idle, fuel off, throttle closed, mags off, master off, evacuate. If after shutdown: Master off, fuel off, evacuate, use fire extinguisher from outside.\n\n**CABIN FIRE - ELECTRICAL:**\nMaster switch OFF, identify circuit if known and isolate, ventilate cabin (open vents/windows if safe), use fire extinguisher on source, land ASAP. After fire out, consider restoring master for essential systems (but be ready to shut off again).\n\n**CABIN FIRE - OTHER SOURCES:**\nIdentify source (cargo, materials, unknown), use fire extinguisher immediately, ventilate if safe to do so, land ASAP. If fire cannot be controlled, prepare for emergency evacuation immediately upon landing.\n\n**CRITICAL PRINCIPLES:**\n- Fire = LAND NOW emergency, minimal troubleshooting\n- Speed is essential - every second counts\n- Passenger briefing critical: prepare for evacuation\n- Know fire extinguisher location and operation\n- After landing with fire: evacuate immediately, distance from aircraft\n\n**FIRE EXTINGUISHER:** Halon or CO2 type, aim at base of fire, short bursts, be ready to re-extinguish. Located [position varies by aircraft].\n\nUse markers: fire detected, immediate actions completed, fire status (out/controlled/uncontrolled), emergency descent started, landing initiated, touchdown. Multiple scenarios: engine fire flight/ground, electrical fire, cabin fire.",
+  "openingLine": "Today we train for fire emergencies - immediate action situations requiring quick decisions and landing ASAP. You'll learn engine fire, cabin fire, and electrical fire procedures. These skills can save lives.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "checklists": true,
+    "pohLookup": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on fire emergency types, immediate actions, and critical decision-making.",
+      "steps": [
+        "Explain fire is one of most time-critical emergencies - every second matters, must land ASAP",
+        "Teach fire emergency principle: RECOGNIZE immediately, ACT without delay, LAND at nearest suitable location",
+        "Review fire types: engine fire (in flight vs ground), cabin fire (electrical vs other), each has specific procedures",
+        "Emphasize NO TROUBLESHOOTING philosophy for fire - secure systems, extinguish if possible, land immediately",
+        "Explain engine fire in flight procedure: mixture idle, fuel off, throttle closed, cabin heat/air off, increase airspeed",
+        "Teach cabin electrical fire: master off, identify/isolate circuit if known, extinguish, ventilate, land ASAP",
+        "Discuss fire extinguisher: location, type (Halon/CO2), operation (aim at base, short bursts), be ready to re-apply",
+        "Review passenger considerations: brief immediately (prepare for evacuation), keep calm, evacuate quickly after landing",
+        "Explain post-landing: evacuate immediately, move away from aircraft (fire/explosion risk), call for help",
+        "Set expectations: practice multiple fire scenarios today, develop immediate correct responses",
+        "Emphasize: this is PRACTICE with simulated fires - we will simulate procedures but no actual fire"
+      ],
+      "goals": [
+        "Student understands fire emergencies require immediate action and landing ASAP",
+        "Student knows different fire types have different immediate action procedures",
+        "Student prepared to execute engine fire procedures: mixture idle, fuel off, throttle closed",
+        "Student knows electrical fire procedure: master off, isolate circuit, extinguish",
+        "Student familiar with fire extinguisher location and operation",
+        "Student understands critical importance of passenger briefing and evacuation preparation"
+      ],
+      "commonErrors": [
+        "Attempting to troubleshoot or investigate fire instead of immediate action",
+        "Not securing fuel/ignition systems quickly enough for engine fire",
+        "Continuing flight trying to reach preferred airport instead of landing ASAP",
+        "Not briefing passengers about emergency and evacuation preparation"
+      ]
+    },
+    {
+      "name": "Fire_Systems",
+      "prompt": "Review aircraft systems relevant to fire detection, prevention, and suppression.",
+      "steps": [
+        "Review fire triangle: heat, fuel, oxygen - remove one element to extinguish fire",
+        "Discuss fire detection: smell (acrid, electrical, fuel), sight (smoke, flames), abnormal indications (electrical failure, high temps)",
+        "Explain engine compartment: fuel lines, electrical wiring, hot exhaust - all potential fire sources",
+        "Review fuel system: from tanks to engine, fuel selector controls flow, shutting off fuel starves fire",
+        "Discuss electrical system: alternator, battery, wiring, circuit breakers - electrical fires often from short circuits or overloads",
+        "Explain cabin heat system: takes air from engine compartment - must shut off during engine fire to prevent smoke/fumes in cabin",
+        "Review ventilation: cabin vents and windows can ventilate smoke but also feed oxygen to fire - decision depends on fire type/location",
+        "Discuss fire extinguisher: pressurized agent (Halon or CO2) displaces oxygen, cool fire, typically ~10 seconds of discharge",
+        "Explain emergency equipment: location of fire extinguisher, flashlight, ELT, first aid kit, survival gear",
+        "Use POH lookup for fire emergency procedures, review each type systematically",
+        "Practice locating fire extinguisher, demonstrate discharge technique (aim at base, sweeping motion, short bursts)"
+      ],
+      "goals": [
+        "Student understands fire detection methods: smell, sight, indications",
+        "Student knows fuel shutoff starves engine fires",
+        "Student aware electrical fires require electrical system shutdown",
+        "Student understands cabin heat must be shut off during engine fire",
+        "Student familiar with fire extinguisher location and proper operation technique",
+        "Student prepared for systematic approach to different fire types"
+      ],
+      "commonErrors": [
+        "Not recognizing fire quickly enough (smell, smoke ignored)",
+        "Not shutting off cabin heat during engine fire (brings smoke into cabin)",
+        "Incorrect fire extinguisher technique (too far away, too brief discharge)",
+        "Not knowing fire extinguisher location beforehand"
+      ]
+    },
+    {
+      "name": "Engine_Fire_Flight",
+      "prompt": "Practice engine fire in flight procedures - immediate actions and emergency landing.",
+      "steps": [
+        "Position aircraft at 3,500 AGL in cruise configuration near KMRY",
+        "Brief: 'Engine fire in flight - you will smell smoke, see high oil temp, possibly see flames - immediate action required'",
+        "Simulate engine fire using setpoints (high oil temp indication, rough running)",
+        "Student recognizes fire indicators and marks 'Engine Fire Detected In Flight'",
+        "Student executes IMMEDIATE ACTIONS from memory: Mixture IDLE, Fuel selector OFF, Throttle CLOSED",
+        "Student continues: Cabin heat/air OFF (prevent smoke entering cabin), Mags OFF, Master OFF when appropriate",
+        "Student increases airspeed (80-90 KIAS) to help blow out fire, may establish forward slip if needed",
+        "Student marks 'Fire Actions Complete' and 'Fire Status' (assume extinguished after actions)",
+        "Student establishes emergency descent: 500-1,000 fpm descent to reach landing site quickly",
+        "Student identifies nearest airport or suitable field: KMRY is closest, declares emergency",
+        "Student briefs passengers (simulated): 'Engine fire, fire appears out, landing immediately at Monterey, prepare for evacuation'",
+        "Student establishes approach to KMRY, maintains adequate airspeed (no flaps/no power available)",
+        "Student plans for immediate evacuation: brief passengers to evacuate quickly away from aircraft after landing",
+        "Marks final approach and touchdown/go-around at safe altitude",
+        "Debrief: immediate action speed (goal: under 5 seconds), fire secured, landing site selection, passenger prep"
+      ],
+      "goals": [
+        "Student executes immediate actions within 5 seconds: mixture idle, fuel off, throttle closed",
+        "Student remembers to shut off cabin heat/air (critical for preventing smoke in cabin)",
+        "Student establishes emergency descent and identifies nearest landing site",
+        "Student briefs passengers appropriately (calm but urgent)",
+        "Student prepares for immediate post-landing evacuation",
+        "Fire secured and landing executed without delay"
+      ],
+      "commonErrors": [
+        "Not shutting off mixture/fuel immediately (allows fire to continue)",
+        "Forgetting cabin heat/air off (smoke enters cabin)",
+        "Not increasing airspeed to help extinguish fire",
+        "Attempting to reach preferred airport instead of nearest suitable site",
+        "Not briefing passengers about emergency and evacuation"
+      ]
+    },
+    {
+      "name": "Engine_Fire_Ground",
+      "prompt": "Practice engine fire during start and on ground procedures.",
+      "steps": [
+        "Position aircraft on KMRY ramp, ready for engine start",
+        "Brief: 'Engine fire during start - if fire visible during cranking, CONTINUE cranking to suck fire into engine'",
+        "Scenario 1 - Fire during start: simulate fire indication as student starts engine",
+        "Student continues cranking engine (counterintuitive but correct - sucks fire into engine)",
+        "If fire persists after 3-4 seconds: student stops cranking, executes shutdown: mixture idle, fuel off, throttle closed, mags off, master off",
+        "Student marks 'Fire During Start - Secured' and prepares to evacuate",
+        "Student opens door, evacuates, marks 'Evacuated', retrieves fire extinguisher from outside if safe",
+        "Scenario 2 - Fire after shutdown: simulate fire indication after engine shut down",
+        "Student immediately: master OFF, fuel selector OFF, evacuate aircraft quickly",
+        "Student retrieves fire extinguisher, approaches from upwind if possible, applies extinguisher to fire source",
+        "Marks 'Ground Fire Extinguished' and maintains safe distance",
+        "Scenario 3 - Fire in engine compartment (maintenance): brief on lifting cowl carefully (may feed oxygen), extinguish from outside",
+        "Discuss: when to evacuate vs attempt to extinguish, safety first always",
+        "Review: continue cranking during start fire, evacuate if fire persists, use extinguisher from outside"
+      ],
+      "goals": [
+        "Student knows to continue cranking if fire during start (sucks fire into engine)",
+        "Student executes proper shutdown if fire persists: mixture, fuel, throttle, mags, master all off",
+        "Student evacuates promptly and safely",
+        "Student prepared to use fire extinguisher from outside aircraft",
+        "Student understands ground fire risks and proper responses",
+        "Student prioritizes personal safety over aircraft"
+      ],
+      "commonErrors": [
+        "Stopping cranking immediately when fire starts (allows fire to build outside engine)",
+        "Not evacuating when fire persists (staying in aircraft too long)",
+        "Attempting to fight large fire without proper equipment or training",
+        "Not shutting off fuel and electrical systems before evacuating"
+      ]
+    },
+    {
+      "name": "Electrical_Fire",
+      "prompt": "Practice electrical fire identification and suppression procedures.",
+      "steps": [
+        "Position aircraft at 3,000 AGL in cruise configuration",
+        "Brief: 'Electrical fire - usually indicated by smell (acrid, burning plastic), smoke, or sudden electrical failures'",
+        "Simulate electrical fire: smell of smoke, avionics flickering, possible smoke visible in cabin",
+        "Student recognizes electrical fire indicators and marks 'Electrical Fire Detected'",
+        "Student executes IMMEDIATE ACTION: Master switch OFF (removes electrical power from all systems)",
+        "Student marks 'Master Off' timestamp for analysis",
+        "Student checks if fire extinguished (smoke dissipates after master off)",
+        "If circuit known: student isolates specific circuit breaker if identifiable",
+        "Student uses fire extinguisher if smoke/fire persists: aim at source, short bursts",
+        "Student marks 'Fire Extinguished' when smoke clears",
+        "Student ventilates cabin: open vents slowly (if fire definitely out), fresh air",
+        "Student considers restoring master for essential systems if fire definitely out and source isolated",
+        "Student establishes approach to KMRY for precautionary landing even if fire extinguished",
+        "Student briefs passengers: electrical fire, fire out, landing as precaution",
+        "Plan approach with minimum electrical equipment (partial panel if no master)",
+        "Mark final approach and touchdown/go-around",
+        "Debrief: recognition speed, master off timing, extinguisher use, decision to restore electrical or not"
+      ],
+      "goals": [
+        "Student recognizes electrical fire indicators: smell, smoke, electrical failures",
+        "Student executes immediate action: master switch off",
+        "Student properly uses fire extinguisher on electrical fire",
+        "Student makes sound decision about restoring electrical after fire out",
+        "Student lands ASAP even if fire extinguished (precautionary)",
+        "Student manages flight with partial or no electrical systems"
+      ],
+      "commonErrors": [
+        "Not turning off master switch quickly enough",
+        "Attempting to troubleshoot which circuit before shutting down electrical",
+        "Continuing flight after extinguishing fire instead of landing ASAP",
+        "Ventilating too early (before fire definitely out, can reignite)",
+        "Restoring master without confirming fire source isolated"
+      ]
+    },
+    {
+      "name": "Cabin_Fire_Other",
+      "prompt": "Practice cabin fire from non-electrical sources: cargo, materials, unknown.",
+      "steps": [
+        "Position aircraft in cruise at 3,500 AGL",
+        "Brief: 'Cabin fire non-electrical - could be cargo, baggage, materials, or unknown source - immediate action critical'",
+        "Simulate cabin fire: smoke visible in cabin, source appears to be from cargo area or unknown",
+        "Student recognizes cabin fire and marks 'Cabin Fire Detected - Non-Electrical'",
+        "Student immediately locates fire source if visible: check behind seats, cargo area, baggage",
+        "Student retrieves fire extinguisher and attacks fire immediately: aim at base of fire, short bursts, sweeping motion",
+        "Student marks 'Extinguisher Applied' and monitors fire status",
+        "If fire not controllable quickly: student prepares for emergency landing ASAP",
+        "If fire extinguished: student ventilates cabin (open vents, windows if available), but monitor for reignition",
+        "Student considers whether to land immediately (if fire large/difficult) or continue to nearest airport (if small/controlled)",
+        "Student briefs passengers: fire situation, actions taken, landing plans, prepare for possible evacuation",
+        "Student establishes emergency descent to KMRY",
+        "Student plans for immediate evacuation after landing if fire not fully controlled",
+        "Mark approach and landing/go-around",
+        "Debrief: fire identification, extinguisher effectiveness, decision to continue or land immediately, passenger management"
+      ],
+      "goals": [
+        "Student locates cabin fire source quickly",
+        "Student applies fire extinguisher effectively on cabin fire",
+        "Student makes sound decision: land immediately vs continue to airport",
+        "Student ventilates cabin appropriately after fire controlled",
+        "Student monitors for fire reignition",
+        "Student prepares passengers for possible evacuation",
+        "Student executes timely landing"
+      ],
+      "commonErrors": [
+        "Not locating fire source (spraying extinguisher randomly)",
+        "Using too little extinguisher agent (fire reignites)",
+        "Continuing flight too long with uncontrolled cabin fire",
+        "Not ventilating cabin after fire extinguished (smoke inhalation risk)",
+        "Not monitoring for reignition"
+      ]
+    },
+    {
+      "name": "Fire_Complex",
+      "prompt": "Practice complex fire scenario with multiple decision points and complications.",
+      "steps": [
+        "Position aircraft at 4,000 AGL, cruise configuration, 20 nm from KMRY",
+        "Brief: 'Complex fire scenario - multiple factors, you must prioritize and adapt'",
+        "Simulate initial indication: smell of smoke, source unclear",
+        "Student begins investigation while preparing for emergency",
+        "Simulate escalation: electrical indications fail, smoke increases - appears electrical",
+        "Student executes: master OFF, marks 'Master Off'",
+        "Simulate complication: smoke continues or increases - fire not electrical or has spread",
+        "Student retrieves fire extinguisher, locates source (cabin area), applies extinguisher",
+        "Simulate partial success: fire diminished but not fully extinguished, smoke present",
+        "Student decision point: immediate forced landing or continue to KMRY (10 nm)?",
+        "Coach: 'Fire diminished but not out, smoke in cabin, 10 miles to airport with emergency equipment - what do you do?'",
+        "Student makes decision with justification: if continuing, expedite descent; if landing now, select site",
+        "If continuing to airport: student establishes emergency descent, briefs passengers (evacuation prep), communicates with tower",
+        "If forced landing: student selects site, establishes approach, prepares for immediate evacuation",
+        "Monitor fire throughout: if fire increases again, immediate landing required",
+        "Execute landing at chosen site with immediate evacuation plan",
+        "Debrief: decision-making under uncertainty, task prioritization, adapting to changing situation, risk assessment"
+      ],
+      "goals": [
+        "Student manages complex evolving fire situation",
+        "Student prioritizes correctly: fly airplane, extinguish fire, land ASAP",
+        "Student makes sound risk assessment: continue to airport vs immediate forced landing",
+        "Student adapts to changing conditions (fire diminishes but not extinguished)",
+        "Student maintains aircraft control throughout complex emergency",
+        "Student demonstrates sound aeronautical decision-making under pressure"
+      ],
+      "commonErrors": [
+        "Fixating on extinguishing fire instead of flying airplane",
+        "Not adapting when fire situation changes",
+        "Continuing flight too long with uncontrolled or uncertain fire",
+        "Poor risk assessment (optimism bias - thinking fire will stay controlled)",
+        "Not preparing for evacuation while managing emergency"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all fire emergency scenarios using markers and flight data.",
+      "steps": [
+        "Review markers from all fire scenarios: engine flight/ground, electrical, cabin, complex",
+        "Use analyzeFlightData to examine each emergency sequence",
+        "Analyze immediate action timing: engine fire (mixture/fuel/throttle), electrical (master off), cabin (extinguisher applied)",
+        "Review time from detection to secured: goal under 10 seconds for immediate actions",
+        "Evaluate fire extinguisher use: proper technique? Adequate discharge? Effective?",
+        "Check landing decision timing: how quickly was decision made to land ASAP?",
+        "Analyze passenger briefing: appropriate timing? Complete information? Calm delivery?",
+        "Review evacuation preparation: planned before landing? Ready to evacuate immediately?",
+        "Compare scenarios: which had best response time? Which had complications?",
+        "Evaluate decision-making: sound choices given circumstances? Appropriate risk assessment?",
+        "Check aircraft control: maintained throughout all emergencies despite high workload?",
+        "Identify best fire emergency performance and explain what contributed to success",
+        "Identify areas needing improvement: faster recognition? Better technique? Quicker decisions?",
+        "Student self-reflects: 'Which fire type felt most challenging? What would you do differently? Are you prepared?'"
+      ],
+      "goals": [
+        "Student sees objective timing data for all fire emergency responses",
+        "Immediate action times quantified (goal: under 10 seconds)",
+        "Fire extinguisher effectiveness evaluated",
+        "Landing decision timing assessed",
+        "Student recognizes successful elements and areas for improvement",
+        "Clear understanding of fire emergency proficiency level"
+      ],
+      "commonErrors": [
+        "Not recognizing delays in immediate actions",
+        "Not seeing inadequate fire extinguisher technique",
+        "Not appreciating importance of immediate landing decision"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review fire emergency proficiency and establish readiness for real emergencies.",
+      "steps": [
+        "Summarize all fire scenarios practiced: engine flight/ground, electrical, cabin non-electrical, complex",
+        "Review fundamental principle: fire = land ASAP emergency, minimal troubleshooting, immediate action",
+        "Reinforce engine fire in flight: mixture idle, fuel off, throttle closed, cabin heat off, increase airspeed, land immediately",
+        "Review engine fire during start: continue cranking to suck fire in, if persists shut down and evacuate",
+        "Discuss electrical fire: master off immediately, extinguish, ventilate, land ASAP even if fire out",
+        "Review cabin fire: locate source, extinguish immediately, ventilate after controlled, land ASAP",
+        "Emphasize fire extinguisher: know location, proper technique (aim at base, short bursts), be ready to reapply",
+        "Discuss passenger management: brief immediately, calm but urgent, prepare for evacuation, evacuate quickly after landing",
+        "Review post-landing: evacuate immediately, move away from aircraft, distance from fire/explosion risk",
+        "Ask student: 'Do you feel prepared to handle fire emergency? Know immediate actions for each type?'",
+        "Assess proficiency: immediate action timing, extinguisher use, decision-making, passenger management",
+        "Preview next challenge: Electrical Emergency - complete electrical failure, battery conservation, no-radio procedures",
+        "Explain difference: electrical emergency (no fire) allows more troubleshooting than electrical fire",
+        "Encourage ongoing readiness: know fire extinguisher location every flight, brief passengers every flight",
+        "Celebrate progress: 'You trained for critical fire emergencies and developed life-saving skills!'",
+        "Final emphasis: 'Fire is immediate action emergency - every second counts, land ASAP always'"
+      ],
+      "goals": [
+        "Student demonstrates comprehensive understanding of fire emergency procedures",
+        "Student can recite immediate actions for each fire type from memory",
+        "Student understands fire emergencies are land-ASAP situations with minimal troubleshooting",
+        "Student proficient in fire extinguisher operation and technique",
+        "Student prepared for passenger management and evacuation",
+        "Student ready to progress to electrical emergency challenge",
+        "Student feels confident and prepared to handle fire emergencies"
+      ]
+    }
+  ]
+}

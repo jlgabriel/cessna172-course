@@ -1,0 +1,333 @@
+{
+  "name": "Engine_Failure_Takeoff",
+  "shortDescription": "Master engine failure procedures during and after takeoff. Develop proficiency in immediate decision-making: abort on runway, land ahead after liftoff, and understand the 'impossible turn' critical altitude concept.",
+  "prompt": "You are teaching engine failure on takeoff - one of the most critical emergencies requiring immediate correct action. Different scenarios demand different responses.\n\n**SCENARIOS BY ALTITUDE:**\n\n**ON RUNWAY (before liftoff):** Power IDLE, brakes MAX, possibly full flaps, stay on runway. Decision time: 1-2 seconds.\n\n**AFTER LIFTOFF (below 500 AGL):** Land STRAIGHT AHEAD within ~30° arc. Slight turns OK to avoid obstacles, but DO NOT attempt to turn back. Lower nose if needed for airspeed. Decision time: 2-3 seconds.\n\n**500-800 AGL:** Still land ahead. May use wider arc (~45°) and more maneuvering to reach better site, but returning to runway extremely risky.\n\n**800-1,000+ AGL:** 'Impossible turn' region. Return MIGHT be possible with training and specific aircraft/conditions, but very risky. Most pilots should still land ahead. Requires: adequate altitude, proper technique, training, no hesitation.\n\n**CRITICAL ALTITUDE CONCEPT:** Minimum altitude required to safely return to runway. Varies by: aircraft performance, pilot skill, wind, bank angle used, runway length available. For most pilots in C172: 800-1,000 AGL minimum, and even then very risky.\n\n**DECISION FACTORS:**\n- Altitude AGL when failure occurs (most critical)\n- Available landing areas ahead\n- Runway remaining behind\n- Wind (tailwind helps return, headwind helps ahead)\n- Pilot skill/training in turnback\n- Hesitation = altitude loss = reduced options\n\n**KEY PRINCIPLE:** When in doubt, land ahead. Attempting impossible turn has killed many pilots. Better to land ahead under control than stall-spin trying to return.\n\n**PERFORMANCE:** Land ahead scenarios: maintain flying speed (65-70 KIAS minimum), slight nose-high touchdown, accept moderate damage to protect occupants. Turnback (if attempted): 45° bank, best glide speed, no altitude loss acceptable, teardrop or 225° turn technique.\n\nUse markers: failure point, decision made (abort/ahead/return), actions taken, touchdown/go-around. Multiple scenarios at different altitudes to build correct instincts.",
+  "openingLine": "Today we train for engine failure on takeoff - the most critical emergency. You'll learn when to abort, when to land ahead, and why the 'impossible turn' is usually impossible. Correct split-second decisions save lives.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "checklists": true,
+    "pohLookup": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on engine failure takeoff scenarios and decision-making criteria.",
+      "steps": [
+        "Explain that takeoff engine failure is most dangerous emergency - low altitude, low airspeed, high workload",
+        "Emphasize decision must be made in 1-3 seconds based on altitude - no time for analysis",
+        "Teach altitude-based decision framework: on runway = abort, after liftoff below 500 AGL = land ahead, above 800-1,000 AGL = maybe return (very risky)",
+        "Define 'impossible turn': attempting to return to runway from insufficient altitude - often fatal",
+        "Explain critical altitude concept: minimum altitude needed to safely return (varies by many factors, typically 800-1,000+ AGL)",
+        "Teach golden rule: WHEN IN DOUBT, LAND AHEAD - controllable landing ahead beats stall-spin trying to return",
+        "Discuss runway abort procedure: power idle, max brakes, consider full flaps for more drag, stay on runway",
+        "Teach land-ahead technique: lower nose if needed for airspeed (65-70 KIAS min), within 30° arc straight ahead, slight turns OK to avoid obstacles",
+        "Explain turnback technique IF adequate altitude: 45° bank immediately, best glide speed, teardrop or 225° turn, no altitude loss acceptable",
+        "Set expectations: practice all scenarios today, develop correct instincts for each altitude range",
+        "Emphasize: this is PRACTICE with simulated failures - never actually shut down engine on takeoff"
+      ],
+      "goals": [
+        "Student understands altitude determines correct action for takeoff failures",
+        "Student knows critical rule: below 500 AGL always land ahead",
+        "Student aware of 'impossible turn' danger and why it kills pilots",
+        "Student understands runway abort procedure",
+        "Student prepared for land-ahead technique",
+        "Student has realistic expectations about turnback difficulty and risk"
+      ],
+      "commonErrors": [
+        "Thinking turnback is always possible (it's not)",
+        "Not knowing critical altitude for their skill level",
+        "Hesitating during decision (altitude loss makes situation worse)",
+        "Attempting to return from too low altitude (stall-spin risk)"
+      ]
+    },
+    {
+      "name": "Abort_On_Runway",
+      "prompt": "Practice rejected takeoff - engine failure before liftoff on runway.",
+      "steps": [
+        "Position aircraft at beginning of KMRY runway 10R/28L for takeoff",
+        "Brief: 'Engine failure before liftoff - you have runway ahead, use it'",
+        "Student begins normal takeoff roll, applies full power",
+        "At approximately 40 KIAS (before rotation), simulate engine failure",
+        "Student IMMEDIATELY adds marker 'Failure On Runway - 40 KIAS'",
+        "Student executes abort: power IDLE, brakes MAXIMUM (without locking/skidding), wings level",
+        "Student may deploy full flaps for additional drag if runway length questionable",
+        "Student maintains directional control with rudder, stays on centerline",
+        "Student marks 'Stopped On Runway' when aircraft comes to complete stop",
+        "Measure stopping distance, discuss runway remaining",
+        "Debrief: reaction time (goal: under 1 second), stopping distance, directional control",
+        "Repeat scenario 2-3 times at different speeds (30 KIAS, 40 KIAS, 50 KIAS before rotation)",
+        "Discuss: 'At what speed does abort become questionable?' (close to rotation speed)",
+        "Review decision-making: runway remaining adequate? Obstacles ahead if continuing? Abort is right call?"
+      ],
+      "goals": [
+        "Student demonstrates immediate recognition and correct abort procedure",
+        "Student maintains directional control during maximum braking",
+        "Student understands relationship between speed and stopping distance",
+        "Student develops muscle memory for abort procedure",
+        "Reaction time under 2 seconds from failure to abort initiation"
+      ],
+      "commonErrors": [
+        "Delayed reaction (trying to analyze instead of immediate abort)",
+        "Not applying maximum braking (afraid to lock wheels)",
+        "Pulling back on yoke instead of relaxing/neutral (keeps weight off wheels)",
+        "Not considering flaps for additional drag",
+        "Attempting to steer off runway when stopping on runway is safer"
+      ]
+    },
+    {
+      "name": "Just_After_Liftoff",
+      "prompt": "Practice engine failure immediately after liftoff - land straight ahead.",
+      "steps": [
+        "Position for takeoff on KMRY runway 10R/28L",
+        "Brief: 'Failure just after liftoff, 50-100 ft AGL - land STRAIGHT AHEAD, do not turn back'",
+        "Student executes normal takeoff, lifts off at rotation speed (~55 KIAS)",
+        "At approximately 75-100 ft AGL (just after liftoff), simulate failure",
+        "Student marks 'Failure Just After Liftoff - 100 AGL'",
+        "Student IMMEDIATELY: lower nose for airspeed (65-70 KIAS minimum), keep wings level, aim straight ahead within 30° arc",
+        "Student selects landing spot straight ahead: runway remaining, overrun, open area beyond",
+        "Student marks 'Landing Site Selected' and sets waypoint",
+        "Student maintains airspeed and control, NO TURNS except slight corrections to avoid obstacles",
+        "Coach: 'Do NOT turn back, plenty of runway/field ahead, fly it under control'",
+        "Student prepares for landing: slight nose-high attitude, accept landing gear/prop damage to protect cabin",
+        "Mark 'Touchdown' or execute go-around at 50 ft AGL",
+        "Debrief: reaction time, airspeed control, resisting temptation to turn back",
+        "Repeat 2-3 times, varying failure point (50 AGL, 100 AGL, 150 AGL)"
+      ],
+      "goals": [
+        "Student demonstrates immediate land-ahead decision at low altitude",
+        "Student maintains flying airspeed (never let speed decay below 65 KIAS)",
+        "Student resists instinct to turn back to runway",
+        "Student prepares for controlled landing straight ahead",
+        "Student understands this scenario: land ahead is ONLY option"
+      ],
+      "commonErrors": [
+        "Attempting any turn back toward runway (extremely dangerous)",
+        "Not lowering nose enough to maintain airspeed (stall risk)",
+        "Fixating on returning to runway instead of accepting land-ahead",
+        "Not identifying suitable landing area straight ahead quickly enough",
+        "Allowing airspeed to decay while trying to stretch glide"
+      ]
+    },
+    {
+      "name": "Low_Alt_500",
+      "prompt": "Practice failure at 500 AGL - still land ahead but more maneuvering room.",
+      "steps": [
+        "Position aircraft on upwind leg, 500 AGL, climbing normally after takeoff from KMRY",
+        "Brief: '500 AGL failure - still land ahead, but you have slightly more options for maneuvering'",
+        "Simulate engine failure at 500 AGL on upwind",
+        "Student marks 'Failure At 500 AGL Upwind'",
+        "Student establishes best glide attitude, maintains 68-70 KIAS",
+        "Student evaluates landing options: ahead within ~45° arc, can make wider turns than at 100 ft",
+        "Student selects best available site considering wind, surface, size, approach",
+        "Student marks site and sets waypoint",
+        "Student may make shallow turns (20-30° bank) to reach better landing area if within range",
+        "Coach: 'You can turn more than at 100 ft, but still don't try returning to runway - not enough altitude'",
+        "Student establishes approach to selected site, maintains airspeed control",
+        "Student prepares for landing, maintains aircraft control throughout",
+        "Marks final approach and touchdown/go-around at safe altitude",
+        "Debrief: decision-making (still ahead), use of available maneuvering room, site selection quality",
+        "Discuss: 'Could you have made it back to runway?' (No - insufficient altitude for safe turnback)"
+      ],
+      "goals": [
+        "Student understands 500 AGL provides slightly more options but still insufficient for turnback",
+        "Student demonstrates use of wider maneuvering arc while maintaining land-ahead commitment",
+        "Student selects best available landing site within reach",
+        "Student maintains airspeed and coordination during maneuvering to site",
+        "Student resists temptation to attempt turnback from this altitude"
+      ],
+      "commonErrors": [
+        "Attempting turnback from 500 AGL (almost always insufficient)",
+        "Making too tight turns trying to reach better site (stall risk)",
+        "Not maintaining best glide speed during maneuvering",
+        "Overestimating glide range to distant site",
+        "Fixating on runway behind instead of options ahead"
+      ]
+    },
+    {
+      "name": "Critical_Alt_Discuss",
+      "prompt": "Discuss critical altitude concept and impossible turn - why it's usually impossible.",
+      "steps": [
+        "Review concept: critical altitude = minimum altitude to safely return to runway after engine failure",
+        "Explain factors affecting critical altitude: aircraft performance, pilot proficiency, wind, runway length behind, decision time",
+        "Teach typical critical altitude for C172: 800-1,000 AGL MINIMUM for trained pilots, higher for most pilots",
+        "Explain why 'impossible turn' kills pilots: insufficient altitude + bank angle needed + altitude loss in turn + stall in turn = stall-spin crash",
+        "Demonstrate math: 180° turn at 45° bank takes ~20-25 seconds, aircraft descends 200-300 ft minimum, must then align with runway and descend to landing",
+        "Discuss wind effects: headwind on takeoff = tailwind in turnback (faster groundspeed, less time to descend), requires MORE altitude",
+        "Teach proper turnback technique IF attempted: IMMEDIATE decision (no hesitation), 45° bank instantly, maintain best glide, 225° turn or teardrop pattern",
+        "Explain that even at 1,000 AGL turnback is risky and requires: training, practice, immediate execution, no mistakes",
+        "Emphasize statistics: many fatal accidents from attempted turnback from insufficient altitude",
+        "Reinforce: when in doubt, land ahead - controllable landing ahead always beats stall-spin on turnback",
+        "Student uses pilot notes to record personal minimum critical altitude based on skill level",
+        "Discuss: 'What factors would make you confident to attempt turnback?' (altitude, training, practice, immediate decision, good weather)"
+      ],
+      "goals": [
+        "Student understands critical altitude concept and factors affecting it",
+        "Student knows typical C172 critical altitude: 800-1,000+ AGL for trained pilots",
+        "Student aware of dangers of attempting impossible turn",
+        "Student understands altitude loss during turn and alignment requirements",
+        "Student recognizes that most pilots should land ahead even at 1,000 AGL",
+        "Student makes informed personal decision about their own critical altitude"
+      ],
+      "commonErrors": [
+        "Overestimating own ability to perform turnback",
+        "Not considering wind effects on turnback",
+        "Not accounting for altitude loss during turn and alignment",
+        "Thinking critical altitude is same for all pilots (it varies by skill)"
+      ]
+    },
+    {
+      "name": "Medium_Alt_1000",
+      "prompt": "Practice failure at 1,000 AGL - turnback decision point but still very risky.",
+      "steps": [
+        "Position aircraft at 1,000 AGL on upwind, climbing normally",
+        "Brief: 'This is the gray area - some pilots might attempt return, others land ahead. You decide based on your training and confidence.'",
+        "Simulate engine failure at 1,000 AGL",
+        "Student marks 'Failure At 1,000 AGL - Decision Point'",
+        "Student has ~3 seconds to decide: land ahead or attempt turnback",
+        "Option A - Land Ahead (recommended for most): student establishes best glide, selects site ahead, executes approach",
+        "Option B - Turnback (only if confident): student IMMEDIATELY enters 45° bank, maintains best glide, executes 225° turn to runway",
+        "If attempting turnback: mark 'Turnback Attempted', monitor altitude loss continuously",
+        "If turnback: student must be on final approach to runway by 400-500 AGL or abort and land ahead immediately",
+        "Coach decision: 'Why did you choose land ahead or turnback? What factors influenced you?'",
+        "If turnback attempted, analyze: altitude remaining at runway alignment? Could you safely make landing? Was there hesitation?",
+        "Repeat scenario with student trying both options: land ahead once, attempt turnback once",
+        "Compare outcomes: altitude margins, stress level, success probability",
+        "Discuss: 'Which felt safer? Which would you choose in real emergency at your current skill level?'",
+        "Emphasize: no wrong answer if decision made immediately and executed properly, but land ahead is safer for most pilots"
+      ],
+      "goals": [
+        "Student makes immediate decision appropriate for their skill level",
+        "If landing ahead: proper site selection and approach execution",
+        "If attempting turnback: immediate 45° bank, best glide maintained, adequate altitude remaining",
+        "Student understands 1,000 AGL is borderline and many factors influence success",
+        "Student makes personal informed decision about their own capability",
+        "Student recognizes land ahead is valid choice even at this altitude"
+      ],
+      "commonErrors": [
+        "Hesitating between options (indecision costs altitude)",
+        "Starting turnback then changing mind (worst outcome)",
+        "Not banking steep enough during turnback (uses more altitude)",
+        "Attempting turnback without adequate altitude remaining",
+        "Not aborting turnback if altitude becomes insufficient"
+      ]
+    },
+    {
+      "name": "Decision_Framework",
+      "prompt": "Develop comprehensive decision-making framework for all takeoff failure scenarios.",
+      "steps": [
+        "Review all scenarios practiced: on runway, just after liftoff, 500 AGL, 1,000 AGL",
+        "Create decision matrix: altitude AGL vs action (on runway=abort, 0-500=ahead, 500-800=ahead, 800-1000+=maybe return)",
+        "Discuss modifying factors: available landing areas ahead (excellent=land ahead even if higher), runway behind (short=harder return)",
+        "Consider wind: headwind takeoff = tailwind return (need more altitude), tailwind takeoff = headwind return (helps return)",
+        "Evaluate personal skill: proficient in turnback from practice? = higher critical altitude, never practiced? = land ahead always",
+        "Teach immediate action importance: hesitation = altitude loss = reduced options = worse outcome",
+        "Practice mental scenarios: 'Failure at 300 AGL, wind calm, open field ahead?' (land ahead), 'Failure at 1,200 AGL, trees ahead, runway behind?' (maybe return if proficient)",
+        "Emphasize default decision: land ahead unless CERTAIN you have adequate altitude and skill for turnback",
+        "Student creates personal decision card with: critical altitude for their skill, decision criteria, commitment to immediate action",
+        "Role-play rapid decision making: instructor calls altitude, student states decision instantly (no hesitation)",
+        "Repeat: 150 AGL (ahead), 600 AGL (ahead), 950 AGL (probably ahead), 1,500 AGL (maybe return if proficient)",
+        "Reinforce: correct immediate decision and execution beats perfect decision made too late"
+      ],
+      "goals": [
+        "Student has clear personal decision framework based on altitude",
+        "Student knows their personal critical altitude for current skill level",
+        "Student commits to immediate decision-making (no hesitation)",
+        "Student understands modifying factors: wind, terrain, runway, skill",
+        "Student defaults to land ahead when uncertain",
+        "Student prepared to make split-second correct decision in real emergency"
+      ],
+      "commonErrors": [
+        "Overcomplicating decision (too many factors, no time to analyze)",
+        "Not having predetermined critical altitude (leads to hesitation)",
+        "Overestimating own skill level for turnback",
+        "Not committing to immediate action"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all takeoff failure scenarios using markers and flight data.",
+      "steps": [
+        "Review markers from all scenarios: runway abort, just after liftoff, 500 AGL, 1,000 AGL",
+        "Use analyzeFlightData for each scenario sequence",
+        "Analyze decision time: how quickly was correct action initiated? (goal: under 2-3 seconds)",
+        "Review abort scenario: stopping distance adequate? Directional control maintained? Braking effectiveness?",
+        "Evaluate land-ahead scenarios: airspeed control? Maintained above 65 KIAS throughout? Site selection appropriate?",
+        "If turnback attempted: bank angle adequate (45°)? Best glide maintained? Altitude remaining at runway alignment?",
+        "Check for hesitation: any scenarios where decision was delayed? (altitude loss during indecision)",
+        "Compare outcomes: which scenarios had best execution? Which need more practice?",
+        "Analyze airspeed control: critical parameter - maintained throughout all scenarios?",
+        "Review coordination: any uncoordinated flight during maneuvering? (especially in turns)",
+        "Identify best scenario performance and what made it successful",
+        "Identify weakest scenario and specific improvements needed",
+        "Student self-assessment: 'Which altitude range felt most challenging? Where do you need more practice?'"
+      ],
+      "goals": [
+        "Student sees objective performance data across all takeoff failure scenarios",
+        "Decision time quantified for each scenario",
+        "Airspeed control evaluated (most critical safety parameter)",
+        "Student identifies personal strengths in different scenarios",
+        "Clear areas for continued practice identified",
+        "Student recognizes improvement and proficiency development"
+      ],
+      "commonErrors": [
+        "Not recognizing decision time delays (hesitation)",
+        "Not seeing airspeed deviations that occurred",
+        "Overestimating turnback performance if attempted"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review takeoff emergency proficiency and establish personal standards.",
+      "steps": [
+        "Summarize all scenarios practiced: runway abort, just after liftoff, 500 AGL, 1,000 AGL decision point",
+        "Review fundamental principle: altitude AGL determines correct action, not desires or runway availability",
+        "Reinforce critical altitudes: below 500 AGL ALWAYS land ahead, 500-800 AGL land ahead, 800-1,000+ maybe return if proficient",
+        "Discuss 'impossible turn' danger: attempting turnback from insufficient altitude has killed many pilots",
+        "Review decision-making keys: immediate action, no hesitation, default to land ahead when uncertain",
+        "Student states personal critical altitude for their current skill level",
+        "Discuss that critical altitude will increase with practice and training in turnback technique",
+        "Emphasize land-ahead is valid choice even at higher altitudes - not a sign of weakness",
+        "Review best scenario performance: what went well? What should be replicated?",
+        "Identify areas needing continued practice: specific altitude range? Decision speed? Airspeed control?",
+        "Preview next challenge: Engine and Cabin Fire - different emergency, different procedures",
+        "Explain fire is IMMEDIATE action emergency - land ASAP vs engine failure which allows more planning",
+        "Encourage ongoing practice: mental rehearsal of takeoff failures builds correct instincts",
+        "Celebrate progress: 'You practiced the most dangerous emergency and developed correct decision-making!'",
+        "Final thought: 'Better to land ahead under control than attempt impossible turn - that choice saves lives'"
+      ],
+      "goals": [
+        "Student demonstrates understanding of altitude-based decision-making for takeoff failures",
+        "Student has established personal critical altitude appropriate for skill level",
+        "Student commits to immediate decision-making with no hesitation",
+        "Student understands danger of impossible turn and when turnback might be possible",
+        "Student prepared for continued practice and skill development",
+        "Student ready to progress to fire emergency challenge",
+        "Student feels confident in handling takeoff emergencies correctly"
+      ]
+    }
+  ]
+}
