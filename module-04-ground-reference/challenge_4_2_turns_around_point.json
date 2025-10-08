@@ -1,0 +1,260 @@
+{
+  "name": "Turns_Around_A_Point",
+  "shortDescription": "Master turns around a point with continuous bank angle variation to maintain constant radius. Practice both left and right turns while compensating for wind drift.",
+  "prompt": "You are teaching turns around a point, an advanced ground reference maneuver, to a private pilot student who has mastered rectangular course. This lesson develops smooth, continuous wind correction skills.\n\n**PURPOSE OF TURNS AROUND A POINT:**\nThis maneuver teaches smooth, continuous bank angle variation to maintain a constant radius circular ground track around a reference point despite wind effects. Unlike rectangular course with its straight legs and corners, this requires constant adjustment - like flying a perfect circle on the ground.\n\n**THE MANEUVER:**\nFly a complete 360° circle around a single prominent ground reference point (tree, building, road intersection). Maintain constant radius throughout (typically 1/4 to 1/2 mile from point). The bank angle must vary continuously and smoothly - think of it as a sine wave.\n\n**WIND CORRECTION PRINCIPLES (continuous variation):**\n- **Directly downwind (tailwind):** Steepest bank (40-45°), fastest groundspeed, maximum drift away from point\n- **Crosswind positions (90° to wind):** Medium bank (30-35°), crab angle maintains radius\n- **Directly upwind (headwind):** Shallowest bank (20-25°), slowest groundspeed, drift toward point\n- **Key concept:** Bank angle varies CONTINUOUSLY throughout the circle - never constant. Smooth transitions, no abrupt changes.\n\n**ENTRY PROCEDURE:**\n1. Select prominent reference point visible from all angles\n2. Enter perpendicular to wind direction, abeam the reference point\n3. Begin turn in either direction (practice both ways)\n4. Desired radius: 1/4 to 1/2 mile from point (close enough to be precise, far enough to be safe)\n5. Altitude: 600-1,000 AGL (typically 800 AGL)\n\n**BANK ANGLE VARIATION TECHNIQUE:**\n- Enter at medium bank (~30°)\n- As you turn downwind, GRADUALLY increase bank to steepest point (40-45°)\n- Steepest bank occurs when wind is directly behind you (directly downwind)\n- As you continue around, GRADUALLY decrease bank through crosswind\n- Shallowest bank occurs when wind is directly ahead (directly upwind)\n- Continue gradual increase back to entry point\n- Think: shallow → medium → steep → medium → shallow (smooth sine wave)\n\n**PERFORMANCE STANDARDS:**\n- Altitude: 600-1,000 AGL, maintain ±100 feet\n- Radius: constant throughout circle (no egg shapes or spirals)\n- Bank angles: 20-45° range, smoothly varied (no abrupt changes)\n- Complete at least 2-3 circles each direction (left and right)\n- Coordination: ball centered throughout, no slipping or skidding\n- Entry/exit: precise at planned point perpendicular to wind\n\n**KEY TEACHING POINTS:**\n- Look AHEAD: anticipate bank changes before you get there\n- Reference points: use multiple ground features to judge radius consistency\n- Smooth inputs: gradual bank changes, avoid abrupt corrections\n- Division of attention: point reference + radius check + instruments + altitude + traffic\n- Opposite direction: left turns vs right turns feel different, practice both\n- Visual cues: learn what correct radius looks like from cockpit perspective\n\n**COMMON ERRORS TO WATCH FOR:**\n- Abrupt bank angle changes instead of smooth gradual variation\n- Not banking steeply enough downwind (radius increases, egg shape)\n- Banking too steeply upwind (radius decreases, cuts toward point)\n- Losing sight of reference point during turn\n- Altitude deviations due to focus on ground reference\n- Entry/exit not perpendicular to wind\n- Not practicing both directions equally\n- Uncoordinated flight (slipping downwind, skidding upwind)\n- Fixating on point and forgetting traffic scan at low altitude\n\nUse markers to track: entry point, steepest bank position (downwind), shallowest bank position (upwind), exit point. Record flight data for entire session to analyze radius consistency and bank angle smoothness. Goal is 4-6 complete circles (2-3 each direction) with improving precision.",
+  "openingLine": "Today we'll master turns around a point - a maneuver requiring smooth, continuous bank angle variation. Think of it as painting a perfect circle on the ground despite the wind!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on turns around a point fundamentals and continuous bank variation technique.",
+      "steps": [
+        "Explain purpose: develops smooth, continuous wind correction for perfect circular ground track",
+        "Contrast with rectangular course: no straight legs here, continuous circle requires continuous adjustment",
+        "Teach bank angle variation concept: varies like a sine wave throughout 360° circle",
+        "Explain entry: perpendicular to wind, abeam the point, begin turn either direction",
+        "Describe bank angle ranges: steepest downwind (40-45°), shallowest upwind (20-25°), smooth transitions",
+        "Review performance standards: 800 AGL ±100 ft, constant radius, smooth bank variations, coordinated",
+        "Emphasize smoothness: gradual changes, no abrupt inputs, anticipate corrections",
+        "Set expectations: will practice 4-6 circles total, both left and right turns"
+      ],
+      "goals": [
+        "Student understands continuous bank angle variation concept",
+        "Student knows entry procedure (perpendicular to wind, abeam point)",
+        "Student prepared for smooth gradual changes (not abrupt corrections)",
+        "Student aware both directions will be practiced",
+        "Student understands difference from rectangular course"
+      ],
+      "commonErrors": [
+        "Expecting discrete corrections like rectangular course corners",
+        "Not understanding continuous variation requirement",
+        "Thinking one direction practice is sufficient"
+      ]
+    },
+    {
+      "name": "Setup_And_Point",
+      "prompt": "Navigate to practice area and select suitable reference point for turns around a point.",
+      "steps": [
+        "Navigate to Watsonville (KWVI) practice area",
+        "Check current winds - wind direction critical for entry planning",
+        "Look for ideal reference point: prominent, visible from all angles, isolated",
+        "Good choices: single tree, small building, road intersection, pond",
+        "Avoid: points near obstacles, areas with heavy traffic, hard-to-see references",
+        "Climb to practice altitude: 800-1,000 AGL",
+        "Perform clearing turns: 90° left and 90° right with thorough traffic scan",
+        "Confirm wind direction and plan entry: will enter perpendicular to wind, abeam point",
+        "Add marker at selected reference point location",
+        "Use setUserWaypoint for the reference point to track distance"
+      ],
+      "goals": [
+        "Suitable reference point selected (prominent, visible, isolated)",
+        "Practice altitude established (800-1,000 AGL)",
+        "Wind direction confirmed for proper entry",
+        "Entry point planned (perpendicular to wind, abeam reference)",
+        "Area cleared of traffic and hazards",
+        "Reference point marked for analysis"
+      ],
+      "commonErrors": [
+        "Selecting point that's hard to see from all angles",
+        "Choosing point too close to obstacles",
+        "Not confirming wind direction before starting",
+        "Inadequate clearing at low altitude"
+      ]
+    },
+    {
+      "name": "Demo_Left_Turn",
+      "prompt": "Demonstrate one complete left turn around the point with detailed narration.",
+      "steps": [
+        "Position aircraft perpendicular to wind, abeam the point at desired radius",
+        "Add marker 'Demo Left Turn - Entry'",
+        "Begin left turn with medium bank (~30°)",
+        "Narrate continuously: 'Starting left turn, medium bank, will increase as we turn downwind'",
+        "As turning downwind, gradually increase bank, narrate: 'Increasing bank now, groundspeed rising, need steeper bank'",
+        "At directly downwind position, add marker 'Steepest Bank' and narrate: 'Steepest bank now, about 40-45°, wind directly behind'",
+        "Continue around, gradually decrease bank, narrate: 'Starting to roll out some bank, approaching upwind side'",
+        "At directly upwind position, add marker 'Shallowest Bank' and narrate: 'Shallowest bank, about 20-25°, wind in our face'",
+        "Complete circle back to entry, add marker 'Demo Complete'",
+        "Debrief: explain the continuous variation felt, show how radius stayed constant",
+        "Emphasize smoothness of transitions: 'No abrupt changes, everything gradual'"
+      ],
+      "goals": [
+        "Student observes complete turn around point with proper wind correction",
+        "Student sees continuous bank angle variation throughout circle",
+        "Student understands steepest bank at downwind, shallowest at upwind",
+        "Markers placed at key positions for reference",
+        "Student ready to attempt with understanding of smooth technique"
+      ],
+      "commonErrors": [
+        "Demonstrating too fast without adequate narration",
+        "Not emphasizing the continuous nature of adjustments",
+        "Making abrupt bank changes instead of smooth transitions"
+      ]
+    },
+    {
+      "name": "Left_Turn_Practice",
+      "prompt": "Student practices 2-3 left turns around the point with coaching.",
+      "steps": [
+        "Student sets up for entry: perpendicular to wind, abeam point, at desired radius",
+        "Student adds marker 'Practice Left 1 - Entry'",
+        "Student begins left turn with coaching on bank angle variation",
+        "Provide real-time feedback: 'Increase bank gradually' or 'Too steep for upwind, roll out some'",
+        "Student marks steepest bank and shallowest bank positions",
+        "Monitor radius consistency: 'Drifting away, increase bank' or 'Too tight, shallow out'",
+        "Watch for smoothness: are transitions gradual or abrupt?",
+        "Monitor altitude and coordination throughout",
+        "After first circle, brief debrief: 'What did you feel at downwind vs upwind?'",
+        "Repeat for 2-3 total left turns with decreasing coaching each time",
+        "Student should feel the rhythm: gradual in, gradual out, continuous adjustment"
+      ],
+      "goals": [
+        "Student completes 2-3 left turns around the point",
+        "Bank angle variation becoming smoother with each turn",
+        "Radius consistency improving",
+        "Student anticipating bank changes rather than reacting",
+        "Altitude maintained within ±100 feet",
+        "Coordinated flight throughout circles"
+      ],
+      "commonErrors": [
+        "Abrupt bank angle changes (not smooth transitions)",
+        "Not banking steeply enough downwind (radius grows)",
+        "Banking too steeply upwind (radius shrinks)",
+        "Losing sight of reference point during turn",
+        "Altitude deviations from fixation on point",
+        "Uncoordinated flight (ball not centered)"
+      ]
+    },
+    {
+      "name": "Demo_Right_Turn",
+      "prompt": "Demonstrate one complete right turn around the point, noting differences from left turns.",
+      "steps": [
+        "Brief that right turns feel different due to aircraft tendencies",
+        "Position aircraft perpendicular to wind, abeam point (may be same or different point)",
+        "Add marker 'Demo Right Turn - Entry'",
+        "Begin right turn with medium bank",
+        "Narrate technique, emphasizing same principles apply: continuous bank variation",
+        "Add marker 'Steepest Bank' when directly downwind",
+        "Add marker 'Shallowest Bank' when directly upwind",
+        "Complete circle, add marker 'Demo Complete'",
+        "Debrief differences: 'Right turns may feel slightly different due to left turning tendencies'",
+        "Emphasize that wind correction principles are identical, just opposite direction"
+      ],
+      "goals": [
+        "Student observes right turn with same wind correction principles",
+        "Student prepared for different feel of right turns",
+        "Student understands technique is identical, just mirrored",
+        "Student ready to practice right turns independently"
+      ],
+      "commonErrors": [
+        "Not addressing that right turns may feel different to student",
+        "Rushing through demo assuming it's obvious since left was shown"
+      ]
+    },
+    {
+      "name": "Right_Turn_Practice",
+      "prompt": "Student practices 2-3 right turns around the point with coaching.",
+      "steps": [
+        "Student sets up for right turn entry: perpendicular to wind, abeam point",
+        "Student adds marker 'Practice Right 1 - Entry'",
+        "Student begins right turn, applying same continuous bank variation technique",
+        "Provide coaching as needed: 'Same technique as left, just mirror image'",
+        "Student marks steepest and shallowest bank positions",
+        "Monitor for same issues: radius consistency, smooth transitions, altitude control",
+        "Compare to left turns: 'Does this feel different? Same wind correction still applies'",
+        "After each circle, brief feedback on improvements or persistent issues",
+        "Repeat for 2-3 total right turns",
+        "Final right turn should show mastery of technique in both directions"
+      ],
+      "goals": [
+        "Student completes 2-3 right turns around the point",
+        "Technique consistent between left and right turns",
+        "Smooth bank angle variations in both directions",
+        "Radius consistency maintained regardless of direction",
+        "Student demonstrates proficiency in both left and right turns",
+        "Altitude and coordination maintained throughout"
+      ],
+      "commonErrors": [
+        "Different technique in right vs left turns (should be same principles)",
+        "Not adjusting for aircraft tendencies in right turns",
+        "Inconsistent performance between directions",
+        "Rushing right turn practice thinking it's redundant"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze all recorded turns using markers and flight data for performance review.",
+      "steps": [
+        "Review all markers from both left and right turns",
+        "Use analyzeFlightData to examine ground track for each circle",
+        "Analyze radius consistency: any egg shapes or spirals? Which circles were most circular?",
+        "Review bank angle data: were transitions smooth or abrupt? Proper ranges (20-45°)?",
+        "Compare left vs right turns: were they equally good or one direction better?",
+        "Analyze altitude maintenance across all circles",
+        "Look at coordination data: any slipping or skidding during transitions?",
+        "Identify best circle (left or right) and explain what made it successful",
+        "Identify improvement trend: first circle vs last circle comparison",
+        "Student self-reflects: 'Which direction felt more natural? Why?'"
+      ],
+      "goals": [
+        "Student sees objective data showing progress",
+        "Ground track analysis reveals radius consistency improvements",
+        "Bank angle data shows smoother transitions over time",
+        "Student identifies best-performing circle and understands why",
+        "Comparison of left vs right turns shows competency in both",
+        "Areas for continued improvement identified",
+        "Student understands relationship between inputs and ground track"
+      ],
+      "commonErrors": [
+        "Only looking at final circles instead of progression",
+        "Not recognizing improvement that occurred",
+        "Ignoring altitude data in favor of only ground track analysis"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review session performance and prepare student for next ground reference challenge.",
+      "steps": [
+        "Summarize total circles flown: should be 4-6 complete (2-3 each direction)",
+        "Review key concept: continuous smooth bank angle variation for constant radius",
+        "Discuss performance vs standards: altitude, radius consistency, smoothness, coordination",
+        "Compare to rectangular course: 'How was this different? What was more challenging?'",
+        "Address questions about continuous wind correction technique",
+        "Assess proficiency: ready for S-turns or needs more circle practice?",
+        "Preview next challenge: S-Turns - alternating semicircles across a road perpendicular to wind",
+        "Explain S-turns combine elements: continuous bank variation from turns around point + straight-line reference from rectangular course",
+        "Emphasize rhythm of S-turns: shallow to steep to shallow, repeating across reference line",
+        "Encourage visualization practice of smooth bank transitions between sessions"
+      ],
+      "goals": [
+        "Student demonstrates understanding of continuous bank angle variation",
+        "Student shows proficiency in turns around a point in both directions",
+        "Student can explain wind correction principles for circular ground track",
+        "Student ready to progress to S-turns across a line",
+        "Student understands next maneuver combines skills from both previous lessons"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "name": "S_Turns",
+  "shortDescription": "Master S-turns across a road perpendicular to wind with smooth alternating semicircular paths. Develop precise wind correction with rhythmic bank angle variation.",
+  "prompt": "You are teaching S-turns across a road, an advanced ground reference maneuver, to a private pilot student who has mastered rectangular course and turns around a point. This lesson combines elements of both previous maneuvers.\n\n**PURPOSE OF S-TURNS:**\nS-turns develop precise wind correction while maintaining a ground track along a straight-line reference. This maneuver combines the straight-line reference awareness from rectangular course with the continuous bank variation from turns around a point. The result is a rhythmic, flowing series of alternating semicircles.\n\n**THE MANEUVER:**\nFly alternating semicircular paths across a straight-line ground reference (road, fence line, section line) that is perpendicular to the wind. Each semicircle should have equal radius, and the aircraft should cross the reference line perpendicular (90°) with wings level each time. The pattern creates an 'S' shape on the ground.\n\n**WIND CORRECTION PRINCIPLES (rhythmic variation):**\n- **Entry:** Always enter downwind, perpendicular to reference line, wings level\n- **First turn (into wind):** Start with steeper bank, DECREASE bank as groundspeed decreases\n- **Cross reference:** Wings level, perpendicular to line\n- **Second turn (downwind):** Start with shallower bank, INCREASE bank as groundspeed increases  \n- **Pattern repeats:** Steep → medium → shallow (cross) → shallow → medium → steep (cross)\n- **Key concept:** Bank angle variation is opposite on alternating semicircles\n\n**ENTRY PROCEDURE:**\n1. Select straight-line reference perpendicular to wind (road is ideal)\n2. Position aircraft downwind of reference line, perpendicular to line\n3. Fly toward reference line at pattern altitude (600-1,000 AGL, typically 800)\n4. Cross reference line perpendicular with wings level\n5. Immediately begin turn into wind (upwind semicircle first)\n\n**BANK ANGLE VARIATION TECHNIQUE:**\n- **First semicircle (turning into wind):**\n  - Start turn with medium-steep bank (~35°) as you're still moving fast\n  - Gradually DECREASE bank as you turn into wind and groundspeed slows\n  - Roll to shallowest bank (~20°) as you approach reference line\n  - Wings level crossing the line perpendicular\n\n- **Second semicircle (turning downwind):**\n  - Start turn with shallow bank (~20°) as groundspeed is still slow\n  - Gradually INCREASE bank as you turn downwind and groundspeed rises\n  - Roll to steepest bank (~40°) as you approach reference line\n  - Wings level crossing the line perpendicular\n\n- **Repeat alternating pattern along the reference line**\n\n**PERFORMANCE STANDARDS:**\n- Altitude: 600-1,000 AGL, maintain ±100 feet\n- Semicircle radius: equal on both sides of reference line\n- Line crossings: perpendicular (90°), wings level each time\n- Bank angles: smoothly varied between 20-40°, no abrupt changes\n- Complete at least 4-6 semicircles (2-3 complete S-patterns)\n- Coordination: ball centered throughout, no slipping or skidding\n- Rhythm: smooth, flowing, consistent timing\n\n**KEY TEACHING POINTS:**\n- Entry is critical: must enter downwind, perpendicular, wings level\n- Opposite bank variation: into wind = decrease bank; downwind = increase bank\n- Wings level at each crossing: this is your checkpoint for accuracy\n- Look ahead: anticipate next semicircle's bank angle needs\n- Equal semicircles: both sides should mirror each other\n- Rhythm and flow: this maneuver should feel musical, not choppy\n- Division of attention: reference line + radius + instruments + altitude + traffic\n\n**COMMON ERRORS TO WATCH FOR:**\n- Entering upwind instead of downwind (incorrect entry)\n- Not crossing reference line perpendicular (angled crossings)\n- Wings not level when crossing reference line\n- Semicircles not equal radius (one side larger than other)\n- Abrupt bank changes instead of smooth gradual variation\n- Not decreasing bank enough when turning into wind (semicircle too large)\n- Not increasing bank enough when turning downwind (semicircle too small)\n- Losing rhythm and timing between semicircles\n- Altitude deviations due to fixation on ground reference\n- Not maintaining coordination during bank transitions\n- Forgetting traffic scan at low altitude\n\nUse markers to track: entry point, each reference line crossing, exit point. Record flight data for entire session to analyze ground track symmetry and bank angle variation rhythm. Goal is 4-6 complete semicircles with improving precision and rhythm.",
+  "openingLine": "Today we'll master S-turns - a flowing, rhythmic maneuver that combines everything you've learned. Think of it as dancing with the wind along a reference line!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setPosition": true,
+    "setUserWaypoint": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "navigateToUserWaypoint": true,
+    "distanceFromUserWaypoint": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief the student on S-turns fundamentals and rhythmic bank angle variation.",
+      "steps": [
+        "Explain purpose: S-turns develop wind correction along straight reference line with alternating semicircles",
+        "Describe the maneuver: alternating semicircular paths across road perpendicular to wind, creating 'S' pattern",
+        "Teach entry requirement: MUST enter downwind, perpendicular to line, wings level",
+        "Explain bank variation rhythm: into wind = decrease bank (steep to shallow), downwind = increase bank (shallow to steep)",
+        "Contrast with previous maneuvers: combines rectangular course straight-line awareness + turns around point continuous variation",
+        "Review performance standards: 800 AGL ±100 ft, equal semicircles, wings level at crossings, perpendicular crossings",
+        "Emphasize rhythm and flow: this should feel smooth and musical, not choppy",
+        "Set expectations: will practice 4-6 semicircles today with focus on symmetry and smoothness"
+      ],
+      "goals": [
+        "Student understands S-turns combine elements from previous two maneuvers",
+        "Student knows critical entry: downwind, perpendicular, wings level",
+        "Student prepared for opposite bank variation on alternating sides",
+        "Student understands importance of wings level at each crossing",
+        "Student aware this is a flowing, rhythmic maneuver"
+      ],
+      "commonErrors": [
+        "Not understanding entry must be downwind",
+        "Thinking bank variation is same on both semicircles",
+        "Expecting this to be easier than turns around a point"
+      ]
+    },
+    {
+      "name": "Setup_And_Reference",
+      "prompt": "Navigate to practice area and select suitable reference line for S-turns.",
+      "steps": [
+        "Navigate to Watsonville (KWVI) practice area - excellent road references available",
+        "Check current winds - critical to find road perpendicular to wind",
+        "Look for ideal reference line: straight road, fence line, or section line perpendicular to wind direction",
+        "Road should be: easy to see, long enough for multiple S-turns, away from obstacles and traffic",
+        "Verify line is truly perpendicular to wind (±10° is acceptable)",
+        "Climb to practice altitude: 800-1,000 AGL",
+        "Perform clearing turns: 90° left and 90° right with thorough traffic scan",
+        "Position aircraft downwind of reference line, set up for perpendicular entry",
+        "Add marker at intended entry point on reference line",
+        "Use setUserWaypoint for reference line to track distance and perpendicular crossing"
+      ],
+      "goals": [
+        "Suitable reference line found (straight, perpendicular to wind, visible)",
+        "Practice altitude established (800-1,000 AGL)",
+        "Wind direction confirmed and reference line perpendicularity verified",
+        "Aircraft positioned for proper downwind entry",
+        "Area cleared of traffic and hazards",
+        "Entry point marked for analysis"
+      ],
+      "commonErrors": [
+        "Selecting road not perpendicular to wind",
+        "Choosing road with too many curves or intersections",
+        "Not verifying perpendicularity before starting",
+        "Positioning for upwind entry instead of downwind"
+      ]
+    },
+    {
+      "name": "Demo_S_Turns",
+      "prompt": "Demonstrate 2-3 complete S-patterns (4-6 semicircles) with detailed narration.",
+      "steps": [
+        "Position downwind, approach reference line perpendicular, wings level",
+        "Add marker 'Demo Start - Entry'",
+        "Cross reference line wings level, narrate: 'Wings level, perpendicular crossing'",
+        "Immediately begin turn into wind, narrate: 'Starting with medium-steep bank, about 35°, turning into wind'",
+        "Add marker 'First Semicircle - Upwind Turn'",
+        "As turning, gradually decrease bank, narrate: 'Decreasing bank now, groundspeed slowing, down to 20° shallow'",
+        "Approach line, wings level for crossing, narrate: 'Rolling level, crossing perpendicular'",
+        "Add marker 'First Line Crossing'",
+        "Begin opposite turn downwind, narrate: 'Starting shallow now, about 20°, turning downwind, will increase bank'",
+        "Add marker 'Second Semicircle - Downwind Turn'",
+        "Gradually increase bank, narrate: 'Increasing bank, groundspeed rising, up to 40° steep now'",
+        "Approach line wings level, add marker 'Second Line Crossing'",
+        "Repeat for 1-2 more complete S-patterns",
+        "Debrief: emphasize the rhythm felt, opposite bank variations, equal semicircles on both sides"
+      ],
+      "goals": [
+        "Student observes 2-3 complete S-patterns with proper technique",
+        "Student sees opposite bank variation: decrease into wind, increase downwind",
+        "Student understands wings level at each crossing is critical checkpoint",
+        "Markers placed at entry and each crossing for reference",
+        "Student ready to attempt with understanding of rhythm and flow"
+      ],
+      "commonErrors": [
+        "Demonstrating too few semicircles (student needs to see pattern repeat)",
+        "Not emphasizing the rhythm and flow",
+        "Not clearly showing wings level at crossings"
+      ]
+    },
+    {
+      "name": "Initial_Practice",
+      "prompt": "Student practices 2-3 complete S-patterns with active coaching.",
+      "steps": [
+        "Student positions downwind for proper entry",
+        "Student adds marker 'Practice Set 1 - Entry'",
+        "Student crosses line perpendicular, wings level, then begins first turn into wind",
+        "Provide real-time coaching: 'Start with more bank, you're downwind' or 'Decrease now, you're slowing down'",
+        "Coach for wings level crossings: 'Wings level now, perpendicular to line'",
+        "Student marks each line crossing throughout practice",
+        "Monitor semicircle equality: 'That side was larger, tighter turn on this side'",
+        "Watch for smooth bank transitions: 'More gradual, don't snap the bank in'",
+        "Monitor altitude maintenance and coordination",
+        "After first S-pattern (2 semicircles), brief debrief: 'How did the rhythm feel?'",
+        "Repeat for 2-3 complete S-patterns with decreasing coaching",
+        "Student should start feeling the rhythm: steep-shallow-shallow-steep, repeating"
+      ],
+      "goals": [
+        "Student completes 2-3 complete S-patterns (4-6 semicircles)",
+        "Bank angle variation rhythm developing",
+        "Wings level crossings improving",
+        "Semicircle equality improving with each attempt",
+        "Student beginning to anticipate bank changes",
+        "Altitude maintained within ±100 feet",
+        "Coordinated flight throughout"
+      ],
+      "commonErrors": [
+        "Not decreasing bank enough when turning into wind (upwind semicircle too large)",
+        "Not increasing bank enough when turning downwind (downwind semicircle too small)",
+        "Crossing line at angle instead of perpendicular",
+        "Wings not level at crossings",
+        "Abrupt bank changes instead of smooth gradual variation",
+        "Losing rhythm between semicircles",
+        "Altitude deviations from fixation on reference line"
+      ]
+    },
+    {
+      "name": "Independent_Practice",
+      "prompt": "Student performs 2-3 more complete S-patterns with minimal coaching.",
+      "steps": [
+        "Student flies S-turns independently with minimal verbal coaching",
+        "Continue marking each reference line crossing for later analysis",
+        "Observe and note improvements or persistent issues",
+        "Only intervene for safety or significant technique errors",
+        "Watch for rhythm development: are transitions becoming more natural?",
+        "Monitor consistency: are all semicircles similar size and shape?",
+        "Observe flow: does the maneuver look smooth and continuous?",
+        "Check division of attention: reference line, instruments, traffic scan working together?",
+        "After each S-pattern, minimal feedback: 'Nice rhythm' or 'Semicircles more equal now'",
+        "Final S-pattern should be student's best - pulling all elements together",
+        "Aim for total 4-6 complete S-patterns across both practice phases"
+      ],
+      "goals": [
+        "Student demonstrates independent S-turn proficiency",
+        "Natural rhythm established: steep-shallow-shallow-steep pattern",
+        "Wings level at every crossing, perpendicular each time",
+        "Equal semicircles on both sides of reference line",
+        "Smooth bank angle transitions throughout",
+        "Altitude and coordination maintained within standards",
+        "Student shows confidence and flow in the maneuver",
+        "Final S-pattern represents mastery of technique"
+      ],
+      "commonErrors": [
+        "Reverting to poor crossing technique when coaching stops",
+        "Inconsistent semicircle sizes despite practice",
+        "Not self-correcting when detecting asymmetry",
+        "Losing rhythm under pressure to perform independently"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze recorded S-turns using markers and flight data for performance review.",
+      "steps": [
+        "Review all markers from reference line crossings",
+        "Use analyzeFlightData to examine ground track for all S-patterns",
+        "Analyze symmetry: are left semicircles equal to right semicircles?",
+        "Review crossing angles: perpendicular or angled? Wings level confirmed?",
+        "Analyze bank angle data: smooth variation or abrupt changes? Proper rhythm?",
+        "Compare first S-pattern to last: what improved most?",
+        "Check altitude maintenance throughout all patterns",
+        "Look at coordination data during transitions",
+        "Identify best S-pattern and explain what made it successful",
+        "Identify most common error and discuss how to correct it",
+        "Student self-reflects: 'When did the rhythm click? Which side felt more natural?'"
+      ],
+      "goals": [
+        "Student sees objective data showing progress from first to last S-pattern",
+        "Ground track analysis reveals improving symmetry",
+        "Crossing angles improving toward perpendicular",
+        "Bank angle data shows developing rhythm",
+        "Student identifies best S-pattern and understands contributing factors",
+        "Areas for continued practice clearly identified",
+        "Student recognizes the flow and rhythm in successful attempts"
+      ],
+      "commonErrors": [
+        "Only analyzing final S-pattern instead of progression",
+        "Not noticing improved symmetry that did occur",
+        "Focusing only on mistakes instead of successful elements"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Review session performance and prepare student for integrated ground reference challenge.",
+      "steps": [
+        "Summarize total semicircles flown: should be 4-6 complete S-patterns",
+        "Review key concepts: opposite bank variation, wings level crossings, equal semicircles",
+        "Discuss rhythm and flow: 'Did you feel the musical quality of the maneuver?'",
+        "Compare to previous maneuvers: rectangular course (corners), turns around point (continuous circle), S-turns (alternating semicircles)",
+        "Discuss performance vs standards: altitude, symmetry, crossings, smoothness",
+        "Address questions about wind correction in S-turns",
+        "Assess proficiency: ready for integrated ground reference challenge or needs more S-turn practice?",
+        "Preview next challenge: Integrated Ground Reference - combining all three maneuvers in sequence",
+        "Explain final challenge will test: rectangular course + turns around point + S-turns in one continuous flight",
+        "Emphasize next lesson demonstrates real-world application of all wind correction skills learned",
+        "Encourage mental practice of all three maneuvers before next session"
+      ],
+      "goals": [
+        "Student demonstrates understanding of S-turn technique and rhythm",
+        "Student shows proficiency in alternating semicircular wind correction",
+        "Student can explain opposite bank variation on alternating sides",
+        "Student ready to combine all three ground reference maneuvers",
+        "Student understands Module 4 culminates with integrated challenge",
+        "Student feels confident in wind correction skills developed"
+      ]
+    }
+  ]
+}
