@@ -1,0 +1,350 @@
+{
+  "name": "Operations_Windy_Conditions",
+  "shortDescription": "Master complete operations in strong and gusty winds. Integrate crosswind takeoffs and landings, handle wind shear, make critical go/no-go decisions, and develop pilot-in-command judgment for operations in challenging wind conditions.",
+  "prompt": "You are teaching complete wind operations with decision-making emphasis. This capstone challenge integrates crosswind takeoffs and landings in challenging conditions.\n\n**LOCATION:** KHWD (Hayward Executive).\n\n**WIND CONDITIONS:**\nStudent will experience strong steady winds (20kt with 17kt crosswind), gusty conditions (15G25), variable winds (270-330° shifting), and extreme conditions requiring no-go decision (25G35).\n\n**COMPLETE OPERATIONS:**\nIntegration of all crosswind skills: takeoff with proper aileron/rudder, pattern with crab, landing with slip method, rollout control. No separate practice - complete patterns only.\n\n**WIND SHEAR AWARENESS:**\nWind shear = rapid change in wind speed or direction. On approach: headwind shear (losing headwind) causes airspeed loss and sink. Tailwind shear (gaining tailwind) causes airspeed loss. Recognition: unexpected altitude loss, airspeed change, increased sink rate. Response: power and pitch to maintain glidepath and airspeed.\n\n**DECISION MAKING:**\nPilot in command must decide: Can I safely operate in these conditions? Factors: wind strength, gust spread, crosswind component, personal proficiency, aircraft capability. There is NO SHAME in saying conditions exceed personal limits - that's good judgment.\n\n**PERFORMANCE STANDARDS:**\nSame as previous: ±5 ft centerline, ±5° heading, touchdown within 200 ft, upwind wheel first. But in challenging conditions, safety > perfection. Go-around is always an option.\n\nStudent demonstrates complete proficiency and safety-first decision making.",
+  "openingLine": "Today we integrate all wind operations skills in challenging conditions. You'll fly complete patterns in strong and gusty winds, handle wind shear, and make critical safety decisions as pilot in command.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief complete wind operations integration and decision-making emphasis.",
+      "steps": [
+        "Explain today's capstone challenge: integrate all crosswind skills in challenging conditions",
+        "Review skills mastered: crosswind takeoffs (Challenge 8.1), crosswind landings (Challenge 8.2)",
+        "Explain integration: 'No more separate practice - complete patterns combining takeoff AND landing techniques'",
+        "Discuss wind scenarios: strong steady (20kt), gusty (15G25), variable (shifting), extreme (25G35)",
+        "Introduce wind shear: rapid wind change causes airspeed and altitude changes on approach",
+        "Teach wind shear recognition: unexpected sink, airspeed loss, increased descent rate",
+        "Review wind shear response: add power and pitch to maintain glidepath and airspeed",
+        "Emphasize decision making: 'You're pilot in command - you decide if conditions are safe'",
+        "Discuss go/no-go factors: wind strength, gusts, crosswind component, personal proficiency, fatigue",
+        "Review no-shame principle: 'Saying conditions exceed your limits is GOOD judgment, not weakness'",
+        "Set expectations: multiple complete patterns, some challenging, one extreme (practice no-go decision)",
+        "Coach: 'Today you become pilot in command of wind operations - skills AND judgment!'"
+      ],
+      "goals": [
+        "Student understands capstone nature of challenge",
+        "Student knows all previous skills will be integrated",
+        "Student aware of wind scenarios progression",
+        "Student understands wind shear concept and response",
+        "Student prepared for pilot-in-command decision making",
+        "Student knows no-go decision is proper and expected",
+        "Student ready for complete operations in challenging conditions",
+        "Student mentally prepared for safety-first mindset"
+      ],
+      "commonErrors": [
+        "Treating as separate takeoff/landing practice instead of integration",
+        "Not recognizing wind shear symptoms",
+        "Pushing beyond personal limits due to pressure",
+        "Not making timely go-around or no-go decisions"
+      ]
+    },
+    {
+      "name": "Wind_Assessment",
+      "prompt": "Teach comprehensive wind assessment and go/no-go decision making.",
+      "steps": [
+        "Use weatherLookup for KHWD current conditions",
+        "Teach wind report interpretation: direction, speed, gust spread (e.g., 300° at 15G25 = 300°, 15kt steady, gusts to 25kt)",
+        "Calculate crosswind component: 'Wind from 300° on runway 280° = 20° angle, significant crosswind'",
+        "Discuss gust factor: 'Gusts require maintaining extra airspeed on approach, add half gust factor'",
+        "Example: '15G25 = 10kt gust spread, add 5 knots to approach speed (75 KIAS instead of 70)'",
+        "Teach personal limits assessment: 'What's the strongest crosswind you've handled? Comfortable today?'",
+        "Review aircraft limits: 'C172 demonstrated 15kt crosswind, but aircraft capable of more with technique'",
+        "Discuss fatigue factor: 'Strong winds are tiring - multiple patterns in gusts require full attention'",
+        "Teach decision criteria: 'Can I maintain standards? Do I have required skills? Am I safe?'",
+        "Practice go/no-go: 'If winds are 300° at 20 knots steady, what's your decision?'",
+        "Student uses pilotNotes: record conditions, crosswind component, decision factors",
+        "Coach: 'Good pilots know their limits. Great pilots respect them. You're becoming great!'",
+        "Prepare for first scenario: 'Let's start with strong steady winds - you're ready for this!'"
+      ],
+      "goals": [
+        "Student can interpret complete wind reports",
+        "Student calculates crosswind components accurately",
+        "Student understands gust factor and airspeed addition",
+        "Student considers personal proficiency honestly",
+        "Student knows go/no-go decision criteria",
+        "Student has framework for wind assessment",
+        "Student prepared to make safety decisions",
+        "Student confident in decision-making process"
+      ],
+      "commonErrors": [
+        "Not considering gust spread in planning",
+        "Overestimating personal capability",
+        "Not adding airspeed for gusts on approach",
+        "Making go decision without proper assessment"
+      ]
+    },
+    {
+      "name": "Strong_Steady",
+      "prompt": "Complete pattern operations in strong steady crosswind conditions.",
+      "steps": [
+        "Set conditions: 330° at 20 knots on runway 28L (50° angle = ~17kt crosswind component!)",
+        "Brief: 'Strong steady winds - challenging but predictable. Use all your crosswind techniques!'",
+        "Student performs complete pattern: takeoff, pattern legs, approach, landing",
+        "Takeoff: full aileron into wind, aggressive rudder, reduce aileron during roll, establish crab after liftoff",
+        "Student adds marker 'Strong Wind Takeoff' at liftoff",
+        "Pattern: significant crab angles throughout to maintain ground track",
+        "Coach: 'Notice how much crab needed? Wind is strong but steady - predictable corrections'",
+        "Final approach: transition from crab to slip, lower upwind wing, opposite rudder",
+        "Approach: maintain slip with significant bank and rudder inputs",
+        "Touchdown: upwind wheel first, rollout with aileron into wind",
+        "Student adds marker 'Strong Wind Landing' at touchdown",
+        "Coach: 'Excellent! That was 17kt crosswind - near aircraft demonstrated limit!'",
+        "Second complete pattern: same conditions, building consistency",
+        "Student adds markers for second pattern: 'Strong Wind Takeoff 2', 'Strong Wind Landing 2'",
+        "Review: 'Strong steady winds are manageable with proper technique - you proved it!'",
+        "Assess: 'Maintaining standards? Ready for gusty conditions?'"
+      ],
+      "goals": [
+        "Student completes full patterns in strong crosswind (17kt)",
+        "All crosswind techniques integrated smoothly",
+        "Takeoff and landing both executed properly in same pattern",
+        "Significant crab and slip angles managed successfully",
+        "Performance standards maintained in challenging conditions",
+        "Student demonstrates proficiency near aircraft limits",
+        "Confidence built for gusty scenario",
+        "Complete integration achieved in strong winds"
+      ],
+      "commonErrors": [
+        "Not using full control authority available",
+        "Inconsistent technique between takeoff and landing",
+        "Not maintaining crab in pattern (drifting off track)",
+        "Insufficient slip on final in strong crosswind"
+      ]
+    },
+    {
+      "name": "Gusty_Conditions",
+      "prompt": "Handle gusty winds and practice prompt corrections for changing wind strength.",
+      "steps": [
+        "Set gusty conditions: 300° at 15 gusting 25 knots on runway 28L (10-18kt crosswind variation!)",
+        "Brief: 'Gusts make winds unpredictable. Add 5 knots to approach speed (75 KIAS), be ready for rapid changes'",
+        "Discuss gust management: 'When gust hits, airplane accelerates or wind increases - prompt correction needed'",
+        "Student performs pattern with gust awareness",
+        "Takeoff: may feel airplane pushed or pulled during roll - maintain centerline with rudder",
+        "Student adds marker 'Gusty Takeoff' at liftoff",
+        "Pattern: wind strength varying, crab angle must adjust continuously",
+        "Coach: 'That's a gust! Wind increased - adjust crab! Good correction!'",
+        "Final approach: maintaining slip challenging as gusts change wind strength",
+        "Coach: 'Gust! More bank needed... gust dropped... reduce bank... constant attention!'",
+        "Maintain 75 KIAS for gust protection (5kt above normal 70 KIAS)",
+        "Touchdown: may firm landing due to extra speed, but safe",
+        "Student adds marker 'Gusty Landing'",
+        "Coach: 'Gusty conditions require full attention - you handled it well!'",
+        "Discuss: 'Was that tiring? Gusty winds are exhausting - limits on number of patterns prudent'",
+        "Second pattern if student comfortable and not fatigued",
+        "Review: 'Gusts are most challenging wind condition - you managed them successfully!'"
+      ],
+      "goals": [
+        "Student experiences and manages gusty wind conditions",
+        "Airspeed addition for gusts properly applied (75 KIAS)",
+        "Prompt corrections made for changing wind strength",
+        "Takeoff and landing completed despite unpredictable gusts",
+        "Student recognizes fatigue factor in gusty conditions",
+        "Safety maintained despite challenging conditions",
+        "Student understands limits on operations in strong gusts",
+        "Confidence in gust management demonstrated"
+      ],
+      "commonErrors": [
+        "Not adding airspeed for gust protection",
+        "Slow corrections to gust changes",
+        "Continuing multiple patterns when fatigued",
+        "Not recognizing increased workload and attention required"
+      ]
+    },
+    {
+      "name": "Variable_Winds",
+      "prompt": "Adapt to variable wind direction requiring continuous reassessment.",
+      "steps": [
+        "Set variable winds: shifting between 270° and 330° at 15 knots (crosswind 0-15kt changing!)",
+        "Brief: 'Variable winds are unpredictable direction changes. Runway favoring changes, crosswind component varies'",
+        "Discuss challenge: 'Wind shifts require adapting technique mid-pattern - stay aware!'",
+        "Student begins pattern: wind from 270° initially (direct crosswind from right)",
+        "Takeoff with right crosswind: aileron right, rudder left for centerline",
+        "Student adds marker 'Variable Wind Takeoff'",
+        "During pattern: wind shifts to 300° (crosswind reducing but still present)",
+        "Coach: 'Wind shifted! Notice less crab needed now? Adapt your technique!'",
+        "On final: wind shifts to 330° (increased angle, more crosswind again)",
+        "Coach: 'Wind changed on final! Increase slip - more bank and rudder needed!'",
+        "Landing with adapted technique for current wind",
+        "Student adds marker 'Variable Wind Landing'",
+        "Debrief: 'Variable winds require constant awareness - you adapted well!'",
+        "Discuss: 'This is real-world flying - winds rarely stay constant'",
+        "Coach: 'Monitoring wind and adapting technique continuously is key skill - demonstrated!'"
+      ],
+      "goals": [
+        "Student experiences variable wind direction",
+        "Technique adapted for changing crosswind component",
+        "Continuous wind awareness maintained",
+        "Crosswind handling adjusted mid-pattern",
+        "Student demonstrates adaptability",
+        "Real-world wind variability experienced",
+        "Situational awareness of wind changes proven",
+        "Flexible crosswind technique application shown"
+      ],
+      "commonErrors": [
+        "Not noticing wind shifts",
+        "Using fixed technique despite changing conditions",
+        "Not adapting crab angle for wind changes",
+        "Surprise at different crosswind on landing than takeoff"
+      ]
+    },
+    {
+      "name": "Extreme_Decision",
+      "prompt": "Practice no-go decision making in extreme wind conditions.",
+      "steps": [
+        "Set extreme conditions: 310° at 25 gusting 35 knots on runway 28L (20-25kt crosswind, gusts to 35kt total!)",
+        "Present scenario: 'Tower reports winds 310° at 25 gusting 35. You're planning to fly. What's your decision?'",
+        "Student assesses conditions: crosswind component, gust spread, aircraft limits, personal proficiency",
+        "Calculate: '25kt crosswind component baseline, gusts to 35kt - this is EXTREME'",
+        "Discuss: 'C172 demonstrated crosswind is 15kt. Gusts to 35kt. This exceeds safe limits.'",
+        "Coach: 'What's your decision as pilot in command?'",
+        "Correct response: 'NO-GO. Conditions exceed safe limits for training and my proficiency.'",
+        "Student adds marker 'No-Go Decision - Extreme Winds'",
+        "If student says go: 'Let's think about this. What could go wrong? Lost control on takeoff? Unable to land safely?'",
+        "Lead to correct decision: 'These conditions are dangerous even for experienced pilots. What's the right call?'",
+        "Student makes no-go decision: 'NO-GO. Too windy to fly safely.'",
+        "Coach: 'EXCELLENT! That's the hardest and most important decision - knowing when NOT to fly!'",
+        "Discuss pressure: 'You might feel pressure to fly - scheduled lesson, want to practice. Ignore that pressure!'",
+        "Emphasize: 'Safety ALWAYS comes first. This decision might save your life someday.'",
+        "Celebrate: 'Making no-go decision in simulator is practice for real-world safety judgment!'",
+        "Set conditions back to moderate for remaining training"
+      ],
+      "goals": [
+        "Student experiences extreme wind conditions (scenario)",
+        "Proper wind assessment conducted",
+        "Correct no-go decision made (this is the GOAL)",
+        "Student understands some conditions are too dangerous",
+        "Pilot-in-command judgment exercised",
+        "Pressure to fly despite danger recognized and rejected",
+        "Safety-first mindset reinforced strongly",
+        "Student prepared to make real-world no-go decisions"
+      ],
+      "commonErrors": [
+        "Saying 'go' due to pressure or wanting to practice",
+        "Not recognizing danger of extreme conditions",
+        "Overestimating personal or aircraft capability",
+        "Not making decision quickly and clearly"
+      ]
+    },
+    {
+      "name": "Complete_Integration",
+      "prompt": "Demonstrate complete proficiency with multiple full patterns in varied winds.",
+      "steps": [
+        "Set mixed conditions: moderate winds 300° at 12-15 knots for proficiency demonstration",
+        "Brief: 'Final demonstration - show me complete wind operations proficiency'",
+        "Student performs 2-3 complete patterns independently with minimal coaching",
+        "Each pattern: crosswind takeoff, proper pattern with crab, crosswind landing with slip",
+        "Student adds markers for each: 'Integration Pattern 1', 'Integration Pattern 2', 'Integration Pattern 3'",
+        "Coach observes: consistent technique, proper standards, smooth operations",
+        "Vary winds slightly between patterns: 'Demonstrate adaptability to changing conditions'",
+        "Student maintains performance: ±5ft centerline, ±5° heading, upwind wheel first",
+        "Optional: practice both runways 28L and 28R if time allows",
+        "Coach minimal input: 'You're flying like pilot in command - excellent!'",
+        "Final pattern: 'Make this one your best - show me mastery!'",
+        "Review complete operations: 'Crosswind takeoffs? Check! Landings? Check! Decision making? Check!'",
+        "Celebrate: 'You've demonstrated complete wind operations proficiency - outstanding!'"
+      ],
+      "goals": [
+        "Multiple complete patterns flown independently",
+        "All crosswind techniques integrated smoothly",
+        "Consistent performance across patterns",
+        "Adaptability to varying conditions shown",
+        "Performance standards maintained",
+        "Minimal coaching needed (independence demonstrated)",
+        "Complete wind operations proficiency proven",
+        "Student ready for special operations (Module 9)"
+      ],
+      "commonErrors": [
+        "Inconsistency between patterns",
+        "Requiring excessive coaching (not independent)",
+        "Not maintaining standards throughout",
+        "Not adapting to wind variations"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Comprehensive analysis of all wind operations using markers and flight data.",
+      "steps": [
+        "Review all markers: strong steady, gusty, variable, extreme decision, integration patterns",
+        "Use analyzeFlightData for complete session review",
+        "Analyze takeoffs: centerline tracking, heading control, crab establishment",
+        "Analyze landings: approach stability, slip maintenance, touchdown points, upwind wheel first",
+        "Review wind adaptation: technique changes across different wind scenarios",
+        "Examine decision making: no-go decision in extreme conditions (critical success!)",
+        "Compare early vs late patterns: 'See your improvement? Consistency increased!'",
+        "Look at performance standards: 'Meeting ±5ft centerline throughout? Excellent!'",
+        "Identify strengths: 'Where did you excel? Strong wind handling? Gusty conditions?'",
+        "Identify growth areas: 'What will you continue practicing? Variable winds?'",
+        "Review complete integration: 'Takeoffs AND landings both strong? That's mastery!'",
+        "Celebrate Module 8 completion: 'You've mastered wind operations - essential pilot skill!'",
+        "Discuss real-world application: 'These skills apply to EVERY flight - wind is always present'"
+      ],
+      "goals": [
+        "Complete wind operations performance reviewed",
+        "All scenarios analyzed (strong, gusty, variable, extreme)",
+        "Performance standards assessed across conditions",
+        "Improvement progression visible",
+        "Strengths and growth areas identified",
+        "Student has comprehensive performance awareness",
+        "Module 8 completion celebrated",
+        "Confidence in wind operations established"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief Module 8 completion and prepare for special operations training.",
+      "steps": [
+        "Celebrate Module 8 completion: 'You've mastered complete wind operations - critical safety skills!'",
+        "Review module progression: Challenge 8.1 takeoffs → 8.2 landings → 8.3 complete integration",
+        "Summarize skills: 'Crosswind takeoffs, landings, gusty conditions, wind shear, decision making - ALL mastered!'",
+        "Discuss importance: 'Wind operations are safety-critical - you can now fly safely in most wind conditions'",
+        "Review decision making: 'You made proper no-go decision - that might save your life someday'",
+        "Emphasize real-world: 'Crosswinds are reality of flying - you're prepared for real-world operations'",
+        "Assess confidence: 'Do you feel confident flying in crosswinds now? You should - you've proven proficiency!'",
+        "Review standards: 'You maintained standards even in challenging conditions - excellent piloting!'",
+        "Celebrate achievement: 'Module 8 complete! 33/51 challenges done - over 64% course complete!'",
+        "Preview Module 9: 'Next is Special Operations - short field and soft field takeoffs and landings'",
+        "Explain Module 9: 'New airports KCVH (Hollister) and KSTS (Sonoma), new techniques for special runways'",
+        "Connect modules: 'Wind operations taught aircraft control. Special operations teach performance optimization.'",
+        "Encourage: 'You've mastered challenging wind conditions. Special operations will challenge you differently!'",
+        "Final thought: 'With wind operations mastered, you're becoming complete pilot - skills for any condition!'"
+      ],
+      "goals": [
+        "Module 8 completion celebrated enthusiastically",
+        "Complete skill progression reviewed",
+        "Importance of wind operations emphasized",
+        "Student confident in crosswind capability",
+        "No-go decision making reinforced as critical",
+        "Course progress recognized (64% complete!)",
+        "Student prepared for Module 9 transition",
+        "Motivation high for continuing training",
+        "Pride in significant achievement",
+        "Ready for special operations challenges"
+      ]
+    }
+  ]
+}

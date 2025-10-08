@@ -1,0 +1,343 @@
+{
+  "name": "Crosswind_Takeoffs",
+  "shortDescription": "Master crosswind takeoff technique with progressive difficulty from light to strong crosswinds. Learn proper aileron positioning, rudder control, and drift correction to maintain directional control and climb out safely in crosswind conditions at Hayward Executive Airport.",
+  "prompt": "You are teaching crosswind takeoff technique to a private pilot student. This lesson progresses from light to strong crosswinds, emphasizing proper control inputs and timing.\n\n**LOCATION:** KHWD (Hayward Executive Airport), runways 28L/10R and 28R/10L, known for frequent crosswinds.\n\n**CROSSWIND FUNDAMENTALS:**\nCrosswind component = Wind Speed × sin(angle between wind and runway). C172 demonstrated crosswind is 15 knots (not a limit). Student will practice 5-7kt, 10-12kt, and 14-16kt crosswinds.\n\n**CROSSWIND TAKEOFF TECHNIQUE:**\n1. Before takeoff: Position ailerons FULL into wind (full deflection)\n2. Apply power smoothly, use rudder aggressively to maintain centerline\n3. During roll: Gradually reduce aileron as speed increases (but maintain some deflection)\n4. Rotation: Normal speed (55-60 KIAS), don't force airplane off\n5. After liftoff: Establish crab angle immediately to prevent drift\n6. Climb: Maintain coordinated flight at Vy (79 KIAS) with crab into wind\n\n**WHY IT WORKS:**\nFull aileron at start prevents upwind wing from lifting. As speed increases, less aileron needed but some maintained until liftoff. Rudder keeps nose aligned with runway. After liftoff, crab maintains desired ground track.\n\n**PERFORMANCE STANDARDS:**\n- Centerline: ±5 feet during roll\n- Heading after liftoff: ±5°\n- Positive climb established\n- Coordinated flight (ball centered except during slip)\n\nStudent uses markers for each takeoff, analyzes control inputs and performance.",
+  "openingLine": "Today we're mastering crosswind takeoffs at Hayward Executive. We'll progress from light to strong crosswinds, learning proper aileron and rudder technique to maintain control and climb out safely in challenging wind conditions.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on crosswind takeoff technique and today's training progression.",
+      "steps": [
+        "Explain today's focus: crosswind takeoffs with progressive difficulty at KHWD",
+        "Review KHWD: parallel runways 28L/10R (5,013 ft) and 28R/10L (3,118 ft), towered Class D",
+        "Discuss KHWD crosswinds: prevailing winds often 270-360°, runways oriented 280°/100°, frequent crosswind component",
+        "Define crosswind component: Wind Speed × sin(angle), shows actual crosswind force on aircraft",
+        "Review C172 demonstrated crosswind: 15 knots (tested value, not a limit, can handle more with technique)",
+        "Explain progression: light 5-7kt → moderate 10-12kt → strong 14-16kt crosswinds",
+        "Teach fundamental technique: aileron FULL into wind at start, rudder maintains centerline, reduce aileron during roll",
+        "Explain WHY: full aileron prevents upwind wing lift, less needed as speed increases, rudder controls direction",
+        "Review after liftoff: establish crab angle immediately, maintain track, coordinated climb",
+        "Discuss performance standards: ±5 ft centerline during roll, ±5° heading after liftoff",
+        "Set expectations: multiple takeoffs per crosswind level, use markers to track each attempt",
+        "Coach: 'Crosswind takeoffs require aggressive inputs initially, then smooth reduction. You'll feel it!'"
+      ],
+      "goals": [
+        "Student understands crosswind takeoff challenge and importance",
+        "Student knows KHWD airport and why it's ideal for crosswind training",
+        "Student can calculate crosswind component conceptually",
+        "Student understands C172 crosswind capability (15kt demonstrated)",
+        "Student knows complete takeoff technique sequence",
+        "Student understands WHY technique works (physics)",
+        "Student aware of progressive difficulty structure",
+        "Student ready to practice with proper technique"
+      ],
+      "commonErrors": [
+        "Insufficient aileron at start of takeoff roll",
+        "Not using enough rudder to maintain centerline",
+        "Forgetting to reduce aileron as speed increases",
+        "Forcing airplane off ground before it's ready"
+      ]
+    },
+    {
+      "name": "Crosswind_Theory",
+      "prompt": "Deep dive into crosswind component calculation and control technique theory.",
+      "steps": [
+        "Explain crosswind component formula: Crosswind = Wind Speed × sin(angle between wind and runway)",
+        "Teach practical angles: 30° = 50% crosswind, 45° = 70%, 60° = 90%, 90° = 100% (direct crosswind)",
+        "Example calculation: 20 knots at 45° to runway = 20 × 0.707 = 14 knot crosswind component",
+        "Practice mental math: '15 knots from 300°, runway 280° = 20° angle = ~30% = 5 knots crosswind'",
+        "Review C172 crosswind handling: ailerons and rudder provide sufficient control authority for typical crosswinds",
+        "Explain control surfaces in crosswind: ailerons prevent drift/roll, rudder maintains directional control",
+        "Teach ground effect: during takeoff roll, wind tries to weathervane aircraft and lift upwind wing",
+        "Discuss control timing: FULL aileron at start (stopped aircraft), reduce as airflow increases over surfaces",
+        "Explain rotation: normal speed, positive liftoff, don't delay or airplane will skip/balloon",
+        "Review crab angle: after liftoff, turn into wind to maintain desired ground track (not runway heading)",
+        "Discuss coordination: during climb, centered ball, wings level with crab angle (coordinated flight)",
+        "Teach wind effect on climb: crab maintains track over ground, actual heading differs from desired track",
+        "Coach: 'You're fighting wind on ground with controls, cooperating with wind in air using crab angle'"
+      ],
+      "goals": [
+        "Student can calculate crosswind component for various wind angles",
+        "Student understands practical angle percentages for quick estimation",
+        "Student knows C172 has adequate control authority for training crosswinds",
+        "Student understands role of each control surface (aileron vs rudder)",
+        "Student knows WHY aileron must be reduced during roll",
+        "Student understands crab angle concept and when to establish",
+        "Student ready to apply theory during practice takeoffs",
+        "Student confident in crosswind takeoff physics and technique"
+      ],
+      "commonErrors": [
+        "Confusing total wind speed with crosswind component",
+        "Not understanding aileron reduction during roll",
+        "Maintaining runway heading after liftoff instead of crabbing",
+        "Over-controlling or under-controlling for crosswind strength"
+      ]
+    },
+    {
+      "name": "Takeoff_Technique",
+      "prompt": "Demonstrate and practice complete crosswind takeoff technique step-by-step.",
+      "steps": [
+        "Position aircraft at KHWD runway 28L using setPosition for demonstration",
+        "Set light crosswind: 270° at 10 knots (direct crosswind from right, ~10kt component)",
+        "Walk through pre-takeoff setup: 'Ailerons go where? FULL RIGHT (into wind)!'",
+        "Demonstrate lineup: align with centerline, hold brakes, full aileron right visible",
+        "Apply takeoff power smoothly: 'Watch rudder - need LEFT rudder to maintain centerline!'",
+        "During roll demo: 'Speed increasing... reducing aileron gradually... still some right aileron...'",
+        "At rotation speed: 'Normal rotation, 55-60 KIAS, positive liftoff attitude'",
+        "After liftoff: 'Now establish crab - turn right into wind to maintain runway track'",
+        "In climb: 'Wings level with crab angle, ball centered, climbing at Vy 79 KIAS'",
+        "Student adds marker 'Technique Demo Complete'",
+        "Now student attempts: position at runway 28L, same wind conditions",
+        "Coach through setup: 'Full aileron right, hold brakes, ready? Apply power!'",
+        "Coach during roll: 'More rudder! Good... speed up, reduce aileron... not all, keep some!'",
+        "Coach rotation: 'Good speed... rotate now... positive climb!'",
+        "Coach after liftoff: 'Crab right! Turn into wind... maintain track... perfect!'"
+      ],
+      "goals": [
+        "Student observes complete crosswind takeoff demonstration",
+        "Student sees aileron position at start (full deflection visible)",
+        "Student recognizes rudder input needed during roll",
+        "Student understands aileron reduction timing during acceleration",
+        "Student sees normal rotation despite crosswind",
+        "Student observes crab angle establishment after liftoff",
+        "Student attempts supervised crosswind takeoff with coaching",
+        "Student experiences proper control feel and timing",
+        "Student gains confidence in technique before progression"
+      ],
+      "commonErrors": [
+        "Not applying full aileron at start",
+        "Inadequate rudder during initial roll",
+        "Reducing aileron too much or too little",
+        "Delaying rotation or forcing early liftoff"
+      ]
+    },
+    {
+      "name": "Light_Crosswind",
+      "prompt": "Practice crosswind takeoffs in light crosswind conditions (5-7 knots).",
+      "steps": [
+        "Set conditions: 280° at 12 knots on runway 28L = ~2kt crosswind (nearly aligned) for comfort, then 270° at 8 knots = ~8kt for practice",
+        "Brief: 'Light crosswind is perfect for learning technique without being overwhelming'",
+        "Student performs complete takeoff: ailerons full into wind, rudder for centerline, reduce aileron during roll",
+        "Student adds marker 'Light Crosswind Takeoff 1' at liftoff",
+        "After liftoff, establish crab, climb to pattern altitude, enter downwind",
+        "Coach observations: 'Good aileron at start? Enough rudder? Smooth aileron reduction?'",
+        "Return for another attempt: pattern and land runway 28L",
+        "Student adds marker 'Light Crosswind Takeoff 2' for second attempt",
+        "Coach focus areas: 'This time, feel how much rudder you need. Notice aileron reduction timing.'",
+        "Third attempt: 'Now you're getting it! Crosswind takeoffs becoming more natural?'",
+        "Student adds marker 'Light Crosswind Takeoff 3'",
+        "Review: 'Light crosswinds let you learn technique. Control inputs smaller but sequence is same.'",
+        "Assess readiness: 'Comfortable with technique? Ready for moderate crosswinds?'",
+        "Student confirms understanding before progressing to higher winds"
+      ],
+      "goals": [
+        "Student completes multiple takeoffs in light crosswind",
+        "Proper aileron positioning at start consistently applied",
+        "Adequate rudder control for centerline maintenance",
+        "Smooth aileron reduction during roll demonstrated",
+        "Normal rotation and positive climb achieved",
+        "Crab angle established after each liftoff",
+        "Student comfortable with basic crosswind technique",
+        "Performance standards met: ±5 ft centerline, ±5° heading",
+        "Student ready for increased crosswind challenge"
+      ],
+      "commonErrors": [
+        "Still using insufficient aileron at start",
+        "Late or inadequate rudder application",
+        "Forgetting to establish crab after liftoff",
+        "Not maintaining standards through all takeoffs"
+      ]
+    },
+    {
+      "name": "Moderate_Crosswind",
+      "prompt": "Progress to moderate crosswind conditions (10-12 knots crosswind component).",
+      "steps": [
+        "Increase wind: 300° at 15 knots on runway 28L = ~13kt crosswind component (20° off runway)",
+        "Brief: 'Moderate crosswinds require more aggressive initial inputs and greater attention'",
+        "Student notes difference: 'Feel the wind - more rudder needed, more aileron initially'",
+        "Student performs takeoff with increased wind: FULL aileron into wind, aggressive rudder",
+        "Student adds marker 'Moderate Crosswind Takeoff 1'",
+        "Coach during roll: 'That's it! More rudder... keep centerline... reducing aileron... good!'",
+        "After liftoff: 'Establish crab - notice more turn needed to maintain track in stronger wind'",
+        "Climb and pattern, return for second attempt",
+        "Student adds marker 'Moderate Crosswind Takeoff 2'",
+        "Coach: 'Notice how much more work this is? That's normal for moderate crosswinds.'",
+        "Third attempt: student performs with less coaching, building independence",
+        "Student adds marker 'Moderate Crosswind Takeoff 3'",
+        "Review technique: 'Same sequence as light crosswind but MORE of everything - more aileron initially, more rudder, more crab'",
+        "Assess: 'Maintaining centerline? Positive control? Ready for strong crosswinds?'",
+        "Student confirms confidence before final progression"
+      ],
+      "goals": [
+        "Student successfully handles moderate crosswind (10-12kt component)",
+        "More aggressive control inputs applied appropriately",
+        "Centerline maintained within standards despite stronger wind",
+        "Proper aileron reduction still demonstrated under load",
+        "Crab angle sufficient for wind strength",
+        "Multiple takeoffs completed with consistent technique",
+        "Student adapts technique for increased wind strength",
+        "Confidence built for strong crosswind challenge"
+      ],
+      "commonErrors": [
+        "Insufficient initial control inputs for wind strength",
+        "Letting aircraft drift from centerline",
+        "Inadequate crab angle after liftoff",
+        "Tensing up instead of smooth, firm control inputs"
+      ]
+    },
+    {
+      "name": "Strong_Crosswind",
+      "prompt": "Challenge with strong crosswind conditions (14-16 knots crosswind component).",
+      "steps": [
+        "Set strong crosswind: 330° at 18 knots on runway 28L = ~16kt crosswind component (50° off runway)",
+        "Brief: 'This is near C172 demonstrated crosswind (15kt). Requires your best technique!'",
+        "Emphasize: 'If not comfortable, that's OK - knowing limits is good judgment. But let's try!'",
+        "Student prepares: 'Full aileron right from start, ready for strong rudder input'",
+        "Student performs takeoff: FULL aileron, AGGRESSIVE rudder to fight weathervaning",
+        "Student adds marker 'Strong Crosswind Takeoff 1'",
+        "Coach: 'Maximum effort! Hold centerline... that's it... reduce aileron as speed builds...'",
+        "After liftoff: 'Significant crab needed - turn well into wind to maintain track!'",
+        "Climb and pattern: 'Notice how much attention strong crosswinds require?'",
+        "Return for second attempt if student comfortable",
+        "Student adds marker 'Strong Crosswind Takeoff 2'",
+        "Coach: 'Each takeoff getting better? Finding the feel for strong crosswinds?'",
+        "Optional third attempt for proficiency",
+        "Student adds marker 'Strong Crosswind Takeoff 3' if completed",
+        "Review: 'You handled strong crosswinds near aircraft limits! That's advanced skill!'",
+        "Discuss limits: 'When crosswind exceeds your comfort or aircraft capability, choose different runway or airport'",
+        "Celebrate: 'Strong crosswinds demand maximum pilot skill - you demonstrated it!'"
+      ],
+      "goals": [
+        "Student experiences strong crosswind near aircraft limits",
+        "Maximum control inputs applied appropriately",
+        "Centerline maintained despite challenging conditions",
+        "Student demonstrates advanced crosswind technique",
+        "Proper aeronautical decision making about personal limits",
+        "Student understands when crosswind is too strong",
+        "Confidence built in handling challenging takeoff conditions",
+        "Student ready for crosswind landing challenge"
+      ],
+      "commonErrors": [
+        "Not using full available control authority",
+        "Giving up too easily or becoming frustrated",
+        "Letting aircraft drift without correction",
+        "Not establishing adequate crab angle after liftoff"
+      ]
+    },
+    {
+      "name": "Pattern_Integration",
+      "prompt": "Practice complete traffic pattern with crosswind takeoffs integrated.",
+      "steps": [
+        "Set mixed wind conditions: moderate 10-12kt crosswind for integration practice",
+        "Brief: 'Now integrate crosswind takeoff into complete pattern operations'",
+        "Student performs complete pattern: crosswind takeoff, normal pattern, crosswind landing approach",
+        "Student adds markers for: takeoff, pattern legs, landing",
+        "Focus on normalizing crosswind technique: 'This is just how we take off when there's crosswind'",
+        "Complete 2-3 full patterns with crosswind takeoffs",
+        "Vary wind slightly between patterns: 'Real world winds aren't constant - practice adapting'",
+        "Coach: 'Crosswind takeoff is one part of complete pattern - must remain smooth and efficient'",
+        "Student demonstrates consistent technique across multiple patterns",
+        "Practice different runway if time allows: runway 28R (shorter) with crosswind",
+        "Assess overall proficiency: takeoffs, patterns, landings all integrated smoothly",
+        "Coach: 'Crosswind operations are now part of your normal flying - well done!'"
+      ],
+      "goals": [
+        "Crosswind takeoffs integrated into complete pattern operations",
+        "Consistent technique demonstrated across multiple takeoffs",
+        "Student handles varying crosswind conditions smoothly",
+        "Complete pattern flow maintained despite crosswind",
+        "Student comfortable with crosswind as normal operation",
+        "Ready to combine with crosswind landing techniques",
+        "Proficiency demonstrated in realistic scenario"
+      ],
+      "commonErrors": [
+        "Treating crosswind takeoff as separate from normal pattern flow",
+        "Inconsistent technique between takeoffs",
+        "Not adapting to wind variations",
+        "Losing focus on other pattern elements due to crosswind focus"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze crosswind takeoff performance using markers and flight data.",
+      "steps": [
+        "Review all markers created during lesson: light, moderate, strong crosswind takeoffs",
+        "Use analyzeFlightData to examine takeoff performance across wind conditions",
+        "Analyze centerline tracking during rolls: 'Did you maintain ±5 ft throughout?'",
+        "Review heading after liftoff: 'Was heading within ±5° of runway heading before crab?'",
+        "Examine control inputs: 'Can you see aileron reduction during acceleration in the data?'",
+        "Compare light vs moderate vs strong crosswind performance: 'How did technique adapt?'",
+        "Look at climb performance: 'Did crosswind affect climb rate? Crab angle established quickly?'",
+        "Identify best takeoffs: 'Which attempts felt smoothest? Why?'",
+        "Identify areas for improvement: 'Where could technique be refined?'",
+        "Review common errors: 'Did you catch yourself making any typical mistakes?'",
+        "Discuss feel: 'What did you notice about control forces in different crosswind strengths?'",
+        "Celebrate successes: 'Look at your progression - light to strong crosswinds mastered!'",
+        "Set improvement goals: 'What will you focus on in crosswind landings next?'"
+      ],
+      "goals": [
+        "Complete performance data reviewed and analyzed",
+        "Centerline tracking assessed against standards",
+        "Heading control evaluated",
+        "Technique progression visible across wind strengths",
+        "Student understands personal performance patterns",
+        "Areas for improvement identified",
+        "Successes recognized and celebrated",
+        "Student has data-driven awareness of crosswind skills"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief crosswind takeoff mastery and prepare for crosswind landings.",
+      "steps": [
+        "Summarize lesson: progressed from light (5-7kt) through moderate (10-12kt) to strong (14-16kt) crosswinds",
+        "Review technique: 'What's the key to crosswind takeoffs? Aileron full into wind, rudder centerline, reduce as speed builds'",
+        "Assess mastery: 'Do you feel confident performing crosswind takeoffs now?'",
+        "Discuss real-world application: 'You'll encounter crosswinds frequently - this skill is essential'",
+        "Review C172 limits: 'Demonstrated 15kt crosswind, but you can handle more with good technique'",
+        "Emphasize judgment: 'Knowing when crosswind exceeds your comfort is good decision making'",
+        "Celebrate achievement: 'You handled strong crosswinds near aircraft limits - impressive!'",
+        "Preview Challenge 8.2: 'Next is crosswind landings - even more challenging than takeoffs!'",
+        "Explain landing challenge: 'Must maintain slip or crab all the way to touchdown, upwind wheel first'",
+        "Discuss connection: 'Takeoff technique was about ground control, landing adds touchdown precision'",
+        "Prepare mentally: 'Crosswind landings require constant attention and smooth corrections'",
+        "Encourage: 'You've mastered crosswind takeoffs. Landings will challenge you but you're ready!'",
+        "Final thought: 'Crosswind operations separate good pilots from great pilots - you're becoming great!'"
+      ],
+      "goals": [
+        "Student sees complete crosswind takeoff progression accomplished",
+        "Technique sequence solidified in student's mind",
+        "Confidence built for real-world crosswind operations",
+        "Personal limits and good judgment emphasized",
+        "Student prepared for crosswind landing challenge",
+        "Motivation high for continued crosswind training",
+        "Student ready for Challenge 8.2: Crosswind Landings"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "name": "Crosswind_Landings",
+  "shortDescription": "Master crosswind landing technique using the wing-low slip method. Progress from light to strong crosswinds, learning to maintain slip through touchdown, land upwind wheel first, and control the aircraft during rollout in challenging crosswind conditions.",
+  "prompt": "You are teaching crosswind landing technique to a private pilot student. This lesson emphasizes the wing-low (slip) method with progressive crosswind difficulty.\n\n**LOCATION:** KHWD (Hayward Executive), runways 28L/10R and 28R/10L.\n\n**CROSSWIND LANDING METHODS:**\nTwo primary techniques exist: crab (kick-out at touchdown) and slip (wing-low). Wing-low method is recommended for students because it's maintained throughout approach and touchdown.\n\n**WING-LOW (SLIP) METHOD:**\n1. Fly pattern with crab to maintain ground track\n2. On final approach, transition to slip:\n   - Lower upwind wing (aileron into wind)\n   - Apply opposite rudder to align nose with runway\n3. Maintain slip all the way to touchdown\n4. Touchdown upwind main wheel first, then downwind wheel, then nosewheel\n5. Hold aileron into wind throughout rollout\n6. If not stable by 300 AGL, GO AROUND immediately\n\n**WHY IT WORKS:**\nLowered upwind wing creates slip that counteracts drift. Opposite rudder keeps nose aligned with runway. Amount of bank = amount needed to stop drift. Amount of rudder = amount needed for alignment. At touchdown, upwind wheel contacts first (correct!), aircraft settles onto downwind wheel naturally.\n\n**PERFORMANCE STANDARDS:**\n- Centerline: ±5 feet\n- Touchdown point: within 200 feet of intended point\n- Touchdown: upwind wheel first\n- No drift or side load at touchdown\n- Go-around if not stable by 300 AGL\n\nStudent uses markers for each landing to track performance and analyze technique.",
+  "openingLine": "Today we're mastering crosswind landings using the wing-low slip method. We'll progress from light to strong crosswinds, learning to maintain slip all the way to touchdown and land smoothly with upwind wheel first in challenging conditions.",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on crosswind landing technique and wing-low slip method.",
+      "steps": [
+        "Explain today's focus: crosswind landings with wing-low slip method, progressive difficulty",
+        "Review KHWD: continuing at Hayward Executive, same crosswind conditions as takeoff training",
+        "Define two crosswind landing methods: crab (kick out at touchdown) vs slip (wing-low throughout)",
+        "Explain why slip method preferred for students: constant correction visible, no last-second changes, more stable",
+        "Teach wing-low technique: lower upwind wing with aileron, opposite rudder aligns nose with runway",
+        "Explain visual picture: 'Aircraft banked toward wind, nose pointed down runway centerline, descending in slip'",
+        "Discuss touchdown: upwind main wheel contacts first, then downwind wheel, then nosewheel - this is CORRECT",
+        "Review rollout: hold aileron into wind throughout, wind still tries to lift upwind wing",
+        "Emphasize go-around criteria: if not stable by 300 AGL (aligned, on speed, on glidepath), GO AROUND",
+        "Set performance standards: ±5 ft centerline, within 200 ft of touchdown point, upwind wheel first",
+        "Discuss progression: light 5-7kt, moderate 10-12kt, strong 14-16kt crosswinds",
+        "Coach: 'Crosswind landings are more challenging than takeoffs - require constant attention and smooth inputs!'"
+      ],
+      "goals": [
+        "Student understands crosswind landing challenge",
+        "Student knows crab vs slip methods, understands why slip preferred",
+        "Student can visualize wing-low slip technique",
+        "Student knows touchdown sequence: upwind wheel first is correct",
+        "Student aware of go-around criteria and importance",
+        "Student understands performance standards",
+        "Student prepared for progressive difficulty structure",
+        "Student mentally ready for challenging practice"
+      ],
+      "commonErrors": [
+        "Not maintaining slip all the way to touchdown",
+        "Leveling wings before touchdown (causes drift)",
+        "Inadequate rudder to align with runway",
+        "Not going around when unstable"
+      ]
+    },
+    {
+      "name": "Landing_Theory",
+      "prompt": "Deep dive into crosswind landing physics and technique theory.",
+      "steps": [
+        "Review crosswind effect on approach: wind pushes aircraft sideways, creates drift if uncorrected",
+        "Explain crab method: turn into wind, maintain runway track, aircraft angled relative to runway",
+        "Explain crab limitation: must align with runway before touchdown or land sideways (bad!)",
+        "Teach slip method: bank toward wind counteracts drift, rudder points nose down runway",
+        "Explain slip physics: sideslip creates aerodynamic force opposing wind drift, aircraft descends in coordinated slip",
+        "Discuss bank angle: amount of bank = amount needed to stop drift, changes with wind strength",
+        "Discuss rudder: amount of rudder = amount needed to keep nose aligned, also varies with wind",
+        "Explain control relationship: more crosswind = more bank + more opposite rudder (both increase together)",
+        "Teach visual cues: 'Runway stays centered, wing down into wind, nose aligned, constant correction'",
+        "Review touchdown mechanics: upwind wheel contacts first because wing is lowered, aircraft rolls onto downwind wheel",
+        "Explain why upwind first is good: absorbs side load, prevents drift, natural aircraft response to slip",
+        "Discuss common errors: leveling wings too soon, not enough rudder, inconsistent slip, floating in slip",
+        "Teach go-around decision: 'Not stable by 300 AGL? Drift evident? Misaligned? GO AROUND!'",
+        "Coach: 'Slip method looks unusual but it's aerodynamically sound - trust the technique!'"
+      ],
+      "goals": [
+        "Student understands crosswind drift and need for correction",
+        "Student knows difference between crab and slip methods clearly",
+        "Student understands slip physics and why it works",
+        "Student knows bank and rudder relationship in slip",
+        "Student can visualize proper slip on final approach",
+        "Student understands touchdown mechanics (upwind wheel first)",
+        "Student knows when to go around (300 AGL stable criteria)",
+        "Student confident in slip method theory before practice"
+      ],
+      "commonErrors": [
+        "Trying to land while still in crab (sideways touchdown)",
+        "Insufficient bank angle for wind strength",
+        "Not using enough opposite rudder",
+        "Leveling wings in flare (causes drift)"
+      ]
+    },
+    {
+      "name": "Technique_Demo",
+      "prompt": "Demonstrate complete crosswind landing using wing-low slip method.",
+      "steps": [
+        "Set conditions: 270° at 10 knots on runway 28L (direct crosswind from right, ~10kt component)",
+        "Position aircraft on left downwind using setPosition",
+        "Demonstrate pattern: 'Flying normal pattern with crab to maintain runway ground track'",
+        "Turn base: 'Still crabbing, runway offset to my left because of wind'",
+        "Turn final: 'On final, still in crab, runway centered but I'm angled'",
+        "Demonstrate slip transition: 'Now lowering right wing... applying left rudder... nose aligned with runway!'",
+        "In slip: 'See? Wing down right, rudder left, descending aligned with centerline'",
+        "Narrate approach: 'Constant small corrections... holding slip... runway centered...'",
+        "Approaching runway: 'Same slip all the way down... 50 feet... 20 feet...'",
+        "Touchdown: 'Right wheel touches first... now left wheel... nosewheel... hold aileron right during rollout!'",
+        "Rollout: 'Maintaining aileron into wind... slowing... centerline... stopped.'",
+        "Student adds marker 'Landing Demo Complete'",
+        "Debrief demo: 'That's wing-low slip method. Notice upwind wheel first? That's correct technique!'",
+        "Coach: 'Now you try - fly the pattern, establish slip on final, maintain to touchdown'",
+        "Position student for first attempt"
+      ],
+      "goals": [
+        "Student observes complete crosswind landing demonstration",
+        "Student sees crab in pattern, slip on final transition",
+        "Student observes constant slip corrections during approach",
+        "Student sees upwind wheel touchdown first (correct!)",
+        "Student observes aileron held during rollout",
+        "Student understands complete sequence before attempting",
+        "Student motivated to practice technique",
+        "Student ready for supervised first attempt"
+      ],
+      "commonErrors": [
+        "Student tries to level wings before touchdown (demo shows this wrong)",
+        "Student doesn't maintain slip all the way down",
+        "Student forgets aileron during rollout",
+        "Student afraid of banked attitude near ground"
+      ]
+    },
+    {
+      "name": "Light_Crosswind",
+      "prompt": "Practice crosswind landings in light crosswind conditions (5-7 knots).",
+      "steps": [
+        "Set conditions: 280° at 12 knots on runway 28L (nearly aligned) initially for comfort, then 270° at 8 knots for practice",
+        "Brief: 'Light crosswind is perfect for learning slip without being overwhelming'",
+        "Student flies pattern with crab: 'Maintain runway ground track using crab'",
+        "On final: 'Now transition to slip - lower right wing, left rudder, align nose'",
+        "Coach during approach: 'Good! Hold that slip... small corrections... runway centered...'",
+        "Coach near touchdown: 'Maintain slip... 50 feet... 20 feet... keep wing down... touchdown!'",
+        "Student adds marker 'Light Crosswind Landing 1' at touchdown",
+        "Coach after landing: 'Did right wheel touch first? Perfect! That's correct technique!'",
+        "Review: 'What did you notice? How much bank needed? How much rudder?'",
+        "Second attempt: pattern and approach with same crosswind",
+        "Student adds marker 'Light Crosswind Landing 2'",
+        "Coach: 'Getting more comfortable? Slip feels more natural now?'",
+        "Third attempt: student performs with less coaching",
+        "Student adds marker 'Light Crosswind Landing 3'",
+        "Review all three: 'Light crosswind lets you learn without overwhelming inputs. Ready for more?'",
+        "Assess readiness for moderate crosswind progression"
+      ],
+      "goals": [
+        "Student completes multiple crosswind landings in light wind",
+        "Slip technique established and maintained to touchdown",
+        "Upwind wheel touchdown achieved consistently",
+        "Small corrections during approach demonstrated",
+        "Centerline maintained within ±5 feet",
+        "Touchdown within 200 feet of intended point",
+        "Student comfortable with basic slip technique",
+        "Student ready for increased crosswind challenge"
+      ],
+      "commonErrors": [
+        "Leveling wings too early (causing drift at touchdown)",
+        "Insufficient bank or rudder for wind",
+        "Not maintaining slip consistently throughout approach",
+        "Touchdown on both wheels simultaneously"
+      ]
+    },
+    {
+      "name": "Moderate_Crosswind",
+      "prompt": "Progress to moderate crosswind landing conditions (10-12 knots crosswind).",
+      "steps": [
+        "Increase wind: 300° at 15 knots on runway 28L (~13kt crosswind component, 20° off runway)",
+        "Brief: 'Moderate crosswinds require more bank and more opposite rudder - bigger inputs'",
+        "Student flies pattern: 'Notice stronger crab needed to maintain ground track?'",
+        "On final: 'Transition to slip - this time more bank, more rudder than light crosswind'",
+        "Coach during approach: 'That's it! More wing down... more rudder... holding slip... good!'",
+        "Student adds marker 'Moderate Crosswind Landing 1'",
+        "Coach: 'Feel the difference? More control pressure needed, more attention required'",
+        "Debrief: 'Same technique as light crosswind but MORE - more bank, more rudder, more corrections'",
+        "Second attempt: student anticipates larger inputs needed",
+        "Student adds marker 'Moderate Crosswind Landing 2'",
+        "Coach: 'Excellent! You're adapting to wind strength well!'",
+        "Third attempt: building consistency in moderate crosswinds",
+        "Student adds marker 'Moderate Crosswind Landing 3'",
+        "Review: 'Moderate crosswinds show why this skill is essential - wind is often this strong!'",
+        "Assess: 'Maintaining standards? Upwind wheel first each time? Comfortable for strong crosswinds?'",
+        "Confirm readiness before final progression"
+      ],
+      "goals": [
+        "Student successfully handles moderate crosswind (10-12kt)",
+        "Larger bank and rudder inputs applied appropriately",
+        "Slip maintained consistently despite stronger wind",
+        "Upwind wheel touchdown achieved in stronger crosswind",
+        "Centerline maintained within standards",
+        "Multiple landings completed with good technique",
+        "Student adapts technique for increased wind strength",
+        "Confidence built for strong crosswind challenge"
+      ],
+      "commonErrors": [
+        "Not using enough bank for wind strength",
+        "Inadequate opposite rudder",
+        "Letting nose drift off centerline during approach",
+        "Rushing touchdown or floating too long in slip"
+      ]
+    },
+    {
+      "name": "Strong_Crosswind",
+      "prompt": "Challenge with strong crosswind landing conditions (14-16 knots crosswind).",
+      "steps": [
+        "Set strong crosswind: 330° at 18 knots on runway 28L (~16kt crosswind, 50° off runway)",
+        "Brief: 'Strong crosswind near C172 demonstrated limit. This requires your absolute best technique!'",
+        "Emphasize decision making: 'If uncomfortable at any point, GO AROUND. Knowing limits is good judgment.'",
+        "Student flies pattern: 'Notice strong crab angle needed in pattern?'",
+        "On final: 'Establish slip - significant bank and rudder will be needed'",
+        "Coach during approach: 'Maximum inputs! Wing well down... strong rudder... fighting for centerline...'",
+        "Monitor stability: 'Stable? Aligned? If not, GO AROUND!'",
+        "If stable, continue: 'Excellent control! Maintain slip... almost there...'",
+        "Student adds marker 'Strong Crosswind Landing 1'",
+        "Coach: 'Outstanding! You handled strong crosswind - that's advanced piloting!'",
+        "Debrief: 'How did that feel? Maximum effort required, right?'",
+        "Second attempt if student comfortable and conditions safe",
+        "Student adds marker 'Strong Crosswind Landing 2' if completed",
+        "If go-around needed: 'Good decision! Better to go around than force bad landing!'",
+        "Review: 'Strong crosswinds demand full attention and maximum skill - you demonstrated both!'",
+        "Discuss personal limits: 'Each pilot has limits. Today you explored yours - that's valuable experience!'",
+        "Celebrate: 'You handled challenging conditions most pilots avoid - impressive!'"
+      ],
+      "goals": [
+        "Student experiences strong crosswind near aircraft limits",
+        "Maximum control inputs and attention applied",
+        "Proper go-around decision making if needed",
+        "If completed: successful landing in very challenging conditions",
+        "Student understands personal crosswind limits",
+        "Proper aeronautical decision making demonstrated",
+        "Confidence built (or healthy respect gained) for strong crosswinds",
+        "Student ready for integrated wind operations"
+      ],
+      "commonErrors": [
+        "Attempting landing when clearly unstable",
+        "Not using full available control authority",
+        "Giving up too early without proper attempt",
+        "Forcing landing despite drift or misalignment"
+      ]
+    },
+    {
+      "name": "Go_Around_Practice",
+      "prompt": "Practice go-around decision making in challenging crosswind conditions.",
+      "steps": [
+        "Brief go-around importance: 'Go-around is normal maneuver, not failure. Safety always comes first.'",
+        "Review go-around criteria: not stable by 300 AGL (airspeed, alignment, glidepath all must be correct)",
+        "Set challenging scenario: strong gusty crosswind, 15 gusting 25 knots",
+        "Student flies approach: 'Try to maintain slip in gusty conditions'",
+        "Introduce instability: 'Gust pushes you off - you're drifting, not aligned at 300 AGL'",
+        "Coach: 'What do you do? GO AROUND!'",
+        "Student executes go-around: full power, pitch for Vy, positive climb, retract flaps gradually",
+        "Student adds marker 'Go-Around - Unstable Approach'",
+        "Coach: 'Perfect! You recognized unstable approach and made correct decision!'",
+        "Second scenario: aligned but too high on glidepath at 300 AGL",
+        "Coach: 'Not on proper glidepath - what's the decision?'",
+        "Student goes around again",
+        "Student adds marker 'Go-Around - High Glidepath'",
+        "Review: 'Go-arounds prevent accidents. There's ALWAYS another chance to land safely.'",
+        "Discuss: 'Better to go around 10 times than force one bad landing'",
+        "Practice one more approach to successful landing after go-arounds",
+        "Coach: 'See? Go-around resets situation. Then you can make good landing!'"
+      ],
+      "goals": [
+        "Student understands go-around is normal safety procedure",
+        "Go-around criteria clearly understood (300 AGL stable check)",
+        "Student practices go-around from unstable approaches",
+        "Proper go-around technique executed (power, pitch, flaps, climb)",
+        "Student comfortable making go-around decision",
+        "Safety-first mindset reinforced",
+        "Student knows successful landing possible after go-around",
+        "Confidence in aeronautical decision making"
+      ],
+      "commonErrors": [
+        "Trying to salvage unstable approach instead of going around",
+        "Hesitating on go-around decision",
+        "Improper go-around technique (not full power, late flap retraction)",
+        "Feeling go-around is failure rather than smart decision"
+      ]
+    },
+    {
+      "name": "Performance_Analysis",
+      "prompt": "Analyze crosswind landing performance using markers and flight data.",
+      "steps": [
+        "Review all markers: light, moderate, strong crosswind landings, go-arounds",
+        "Use analyzeFlightData to examine landing approaches and touchdowns",
+        "Analyze approach stability: 'Were you maintaining centerline and glidepath?'",
+        "Review touchdown points: 'Within 200 feet of intended point each landing?'",
+        "Examine touchdown technique: 'Can you see upwind wheel touching first in the data?'",
+        "Compare crosswind strengths: 'How did technique change from light to moderate to strong?'",
+        "Look at go-around responses: 'How quickly did you recognize instability and react?'",
+        "Identify best landings: 'Which felt smoothest? Best centerline tracking?'",
+        "Identify areas for improvement: 'Where could slip be maintained better?'",
+        "Review common errors: 'Did you catch yourself leveling wings early? Insufficient rudder?'",
+        "Discuss control feel: 'What did you notice about control pressures in different winds?'",
+        "Celebrate progression: 'Look at your improvement from first to last landing!'",
+        "Set improvement goals: 'What will you focus on in complete wind operations next?'",
+        "Coach: 'You've demonstrated crosswind landing proficiency - data proves it!'"
+      ],
+      "goals": [
+        "Complete landing performance data reviewed",
+        "Touchdown accuracy assessed",
+        "Upwind wheel first technique confirmed",
+        "Technique adaptation across wind strengths visible",
+        "Go-around decisions reviewed positively",
+        "Student has data-driven awareness of performance",
+        "Areas for continued improvement identified",
+        "Successes celebrated with objective evidence"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief crosswind landing mastery and prepare for complete wind operations integration.",
+      "steps": [
+        "Summarize lesson: progressed from light through moderate to strong crosswind landings",
+        "Review technique: 'What's key to crosswind landings? Wing-low slip method, maintain to touchdown, upwind wheel first'",
+        "Assess mastery: 'Do you feel confident performing crosswind landings now?'",
+        "Discuss real-world importance: 'Crosswind landings are one of most challenging skills - you've mastered them!'",
+        "Review go-around importance: 'Knowing when to go around is as important as landing technique'",
+        "Emphasize safety: 'These skills keep you safe in real-world varying wind conditions'",
+        "Celebrate achievement: 'You handled strong crosswind landings near aircraft limits - outstanding!'",
+        "Compare to takeoffs: 'Takeoffs control on ground, landings require precision to touchdown - both mastered!'",
+        "Preview Challenge 8.3: 'Next is complete wind operations - takeoffs AND landings, strong winds, gusts, full integration'",
+        "Explain final challenge: 'Combines everything learned, adds wind shear awareness, tests decision making'",
+        "Discuss capstone: 'Challenge 8.3 is when crosswind skills become normal operations - complete integration'",
+        "Prepare mentally: 'You've proven you can handle each piece - now we integrate them all!'",
+        "Encourage: 'Crosswind operations separate competent pilots from excellent pilots - you're becoming excellent!'",
+        "Final thought: 'With these skills, you can safely fly into most airports regardless of wind direction!'"
+      ],
+      "goals": [
+        "Student sees complete crosswind landing progression accomplished",
+        "Wing-low slip technique solidified",
+        "Confidence built for real-world crosswind operations",
+        "Go-around decision making reinforced as safety skill",
+        "Student prepared for complete wind operations challenge",
+        "Motivation high for final wind operations integration",
+        "Student ready for Challenge 8.3: Operations in Windy Conditions",
+        "Pride in significant skill development achieved"
+      ]
+    }
+  ]
+}
