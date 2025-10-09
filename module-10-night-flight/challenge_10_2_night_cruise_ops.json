@@ -1,0 +1,374 @@
+{
+  "name": "Night_Cruise_Operations",
+  "shortDescription": "Master night cruise flight with limited visual references, instrument reliance, navigation lights identification, traffic scanning, and spatial disorientation awareness. Learn emergency planning and extended night VFR operations in Class C airspace.",
+  "prompt": "You are teaching night cruise operations to a private pilot student. This lesson focuses on extended flight with minimal visual references.\n\n**LOCATION:** KSJC (San Jose International) Class C airspace for night cruise operations.\n\n**NIGHT CRUISE FUNDAMENTALS:**\n1. Instruments PRIMARY: attitude, altitude, heading by instruments (horizon often invisible)\n2. Visual references limited: city lights visible, terrain/horizon dark, stars above\n3. Navigation lights: RED left, GREEN right, WHITE tail (collision avoidance critical)\n4. Traffic scanning: lights only visible, more difficult than day\n5. Spatial disorientation: trust instruments over sensations\n6. Emergency planning: know lit areas, nearby airports always\n\n**NAVIGATION LIGHTS MEANING:**\n- Red on left + green on right = aircraft coming AT you (DANGER!)\n- White light only = aircraft flying AWAY (safe)\n- Red OR green alone = aircraft crossing (determine direction)\n- No lights = illegal or very far, rely on ATC\n\n**SPATIAL DISORIENTATION:**\nInner ear (vestibular system) unreliable in flight, especially night. 'Leans' common - feel banked when level or vice versa. SOLUTION: Trust instruments completely, ignore body sensations.\n\n**CLASS C CRUISE:**\nRadar service provided, traffic advisories given, maintain altitude and heading assigned, respond promptly to ATC.\n\nStudent uses markers for cruise legs and scenarios.",
+  "openingLine": "Now we're mastering night cruise operations. Flying with no visible horizon requires trusting your instruments completely. We'll practice extended night flight, traffic scanning, and spatial awareness. Your instruments become your reality at night!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on night cruise challenges and instrument reliance.",
+      "steps": [
+        "Explain today's focus: extended night cruise operations with minimal visual references in Class C airspace",
+        "Review previous lesson: night takeoff and instrument transition mastered - now extended cruise practice",
+        "Discuss primary challenge: horizon often INVISIBLE at night (dark sky meets dark terrain seamlessly)",
+        "Teach key principle: 'Your instruments ARE your reality at night. What you FEEL is often wrong. What instruments SHOW is truth!'",
+        "Review what you CAN see: city lights (excellent orientation), lighted highways/roads, airport beacons, other aircraft nav lights, stars above",
+        "Review what you CANNOT see: horizon (invisible!), dark terrain (mountains, water, desert), unlighted obstacles, clouds until close",
+        "Explain instrument scan critical: attitude for pitch/bank, altimeter for altitude, heading indicator for direction, airspeed for speed",
+        "Discuss spatial disorientation: 'The leans' - feeling banked when level, or level when banked. Inner ear unreliable in flight!",
+        "Teach solution: trust instruments completely, ignore body sensations, continuous instrument crosscheck",
+        "Review navigation lights: red-left, green-right, white-tail (collision avoidance by lights identification)",
+        "Discuss emergency planning: always know where lit areas are, where nearest airports are, where you'd go if engine fails NOW",
+        "Preview progression: instrument scan setup → visual reference practice → traffic scanning → spatial awareness → emergency scenarios",
+        "Emphasize Class C: radar service helps but YOU are still responsible for see-and-avoid and safe flight",
+        "Coach: 'Night cruise is where instrument flying becomes essential. You'll feel why instrument rating exists!'",
+        "Set expectation: 'Extended cruise practice - building comfort with instrument reliance over time'"
+      ],
+      "goals": [
+        "Student understands horizon typically invisible at night",
+        "Student knows instruments are PRIMARY reality at night",
+        "Student aware of spatial disorientation possibility (the leans)",
+        "Student comprehends what visual references exist vs don't exist",
+        "Student knows navigation lights collision avoidance importance",
+        "Student understands emergency planning necessity",
+        "Student prepared for extended instrument reliance practice",
+        "Student motivated to trust instruments over sensations"
+      ],
+      "commonErrors": [
+        "Trusting body sensations over instruments (dangerous!)",
+        "Fixating outside looking for horizon (doesn't exist!)",
+        "Not maintaining instrument crosscheck continuously",
+        "Inadequate emergency planning awareness"
+      ]
+    },
+    {
+      "name": "Instrument_Scan",
+      "prompt": "Establish proper instrument crosscheck for night cruise.",
+      "steps": [
+        "Position aircraft in cruise: 3,500 MSL, heading 270 (west), 100 KIAS cruise speed",
+        "Brief instrument scan pattern: 'Attitude → Airspeed → Altitude → Heading → back to Attitude (repeat continuously)'",
+        "Teach attitude indicator: 'PRIMARY for pitch and bank. Blue side up, brown side down. Wings level = horizon bar level'",
+        "Explain: 'At night, attitude indicator IS your horizon. Not outside - INSIDE!'",
+        "Practice pitch control: 'Nose up slightly - see altitude increasing? Nose down slightly - altitude decreasing? Attitude controls altitude!'",
+        "Practice bank control: 'Bank left - heading decreasing. Bank right - heading increasing. Attitude controls heading!'",
+        "Teach altimeter scan: 'Check every 5-10 seconds. Climbing? Descending? Adjust pitch on attitude indicator'",
+        "Set altitude tolerance: 'Night cruise: hold ±100 feet. Tighter than day because less visual feedback'",
+        "Teach heading indicator: 'Check every 5-10 seconds. Drifting left? Right? Adjust bank on attitude indicator'",
+        "Set heading tolerance: 'Night cruise: hold ±5 degrees. Precision matters for navigation and ATC compliance'",
+        "Practice airspeed: 'Pitch controls airspeed in level flight. Nose up = slower. Nose down = faster'",
+        "Emphasize continuous scan: 'NEVER fixate on one instrument! Scan, scan, scan - continuous crosscheck!'",
+        "Practice scenario: 'Maintain 3,500 MSL, heading 270, 100 KIAS for 2 minutes. Focus on instrument scan only'",
+        "Student adds marker 'Instrument Scan Practice Start'",
+        "Coach during practice: 'Attitude... good! Check altitude... perfect! Heading... adjust slightly left... excellent!'",
+        "After 2 minutes: student adds marker 'Instrument Scan Practice End'",
+        "Debrief: 'How did continuous scan feel? Natural? Tiring? Gets easier with practice!'",
+        "Emphasize: 'This scan pattern keeps you safe at night. Master it and night flying becomes comfortable!'"
+      ],
+      "goals": [
+        "Student establishes systematic instrument scan pattern",
+        "Attitude indicator understood as PRIMARY horizon reference",
+        "Altitude control within ±100 feet using instruments",
+        "Heading control within ±5 degrees using instruments",
+        "Airspeed awareness and pitch corrections made",
+        "Continuous crosscheck habit developing (no fixation)",
+        "Student comfortable with 2-minute instrument practice",
+        "Foundation set for extended instrument reliance"
+      ],
+      "commonErrors": [
+        "Fixating on single instrument (altitude or heading)",
+        "Looking outside for horizon (doesn't exist!)",
+        "Chasing instruments instead of smooth corrections",
+        "Inadequate scan rate (too slow, miss deviations)"
+      ]
+    },
+    {
+      "name": "Visual_Refs",
+      "prompt": "Identify and use limited visual references available at night.",
+      "steps": [
+        "Brief visual references at night: 'Limited but useful for orientation, NOT primary flight references'",
+        "Look for city lights: 'See San Jose city lights below? Excellent orientation reference - know your position'",
+        "Identify highways: 'Lighted highways like 101, 880 visible - great for navigation cross-check'",
+        "Point out airport beacons: 'Rotating beacon - green/white for civilian airport. Helps locate airports miles away'",
+        "Look for other aircraft: 'See those nav lights? Red/green/white of aircraft in pattern. More on this next phase'",
+        "Check for stars: 'Stars above provide some up/down reference, but NOT reliable for attitude!'",
+        "Demonstrate what's NOT visible: 'Look for horizon - see it? No! Dark sky meets dark terrain - invisible!'",
+        "Point out dark areas: 'South of here - dark mountains. West - dark ocean/bay. Can't see terrain at night!'",
+        "Explain danger: 'Flying over dark terrain without instruments = spatial disorientation risk'",
+        "Practice using city lights: 'San Jose lights are west. If lights move right in windscreen, we're turning left - crosscheck heading indicator!'",
+        "Use visual refs for orientation: 'Position checks: city lights, highways, airports. But flight control STILL on instruments!'",
+        "Coach: 'Visual references are SUPPLEMENTAL for situation awareness. Instruments PRIMARY for flight control!'",
+        "Practice scenario: fly toward dark area (mountains south), then back toward city lights - notice instrument reliance increases over dark terrain",
+        "Student adds marker 'Visual Reference Practice'",
+        "Emphasize: 'City lights help know WHERE you are. Instruments tell you HOW you're flying. Both needed!'"
+      ],
+      "goals": [
+        "Student identifies useful visual references (city lights, highways, beacons)",
+        "Student recognizes horizon typically invisible",
+        "Student understands dark terrain areas require more instrument reliance",
+        "Student uses visual refs for orientation, not flight control",
+        "Student experienced flying over both lit and dark areas",
+        "Clear distinction: visual refs = WHERE you are, instruments = HOW you fly",
+        "Student comfortable with supplemental use of visual references"
+      ],
+      "commonErrors": [
+        "Trying to use city lights for attitude reference (dangerous!)",
+        "Assuming visible horizon when it doesn't exist",
+        "Losing instrument scan when visual references present",
+        "Not preparing for transition over dark terrain"
+      ]
+    },
+    {
+      "name": "Traffic_Scan",
+      "prompt": "Master navigation lights identification and traffic scanning at night.",
+      "steps": [
+        "Brief traffic scanning at night: 'MUCH harder than day - only nav lights visible, more difficult to see, collision risk higher'",
+        "Teach navigation lights: 'RED light on LEFT wing, GREEN light on RIGHT wing, WHITE light on tail'",
+        "Explain viewing from other aircraft: 'What lights do they see based on relative position?'",
+        "Critical combo 1: 'RED on left + GREEN on right visible = aircraft coming DIRECTLY AT YOU! Evasive action needed!'",
+        "Critical combo 2: 'WHITE light only = aircraft moving AWAY from you (safe, no collision risk)'",
+        "Side view: 'RED light only = aircraft showing left side (moving right to left across your view)'",
+        "Side view: 'GREEN light only = aircraft showing right side (moving left to right across your view)'",
+        "Teach scanning technique: 'Series of short eye movements, 10-degree segments, pause 1-2 seconds each segment'",
+        "Explain night vision: 'Use off-center viewing for dim lights - look slightly to side to engage rod cells'",
+        "Practice: 'Scan left to right, horizon level, looking for any lights. Don't fixate!'",
+        "Demonstrate collision risk: 'If nav lights don't move relative to windscreen frame, collision course! Take action!'",
+        "Teach avoidance: 'Aircraft on collision course - alter heading or altitude, announce intention to ATC if in Class C'",
+        "Review ATC traffic advisories: 'NorCal Approach will call traffic, but YOU must see and avoid'",
+        "Practice scanning while maintaining instruments: 'Scan outside 5 seconds, check instruments 5 seconds, repeat'",
+        "Student adds marker 'Traffic Scan Practice'",
+        "Coach: 'Scanning at night requires discipline - easy to fixate on instruments. Force yourself to look outside!'",
+        "Emphasize: 'Red-green together = danger! White only = safe! Remember this and you'll avoid collisions!'"
+      ],
+      "goals": [
+        "Student understands navigation lights meaning (red-left, green-right, white-tail)",
+        "Student can identify collision risk (red + green together)",
+        "Student knows safe indication (white light only)",
+        "Student uses proper scanning technique (short movements, pause, don't fixate)",
+        "Student applies off-center viewing for dim lights",
+        "Student balances outside scanning with instrument crosscheck",
+        "Student prepared to take evasive action if needed",
+        "Collision avoidance at night mastered"
+      ],
+      "commonErrors": [
+        "Not scanning outside (fixated on instruments)",
+        "Not recognizing red+green collision risk pattern",
+        "Inadequate scanning technique (too fast, not systematic)",
+        "Not using off-center viewing for dim lights"
+      ]
+    },
+    {
+      "name": "Spatial_Aware",
+      "prompt": "Spatial disorientation awareness and instrument trust practice.",
+      "steps": [
+        "Brief spatial disorientation: 'The leans - feeling banked when level, or level when banked. VERY common at night!'",
+        "Explain physiology: 'Inner ear (vestibular system) senses acceleration, NOT absolute position. Unreliable in flight!'",
+        "Describe the leans: 'Slowly enter turn, inner ear doesn't sense it. Roll out, NOW inner ear senses and feels like opposite bank!'",
+        "Demonstrate: enter slow 10-degree turn, hold 30 seconds, roll out - 'Feel that? Body says we're banked opposite direction! But attitude indicator shows level!'",
+        "Teach solution: 'Trust instruments, NOT sensations. Attitude indicator shows truth, your body lies!'",
+        "Practice scenario 1: straight and level cruise, ask 'Does it feel level? Check attitude indicator - it IS level, even if body says not!'",
+        "Practice scenario 2: gentle turn, hold 30 sec, roll out - 'Feel the lean? Ignore it! Attitude indicator shows level - believe it!'",
+        "Student adds marker 'Spatial Disorientation Demo'",
+        "Discuss somatogravic illusion: 'Acceleration feels like pitch up. Deceleration feels like pitch down. Instruments show truth!'",
+        "Practice: increase power (accelerate) - 'Feel nose up sensation? Check attitude indicator - level! That's somatogravic illusion'",
+        "Emphasize danger: 'Spatial disorientation has killed many pilots. ALWAYS trust instruments over sensations at night!'",
+        "Teach recovery: 'If confused about attitude - focus ONLY on attitude indicator. Ignore all sensations. Fly instruments!'",
+        "Practice extended: fly 5 minutes with various gentle maneuvers, student announces when feeling disorientation, crosschecks instruments",
+        "Student adds marker 'Spatial Awareness Practice End'",
+        "Coach: 'Feeling disorientation is NORMAL at night. Trusting instruments despite feelings is SKILL!'",
+        "Emphasize: 'This is why instrument rating exists! Night VFR is instrument flying - you just experienced why!'"
+      ],
+      "goals": [
+        "Student experiences the leans (spatial disorientation)",
+        "Student understands vestibular system unreliable in flight",
+        "Student practices trusting instruments over sensations",
+        "Student recognizes somatogravic illusion (acceleration/deceleration)",
+        "Student can identify when feeling disorientation",
+        "Student automatically crosschecks instruments when confused",
+        "Critical skill: trusting instruments DESPITE conflicting sensations",
+        "Student appreciates instrument flying importance"
+      ],
+      "commonErrors": [
+        "Following body sensations instead of instruments (deadly!)",
+        "Not recognizing disorientation when it occurs",
+        "Fixating outside trying to find visual horizon",
+        "Not maintaining instrument scan when disoriented"
+      ]
+    },
+    {
+      "name": "Emergency_Plan",
+      "prompt": "Emergency planning and awareness during night cruise.",
+      "steps": [
+        "Brief emergency planning: 'Engine failure at night = MUCH harder than day. Must plan ahead continuously!'",
+        "Discuss challenge: 'Can't see unlighted terrain. Can't see fields, roads, obstacles. Landing site selection very limited!'",
+        "Teach continuous awareness: 'Always ask: If engine quits NOW, where would I land? Where are lit areas? Nearest airport?'",
+        "Look at terrain: 'Below us - what's lit? San Jose (good). What's dark? Mountains south (dangerous), bay west (water!)'",
+        "Identify airports: 'KPAO Palo Alto - beacon visible northeast. KRHV Reid-Hillview - beacon visible east. Know where they are!'",
+        "Review lit areas: 'Highways have lights and are straight - last resort landing option if needed'",
+        "Discuss glide range: 'C172 at 3,500 AGL glides about 7 miles. What's within 7 miles? Lit areas? Airports?'",
+        "Practice awareness: student identifies landing options continuously: 'If engine fails now, where would you go?'",
+        "Student response options: 'KPAO northeast 5 miles, KSJC northwest 8 miles, highway 101 below'",
+        "Emphasize altitude importance: 'Higher altitude = more options. Stay high enough for glide to lit areas!'",
+        "Discuss ATC help: 'Declare emergency immediately! NorCal Approach has radar, can vector to nearest airport, coordinate emergency services'",
+        "Review communication: 'Mayday Mayday Mayday, NorCal Approach, Cessna 12345, engine failure, 3500 feet, request vectors nearest airport'",
+        "Teach equipment: 'Flashlight critical for night emergency - landing light may not work without engine. Survival gear more important at night'",
+        "Practice scenario: engine loss (simulated) - student identifies best option, establishes best glide, communicates emergency",
+        "Student adds marker 'Emergency Planning Practice'",
+        "Debrief: 'You had plan ready! That's what keeps you safe at night - continuous awareness!'",
+        "Coach: 'Flying over dark areas is legal but risky. Stay within glide distance of lit areas when possible!'",
+        "Emphasize: 'Night emergency planning isn't paranoia - it's professional flying!'"
+      ],
+      "goals": [
+        "Student continuously aware of emergency landing options",
+        "Student identifies lit areas vs dark areas below",
+        "Student knows location of nearby airports",
+        "Student understands glide range and options within range",
+        "Student prepared to declare emergency and communicate",
+        "Student appreciates altitude importance at night",
+        "Student avoids flying over dark areas when possible",
+        "Professional emergency planning mindset developed"
+      ],
+      "commonErrors": [
+        "Not thinking about emergency options (complacency)",
+        "Flying over extensive dark areas without altitude margin",
+        "Not knowing location of nearby airports",
+        "Delayed emergency declaration (should be immediate)"
+      ]
+    },
+    {
+      "name": "Practice",
+      "prompt": "Extended night cruise practice with progressive scenarios.",
+      "steps": [
+        "Brief extended practice: 'Now we'll fly extended cruise combining all skills - instruments, traffic, awareness, planning'",
+        "Set cruise parameters: 'Maintain 3,500 MSL, various headings, 100 KIAS, Class C airspace'",
+        "Leg 1: Fly heading 090 (east) for 5 minutes toward KRHV area - practice over lit city area",
+        "Student maintains altitude ±100 ft, heading ±5 degrees, airspeed ±5 knots, scans for traffic",
+        "Student adds marker 'Practice Leg 1 Start'",
+        "Coach: 'Instrument scan... traffic scan... emergency planning... all together now!'",
+        "After 5 min: student adds marker 'Practice Leg 1 End', assess performance",
+        "Leg 2: Fly heading 180 (south) for 3 minutes toward dark mountain area - practice over dark terrain",
+        "Student adds marker 'Practice Leg 2 Start'",
+        "Notice increased instrument reliance over dark terrain: 'Feel the difference? Less visual references, more instrument focus!'",
+        "Student adds marker 'Practice Leg 2 End'",
+        "Leg 3: Fly heading 270 (west) for 5 minutes toward bay area - practice over water/dark area",
+        "Student adds marker 'Practice Leg 3 Start'",
+        "Emphasize emergency awareness: 'Over water now - where's nearest airport? KPAO north, KSJC east - always know!'",
+        "Student adds marker 'Practice Leg 3 End'",
+        "Scenario: ATC gives traffic advisory: 'Cessna 12345, traffic 2 o'clock, 3 miles, opposite direction, same altitude'",
+        "Student scans for traffic, identifies nav lights if visible, reports 'Looking for traffic' or 'Traffic in sight'",
+        "Final leg: Return to KSJC area, heading 360 (north) for 3 minutes",
+        "Student adds marker 'Practice Leg 4 Start'",
+        "Student maintains all parameters, demonstrates mastery of night cruise operations",
+        "Student adds marker 'Practice Complete'",
+        "Debrief practice: 'How did extended cruise feel? Comfortable? Instrument scan automatic? Traffic awareness maintained?'"
+      ],
+      "goals": [
+        "Student completes extended night cruise (20+ minutes) successfully",
+        "Altitude maintained within ±100 feet throughout",
+        "Heading maintained within ±5 degrees throughout",
+        "Continuous instrument crosscheck automatic",
+        "Traffic scanning maintained despite instrument focus",
+        "Emergency planning awareness continuous",
+        "Student experienced different terrain types (lit city, dark mountains, water)",
+        "Comfort level high for extended night VFR operations",
+        "All night cruise skills integrated successfully"
+      ],
+      "commonErrors": [
+        "Altitude deviations increasing with fatigue",
+        "Neglecting traffic scan when focused on instruments",
+        "Losing emergency awareness during extended cruise",
+        "Inadequate adaptation to terrain type changes"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze night cruise performance using markers and data.",
+      "steps": [
+        "Review all markers: instrument scan, visual refs, traffic scan, spatial awareness, emergency planning, practice legs 1-4",
+        "Use analyzeFlightData to examine cruise performance across all phases",
+        "Analyze altitude control: 'Was ±100 feet maintained throughout? Where were largest deviations? Why?'",
+        "Review heading control: 'Was ±5 degrees maintained? Any trends (drifting left/right consistently)?'",
+        "Examine airspeed: 'Was 100 KIAS ±5 knots maintained? Any variations during maneuvers?'",
+        "Assess instrument scan: 'Was crosscheck continuous? Evidence of fixation on single instrument?'",
+        "Review traffic scanning: 'Were outside scans maintained? Duration appropriate (5 seconds outside, 5 inside)?'",
+        "Compare terrain types: 'Performance over lit areas vs dark areas - any difference? More deviations over dark terrain?'",
+        "Evaluate spatial awareness: 'Any disorientation episodes? How quickly recognized and corrected?'",
+        "Assess emergency planning: 'Were landing options identified throughout? Altitude management for glide options?'",
+        "Identify best performance period: 'Which leg had tightest parameters? What was different?'",
+        "Identify challenges: 'Which skill was hardest? Instrument scan? Traffic scan? Spatial awareness? Emergency planning?'",
+        "Review progression: 'Compare first practice leg to last - see improvement?'",
+        "Celebrate successes: 'Extended night cruise completed! Instrument reliance demonstrated! Skills integrated!'",
+        "Set goals for approach/landing: 'What skills from cruise will help with night approaches? Instrument scan? Trust instruments?'"
+      ],
+      "goals": [
+        "Complete night cruise performance analyzed from data",
+        "Altitude and heading control precision assessed",
+        "Instrument scan effectiveness evaluated",
+        "Traffic scanning frequency verified",
+        "Terrain type impact on performance recognized",
+        "Spatial awareness incidents reviewed",
+        "Areas for continued improvement identified",
+        "Student has objective understanding of night cruise capabilities",
+        "Confidence reinforced for approach and landing phase"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief night cruise mastery, prepare for approach and landing.",
+      "steps": [
+        "Summarize lesson: progressed from instrument scan → visual refs → traffic → spatial awareness → emergency planning → extended practice",
+        "Review key principle: 'Night cruise = instrument flying in VFR. Instruments PRIMARY, outside SUPPLEMENTAL. Did you experience this?'",
+        "Assess instrument reliance: 'Could you maintain altitude and heading on instruments alone? Without outside references?'",
+        "Review spatial disorientation: 'Did you experience the leans? Somatogravic illusion? Could you trust instruments despite sensations?'",
+        "Discuss traffic scanning: 'Red+green=danger, white=safe. Saw any traffic? Identified nav lights correctly?'",
+        "Emphasize emergency planning: 'Always knowing landing options - this mindset must continue through approach and landing!'",
+        "Review Class C operations: 'Comfortable with ATC communication during extended cruise? Traffic advisories helpful?'",
+        "Assess comfort level: 'On scale 1-10, comfort with night cruise now? What increased comfort? What still challenging?'",
+        "Celebrate achievement: 'You flew extended night cruise with instrument reliance! Foundation for instrument rating built!'",
+        "Preview Challenge 10.3: 'Next is night approach and landing - VASI/PAPI becomes CRITICAL, visual illusions major challenge'",
+        "Explain approach challenge: 'Black hole approach illusion, depth perception issues, VASI/PAPI as PRIMARY glidepath reference'",
+        "Discuss connection: 'Instrument reliance from cruise applies to approach. Attitude indicator still primary even on approach!'",
+        "Prepare mentally: 'Approach at night = trust VASI/PAPI completely, use instruments to crosscheck, resist illusions'",
+        "Teach critical concept: 'VASI/PAPI at night is NOT optional equipment - it's PRIMARY glidepath reference! Red over white = you're alright!'",
+        "Encourage: 'You mastered night cruise! Approach and landing will complete your night operations skill set!'",
+        "Final thought: 'Night cruise is where you build instrument discipline. This discipline keeps you safe for approach and landing!'"
+      ],
+      "goals": [
+        "Student sees complete night cruise skill progression accomplished",
+        "Instrument reliance principle solidified and internalized",
+        "Spatial disorientation experience and trust-instruments solution understood",
+        "Traffic collision avoidance at night mastered",
+        "Emergency planning mindset established",
+        "Confidence high for extended night VFR cruise operations",
+        "Student prepared for approach and landing challenges",
+        "VASI/PAPI critical importance previewed and understood",
+        "Excitement maintained for completing night operations training",
+        "Student ready for Challenge 10.3: Night Approach and Landing"
+      ]
+    }
+  ]
+}

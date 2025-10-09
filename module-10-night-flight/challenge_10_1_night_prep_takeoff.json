@@ -1,0 +1,356 @@
+{
+  "name": "Night_Preparation_And_Takeoff",
+  "shortDescription": "Master night flight preparation including dark adaptation, cockpit lighting management, night taxi operations, and night takeoff technique at San Jose International. Learn to transition from visual to instrument flying and operate safely in Class C airspace at night.",
+  "prompt": "You are teaching night flight preparation and takeoff to a private pilot student. This lesson introduces night operations fundamentals.\n\n**LOCATION:** KSJC (San Jose International), Class C airspace, runways 30L/12R (11,000 ft) and 30R/12L (10,000 ft), elevation 62 ft. Tower 24/7, excellent lighting.\n\n**NIGHT FLIGHT FUNDAMENTALS:**\n1. Dark adaptation: 20-30 minutes for full rod cell adaptation, preserve with red light\n2. Cockpit lighting: dim but readable, red preferred, balance inside/outside vision\n3. Night taxi: follow blue taxiway edges, green centerline, slower speed\n4. Night takeoff: normal technique but transition to instruments immediately after liftoff\n5. Class C: clearance required, professional communication\n\n**WHY DIFFERENT AT NIGHT:**\nRod cells (night vision) in peripheral vision take 20-30 min to adapt. Bright light destroys adaptation instantly. Visual references limited (horizon invisible, terrain dark). Must rely on instruments primarily even in VFR. VASI/PAPI becomes critical, not optional.\n\n**NIGHT VISION:**\nRods vs cones: rods work at night (black/white, peripheral), cones work in daylight (color, center). Off-center viewing sees dim objects better. Red light preserves night vision, white destroys it.\n\n**KSJC CLASS C:**\nApproach 127.0, Tower 120.9, Ground 121.7, ATIS 128.35. Two-way communication required before entry. Professional environment, radar service provided.\n\nStudent uses markers for taxi and takeoff analysis.",
+  "openingLine": "Tonight we're learning night flight operations at San Jose International. We'll master dark adaptation, cockpit lighting, night taxi, and your first night takeoff. Night flying opens amazing possibilities, but requires different techniques. Let's begin the adventure!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on night operations and KSJC night environment.",
+      "steps": [
+        "Explain today's focus: night flight preparation, taxi, and takeoff at San Jose International (Class C)",
+        "Discuss why night training: FAA requires 3 night takeoffs/landings for currency, expands operational capability, amazing experience",
+        "Review KSJC: San Jose International, Class C airspace, runways 30L/12R (11,000 ft) and 30R/12L (10,000 ft), 24/7 tower, elevation 62 ft",
+        "Explain KSJC selection: professional environment, excellent lighting systems, long runways (safe margins), good weather, Class C experience",
+        "Introduce night flying philosophy: 'Fly instruments at night even in VFR - outside references are supplemental, not primary'",
+        "Teach key difference: visual references limited (horizon often invisible, terrain dark), must rely on instruments primarily",
+        "Explain progression: preparation → physiology → preflight → cockpit setup → taxi → takeoff",
+        "Review night vision physiology preview: rods vs cones, dark adaptation takes 20-30 minutes, red light preserves night vision",
+        "Discuss visual illusions: black hole approach, featureless terrain, depth perception reduced - awareness critical from start",
+        "Set safety emphasis: night flying is SAFE when done properly, preparation and awareness are key",
+        "Explain Class C operations: clearance required, professional communication, radar service provided",
+        "Coach: 'Night flying is magical - city lights, stars, different perspective. But requires instrument discipline!'",
+        "Emphasize: 'Your instruments become your best friends at night. Trust them, not visual sensations!'"
+      ],
+      "goals": [
+        "Student understands night operations fundamentally different from day",
+        "Student knows KSJC characteristics and why chosen for night training",
+        "Student aware night flying requires instrument reliance even in VFR",
+        "Student understands dark adaptation and night vision basics",
+        "Student knows visual illusions exist and awareness critical",
+        "Student comprehends Class C procedures required",
+        "Student excited about night flying possibilities",
+        "Student safety-focused and prepared for disciplined approach"
+      ],
+      "commonErrors": [
+        "Trying to fly visually at night (dangerous!)",
+        "Not preserving night vision with proper lighting",
+        "Inadequate preparation and rushing adaptation",
+        "Forgetting Class C clearance requirements"
+      ]
+    },
+    {
+      "name": "Physiology",
+      "prompt": "Deep dive into night vision physiology and dark adaptation.",
+      "steps": [
+        "Explain eye anatomy: rods and cones in retina have different functions",
+        "Teach cones: center of vision, color vision, work in bright light (daytime flying)",
+        "Teach rods: peripheral vision, black and white, work in low light (night flying)",
+        "Key point: 'Rods take 20-30 MINUTES for full dark adaptation after exposure to bright light!'",
+        "Explain adaptation process: starts immediately after leaving bright light, reaches 80% at 10 minutes, full at 20-30 minutes",
+        "Demonstrate destruction: 'One flash of bright light - phone screen, landing light, flashlight in eyes - destroys adaptation instantly!'",
+        "Teach red light benefit: red wavelength doesn't affect rod cells, preserves night vision, use red flashlight in cockpit",
+        "Explain off-center viewing: to see dim object (distant nav light, star), look 5-10 degrees off center where rods concentrated",
+        "Practice off-center: 'Try looking at dim star directly - disappears! Look slightly to side - visible! That's your rods working'",
+        "Discuss implications for flying: start dark adaptation during preflight (20-30 min), avoid all bright lights after, use red cockpit lighting",
+        "Explain limitations: depth perception reduced at night, peripheral vision more important, objects appear farther away",
+        "Review why critical: 'Without proper dark adaptation, you're flying partially blind. With it, you can see nav lights miles away'",
+        "Coach: 'Dark adaptation begins NOW during this brief. By preflight completion, you'll have 30 minutes adapted - perfect timing!'",
+        "Emphasize: 'Protect your night vision like gold! One bright light = start over!'"
+      ],
+      "goals": [
+        "Student understands rods vs cones function and difference",
+        "Student knows dark adaptation takes 20-30 minutes minimum",
+        "Student aware bright light destroys adaptation instantly",
+        "Student comprehends red light preservation benefit",
+        "Student can use off-center viewing technique",
+        "Student understands timing: adaptation during preflight process",
+        "Student motivated to protect night vision throughout flight",
+        "Student has physiological foundation for night operations"
+      ],
+      "commonErrors": [
+        "Exposing eyes to bright lights during adaptation",
+        "Using white flashlight in cockpit (destroys night vision)",
+        "Not allowing sufficient adaptation time",
+        "Looking directly at dim objects instead of off-center"
+      ]
+    },
+    {
+      "name": "Preflight",
+      "prompt": "Night preflight inspection technique with flashlight.",
+      "steps": [
+        "Brief preflight importance: 'Can't see damage or issues in daylight - must be thorough with flashlight'",
+        "Explain flashlight strategy: WHITE flashlight for exterior preflight, RED flashlight for cockpit/charts",
+        "Emphasize: 'Using white light outside is OK - you're still adapting. But eyes stay adapted for cockpit later!'",
+        "Review critical night equipment checks: all lights operational (position/nav lights, strobe, beacon, landing light, taxi light)",
+        "Teach position lights: red on LEFT wing, green on RIGHT wing, white on TAIL (required for night VFR)",
+        "Check anti-collision: strobe lights or rotating beacon (required for night)",
+        "Verify landing light: if installed, must be operational for night (especially for hire operations)",
+        "Check fuel contamination carefully: harder to see water or debris at night, extra attention needed",
+        "Inspect for leaks: oil, fuel leaks less visible at night, use flashlight thoroughly under engine, wings",
+        "Verify control surfaces: check ailerons, elevator, rudder operation - can't see issues from distance at night",
+        "Check tires and brakes: critical for night operations, brake failure more dangerous at night",
+        "Carry backup flashlights: primary white, primary red, backup of each - batteries fresh",
+        "Review headlamp option: hands-free lighting useful, but must be red for cockpit use",
+        "Coach: 'Your flashlight is your best friend during preflight. Thorough is safe!'",
+        "After preflight: 'Eyes have been adapting 15-20 minutes now. Avoid bright lights from here forward!'"
+      ],
+      "goals": [
+        "Student performs thorough night preflight with flashlight technique",
+        "All required lights checked and operational",
+        "Position lights understood: red-left, green-right, white-tail",
+        "Anti-collision lights verified working",
+        "Fuel, oil, and control surfaces inspected thoroughly",
+        "Backup flashlights confirmed available",
+        "Student appreciates need for extra diligence at night",
+        "Dark adaptation proceeding (15-20 minutes elapsed)"
+      ],
+      "commonErrors": [
+        "Rushing preflight due to darkness discomfort",
+        "Not checking all light systems operational",
+        "Insufficient fuel contamination check",
+        "Forgetting backup flashlights"
+      ]
+    },
+    {
+      "name": "Cockpit_Setup",
+      "prompt": "Cockpit lighting management for night operations.",
+      "steps": [
+        "Enter cockpit with RED flashlight only: 'Protect your night vision - white light OFF now!'",
+        "Explain cockpit lighting challenge: 'Bright enough to read instruments accurately, dim enough to maintain outside vision'",
+        "Review available lighting: instrument panel lights, flood lights (red preferred), individual instrument lights",
+        "Set panel lights: start bright for setup, will dim after takeoff when outside vision critical",
+        "Demonstrate red flood lights: 'See how red preserves night vision? You can still see outside!'",
+        "Set individual instruments: attitude indicator, airspeed, altimeter, heading indicator - each dim but readable",
+        "Adjust radio/GPS: dim display brightness, some have night mode (red display)",
+        "Position red flashlight: easily accessible for charts, but won't need often with good panel lighting",
+        "Test lighting: 'Can you read all critical instruments? Airspeed, altitude, heading, attitude?'",
+        "Look outside: 'Can you still see ramp lights, other aircraft, taxiway lights? If not, too bright inside!'",
+        "Explain balance: 'Too bright = blind outside (dangerous). Too dim = can't read instruments (dangerous). Find sweet spot!'",
+        "Practice adjustment: brighten panel, notice outside vision loss, dim panel, notice instrument difficulty, find balance",
+        "Coach: 'You'll adjust lighting throughout flight as eyes adapt more. Start slightly brighter, dim as you go'",
+        "Final check: 'Instruments readable? Outside visible? Night vision preserved? Perfect - ready for taxi!'"
+      ],
+      "goals": [
+        "Cockpit lighting properly set: dim but readable",
+        "Red lighting preferred and utilized",
+        "Student can read all critical instruments clearly",
+        "Outside vision maintained (not blinded by cockpit lights)",
+        "Student understands lighting adjustment throughout flight",
+        "Balance between inside/outside vision achieved",
+        "Night vision protection continued",
+        "Ready for night taxi operations"
+      ],
+      "commonErrors": [
+        "Panel lights too bright (lose outside vision)",
+        "Panel lights too dim (can't read instruments)",
+        "Using white lights in cockpit (destroy night vision)",
+        "Not testing lighting before taxi"
+      ]
+    },
+    {
+      "name": "Taxi",
+      "prompt": "Night taxi operations and airport lighting systems.",
+      "steps": [
+        "Brief taxi lighting: 'Follow the lights - blue edges, green centerline, white runway edges'",
+        "Teach taxiway edge lights: BLUE lights mark edges of taxiway (stay between them)",
+        "Teach taxiway centerline: GREEN lights mark centerline to follow (keep nose gear on green)",
+        "Teach runway edge lights: WHITE lights mark runway edges (DON'T taxi on runway without clearance!)",
+        "Teach runway end lights: RED lights mark end of runway (STOP - danger!)",
+        "Review hold short lights: RED lights across taxiway at hold short line (STOP before runway)",
+        "Get ATIS: 'San Jose ATIS information Alpha, listen for active runway, altimeter, weather'",
+        "Call Ground: 'San Jose Ground, Cessna 12345, at [location], taxi with information Alpha'",
+        "Ground gives clearance: 'Cessna 12345, taxi runway 30L via Alpha, hold short runway 30R'",
+        "Begin taxi: taxi light ON (if available), landing light OFF (save for takeoff), strobes ON",
+        "Taxi speed: SLOWER than daytime! Harder to see obstacles, other aircraft, taxiway edges",
+        "Follow blue edges: 'See blue lights? Stay centered between them. Green centerline guides you'",
+        "Use airport diagram: critical at night, confirms position, identifies taxiways",
+        "Announce position: 'San Jose Ground, Cessna 12345, holding short runway 30R at Alpha'",
+        "Coach: 'Taxi at night requires patience. Slow, deliberate, follow the lights carefully'",
+        "Add marker: student marks 'Night Taxi Complete' when at hold short line",
+        "Verify position: 'RED lights across taxiway? That's hold short - STOP here!'"
+      ],
+      "goals": [
+        "Student understands airport lighting systems (blue, green, white, red)",
+        "Student can identify taxiway edges (blue) and centerline (green)",
+        "Student recognizes runway edges (white) and hold short (red)",
+        "Proper Class C communication (ATIS, Ground clearance)",
+        "Slower taxi speed appropriate for night conditions",
+        "Airport diagram used effectively for position confirmation",
+        "Student safely taxis to hold short line at night",
+        "Confidence building for night ground operations"
+      ],
+      "commonErrors": [
+        "Taxiing too fast for night conditions",
+        "Not following blue edge lights (veering off taxiway)",
+        "Crossing hold short line without clearance",
+        "Inadequate use of airport diagram"
+      ]
+    },
+    {
+      "name": "Takeoff_Prep",
+      "prompt": "Pre-takeoff checks and Class C takeoff clearance.",
+      "steps": [
+        "Brief takeoff preparation: 'Night takeoff is normal technique, but we transition to instruments immediately after liftoff'",
+        "Position at hold short line: verify RED lights visible across taxiway (confirmation of position)",
+        "Run-up: complete normal run-up, check all instruments, verify lights operational (position, strobe, landing light test)",
+        "Pre-takeoff checklist: same as day, but emphasis on lighting (strobes ON, landing light ready for takeoff)",
+        "Set cockpit lighting: slightly brighter than taxi for instrument visibility during takeoff",
+        "Brief takeoff technique: 'Normal rotation 55-60 KIAS, but IMMEDIATELY look inside at attitude indicator after liftoff!'",
+        "Explain why: 'No visual horizon at night - attitude indicator becomes PRIMARY pitch reference immediately'",
+        "Review climb: 'Vy 79 KIAS on instruments, attitude indicator for pitch, heading indicator for direction'",
+        "Contact Tower: 'San Jose Tower, Cessna 12345, holding short runway 30L, ready for takeoff'",
+        "Tower responds: 'Cessna 12345, runway 30L, cleared for takeoff'",
+        "Readback: 'Cleared for takeoff runway 30L, Cessna 12345'",
+        "Final before takeoff: 'Lights - strobes ON, landing light ON. Instruments - all checked. Cleared for takeoff - let's go!'",
+        "Coach: 'After liftoff, eyes go INSIDE to attitude indicator. Outside is backup, not primary!'",
+        "Add marker: student marks 'Takeoff Clearance Received' before rolling"
+      ],
+      "goals": [
+        "Normal pre-takeoff checklist completed with night emphasis",
+        "All lights verified operational and properly set",
+        "Class C takeoff clearance obtained correctly",
+        "Student understands instrument transition after liftoff",
+        "Student knows attitude indicator becomes primary pitch reference",
+        "Cockpit lighting optimized for takeoff phase",
+        "Student mentally prepared for instrument transition",
+        "Clearance readback accurate and professional"
+      ],
+      "commonErrors": [
+        "Forgetting to turn on landing light for takeoff",
+        "Not preparing for instrument transition mentally",
+        "Inadequate readback of takeoff clearance",
+        "Cockpit lights too dim for instrument crosscheck"
+      ]
+    },
+    {
+      "name": "Takeoff",
+      "prompt": "Execute night takeoff with immediate instrument transition.",
+      "steps": [
+        "Brief execution: 'Normal takeoff roll, normal rotation, but eyes INSIDE after liftoff!'",
+        "Roll onto runway: landing light ON, strobes ON, check runway edge lights (white) for alignment",
+        "Align centerline: use runway edge lights (white) to verify centered, landing light helps (if available)",
+        "Full power: normal acceleration, use runway lights for directional control during roll",
+        "Rotation: 55-60 KIAS, normal backstick pressure, maintain centerline with rudder",
+        "CRITICAL - After liftoff: 'EYES INSIDE! Look at attitude indicator NOW!'",
+        "Establish pitch: 'Attitude indicator shows 10-12 degrees nose up - that's Vy climb attitude'",
+        "Check airspeed: 'Climbing through 60... 70... 79 KIAS - hold that for Vy'",
+        "Heading: 'Heading indicator shows runway heading - maintain that. Don't chase outside!'",
+        "Altitude: 'Altimeter climbing - good. Verify on instruments, not outside sensation'",
+        "Resist outside fixation: 'If you look outside too much, spatial disorientation possible. Trust instruments!'",
+        "Continue climb: maintain Vy 79 KIAS on attitude indicator, heading on heading indicator",
+        "Coach during climb: 'See how instruments tell you everything? Pitch, bank, heading, airspeed, altitude - all there!'",
+        "Add marker: student marks 'Night Takeoff' at liftoff point",
+        "Level at pattern altitude: 1,500 AGL (1,562 MSL), trim for level flight on instruments",
+        "Debrief immediate feeling: 'How did instrument transition feel? Natural? Challenging?'",
+        "Emphasize success: 'You just flew on instruments at night in VFR - that's the foundation!'"
+      ],
+      "goals": [
+        "Student executes normal takeoff roll with runway lights for reference",
+        "Student rotates at proper speed (55-60 KIAS)",
+        "Student immediately transitions to attitude indicator after liftoff (CRITICAL!)",
+        "Vy climb (79 KIAS) established and maintained on instruments",
+        "Heading maintained using heading indicator (not outside)",
+        "Altitude verified on altimeter (not visual cues)",
+        "Student successfully flies first night departure on instruments",
+        "Confidence built in instrument reliance at night",
+        "Student understands night flying = instrument flying even in VFR"
+      ],
+      "commonErrors": [
+        "Trying to fly visually after liftoff (dangerous disorientation risk)",
+        "Not looking at attitude indicator immediately",
+        "Chasing outside visual cues instead of instruments",
+        "Poor airspeed control due to fixation outside",
+        "Not maintaining heading due to lack of visual horizon"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze night taxi and takeoff performance using markers and data.",
+      "steps": [
+        "Review markers: Night Taxi Complete, Takeoff Clearance Received, Night Takeoff",
+        "Use analyzeFlightData to examine taxi and takeoff performance",
+        "Analyze taxi: 'Was taxi speed appropriate? Did you stay on centerline (green lights)? Any deviations?'",
+        "Review lighting management: 'Did cockpit lighting balance work? Too bright? Too dim? Adjustments needed?'",
+        "Examine takeoff roll: 'Directional control good? Used runway lights for alignment?'",
+        "Assess rotation: 'Rotation at correct speed? Smooth backstick pressure?'",
+        "CRITICAL - Instrument transition: 'How quickly did you transition to attitude indicator? Was it immediate?'",
+        "Review climb performance: 'Vy 79 KIAS maintained? Attitude indicator primary? Heading held?'",
+        "Examine instrument scan: 'Did you scan all instruments? Altitude, airspeed, attitude, heading?'",
+        "Identify challenges: 'What felt most different from day flying? What was hardest?'",
+        "Discuss outside vs inside: 'Were you tempted to look outside instead of instruments? Natural reaction!'",
+        "Celebrate success: 'You flew at night using instruments primarily - that's the skill!'",
+        "Compare to day flying: 'Day = outside primary, instruments backup. Night = instruments primary, outside backup!'",
+        "Set improvement goals: 'What will you focus on during night cruise? Instrument scan? Outside/inside balance?'",
+        "Coach: 'First night takeoff done! Foundation set for cruise operations next!'"
+      ],
+      "goals": [
+        "Complete taxi and takeoff performance reviewed from data",
+        "Lighting management effectiveness assessed",
+        "Instrument transition quality evaluated (most critical!)",
+        "Climb performance verified against standards",
+        "Student awareness of outside/inside balance challenges",
+        "Areas for improvement identified for cruise phase",
+        "Success acknowledged and confidence built",
+        "Student understands instrument reliance is key to night safety"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief night preparation and takeoff, prepare for cruise operations.",
+      "steps": [
+        "Summarize lesson: progressed from dark adaptation → preflight → cockpit setup → taxi → takeoff",
+        "Review night vision: 'Dark adaptation takes 20-30 minutes. Red light preserves. Off-center viewing works. Did you notice?'",
+        "Assess preparation: 'Flashlight technique effective? Cockpit lighting balanced? Felt prepared?'",
+        "Review taxi operations: 'Blue edges, green centerline, slower speed. Followed lights successfully?'",
+        "Emphasize instrument transition: 'Most critical skill - transitioning to attitude indicator after liftoff. How did it feel?'",
+        "Discuss Class C operations: 'Professional communication with Ground and Tower. Felt comfortable?'",
+        "Review key learning: 'Night flying = instrument flying, even in VFR. Outside references supplemental, not primary'",
+        "Assess comfort level: 'On scale 1-10, how comfortable with night operations now? What would increase comfort?'",
+        "Celebrate achievement: 'You completed your first night departure! Dark adaptation, taxi, and takeoff mastered!'",
+        "Preview Challenge 10.2: 'Next is night cruise operations - extended instrument reliance, traffic scanning, emergency planning'",
+        "Explain cruise challenge: 'Flying with limited visual references, scanning for traffic (lights only), spatial awareness maintenance'",
+        "Discuss importance: 'Cruise is where instrument discipline pays off. You'll practice extended night VFR flying'",
+        "Prepare mentally: 'Cruise = trust instruments completely. Horizon invisible, terrain dark, instruments tell truth'",
+        "Encourage: 'You've got the foundation! Cruise operations will build on instrument transition you just mastered!'",
+        "Final thought: 'Night flying opens incredible experiences - stars, city lights, different perspective. You're on your way!'"
+      ],
+      "goals": [
+        "Student sees complete night preparation and takeoff progression accomplished",
+        "Dark adaptation and lighting management principles solidified",
+        "Instrument transition recognized as most critical skill",
+        "Class C communication comfort achieved",
+        "Student understands night = instruments primary philosophy",
+        "Confidence high for night operations continuation",
+        "Student prepared for cruise operations challenge",
+        "Excitement maintained for night flying journey",
+        "Student ready for Challenge 10.2: Night Cruise Operations"
+      ]
+    }
+  ]
+}
