@@ -662,4 +662,4 @@ Completing Module 10 means you've mastered night flight operations - one of the 
 *Module 10 of 12 - Night Flight Operations*  
 *3 Challenges | KSJC (San Jose International) | Class C Airspace*
 
-**Next Module:** [Module 11: Checkride Preparation](../module-11-checkride-prep/README.md) →
+**Next Module:** [Module 11: Checkride Preparation](../module-12-advanced-flight/README.md) →
