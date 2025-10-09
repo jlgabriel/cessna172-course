@@ -1,0 +1,352 @@
+{
+  "name": "Short_Field_Landings",
+  "shortDescription": "Master short field landing technique with steep approaches and precise touchdown point control. Learn to minimize landing distance using proper configuration, airspeed control, and maximum braking at Hollister Municipal Airport's 2,801-foot runway.",
+  "prompt": "You are teaching short field landing technique to a private pilot student. This lesson focuses on precision touchdown and minimum landing distance.\n\n**LOCATION:** KCVH (Hollister Municipal Airport), runway 13/31 (2,801 feet), non-towered, elevation 230 ft. Perfect for short field training.\n\n**SHORT FIELD LANDING TECHNIQUE:**\n1. Configuration: Full flaps 30°, approach at 61 KIAS (1.3 × Vso)\n2. Approach: Steeper than normal for obstacle clearance, use power to control glidepath\n3. Aim point: Specific touchdown point (typically numbers + 200 ft)\n4. Threshold: Power to idle right at threshold\n5. Touchdown: Minimum controllable airspeed, main wheels first\n6. After touchdown: Firm back pressure (aero braking), maximum braking without skid, full flaps remain\n\n**WHY IT WORKS:**\nLower approach speed means shorter float and rollout. Steeper approach clears obstacles with less float distance. Power at threshold enables precise touchdown point. Maximum braking gives shortest ground roll. Full flaps provide slower stall speed and steeper approach capability.\n\n**PERFORMANCE STANDARDS:**\n- Touchdown: within 100 feet of intended point (PTS standard)\n- Approach speed: 61 KIAS (+5/-0 knots)\n- No floating or ballooning\n- Positive directional control throughout\n\n**KCVH DETAILS:**\nRunway 13/31: 2,801' × 60', asphalt. CTAF 122.8, AWOS 118.375. Runway 31 has displaced threshold (trees). Non-towered Class G.\n\nStudent uses markers for each approach and touchdown point analysis.",
+  "openingLine": "Today we're mastering short field landings at Hollister. We'll learn steep approach technique and precise touchdown control to minimize landing distance on this 2,800-foot runway. Essential skill for operating into shorter airports safely!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on short field landing necessity and technique.",
+      "steps": [
+        "Explain today's focus: short field landing technique at KCVH for minimum landing distance",
+        "Discuss when short field landings needed: short runways, obstacles on approach, high density altitude performance",
+        "Review KCVH: Hollister Municipal, runway 13/31 (2,801 ft × 60 ft), non-towered, elevation 230 ft MSL",
+        "Explain KCVH selection: realistic short runway (not dangerously short but requires technique), runway 31 has displaced threshold (trees provide obstacle scenario)",
+        "Review C172 normal landing distance: ~1,500 ft total (50 ft obstacle to full stop), short field can reduce to ~500-700 ft ground roll",
+        "Teach technique overview: full flaps, 61 KIAS approach, steeper glidepath, precise aim point, idle at threshold, maximum braking",
+        "Explain performance standard: touchdown within 100 feet of intended point (FAA PTS requirement)",
+        "Discuss progression: basic technique → 200 ft zone → 100 ft zone → 50 ft zone → obstacle clearance",
+        "Review why technique works: lower speed = shorter float/rollout, steeper = clears obstacles/less float, max braking = shortest roll",
+        "Set expectations: multiple approaches for precision development, each landing marked and analyzed",
+        "Emphasize: 'Short field technique can be lifesaver - many airports require it!'",
+        "Coach: 'Lower and slower than normal approach, but controlled and precise!'"
+      ],
+      "goals": [
+        "Student understands short field landing necessity and real-world application",
+        "Student knows KCVH airport characteristics and why chosen for training",
+        "Student aware of C172 landing distance reduction possible with technique",
+        "Student understands complete short field technique sequence",
+        "Student knows 100-foot touchdown accuracy standard",
+        "Student comprehends WHY technique works (physics and aerodynamics)",
+        "Student ready for progressive precision challenge",
+        "Student motivated by practical skill importance"
+      ],
+      "commonErrors": [
+        "Approaching too fast (exceeding 61 KIAS)",
+        "Not using full flaps (reducing drag/lift capability)",
+        "Floating past intended touchdown point",
+        "Inadequate braking after touchdown"
+      ]
+    },
+    {
+      "name": "Theory",
+      "prompt": "Deep dive into short field landing aerodynamics and performance.",
+      "steps": [
+        "Explain airspeed selection: 1.3 × Vso = 1.3 × 47 KIAS = 61 KIAS (minimum safe approach speed)",
+        "Discuss why 1.3 Vso: provides margin above stall (30%) while minimizing float and rollout distance",
+        "Review full flaps benefit: Vso drops from 55 KIAS (no flaps) to 47 KIAS (full flaps), enables slower approach",
+        "Teach steep approach: normal is 3° glidepath, short field can be 4-5° (steeper clears obstacles, less float distance)",
+        "Explain power management: power maintains glidepath (not idle until threshold), pitch controls airspeed precisely at 61 KIAS",
+        "Discuss aim point selection: typically threshold + 200 ft (runway numbers area), must be specific and visible point",
+        "Review threshold technique: power to idle crossing threshold, eliminates float tendency from power",
+        "Teach touchdown: main wheels first at minimum controllable speed, no flare to soft touchdown (firm is OK)",
+        "Explain aerodynamic braking: after touchdown, full aft elevator pins tail down, creates drag, slows aircraft",
+        "Discuss maximum braking: smooth firm brake pressure to maximum without skidding, ABS helps in some aircraft",
+        "Review ground roll physics: kinetic energy = ½mv², speed reduction crucial (61 KIAS vs 70 KIAS = significant distance difference)",
+        "Calculate example: 10 KIAS faster = ~30% more landing distance (speed squared relationship)",
+        "Coach: 'Every knot over 61 KIAS costs you runway. Precision airspeed = precision landing!'"
+      ],
+      "goals": [
+        "Student understands 1.3 Vso calculation and safety margin",
+        "Student knows why full flaps reduce landing distance",
+        "Student comprehends steep approach benefits and risks",
+        "Student understands power-for-glidepath, pitch-for-airspeed concept",
+        "Student knows aim point selection strategy",
+        "Student understands threshold power reduction importance",
+        "Student comprehends aerodynamic braking technique",
+        "Student aware of speed-distance relationship (squared)",
+        "Student has theoretical foundation for technique application"
+      ],
+      "commonErrors": [
+        "Approaching faster thinking it's safer (actually increases distance)",
+        "Using partial flaps (losing short field capability)",
+        "Carrying power past threshold (causes floating)",
+        "Not using aerodynamic braking before wheel braking"
+      ]
+    },
+    {
+      "name": "Demo",
+      "prompt": "Demonstrate complete short field landing technique step-by-step.",
+      "steps": [
+        "Position aircraft on long final for KCVH runway 31 using setPosition (2 miles out, 1,000 AGL)",
+        "Set up demonstration: 'Full flaps 30° already set, slowing to 61 KIAS on final'",
+        "Point out steeper approach: 'See how steep this is compared to normal? That's short field approach angle'",
+        "Demonstrate power control: 'Adding power slightly - holding glidepath steady. Pitch holds 61 KIAS exactly'",
+        "Show aim point: 'See runway numbers? That's my aim point - runway 31 numbers plus about 200 feet'",
+        "On short final: 'Still 61 KIAS... glidepath steady with power... aim point not moving in windscreen'",
+        "Crossing threshold: 'Threshold now - power to IDLE! Watch what happens...'",
+        "Touchdown: 'Holding attitude... main wheels touch... NOW firm back pressure!'",
+        "After touchdown: 'Full aft elevator for aerodynamic braking... now maximum wheel braking... stopping!'",
+        "Student adds marker 'Demo Landing Touchdown' at touchdown point",
+        "Measure distance from numbers: 'Touchdown was 180 feet from numbers - within our 200-foot zone!'",
+        "Review sequence: 'Full flaps, 61 KIAS, power for glidepath, idle at threshold, firm touchdown, max braking'",
+        "Now student's turn: 'Position you for approach runway 31, same technique'",
+        "Coach setup: 'Full flaps... slow to 61 KIAS... aim for numbers area... you've got this!'"
+      ],
+      "goals": [
+        "Student observes complete short field landing from cockpit perspective",
+        "Steep approach angle visible and understood",
+        "Power-for-glidepath technique demonstrated",
+        "Precise 61 KIAS airspeed maintenance shown",
+        "Aim point selection and tracking demonstrated",
+        "Power reduction at threshold timing clear",
+        "Firm touchdown technique shown (not greaser)",
+        "Aerodynamic and wheel braking sequence demonstrated",
+        "Landing distance measurement process shown",
+        "Student ready to attempt with coaching"
+      ],
+      "commonErrors": [
+        "Watching instruments instead of aim point",
+        "Reducing power too early (before threshold)",
+        "Trying to grease landing (causes floating)",
+        "Delayed or insufficient braking"
+      ]
+    },
+    {
+      "name": "Basic",
+      "prompt": "Initial short field landing attempts with coaching.",
+      "steps": [
+        "Position student on final for runway 31, 2 miles out, pattern altitude",
+        "Coach setup: 'Full flaps... good. Now slow to 61 KIAS... perfect'",
+        "Coach approach: 'Aim point is runway numbers. Power controls glidepath - add power if sinking, reduce if high'",
+        "Monitor airspeed: 'Check airspeed... 61? Good. Too fast? Reduce power slightly and pitch up'",
+        "Coach short final: 'Aim point steady? Airspeed steady? You're doing great!'",
+        "Coach threshold: 'Threshold... power IDLE now! Hold attitude...'",
+        "Coach touchdown: 'Mains touching... BACK pressure! Good! Now brakes!'",
+        "Student adds marker 'Basic Landing 1' at touchdown",
+        "After landing: 'How did that feel? Where did we touchdown compared to aim point?'",
+        "Measure distance from numbers, provide feedback: 'That was 240 feet - just outside 200-foot zone. Great first attempt!'",
+        "Reposition for second attempt: 'Let's refine. Focus on holding 61 KIAS exactly'",
+        "Second approach: student performs with less coaching, building independence",
+        "Student adds marker 'Basic Landing 2'",
+        "Coach: 'Better! Airspeed control improving. Now let's nail that aim point'",
+        "Third attempt: focus on aim point precision",
+        "Student adds marker 'Basic Landing 3'",
+        "Review: 'Three landings done. Technique is there. Ready for precision challenge?'"
+      ],
+      "goals": [
+        "Student completes multiple short field landings with technique foundation",
+        "Proper configuration (full flaps) consistently applied",
+        "Airspeed control at 61 KIAS improving",
+        "Power-for-glidepath concept demonstrated in practice",
+        "Aim point selection and tracking practiced",
+        "Threshold power reduction timing learned",
+        "Touchdown and braking sequence executed",
+        "Student building confidence in technique",
+        "Ready for progressive precision challenge"
+      ],
+      "commonErrors": [
+        "Allowing airspeed to drift above 61 KIAS",
+        "Late power reduction (past threshold)",
+        "Insufficient back pressure after touchdown",
+        "Not using maximum braking capability"
+      ]
+    },
+    {
+      "name": "Precision",
+      "prompt": "Progressive precision challenge: 200 ft → 100 ft → 50 ft zones.",
+      "steps": [
+        "Brief precision challenge: '200-foot zone (easy), 100-foot zone (standard), 50-foot zone (advanced)'",
+        "Explain zones: '200-ft zone = numbers to 200 ft past, 100-ft = tighter window, 50-ft = expert precision'",
+        "Set aim point: 'Aim for runway 31 numbers plus 100 feet for center of each zone'",
+        "Attempt 1 - 200 ft zone: 'Land anywhere from numbers to 200 feet past'",
+        "Student performs landing, adds marker 'Precision 200ft - Attempt 1'",
+        "Assess: touchdown at 150 feet = 'Perfect! Within 200-foot zone!'",
+        "Attempt 2 - 200 ft zone: 'Do it again for consistency'",
+        "Student adds marker 'Precision 200ft - Attempt 2'",
+        "Now challenge: 100 ft zone (FAA standard): 'Numbers to 100 feet past. This is checkride standard!'",
+        "Coach: 'Airspeed exactly 61 KIAS. Aim point precise. Power idle right at threshold'",
+        "Student performs, adds marker 'Precision 100ft - Attempt 1'",
+        "If within 100 ft: 'Excellent! That's checkride standard!' If not: 'Close! What will you adjust?'",
+        "Second attempt at 100-ft zone for consistency",
+        "Student adds marker 'Precision 100ft - Attempt 2'",
+        "Advanced challenge: 50 ft zone: 'Numbers to 50 feet past - this is expert level!'",
+        "Coach: 'Maximum precision. Every detail matters at this level'",
+        "Student attempts, adds marker 'Precision 50ft - Attempt'",
+        "Celebrate achievement regardless of result: 'Attempting 50-foot precision shows advanced skill!'"
+      ],
+      "goals": [
+        "Student achieves touchdown within 200-foot zone consistently",
+        "Student demonstrates 100-foot precision (FAA PTS standard)",
+        "Student attempts 50-foot zone (advanced challenge)",
+        "Airspeed control at 61 KIAS becomes automatic",
+        "Aim point tracking highly refined",
+        "Threshold technique perfected",
+        "Progressive improvement visible across attempts",
+        "Student gains confidence in precision capability",
+        "Checkride standard achieved or approached"
+      ],
+      "commonErrors": [
+        "Losing airspeed precision under pressure",
+        "Changing aim point during approach",
+        "Early or late power reduction timing",
+        "Fixating on landing instead of aim point"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "prompt": "Advanced short field practice for mastery.",
+      "steps": [
+        "Brief advanced practice: 'Multiple landings maintaining 100-foot standard consistently'",
+        "Set challenge: 'Three consecutive landings within 100-foot zone for mastery'",
+        "Landing 1: student performs with minimal coaching",
+        "Student adds marker 'Advanced Landing 1'",
+        "Assess: 'Within zone? Good! Two more for consistency'",
+        "Landing 2: focus on repeatability",
+        "Student adds marker 'Advanced Landing 2'",
+        "Landing 3: demonstrate mastery",
+        "Student adds marker 'Advanced Landing 3'",
+        "Review consistency: 'All three within 100 feet? That's mastery!' or 'Two of three? Very good!'",
+        "Discuss what affects precision: wind shifts, airspeed variations, power management timing",
+        "Practice wind correction: set light crosswind, short field landing with drift correction",
+        "Student adds marker 'Crosswind Short Field'",
+        "Coach: 'Short field + crosswind = real-world skill combination!'",
+        "Final mastery landing: 'Show me your best short field landing'",
+        "Student adds marker 'Mastery Landing'",
+        "Celebrate: 'You've mastered the technique! Now one more challenge - obstacles!'"
+      ],
+      "goals": [
+        "Student consistently achieves 100-foot touchdown accuracy",
+        "Technique becomes automatic and repeatable",
+        "Student handles minor variations (wind) while maintaining precision",
+        "Confidence high for any short field situation",
+        "Mastery level demonstrated",
+        "Ready for obstacle clearance scenario"
+      ],
+      "commonErrors": [
+        "Complacency after initial success",
+        "Not adapting to changing conditions",
+        "Losing precision under distraction",
+        "Insufficient practice for full mastery"
+      ]
+    },
+    {
+      "name": "Obstacle",
+      "prompt": "Short field landing with obstacle clearance scenario.",
+      "steps": [
+        "Brief obstacle scenario: 'Runway 31 has displaced threshold due to trees - perfect obstacle scenario'",
+        "Explain situation: '50-foot trees on approach require steeper glidepath, precise aim point critical'",
+        "Set up scenario: position student further out with simulated obstacle (trees before threshold)",
+        "Coach approach: 'See displaced threshold markers? Can't touch down before those - obstacle there!'",
+        "Emphasize: 'Steeper approach to clear obstacle, but SAME technique: 61 KIAS, power for glidepath'",
+        "Monitor approach: 'Clearing obstacle... good height... now precision landing after obstacle'",
+        "Student performs obstacle clearance landing, adds marker 'Obstacle Landing 1'",
+        "Assess: 'Cleared obstacle with safe margin? Touchdown after displaced threshold? Distance from threshold?'",
+        "Discuss: 'This is real-world short field - obstacles make technique critical for safety'",
+        "Second attempt: student performs with more confidence",
+        "Student adds marker 'Obstacle Landing 2'",
+        "Review scenario: 'Obstacle clearance + short field precision = complete skill!'",
+        "Explain variations: 'Different airports have trees, buildings, terrain, wires - always check approach path'",
+        "Coach: 'You've proven you can handle short field with obstacles - that's advanced piloting!'"
+      ],
+      "goals": [
+        "Student successfully clears obstacle with safe margin",
+        "Student maintains precision touchdown after obstacle",
+        "Steeper approach technique applied appropriately",
+        "Student understands real-world obstacle challenges",
+        "Confidence built for various short field scenarios",
+        "Complete short field skill demonstrated (distance + obstacles)",
+        "Ready for short field takeoff challenge next"
+      ],
+      "commonErrors": [
+        "Insufficient obstacle clearance margin",
+        "Losing precision focus after clearing obstacle",
+        "Approaching too fast due to obstacle concern",
+        "Forgetting maximum braking after obstacle clearance"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze short field landing performance using markers and data.",
+      "steps": [
+        "Review all markers: basic, precision (200/100/50 ft), advanced, obstacle landings",
+        "Use analyzeFlightData to examine landing performance across attempts",
+        "Analyze touchdown points: 'Where did each landing touch down relative to aim point?'",
+        "Review airspeed control: 'Was 61 KIAS maintained throughout approaches? Any deviations?'",
+        "Examine glidepath: 'Was approach stable? Any porpoising or hunting?'",
+        "Look at power management: 'Power for glidepath visible in data? Idle at threshold?'",
+        "Assess braking: 'Maximum braking applied? Stopping distance minimum?'",
+        "Compare early attempts vs later: 'See improvement in precision? What changed?'",
+        "Identify best landing: 'Which felt best? Why? Does data confirm?'",
+        "Identify areas for improvement: 'Where can technique be refined further?'",
+        "Discuss consistency: 'Are landings repeatable? That's key for safety'",
+        "Review obstacle clearance: 'Safe margins maintained? Precision after obstacle?'",
+        "Celebrate successes: 'Look at progression - basic to mastery to obstacles cleared!'",
+        "Set goals: 'What will you focus on in short field takeoffs next?'"
+      ],
+      "goals": [
+        "Complete performance data reviewed across all landings",
+        "Touchdown accuracy assessed against standards",
+        "Airspeed control precision evaluated",
+        "Technique progression visible in data",
+        "Best practices identified from successful attempts",
+        "Areas for continued improvement noted",
+        "Student has data-driven understanding of performance",
+        "Confidence reinforced by objective analysis"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief short field landing mastery and prepare for short field takeoffs.",
+      "steps": [
+        "Summarize lesson: progressed from basic technique to 100-foot precision to obstacle clearance",
+        "Review technique: 'What's key to short field landings? 61 KIAS, full flaps, steep approach, precise aim point, max braking'",
+        "Assess mastery: 'Can you consistently land within 100 feet of intended point?'",
+        "Discuss real-world application: 'Many airports have short runways - this skill expands where you can fly safely'",
+        "Review KCVH challenge: '2,801 feet requires attention, but with technique it's manageable'",
+        "Emphasize safety: 'Short field technique reduces landing distance by 50% or more - potentially lifesaving'",
+        "Celebrate achievement: 'You demonstrated 100-foot precision - that's checkride level skill!'",
+        "Preview Challenge 9.2: 'Next is short field takeoffs - clearing obstacles, maximum performance'",
+        "Explain takeoff challenge: 'Different technique - 51 KIAS rotation, Vx 62 KIAS climb, clearing 50-foot obstacle'",
+        "Discuss connection: 'Landing mastered short runway use, takeoff will master short runway departure'",
+        "Prepare mentally: 'Takeoff is all about minimum distance and obstacle clearance - precision performance'",
+        "Encourage: 'You've mastered short field landings. Takeoffs will complete your short field skill set!'",
+        "Final thought: 'Short field operations are essential private pilot skills - you're mastering them!'"
+      ],
+      "goals": [
+        "Student sees complete short field landing progression accomplished",
+        "Technique sequence solidified and automatic",
+        "Confidence high for any short runway landing",
+        "Real-world safety benefits understood",
+        "Student prepared for short field takeoff challenge",
+        "Motivation high for completing short field operations",
+        "Student ready for Challenge 9.2: Short Field Takeoffs"
+      ]
+    }
+  ]
+}

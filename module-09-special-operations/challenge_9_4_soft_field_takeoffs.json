@@ -1,0 +1,407 @@
+{
+  "name": "Soft_Field_Takeoffs",
+  "shortDescription": "Master soft field takeoff technique for nosewheel protection using continuous motion, early liftoff in ground effect, and smooth acceleration. Essential for grass strips, backcountry operations, and unpaved surfaces at Sonoma County Airport.",
+  "prompt": "You are teaching soft field takeoff technique to a private pilot student. This lesson focuses on protecting the nosewheel during departure from unpaved surfaces.\n\n**LOCATION:** KSTS (Charles M. Schulz Sonoma County Airport), runway 14/32 (5,000 feet), towered Class D, elevation 128 ft. Professional environment for soft field simulation.\n\n**SOFT FIELD TAKEOFF TECHNIQUE:**\n1. Configuration: 10° flaps, full aft elevator BEFORE moving\n2. Rolling start: NO brake hold, taxi smoothly onto runway keeping moving\n3. Power: Full power while rolling (continuous motion!)\n4. Elevator: FULL AFT throughout roll (nosewheel stays light or OFF ground)\n5. Liftoff: At first opportunity, may be below normal speed (45-50 KIAS)\n6. Ground effect: Stay 10-15 feet AGL in ground effect, level attitude\n7. Accelerate: Build to Vy 79 KIAS while staying in ground effect\n8. Climb: Once at Vy, begin normal climb out of ground effect\n9. Cleanup: Retract flaps gradually above 400 AGL\n\n**WHY IT WORKS:**\nNo brake hold prevents nosewheel sinking. Continuous motion prevents getting stuck. Full aft elevator keeps weight OFF nosewheel (all on mains). Early liftoff gets out of soft surface quickly. Ground effect provides extra lift to accelerate safely. This protects nosewheel from soft surface damage.\n\n**CRITICAL DIFFERENCE FROM SHORT FIELD:**\nShort field = hold brakes, 51 KIAS rotation, Vx climb. Soft field = NO brakes, rolling start, early liftoff <50 KIAS, ground effect acceleration. Opposite techniques!\n\n**PERFORMANCE STANDARDS:**\n- Smooth continuous operation (no stopping)\n- Nosewheel light or off ground during roll\n- Early liftoff achieved (45-50 KIAS)\n- Ground effect maintained 10-15 ft AGL\n- Vy 79 KIAS achieved before normal climb\n\n**KSTS DETAILS:**\nRunway 14/32: 5,000' × 150'. Tower 119.5, Ground 121.7, ATIS 127.85.\n\nStudent uses markers for rolling start, liftoff, ground effect, Vy achieved, normal climb.",
+  "openingLine": "Today we're mastering soft field takeoffs at Sonoma County - completing your soft field operations! We'll learn continuous motion technique, early liftoff, and ground effect acceleration to protect the nosewheel during departure. Keep moving!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on soft field takeoff technique and differences from short field.",
+      "steps": [
+        "Explain today's focus: soft field takeoff at KSTS for nosewheel protection during departure from unpaved surfaces",
+        "Discuss when soft field takeoffs needed: grass strips, backcountry airports, muddy runways, soft surfaces, rough terrain",
+        "Review KSTS: runway 14/32 (5,000 ft), towered, elevation 128 ft, simulating soft field operations safely",
+        "CRITICAL: Contrast with short field just completed: 'Short field = hold brakes, 51 KIAS, Vx. Soft field = NO brakes, rolling start, early liftoff, ground effect!'",
+        "Teach technique overview: rolling start, full aft elevator, full power while moving, early liftoff, ground effect acceleration to Vy",
+        "Explain goal: protect nosewheel from sinking or damage during takeoff roll by keeping weight OFF nosewheel entirely",
+        "Review why NO brake hold: brakes = stopped = nosewheel sinks into soft surface. Rolling = moving = no sinking!",
+        "Discuss full aft elevator: pins tail down, lifts nosewheel off ground, all weight on main wheels only",
+        "Explain early liftoff: airplane lifts off in ground effect at 45-50 KIAS (before normal speed), gets out of soft surface quickly",
+        "Teach ground effect benefit: extra lift near ground lets airplane fly slower, safe place to accelerate to Vy before climbing",
+        "Set expectations: multiple takeoffs, progressive scenarios, continuous motion emphasis, markers for analysis",
+        "Emphasize finesse: 'Smooth continuous motion, gentle and flowing, protect that nosewheel from first roll to liftoff!'",
+        "Coach: 'Think: keep moving, nose light, early liftoff, ground effect friend, then climb normally!'"
+      ],
+      "goals": [
+        "Student understands soft field takeoff necessity and scenarios",
+        "Student knows KSTS and training advantages for soft field practice",
+        "Student clearly understands difference from short field technique",
+        "Student comprehends complete technique sequence",
+        "Student knows primary goal is nosewheel protection during roll",
+        "Student understands NO brake hold critical difference",
+        "Student knows full aft elevator purpose (weight on mains only)",
+        "Student understands early liftoff and ground effect concepts",
+        "Student ready for continuous motion practice",
+        "Student motivated by backcountry operations capability"
+      ],
+      "commonErrors": [
+        "Confusing soft field with short field (holding brakes)",
+        "Not using full aft elevator from start",
+        "Delaying liftoff to normal speed (wastes soft surface time)",
+        "Climbing out of ground effect before reaching Vy"
+      ]
+    },
+    {
+      "name": "Theory",
+      "prompt": "Deep dive into soft field takeoff physics and ground effect.",
+      "steps": [
+        "Explain nosewheel challenge on takeoff: rolling through soft surface, weight causes sinking, stopping makes it worse",
+        "Discuss continuous motion principle: moving object less likely to sink than stationary, momentum helps traverse soft surface",
+        "Review brake hold problem: holding brakes = stopped = nosewheel sinks = hard to start moving = risks getting stuck",
+        "Teach rolling start solution: taxi onto runway with momentum, never stop, add power while moving = nosewheel stays on top",
+        "Explain full aft elevator physics: tail-low attitude transfers weight from nosewheel to main wheels, nosewheel becomes light or lifts off ground",
+        "Discuss weight distribution: full aft elevator = near zero weight on nosewheel, all weight on mains = no sinking!",
+        "Teach early liftoff concept: airplane can fly slower in ground effect (1/2 wingspan = enhanced lift), safe to lift off at 45-50 KIAS",
+        "Explain ground effect physics: reduced induced drag near ground, increased lift, allows flight at lower airspeed safely",
+        "Review ground effect altitude: within 1/2 wingspan of ground = 18 feet for C172, stay at 10-15 ft AGL for best effect",
+        "Discuss acceleration strategy: level flight in ground effect builds speed efficiently (less drag than climb), accelerate to Vy 79 KIAS",
+        "Teach transition: once at Vy, airplane ready for normal climb, exit ground effect and climb normally",
+        "Compare to short field: short field = max performance from standstill. Soft field = max protection via continuous motion",
+        "Calculate benefit: continuous motion + early liftoff = minimum nosewheel time on soft surface (maybe 5-8 seconds vs 15-20 stopped)",
+        "Coach: 'Ground effect is your friend for soft field - use it to safely accelerate after early liftoff!'"
+      ],
+      "goals": [
+        "Student understands continuous motion physics and benefits",
+        "Student knows why brake hold is problematic for soft field",
+        "Student comprehends full aft elevator weight transfer",
+        "Student understands early liftoff capability in ground effect",
+        "Student knows ground effect physics and altitude (10-15 ft)",
+        "Student comprehends acceleration strategy in ground effect",
+        "Student knows transition to normal climb procedure",
+        "Student sees clear distinction from short field approach",
+        "Student has theoretical foundation for technique"
+      ],
+      "commonErrors": [
+        "Not understanding why continuous motion critical",
+        "Thinking early liftoff is unsafe (actually safer in ground effect)",
+        "Not using ground effect for acceleration",
+        "Climbing too early before reaching Vy"
+      ]
+    },
+    {
+      "name": "Technique",
+      "prompt": "Step-by-step soft field takeoff technique instruction.",
+      "steps": [
+        "Position aircraft near runway 14 for technique instruction (not on runway yet)",
+        "Step 1 - Configuration: 'Set flaps to 10° - soft field setting. Check indicator shows 10°'",
+        "Step 2 - Elevator: 'FULL aft elevator right NOW before moving. Pin that stick back!'",
+        "Step 3 - Rolling start: 'Taxi onto runway smoothly - NO stopping! Keep momentum going'",
+        "Step 4 - Power: 'As you roll onto centerline, smoothly advance to full power while MOVING'",
+        "Step 5 - Roll: 'Full aft elevator throughout - feel how light nosewheel is? Barely touching or OFF ground!'",
+        "Step 6 - Liftoff: 'Airplane will want to fly early - LET IT! Around 45-50 KIAS it'll lift off - that's correct!'",
+        "Step 7 - Stay low: 'After liftoff, level off at 10-15 feet AGL - stay IN ground effect. Don't climb yet!'",
+        "Step 8 - Accelerate: 'Level flight in ground effect, building speed... 50... 60... 70... approaching Vy...'",
+        "Step 9 - Vy: 'Reaching 79 KIAS - Vy achieved! NOW ready to climb'",
+        "Step 10 - Climb: 'Gently climb out of ground effect, maintain Vy 79 KIAS'",
+        "Step 11 - Cleanup: 'Above 400 AGL, retract flaps gradually to 0°, maintain Vy'",
+        "Review sequence: 'Nine steps - rolling start to ground effect to climb. Each critical for nosewheel protection!'",
+        "Emphasize feel: 'Soft field takeoff feels different - early liftoff, level low, then climb. Trust the technique!'",
+        "Coach: 'Ready to try it? Remember: keep moving, nose light, early liftoff, stay low to accelerate!'"
+      ],
+      "goals": [
+        "Student understands complete technique sequence",
+        "Each step purpose and timing clear",
+        "Configuration (10° flaps, full aft elevator) emphasized",
+        "Rolling start vs brake hold understood",
+        "Early liftoff concept (45-50 KIAS) clear",
+        "Ground effect altitude (10-15 ft AGL) understood",
+        "Acceleration phase in ground effect clear",
+        "Transition to normal climb at Vy learned",
+        "Student ready to execute with coaching"
+      ],
+      "commonErrors": [
+        "Stopping before power application",
+        "Not using full aft elevator from start",
+        "Fighting early liftoff (delaying unnecessarily)",
+        "Climbing out of ground effect before Vy"
+      ]
+    },
+    {
+      "name": "Demo",
+      "prompt": "Demonstrate complete soft field takeoff with ground effect acceleration.",
+      "steps": [
+        "Position near runway 14 for demonstration: 'Watch the continuous motion carefully'",
+        "Setup: 'Flaps 10°... full aft elevator NOW... before moving!'",
+        "Rolling start: 'Taxiing onto runway... smooth... no stopping... building momentum...'",
+        "Add marker 'Demo Takeoff - Rolling Start'",
+        "Power up while rolling: 'On centerline now... full power while MOVING... aft elevator pinned back!'",
+        "During roll: 'See nosewheel? It's OFF the ground! All weight on mains... protecting nosewheel!'",
+        "Early liftoff: 'Speed building... 40... 45... airplane wants to fly... lifting off now at 48 KIAS!'",
+        "Add marker 'Demo Takeoff - Liftoff'",
+        "Ground effect: 'Leveling at 12 feet AGL... staying IN ground effect... see how it floats here?'",
+        "Add marker 'Demo Takeoff - Ground Effect'",
+        "Accelerate: 'Holding 12 feet... accelerating in ground effect... 50... 60... 70... approaching Vy...'",
+        "Vy achieved: 'There - 79 KIAS, Vy! NOW ready to climb normally'",
+        "Add marker 'Demo Takeoff - Vy Achieved'",
+        "Climb: 'Beginning normal climb... out of ground effect... maintaining Vy... climbing smoothly...'",
+        "Add marker 'Demo Takeoff - Normal Climb'",
+        "Cleanup: 'Above 400 AGL... retracting flaps gradually... still Vy climb...'",
+        "Review: 'That's soft field! Rolling start, nosewheel light, early liftoff, ground effect magic, then normal climb!'",
+        "Emphasize: 'Never stopped moving from taxi to liftoff - that's key to soft field protection!'",
+        "Now student's turn: 'Position you near runway 14, same smooth technique, I'll coach'"
+      ],
+      "goals": [
+        "Student observes complete soft field takeoff demonstration",
+        "Continuous motion visible from start to liftoff",
+        "Nosewheel light/off ground during roll shown",
+        "Early liftoff at 45-50 KIAS demonstrated",
+        "Ground effect altitude (10-15 ft) clearly shown",
+        "Acceleration in ground effect visible",
+        "Transition to normal climb at Vy clear",
+        "Complete sequence understood visually",
+        "Student ready to attempt with coaching"
+      ],
+      "commonErrors": [
+        "Not observing continuous motion importance",
+        "Missing nosewheel-light demonstration",
+        "Not noticing early liftoff speed",
+        "Not recognizing ground effect phase"
+      ]
+    },
+    {
+      "name": "Basic",
+      "prompt": "Initial soft field takeoff attempts with coaching.",
+      "steps": [
+        "Position student near runway 14 for first attempt",
+        "Coach setup: 'Flaps 10°... good. FULL aft elevator NOW, before moving!'",
+        "Coach start: 'Now taxi onto runway smoothly - keep rolling, no stopping!'",
+        "Student adds marker 'Basic Takeoff 1 - Rolling Start'",
+        "Coach power: 'On centerline... full power while MOVING... keep elevator back!'",
+        "Coach roll: 'Feel how light nosewheel is? Perfect! Speed building... 40... 45...'",
+        "Coach liftoff: 'Airplane lifting... LET IT! Good - you're airborne at 47 KIAS!'",
+        "Student adds marker 'Basic Takeoff 1 - Liftoff'",
+        "Coach ground effect: 'Now level at 10-12 feet! Stay low... stay IN ground effect!'",
+        "Student adds marker 'Basic Takeoff 1 - Ground Effect'",
+        "Coach acceleration: 'Good! Accelerating... 50... 60... 70... getting close to Vy...'",
+        "Coach Vy: '79 KIAS - Vy! NOW climb!'",
+        "Student adds marker 'Basic Takeoff 1 - Vy'",
+        "After landing: 'How did that feel? Strange lifting off so early, right? That's correct!'",
+        "Debrief: 'Great first attempt! Continuous motion good, early liftoff achieved, ground effect used!'",
+        "Second attempt: 'Now focus on keeping nosewheel even LIGHTER during roll'",
+        "Student performs with less coaching, adds markers 'Basic Takeoff 2'",
+        "Third attempt: building consistency and confidence",
+        "Student adds markers 'Basic Takeoff 3'",
+        "Review: 'Three takeoffs, technique solidifying! Ready for advanced scenarios?'"
+      ],
+      "goals": [
+        "Student completes multiple soft field takeoffs with technique foundation",
+        "Continuous motion consistently achieved (no stopping)",
+        "Full aft elevator from start applied",
+        "Early liftoff at 45-50 KIAS achieved",
+        "Ground effect maintained at 10-15 ft AGL",
+        "Acceleration to Vy in ground effect completed",
+        "Student building confidence in unusual technique",
+        "Ready for progressive challenges"
+      ],
+      "commonErrors": [
+        "Stopping before power application (old habit)",
+        "Not using full aft elevator (nosewheel still heavy)",
+        "Delaying liftoff past 50 KIAS (unnecessary)",
+        "Climbing out of ground effect too early"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "prompt": "Advanced practice maximizing nosewheel protection during roll.",
+      "steps": [
+        "Brief advanced goal: 'Challenge is keeping nosewheel OFF ground throughout entire roll - zero nosewheel contact!'",
+        "Explain technique: 'FULL aft elevator from first movement, aggressive technique, nosewheel never touches'",
+        "Set challenge: 'Can you keep nosewheel in the air from rolling start to liftoff? Ultimate protection!'",
+        "First attempt: student focuses on maximum elevator, nosewheel stays off ground",
+        "Student adds markers 'Advanced 1 - Rolling Start' and 'Advanced 1 - Liftoff'",
+        "Assess: 'Nosewheel stayed off ground about 80% of roll - good! Can we get 100%?'",
+        "Coach: 'More aft elevator immediately, aggressive back pressure from start!'",
+        "Second attempt: maximum focus on nosewheel-off technique",
+        "Student adds markers 'Advanced 2 - Rolling Start' and 'Advanced 2 - Liftoff'",
+        "Assess: '95% nosewheel-off! Almost perfect! Just touched briefly at start'",
+        "Explain benefit: 'Zero nosewheel contact = zero sinking risk = ultimate soft field technique!'",
+        "Third attempt: mastery level nosewheel protection",
+        "Student adds markers 'Advanced 3 - Rolling Start' and 'Advanced 3 - Liftoff'",
+        "Assess: 'Perfect! 100% nosewheel-off throughout roll! That's expert-level soft field!'",
+        "Discuss feel: 'Tail-low attitude during roll feels unusual but that's correct technique'",
+        "Review benefit: 'Real grass/mud strip - this technique prevents damage or getting stuck completely!'",
+        "Celebrate: 'You achieved zero nosewheel contact - maximum possible protection!'"
+      ],
+      "goals": [
+        "Student maximizes nosewheel protection during roll",
+        "Full aft elevator technique perfected",
+        "Nosewheel-off throughout roll achieved (or very close)",
+        "Student comfortable with aggressive elevator input",
+        "Progressive improvement visible across attempts",
+        "Understanding of ultimate protection technique",
+        "Advanced soft field capability demonstrated",
+        "Ready for various surface scenarios"
+      ],
+      "commonErrors": [
+        "Not using full available aft elevator",
+        "Letting nosewheel touch unnecessarily",
+        "Being timid with elevator input",
+        "Not maintaining aft pressure throughout roll"
+      ]
+    },
+    {
+      "name": "Conditions",
+      "prompt": "Practice various simulated soft field conditions.",
+      "steps": [
+        "Brief condition variations: 'Different surfaces require same technique but test it differently'",
+        "Scenario 1 - Grass strip: 'Most common. Medium resistance, good for technique demonstration'",
+        "Coach: 'Grass = continuous motion essential. Stop and you might bog down nosewheel'",
+        "Student performs grass strip takeoff, adds markers 'Grass Takeoff'",
+        "Assess: 'Perfect! On real grass, that technique would prevent any bogging!'",
+        "Scenario 2 - Muddy runway: 'Very soft, high sinking risk. Technique must be perfect!'",
+        "Coach: 'Mud = any nosewheel weight causes sinking. Keep it off ground entirely!'",
+        "Student performs muddy runway simulation, adds markers 'Mud Takeoff'",
+        "Assess: 'Excellent! Nosewheel stayed light/off - in real mud you'd depart safely!'",
+        "Scenario 3 - Snow-covered: 'Soft snow similar to mud. Nosewheel can sink deep fast'",
+        "Coach: 'Snow = continuous motion and nosewheel-off critical or you'll plow through!'",
+        "Student performs snow takeoff simulation, adds markers 'Snow Takeoff'",
+        "Assess: 'Great! Nosewheel protection perfect - snow wouldn't stop you!'",
+        "Scenario 4 - Rough/unimproved: 'Gravel, dirt, rocks. Impact damage risk plus soft spots'",
+        "Coach: 'Rough terrain = smooth continuous motion, light nosewheel prevents impact damage'",
+        "Student performs rough terrain simulation, adds markers 'Rough Takeoff'",
+        "Assess: 'Perfect! Light nosewheel would prevent damage, smooth operation succeeded!'",
+        "Review all conditions: 'Same technique works universally - that's why it's so valuable!'",
+        "Discuss real-world: 'Backcountry strips often grass or dirt. You're ready for them!'"
+      ],
+      "goals": [
+        "Student practices soft field technique in multiple scenarios",
+        "Understanding of different surface challenges developed",
+        "Same technique successfully applied to all conditions",
+        "Student confident for grass, mud, snow, rough operations",
+        "Real-world backcountry application clear",
+        "Versatility of technique demonstrated",
+        "Student ready for any soft/rough surface departure"
+      ],
+      "commonErrors": [
+        "Varying technique for different conditions (should stay same)",
+        "Not recognizing universal application of technique",
+        "Being less careful on 'easier' surfaces",
+        "Not maintaining continuous motion discipline"
+      ]
+    },
+    {
+      "name": "Integration",
+      "prompt": "Integrate soft field takeoffs and landings into complete operations.",
+      "steps": [
+        "Brief integration: 'Complete soft field cycle - landing AND takeoff in one operation'",
+        "Complete cycle 1: soft field landing, minimal stop, soft field takeoff",
+        "Coach: 'Land soft, nose up long as possible, gentle stop, then immediate soft field departure'",
+        "Student adds markers for complete soft field cycle",
+        "Assess: 'Excellent integration! That's how backcountry operations work - complete soft field technique'",
+        "Practice touch-and-go variation: 'Soft field landing transitions to soft field takeoff without stopping!'",
+        "Coach: 'Land soft, as speed builds add power for takeoff, continuous motion throughout!'",
+        "Student performs soft field touch-and-go, adds markers",
+        "Discuss: 'Ultimate soft field skill - continuous operation from landing to takeoff!'",
+        "Complete cycle 2: simulate grass strip operations (landing, taxi, takeoff)",
+        "Student adds markers for second complete cycle",
+        "Practice full-stop-and-go: soft field landing, brief taxi, soft field takeoff",
+        "Coach: 'Even when stopped, restart with soft field technique - rolling start, nosewheel light!'",
+        "Student performs, adds markers",
+        "Review integration: 'You've mastered complete soft field operations - landing to taxi to takeoff!'",
+        "Celebrate: 'Complete soft field proficiency achieved - backcountry ready!'"
+      ],
+      "goals": [
+        "Complete soft field operations integrated (landing + takeoff)",
+        "Touch-and-go soft field variation practiced",
+        "Full-stop-and-go operations practiced",
+        "Continuous technique throughout operations",
+        "Student comfortable with complete soft field cycle",
+        "Real-world grass strip operations simulated",
+        "Complete soft field mastery demonstrated",
+        "Student ready for backcountry flying"
+      ],
+      "commonErrors": [
+        "Forgetting technique between landing and takeoff",
+        "Not maintaining continuous motion in touch-and-go",
+        "Reverting to normal technique during integration",
+        "Not treating full cycle as unified operation"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze soft field takeoff performance using markers and data.",
+      "steps": [
+        "Review all markers: basic, advanced, various conditions, integration operations",
+        "Use analyzeFlightData to examine takeoff performance across attempts",
+        "Analyze continuous motion: 'Were you always moving from start to liftoff? Any stops?'",
+        "Review nosewheel status: 'How light was nosewheel during roll? Off ground entirely?'",
+        "Examine liftoff speed: 'Lifting off at 45-50 KIAS consistently? Early liftoff achieved?'",
+        "Look at ground effect: 'Altitude maintained at 10-15 ft? Acceleration successful?'",
+        "Assess Vy achievement: 'Reaching 79 KIAS before climb? Smooth transition?'",
+        "Compare early vs later attempts: 'See improvement in nosewheel protection and technique?'",
+        "Identify best takeoff: 'Which felt smoothest with best nosewheel protection? Why?'",
+        "Review different conditions: 'Did technique stay consistent across grass, mud, snow, rough?'",
+        "Identify areas for improvement: 'Where can technique be refined further?'",
+        "Compare to soft field landings: 'See how landing + takeoff complete the soft field skill set?'",
+        "Celebrate successes: 'Look at progression - from basic to zero nosewheel contact to complete operations!'",
+        "Final assessment: 'Data confirms you've mastered soft field operations completely!'"
+      ],
+      "goals": [
+        "Complete performance data reviewed across all takeoffs",
+        "Continuous motion consistency verified",
+        "Nosewheel protection effectiveness assessed",
+        "Early liftoff consistency confirmed",
+        "Ground effect usage validated",
+        "Technique progression visible in data",
+        "Complete soft field operations (landing + takeoff) confirmed",
+        "Student has data-driven mastery confirmation"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief complete soft field operations mastery and celebrate Module 9 completion.",
+      "steps": [
+        "Summarize lesson: progressed from basic rolling start to zero nosewheel contact to complete soft field cycle",
+        "Review technique: 'What's key to soft field takeoffs? Rolling start, full aft elevator, early liftoff, ground effect, then Vy climb!'",
+        "Assess complete mastery: 'Can you do complete soft field operations - landing AND takeoff?'",
+        "Discuss real-world: 'Grass strips, backcountry airports, unpaved runways - you can handle them all now!'",
+        "Review complete Module 9: 'You've mastered FOUR special operations - short field landing, short field takeoff, soft field landing, soft field takeoff!'",
+        "Emphasize distinction: 'Short field = performance/distance. Soft field = protection/surfaces. Two different goals, two different techniques!'",
+        "Celebrate achievement: 'Zero nosewheel contact during roll is expert-level technique - impressive!'",
+        "Discuss capability expansion: 'Before Module 9: paved runways only. After Module 9: short runways, grass strips, backcountry - huge expansion!'",
+        "Review both airports: 'KCVH for short field (2,801 ft), KSTS for soft field (5,000 ft) - two great training environments!'",
+        "Connect to PPL: 'Special operations required for private pilot checkride - you're ready!'",
+        "Preview Module 10: 'Next is night operations at KSJC - flying after dark, different challenges!'",
+        "Prepare mentally: 'Night flying requires different visual references, cockpit lighting, traffic awareness'",
+        "Encourage: 'Module 9 complete - 37 of 51 challenges done (72.5%)! You're crushing this course!'",
+        "Final thought: 'Special operations mastered - you can now operate from almost any runway safely. Excellent work!'"
+      ],
+      "goals": [
+        "Student sees complete soft field takeoff progression accomplished",
+        "Complete soft field operations mastery (landing + takeoff) confirmed",
+        "Module 9 completion celebrated - all 4 special operations mastered!",
+        "Clear distinction between short field and soft field maintained",
+        "Capability expansion from Module 9 understood and celebrated",
+        "Real-world backcountry operations capability achieved",
+        "Student prepared for Module 10 Night Operations",
+        "Motivation high - 72.5% course completion!",
+        "Pride in special operations mastery earned"
+      ]
+    }
+  ]
+}

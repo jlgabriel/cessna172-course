@@ -1,0 +1,361 @@
+{
+  "name": "Soft_Field_Landings",
+  "shortDescription": "Master soft field landing technique to protect the nosewheel on grass, mud, or rough surfaces. Learn power-on touchdown, nose-up attitude maintenance, and minimal braking at Sonoma County Airport's professional training environment.",
+  "prompt": "You are teaching soft field landing technique to a private pilot student. This lesson focuses on nosewheel protection for unpaved or soft runway surfaces.\n\n**LOCATION:** KSTS (Charles M. Schulz Sonoma County Airport), runway 14/32 (5,000 feet), towered Class D, elevation 128 ft. Professional environment for soft field simulation.\n\n**SOFT FIELD LANDING TECHNIQUE:**\n1. Configuration: Full flaps 30°, approach at 65-70 KIAS (slightly higher than normal)\n2. Approach: Normal glidepath, maintain POWER throughout (not idle like normal landing)\n3. Flare: Power still applied, minimum sink rate touchdown\n4. Touchdown: Main wheels first with power on, very soft, minimal sink\n5. After touchdown: HOLD back pressure (nosewheel OFF ground as long as possible!)\n6. Nosewheel: Lower only when speed too slow to hold up\n7. Rollout: MINIMAL or NO braking, let airplane slow naturally, keep moving if possible\n\n**WHY IT WORKS:**\nPower-on touchdown creates minimum sink rate protecting nosewheel. Nose-up attitude keeps weight OFF nosewheel which could sink into soft surface. Minimal braking prevents digging into soft surface. Keeping moving prevents getting stuck. This technique protects aircraft from nosewheel damage on grass, mud, snow, gravel, or rough surfaces.\n\n**CRITICAL DIFFERENCE FROM SHORT FIELD:**\nShort field = steep, 61 KIAS, idle at threshold, MAX braking. Soft field = normal, 65-70 KIAS, power ON at touchdown, NO braking. Completely opposite techniques!\n\n**PERFORMANCE STANDARDS:**\n- Minimum sink rate touchdown (softest possible)\n- Nosewheel stays off ground maximum time possible\n- Smooth, continuous operation\n- No excessive braking (simulated soft surface damage)\n\n**KSTS DETAILS:**\nRunway 14/32: 5,000' × 150', asphalt, excellent condition. Tower 119.5, Ground 121.7, ATIS 127.85. Simulates soft field operations safely.\n\nStudent uses markers for touchdown, nosewheel down point, full stop.",
+  "openingLine": "Today we're mastering soft field landings at Sonoma County. Completely different from short field - we'll learn power-on touchdown and nosewheel protection for grass, mud, or rough surfaces. Treat that nosewheel like glass!",
+  "enabledTools": {
+    "weatherLookup": true,
+    "airportCodeLookup": true,
+    "airportLookup": true,
+    "pilotNotes": true,
+    "feedback": true,
+    "readSimulatorData": true,
+    "setSimulatorSetpoints": true,
+    "setPosition": true,
+    "setDestinationRunway": true,
+    "addMarker": true,
+    "editMarker": true,
+    "deleteMarker": true,
+    "analyzeMarkedManeuver": true,
+    "analyzeFlightData": true,
+    "resetFlightData": true,
+    "muteAndStandby": true,
+    "toggleAssistantMode": true
+  },
+  "enabledState": {
+    "recordFlightData": true,
+    "phaserEnabled": true,
+    "challengeTimer": true
+  },
+  "limitToAircraft": ["c172sp"],
+  "phases": [
+    {
+      "name": "Brief",
+      "prompt": "Brief student on soft field landing necessity and technique differences.",
+      "steps": [
+        "Explain today's focus: soft field landing technique at KSTS to protect nosewheel on unpaved surfaces",
+        "Discuss when soft field needed: grass strips, backcountry airports, muddy runways, snow-covered surfaces, gravel, rough terrain",
+        "Review KSTS: Sonoma County Airport, runway 14/32 (5,000 ft × 150 ft), towered Class D, elevation 128 ft MSL",
+        "Explain KSTS selection: professional environment, good runway length for safe practice, can simulate soft conditions without actual soft surface risk",
+        "CRITICAL: Contrast with short field just learned: 'Short field = minimum distance, steep, idle, MAX braking. Soft field = nosewheel protection, power-on, NO braking!'",
+        "Teach technique overview: 65-70 KIAS approach, power throughout, soft touchdown, nose UP maximum time, minimal braking",
+        "Explain goal: protect nosewheel from sinking into soft surface or hitting rough terrain - 'Pretend nosewheel is made of glass!'",
+        "Discuss real-world scenarios: grass strips common, many airports have grass alongside paved, backcountry flying requires soft field skill",
+        "Review why technique works: power = soft touchdown, nose up = weight on mains only, no braking = don't dig in, keep moving = don't get stuck",
+        "Set expectations: progressive practice, various simulated conditions (grass, mud, snow), markers for analysis",
+        "Emphasize finesse: 'This is gentle technique, not aggressive like short field. Smooth and soft throughout!'",
+        "Coach: 'Think soft, smooth, and protect that nosewheel - it's your most vulnerable part on rough surfaces!'"
+      ],
+      "goals": [
+        "Student understands soft field landing necessity and real-world application",
+        "Student knows KSTS airport characteristics and training advantages",
+        "Student clearly understands difference from short field technique",
+        "Student comprehends complete soft field technique sequence",
+        "Student knows primary goal is nosewheel protection",
+        "Student understands WHY technique works (physics of soft surfaces)",
+        "Student ready for finesse-focused practice",
+        "Student motivated by backcountry and grass strip capabilities"
+      ],
+      "commonErrors": [
+        "Confusing soft field with short field technique",
+        "Going idle at threshold (like normal landing)",
+        "Letting nosewheel down too early",
+        "Using excessive braking (would damage nosewheel in real soft field)"
+      ]
+    },
+    {
+      "name": "Theory",
+      "prompt": "Deep dive into soft field landing physics and nosewheel protection.",
+      "steps": [
+        "Explain soft surface challenge: weight on nosewheel causes sinking (mud/snow), impact damage (rough terrain/gravel), or nose-over (very soft)",
+        "Discuss nosewheel vulnerability: small wheel, concentrated weight, forward position = susceptible to soft surface problems",
+        "Review main wheels advantage: larger, spread weight over bigger area, more contact points = less sinking",
+        "Teach power-on touchdown physics: power creates thrust, reduces descent rate, results in minimum sink = softest possible touchdown",
+        "Contrast normal landing: idle power at threshold = higher sink rate = firm touchdown. Soft field = power on = gentle touchdown",
+        "Explain airspeed selection: 65-70 KIAS slightly higher than normal gives better control authority for power-on flare",
+        "Discuss nose-up attitude: after touchdown, full aft elevator keeps tail down and nosewheel up = all weight on main wheels only",
+        "Review weight distribution: nosewheel up = 100% weight on mains, nose down = 10-15% weight on nose (problem in soft field!)",
+        "Teach timing: hold nose up until aerodynamic authority lost (too slow), only then gently lower nosewheel",
+        "Explain braking prohibition: braking increases weight on all wheels, can cause sinking or digging, especially damaging to nosewheel",
+        "Discuss rollout strategy: let airplane slow naturally via aerodynamic drag, keep moving to prevent getting stuck",
+        "Review surface types: grass (medium challenge), mud (high challenge), snow (high challenge), gravel (impact damage risk)",
+        "Calculate stress: normal landing = 500+ lb nosewheel load. Soft field technique = near zero lb until speed too low",
+        "Coach: 'Every second nosewheel stays up is another second of protection from damage or getting stuck!'"
+      ],
+      "goals": [
+        "Student understands why soft surfaces challenge nosewheel",
+        "Student comprehends nosewheel vulnerability vs main wheel capability",
+        "Student knows power-on touchdown physics and benefits",
+        "Student understands why slightly higher approach speed helps",
+        "Student knows importance of nose-up attitude maintenance",
+        "Student comprehends weight distribution and its effects",
+        "Student understands why braking is prohibited or minimal",
+        "Student aware of various soft surface types and challenges",
+        "Student has theoretical foundation for technique application"
+      ],
+      "commonErrors": [
+        "Not understanding why power must be maintained",
+        "Thinking faster approach is unsafe (actually provides control)",
+        "Letting nosewheel down unnecessarily early",
+        "Braking habitually without thinking about surface"
+      ]
+    },
+    {
+      "name": "Demo",
+      "prompt": "Demonstrate complete soft field landing technique step-by-step.",
+      "steps": [
+        "Position aircraft on final approach KSTS runway 32, 2 miles out",
+        "Set up demonstration: 'Full flaps 30°, slowing to 65-70 KIAS - bit faster than normal'",
+        "Point out: 'Notice I'm keeping power in - not going idle yet like normal landing'",
+        "On approach: 'Normal glidepath, not steep. Power controls descent rate, holding 68 KIAS'",
+        "Short final: 'Still power on... maintaining glidepath... speed steady at 68 KIAS...'",
+        "Over threshold: 'Power STILL on - not going idle! This is critical difference!'",
+        "Flare: 'Normal flare... but power still applied... very gentle descent rate...'",
+        "Touchdown: 'Mains touching... VERY soft... power creating cushion... NOW reducing power to idle'",
+        "Student adds marker 'Demo Landing - Touchdown'",
+        "After touchdown: 'FULL back pressure immediately! Nosewheel UP! Look - it's still in the air!'",
+        "Hold nose up: 'Holding... holding... speed decreasing... still holding nose up...'",
+        "Nosewheel down: 'Now speed too slow... gently lowering nosewheel... there, soft touchdown'",
+        "Student adds marker 'Demo Landing - Nosewheel Down'",
+        "Rollout: 'NO braking! Letting airplane slow naturally... smooth and gentle...'",
+        "Stop: 'Airplane slowing on its own... very smooth... now stopped'",
+        "Student adds marker 'Demo Landing - Stopped'",
+        "Review: 'Power throughout, soft touchdown, nose held up maximum time, no braking. That's soft field!'",
+        "Now student's turn: 'Position you for approach runway 32, same gentle technique'"
+      ],
+      "goals": [
+        "Student observes complete soft field landing from cockpit",
+        "Power maintained throughout approach visible and understood",
+        "Gentle touchdown with power demonstrated",
+        "Nose-up attitude maintenance clearly shown",
+        "Nosewheel staying up maximum time visible",
+        "Minimal/no braking technique demonstrated",
+        "Complete sequence from approach to rollout clear",
+        "Student ready to attempt with coaching"
+      ],
+      "commonErrors": [
+        "Thinking power-on is mistake instead of technique",
+        "Not noticing how long nose stays up",
+        "Missing the soft touchdown quality",
+        "Not recognizing no-braking strategy"
+      ]
+    },
+    {
+      "name": "Basic",
+      "prompt": "Initial soft field landing attempts with coaching.",
+      "steps": [
+        "Position student on final runway 32, 2 miles out",
+        "Coach setup: 'Full flaps... good. Slow to 65-70 KIAS... I like 68 KIAS for control'",
+        "Coach approach: 'Normal glidepath, but KEEP power in - don't go idle yet!'",
+        "Monitor: 'Good... power still on... airspeed 68 KIAS... looking good...'",
+        "Coach threshold: 'Over threshold now... still power on! Don't go idle yet!'",
+        "Coach flare: 'Normal flare, but power applied... very gentle sink...'",
+        "Coach touchdown: 'Mains touching... soft! NOW idle power... BACK pressure! Nose UP!'",
+        "Student adds marker 'Basic Landing 1 - Touchdown'",
+        "Coach after touchdown: 'Hold it! Nose up! Keep holding... that's it!'",
+        "Monitor nose: 'Good! Nosewheel still up... speed decreasing... keep holding...'",
+        "Coach nosewheel: 'OK, speed too slow now... gently lower nose... there!'",
+        "Student adds marker 'Basic Landing 1 - Nosewheel Down'",
+        "Coach rollout: 'NO braking! Just let it slow... smooth... good!'",
+        "After landing: 'How did that feel? Power-on touchdown felt different, right?'",
+        "Debrief: 'Great first attempt! Touchdown was soft, held nose up well'",
+        "Second attempt: 'Now focus on holding nose up even LONGER'",
+        "Student performs with less coaching, adds markers 'Basic Landing 2'",
+        "Third attempt: building consistency and longer nose-up time",
+        "Student adds markers 'Basic Landing 3'",
+        "Review: 'Three landings, technique improving! Ready for advanced practice?'"
+      ],
+      "goals": [
+        "Student completes multiple soft field landings with technique foundation",
+        "Power throughout approach consistently maintained",
+        "Soft touchdown with power-on technique achieved",
+        "Nose-up attitude held after touchdown (even if briefly at first)",
+        "Minimal braking demonstrated",
+        "Student feeling difference from normal landing",
+        "Building confidence in gentle technique",
+        "Ready for advanced nose-up challenge"
+      ],
+      "commonErrors": [
+        "Going idle at threshold (habit from normal landings)",
+        "Not holding nose up after touchdown",
+        "Lowering nosewheel too quickly (not maximizing protection time)",
+        "Braking immediately after nosewheel down"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "prompt": "Advanced practice holding nosewheel up maximum time.",
+      "steps": [
+        "Brief advanced goal: 'Challenge is holding nose up as LONG as possible - maximum nosewheel protection'",
+        "Explain technique: 'After touchdown, full aft elevator immediately and HOLD until absolutely can't anymore'",
+        "Set challenge: 'See how many seconds you can keep nosewheel in the air after main wheels touchdown'",
+        "First attempt: student performs landing focusing on maximum nose-up time",
+        "Student adds markers 'Advanced 1 - Touchdown' and 'Advanced 1 - Nosewheel Down'",
+        "Measure time: 'From touchdown to nosewheel down: 8 seconds! Not bad for first try!'",
+        "Coach: 'Can you beat 8 seconds? More back pressure, hold longer!'",
+        "Second attempt: student focuses on even longer nose-up hold",
+        "Student adds markers 'Advanced 2 - Touchdown' and 'Advanced 2 - Nosewheel Down'",
+        "Measure: '11 seconds! Better! You're getting it!'",
+        "Explain benefit: 'Every extra second = more protection. In real soft field, could prevent getting stuck!'",
+        "Third attempt: maximum effort for longest hold",
+        "Student adds markers 'Advanced 3 - Touchdown' and 'Advanced 3 - Nosewheel Down'",
+        "Measure: '13 seconds! Excellent! That's mastery-level nosewheel protection!'",
+        "Discuss feel: 'Notice how airplane wants to settle? That's losing aerodynamic authority. When you can't hold anymore, gently lower'",
+        "Practice optimal lowering: 'Not drop it, not force it up - let it settle gently when speed too low'",
+        "Review technique: 'Soft touchdown, immediate full back pressure, hold maximum time, gentle lowering. Perfect!'"
+      ],
+      "goals": [
+        "Student consistently holds nosewheel up 10+ seconds after touchdown",
+        "Maximum back pressure immediately after touchdown automatic",
+        "Student feels aerodynamic authority decreasing with speed",
+        "Gentle nosewheel lowering technique mastered",
+        "Student understands time = protection correlation",
+        "Progressive improvement visible across attempts",
+        "Advanced soft field capability demonstrated",
+        "Ready for various surface condition scenarios"
+      ],
+      "commonErrors": [
+        "Not using full aft elevator (reducing protection time)",
+        "Lowering nose before aerodynamic authority actually lost",
+        "Forcing nose up when speed too low (can cause tail strike or loss of control)",
+        "Dropping nosewheel instead of gentle lowering"
+      ]
+    },
+    {
+      "name": "Conditions",
+      "prompt": "Practice various simulated soft field conditions.",
+      "steps": [
+        "Brief condition variations: 'Different surfaces require same technique but present different challenges'",
+        "Scenario 1 - Grass runway: 'Most common soft field. Simulate grass - medium resistance, good traction'",
+        "Coach: 'Grass won't damage nosewheel but can bog it down if you brake or let nose down early'",
+        "Student performs grass runway landing, adds markers 'Grass Landing'",
+        "Assess: 'Perfect for grass! Held nose up well, no braking - wouldn't get stuck!'",
+        "Scenario 2 - Muddy conditions: 'After rain, runway surface soft and slippery. High challenge!'",
+        "Coach: 'Mud = high sinking risk. Maximum nose-up time critical! Minimal braking or you'll dig in!'",
+        "Student performs muddy runway simulation, adds markers 'Mud Landing'",
+        "Assess: 'Excellent! In real mud, that technique would prevent nose from sinking!'",
+        "Scenario 3 - Snow-covered: 'Winter operations. Snow can be very soft, nosewheel can sink deep'",
+        "Coach: 'Snow similar to mud - keep nose up maximum time, no braking, keep moving!'",
+        "Student performs snow landing simulation, adds markers 'Snow Landing'",
+        "Assess: 'Great! Nose stayed up, no braking - you'd handle snow perfectly!'",
+        "Scenario 4 - Gravel/rough: 'Gravel or rough terrain. Impact damage risk to nosewheel'",
+        "Coach: 'Gravel won't sink but rough impact can damage. Soft touchdown, gentle nosewheel lowering critical!'",
+        "Student performs gravel simulation, adds markers 'Gravel Landing'",
+        "Assess: 'Perfect! Soft touchdown protects from impact, gentle lowering prevents damage!'",
+        "Review all conditions: 'Same technique works for all soft/rough surfaces - that's why it's universal!'",
+        "Discuss real-world: 'Many grass strips, backcountry airports require this skill. You're ready!'"
+      ],
+      "goals": [
+        "Student practices soft field technique in multiple scenarios",
+        "Understanding of different surface challenges developed",
+        "Same technique applied successfully to all conditions",
+        "Student confident for grass, mud, snow, gravel operations",
+        "Real-world application clear and understood",
+        "Versatility of technique demonstrated",
+        "Student ready for any soft/rough surface landing"
+      ],
+      "commonErrors": [
+        "Changing technique for different conditions (should stay same)",
+        "Not recognizing that all soft surfaces require nosewheel protection",
+        "Braking on slippery surfaces (mud/snow)",
+        "Not being gentle enough for impact-prone surfaces (gravel)"
+      ]
+    },
+    {
+      "name": "Integration",
+      "prompt": "Integrate soft field landings into complete pattern operations.",
+      "steps": [
+        "Brief integration: 'Now make soft field technique automatic in normal pattern operations'",
+        "Complete pattern 1: takeoff, pattern, soft field landing",
+        "Student adds markers for complete pattern with soft field landing",
+        "Coach: 'Soft field landing should flow naturally from normal pattern - not feel rushed or special'",
+        "Complete pattern 2: focus on smooth integration and consistency",
+        "Student adds markers for second integrated pattern",
+        "Vary conditions slightly: 'This time simulate grass runway landing'",
+        "Complete pattern 3: demonstrate mastery with minimal coaching",
+        "Student adds markers for third pattern",
+        "Practice touch-and-go variation: 'After soft field touchdown, back to takeoff - keep moving!'",
+        "Coach touch-and-go: 'Soft touchdown, nose up, as speed builds add power, transition to takeoff without stopping!'",
+        "Student performs soft field touch-and-go, adds markers",
+        "Discuss real-world: 'Grass strips often use soft field landing and takeoff in same operation'",
+        "Practice full-stop variation: soft field landing to taxi to parking",
+        "Review integration: 'Soft field technique now part of your normal flying - excellent!'"
+      ],
+      "goals": [
+        "Soft field landing integrated into complete pattern operations",
+        "Consistent technique across multiple patterns demonstrated",
+        "Smooth flow from pattern to soft field landing achieved",
+        "Touch-and-go soft field variation practiced",
+        "Full-stop soft field operations practiced",
+        "Technique becoming automatic and natural",
+        "Student comfortable with soft field as normal operation",
+        "Ready for soft field takeoff challenge next"
+      ],
+      "commonErrors": [
+        "Treating soft field landing as separate from pattern flow",
+        "Inconsistent technique between landings",
+        "Rushing technique due to pattern pressure",
+        "Not adapting touch-and-go for soft field characteristics"
+      ]
+    },
+    {
+      "name": "Analysis",
+      "prompt": "Analyze soft field landing performance using markers and data.",
+      "steps": [
+        "Review all markers: basic, advanced, various conditions, integration landings",
+        "Use analyzeFlightData to examine landing performance across attempts",
+        "Analyze touchdown quality: 'How soft were touchdowns? Sink rate at touchdown?'",
+        "Review power management: 'Was power maintained throughout approach? Timing of power reduction?'",
+        "Examine nose-up time: 'How long did nosewheel stay up after touchdown? Improving over time?'",
+        "Look at airspeed: 'Was 65-70 KIAS maintained on approach? Consistent?'",
+        "Assess braking: 'Minimal or no braking applied? Let airplane slow naturally?'",
+        "Compare early vs later attempts: 'See improvement in nose-up time and touchdown softness?'",
+        "Identify best landing: 'Which felt smoothest and protected nosewheel best? Why?'",
+        "Review different conditions: 'Did technique stay consistent across grass, mud, snow, gravel scenarios?'",
+        "Identify areas for improvement: 'Where can technique be refined further?'",
+        "Celebrate successes: 'Look at progression - from basic to 13+ seconds nose-up time!",
+        "Set goals: 'What will you focus on in soft field takeoffs next?'",
+        "Coach: 'Data shows you've mastered nosewheel protection - ready for takeoffs!'"
+      ],
+      "goals": [
+        "Complete performance data reviewed across all landings",
+        "Touchdown softness assessed objectively",
+        "Nose-up time progression visible in data",
+        "Power management technique validated",
+        "Consistency across conditions confirmed",
+        "Best practices identified from successful attempts",
+        "Student has data-driven understanding of performance",
+        "Confidence reinforced by objective analysis"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief soft field landing mastery and prepare for soft field takeoffs.",
+      "steps": [
+        "Summarize lesson: progressed from basic power-on landing to maximum nose-up time to various conditions",
+        "Review technique: 'What's key to soft field landings? 65-70 KIAS, power ON, soft touchdown, nose UP maximum time, NO braking!'",
+        "Assess mastery: 'Can you consistently protect nosewheel for 10+ seconds after touchdown?'",
+        "Discuss real-world: 'Grass strips, backcountry, muddy conditions - this skill opens up new airports!'",
+        "Emphasize safety: 'Nosewheel damage can strand you at remote airport. This technique prevents that!'",
+        "Celebrate achievement: 'You demonstrated 13+ seconds nose-up time - that's expert-level protection!'",
+        "Preview Challenge 9.4: 'Next is soft field takeoffs - continuous motion, ground effect, nosewheel protection during departure!'",
+        "Explain takeoff challenge: 'No brake hold, rolling start, early liftoff, ground effect acceleration - completely different from short field!'",
+        "Connect landing and takeoff: 'Landing protected nosewheel on arrival, takeoff will protect it on departure'",
+        "Discuss complete skill: 'After 9.4, you'll have complete soft field operations - landing and takeoff mastered!'",
+        "Prepare mentally: 'Takeoff is smooth continuous motion - finesse technique like landing'",
+        "Encourage: 'You've mastered soft field landings. Takeoffs complete your soft field capability!'",
+        "Final thought: 'Soft field operations expand where you can fly safely - backcountry flying enabled!'"
+      ],
+      "goals": [
+        "Student sees complete soft field landing progression accomplished",
+        "Technique sequence solidified and automatic",
+        "Real-world backcountry capability understood",
+        "Safety benefits of nosewheel protection emphasized",
+        "Student prepared for soft field takeoff challenge",
+        "Clear distinction from short field maintained",
+        "Motivation high for completing soft field operations",
+        "Student ready for Challenge 9.4: Soft Field Takeoffs"
+      ]
+    }
+  ]
+}
