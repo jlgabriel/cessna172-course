@@ -26,7 +26,7 @@
   "phases": [
     {
       "name": "Brief",
-      "prompt": "Brief the student on the critical importance of checklists in aviation. Explain that checklists prevent mistakes, ensure nothing is forgotten, and are used by pilots at every level - from students to airline captains. Today they will learn the exterior pre-flight inspection and the key interior checklists: Before Start, Engine Start, Before Taxi, and Taxi.",
+      "prompt": "Brief the student on the critical importance of checklists in aviation. Explain that checklists prevent mistakes, ensure nothing is forgotten, and are used by pilots at every level - from students to airline captains. Today they will learn the exterior pre-flight inspection and the key interior checklists: Before Start, Engine Start, After Start, Before Taxi, and Taxi.",
       "steps": [
         "Explain why checklists are essential for safety",
         "Describe the types of checklists they will learn today",
@@ -94,7 +94,7 @@
     },
     {
       "name": "Engine_Start",
-      "prompt": "Guide the student through the engine start procedure. Emphasize safety: area clear, brakes set, throttle cracked, mixture rich, propeller area clear with verbal announcement. Cover the full sequence: master on, beacon on, prime if needed, announce clear prop, turn key to start, verify oil pressure, and complete after-start items.",
+      "prompt": "Guide the student through the engine start procedure. Emphasize safety: area clear, brakes set, throttle cracked, mixture rich, propeller area clear with verbal announcement. Cover the full sequence: master on, beacon on, prime if needed, announce clear prop, turn key to start, verify oil pressure.",
       "steps": [
         "Set parking brake",
         "Open throttle approximately 1/4 inch",
@@ -105,9 +105,7 @@
         "Announce CLEAR PROP loudly and check propeller area",
         "Turn ignition key to START (release when engine catches)",
         "Verify oil pressure rises within 30 seconds (critical check)",
-        "Adjust throttle to approximately 1000 RPM",
-        "Check alternator is charging (ammeter shows positive)",
-        "Turn on avionics master after engine is running smoothly"
+        "Adjust throttle to approximately 1000 RPM"
       ],
       "goals": [
         "Student performs engine start safely and correctly",
@@ -124,30 +122,67 @@
       ]
     },
     {
-      "name": "Before_Taxi_Checklist",
-      "prompt": "Teach the Before Taxi checklist. Now that the engine is running, prepare for taxi. Cover: flight instruments set, radios set and tested, transponder set to assigned code, ATIS or AWOS obtained, altimeter set, heading indicator set to compass, and taxi clearance obtained if at towered airport.",
+      "name": "After_Start_Checklist",
+      "prompt": "This is the critical checklist that prepares all systems after engine start. Guide the student through EVERY item needed to be ready for taxi. Cover: oil pressure check, alternator check, avionics power on, radios set up, transponder, flaps, fuel pump, lights, and instruments. This ensures the aircraft is fully configured and all systems are operating before moving.",
       "steps": [
-        "Set and check flight instruments (attitude indicator, heading indicator, altimeter)",
-        "Tune radios (KPAO tower frequency or CTAF if non-towered)",
-        "Set transponder to assigned squawk code or 1200",
-        "Obtain ATIS or AWOS weather information",
-        "Set altimeter to current setting",
-        "Set heading indicator to match magnetic compass",
-        "Test brakes by gently applying pressure",
-        "If towered airport, call for taxi clearance with your location and intentions",
-        "Review taxi route if unfamiliar with airport"
+        "Verify oil pressure is in green arc (already checked, confirm stable)",
+        "Check alternator is charging (ammeter shows positive or voltmeter shows 28V)",
+        "Turn avionics master ON (now safe with engine running)",
+        "Turn on navigation lights",
+        "Turn on strobe lights",
+        "Turn on taxi light or landing light as needed",
+        "Set radios: COM1 to KPAO tower frequency (118.6) or ground if available",
+        "Set transponder to assigned code (or standby until cleared for taxi)",
+        "Check fuel pump switch position (usually OFF for ground ops, ON for takeoff)",
+        "Verify all flight instruments are operational and indicating correctly",
+        "Check suction gauge (vacuum system) is in green arc",
+        "Verify heading indicator is set and attitude indicator is upright",
+        "Confirm all lights and avionics are functioning properly"
       ],
       "goals": [
-        "Student completes all before taxi items",
-        "Student knows how to obtain weather and set altimeter",
-        "Student can properly request taxi clearance",
-        "Student tests brakes before moving"
+        "Student completes comprehensive after-start checklist",
+        "Student knows how to configure all avionics and electrical systems",
+        "Student verifies all instruments are working before taxi",
+        "Student understands each system must be checked and functional",
+        "Student has aircraft fully ready for taxi operations"
+      ],
+      "commonErrors": [
+        "Rushing through after-start items to begin taxiing quickly",
+        "Not verifying alternator is charging (critical electrical system check)",
+        "Forgetting to turn on navigation lights",
+        "Not setting up radios before requesting taxi clearance",
+        "Not checking instrument functionality",
+        "Forgetting to turn on exterior lights"
+      ]
+    },
+    {
+      "name": "Before_Taxi_Checklist",
+      "prompt": "Teach the Before Taxi checklist. Now that all systems are powered and operational, complete final preparations for taxi. Cover: flight instruments verified, radios tested, ATIS obtained, altimeter set, heading indicator aligned, and taxi clearance obtained if at towered airport.",
+      "steps": [
+        "Verify flight instruments are set and reading correctly",
+        "Check radios are tuned correctly and test by listening",
+        "Obtain ATIS or AWOS weather information (KPAO ATIS frequency)",
+        "Set altimeter to current altimeter setting from ATIS",
+        "Verify heading indicator matches magnetic compass (within 5 degrees)",
+        "Test brakes by gently applying pressure",
+        "Review taxi diagram if unfamiliar with airport layout",
+        "If towered airport, call for taxi clearance: Palo Alto Ground, Cessna 12345, ready to taxi with information Alpha",
+        "Write down taxi clearance and read back",
+        "Confirm you understand taxi route to runway"
+      ],
+      "goals": [
+        "Student completes all before taxi items systematically",
+        "Student knows how to obtain ATIS and set altimeter",
+        "Student can properly request taxi clearance at towered airport",
+        "Student tests brakes before moving",
+        "Student reviews taxi route and understands clearance"
       ],
       "commonErrors": [
         "Forgetting to get ATIS or AWOS",
         "Not setting altimeter correctly",
         "Starting to taxi without clearance at towered airport",
-        "Not testing brakes before taxi"
+        "Not testing brakes before taxi",
+        "Not writing down or reading back taxi clearance properly"
       ]
     },
     {
@@ -180,10 +215,12 @@
     },
     {
       "name": "Debrief",
-      "prompt": "Review all the checklists and procedures covered today. Quiz the student on key safety items. Emphasize that checklists are not optional - they save lives. Answer any questions and encourage the student to practice these flows until they become automatic. Preview that next lesson will involve actual flight with these checklists.",
+      "prompt": "Review all the checklists and procedures covered today. Quiz the student on key safety items. Emphasize that checklists are not optional - they save lives. Special emphasis on the After Start checklist which ensures all systems are operational before taxi. Answer any questions and encourage the student to practice these flows until they become automatic. Preview that next lesson will involve actual flight with these checklists.",
       "steps": [
         "Ask student to explain the exterior walk-around sequence",
         "Quiz on critical items: CLEAR PROP, oil pressure check, brake test",
+        "Review the importance of the After Start checklist - configuring all systems",
+        "Ask student to list what must be turned on after engine start",
         "Discuss why we always use checklists, even when experienced",
         "Answer any remaining questions",
         "Encourage practice and study of checklists before next flight",
@@ -192,6 +229,7 @@
       "goals": [
         "Student can recall the major checklist phases",
         "Student understands critical safety checks",
+        "Student knows the After Start checklist ensures all systems are ready",
         "Student is committed to always using checklists",
         "Student feels prepared for next lesson"
       ]
