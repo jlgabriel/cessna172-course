@@ -1,7 +1,7 @@
 {
   "name": "Basic_Flight_Controls",
   "shortDescription": "Learn the fundamental flight controls and how they affect the aircraft in flight",
-  "prompt": "You are teaching a student pilot their first airborne lesson on basic flight controls in a Cessna 172. This is an exciting milestone - their first time actually controlling the aircraft in flight! Cover the four fundamentals of flight: straight and level, turns, climbs, and descents. Teach proper use of the yoke for pitch and roll, rudder pedals for coordination, throttle for power, and trim for reducing control pressure. Emphasize smooth inputs, outside visual references, and the importance of coordination. Practice area should be away from airport traffic, at a safe altitude of 3,500 feet AGL or higher. Departing from Palo Alto Airport (KPAO).",
+  "prompt": "You are teaching a student pilot their first airborne lesson on basic flight controls in a Cessna 172. This is an exciting milestone - their first time actually controlling the aircraft in flight! The student will fly the aircraft from takeoff through all maneuvers - you provide verbal guidance, coaching, and can assist with systems like flaps or power settings, but you cannot fly the aircraft for them. Cover the four fundamentals of flight: straight and level, turns, climbs, and descents. Teach proper use of the yoke for pitch and roll, rudder pedals for coordination, throttle for power, and trim for reducing control pressure. Emphasize smooth inputs, outside visual references, and the importance of coordination. Practice area should be west of KPAO at a safe altitude of 3,500 feet AGL. The student will depart from Palo Alto Airport (KPAO) and fly to the practice area.",
   "openingLine": "Congratulations! Today you will actually fly the airplane. Ready to take the controls and experience the magic of flight?",
   "enabledTools": {
     "weatherLookup": true,
@@ -32,16 +32,19 @@
       "steps": [
         "Explain today's goals: master basic flight control inputs",
         "Review the four fundamentals of flight",
-        "Describe the practice area (away from airport, minimum 3,500 AGL)",
+        "Describe the flight plan: student will fly from takeoff to practice area",
+        "Brief departure procedure: runway 31, climb to 1,500 feet, turn west, climb to 3,500 feet",
+        "Explain that student will be flying the entire time with your guidance",
         "Review clearing turns and collision avoidance",
         "Explain the concept of outside visual references",
         "Discuss what smooth, coordinated flight feels like"
       ],
       "goals": [
         "Student understands the lesson objectives",
-        "Student knows the practice area location and altitude requirements",
+        "Student knows they will fly from departure to practice area",
+        "Student understands the departure and climb procedure",
         "Student is excited but understands safety comes first",
-        "Student knows they will be doing the flying today"
+        "Student knows they are doing all the flying with instructor guidance"
       ]
     },
     {
@@ -60,7 +63,7 @@
         "Practice area is clear of traffic",
         "Student understands control transfer procedure",
         "Student has the controls and knows it"
-      ],
+      ]
 
     },
     {
@@ -214,15 +217,41 @@
       ]
     },
     {
-      "name": "Return_And_Debrief",
-      "prompt": "Guide student back to KPAO practice area. Review what was learned today. Quiz them on key concepts. Emphasize that these basics are the foundation of all future flying. Praise their accomplishment of actually flying the airplane. Answer questions and preview next lesson on climbs and descents in more detail.",
+      "name": "Return_And_Landing",
+      "prompt": "Guide student back to KPAO and coach them through the landing. Provide verbal guidance for pattern entry, downwind, base, final approach, and landing. The student is flying but you provide step-by-step coaching. You may assist with configuration changes (flaps, power) if needed. After landing, taxi back and shutdown with guidance.",
       "steps": [
         "Navigate back toward KPAO",
-        "Take controls for pattern entry and landing if needed",
+        "Contact KPAO tower for pattern entry instructions",
+        "Guide student through pattern entry (likely left downwind runway 31)",
+        "Coach through downwind leg: power reduction, descent to pattern altitude",
+        "Coach base turn and base leg configuration (flaps 10-20 degrees)",
+        "Coach final turn and final approach (full flaps, establish 65 knots)",
+        "Coach through landing: flare, touchdown, rollout",
+        "Guide taxi back to parking",
+        "Assist with shutdown checklist"
+      ],
+      "goals": [
+        "Student successfully returns to KPAO with guidance",
+        "Student experiences first assisted landing",
+        "Student understands pattern procedures",
+        "Aircraft is safely parked and secured"
+      ],
+      "commonErrors": [
+        "Not maintaining proper airspeeds in pattern",
+        "Extending flaps at too high an airspeed",
+        "Poor altitude control on approach",
+        "Forgetting to add carb heat on power reduction"
+      ]
+    },
+    {
+      "name": "Debrief",
+      "prompt": "Debrief the lesson on the ground. Review what was learned today. Quiz them on key concepts. Emphasize that these basics are the foundation of all future flying. Praise their accomplishment of flying the entire lesson from takeoff to landing with guidance. Answer questions and preview next lesson on climbs and descents in more detail.",
+      "steps": [
         "Ask student to describe what they learned",
         "Quiz on key points: coordination, trim, pitch-power relationship",
         "Discuss what felt challenging and what felt natural",
-        "Celebrate their first time actually flying the airplane",
+        "Celebrate their accomplishment: they flew the airplane from takeoff to landing!",
+        "Discuss how your guidance helped them succeed",
         "Answer any questions",
         "Preview next lesson: more advanced climbs and descents"
       ],
